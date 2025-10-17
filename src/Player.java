@@ -21,7 +21,6 @@ public class Player {
 
     public void step() {
         keyPressed();
-        updatePlayer();
     }
     public void setKeyPressed(int key){
         this.key = key;
@@ -37,34 +36,13 @@ public class Player {
         }
         if(key == 'w'){
             forceY += 15;
-            timeStart = System.currentTimeMillis();
+            timeStart = System.nanoTime();
         }
         else if(key == 's'){
             forceY -= 15;
-            timeStart = System.currentTimeMillis();
+            timeStart = System.nanoTime();
         }
-    }
-
-    public void updatePlayer(){
-        x += forceX;
-
-        if (getForceY() >= 0) {
-            y = (getForceY() * (System.currentTimeMillis() - timeStart) / 1000 + 0.001) - 0.5 * 9.81 * pow((double) (System.currentTimeMillis() - timeStart - 10) / 1000, 2);
-            if (getY() < 0) {
-                setForceY(0);
-                setY(0);
-            }
         }
-        else if (getForceY() < 0) {
-            y = (getForceY() * -1 * (System.currentTimeMillis() - timeStart) / 1000 + 0.001) - 0.5 * 9.81 * pow((double) (System.currentTimeMillis() - timeStart - 10) / 1000, 2);
-            y *= -1;
-            if (getY() > 0) {
-                setForceY(0);
-                setY(0);
-            }
-        }
-    }
-
     public double getX() {
         return x;
     }
