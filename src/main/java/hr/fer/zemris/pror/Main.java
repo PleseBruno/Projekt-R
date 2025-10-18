@@ -18,13 +18,13 @@ public class Main {
         }
 
         Point topLeft = new Point(2, 4);
-        //duck square
+
         for (int i = topLeft.x; i < topLeft.x + 3; i++) {
             for (int j = topLeft.y; j < topLeft.y + 3; j++) {
                 grid[j][i] = '*';
             }
         }
-        // print it
+
         for (int r = 0; r < rows; r++) {
             System.out.println(new String(grid[r]));
         }
