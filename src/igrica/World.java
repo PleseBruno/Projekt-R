@@ -4,7 +4,7 @@ public class World implements Runnable {
 
     Thread gameThread;
     Thread playerThread;
-    public int FPS = 3;
+    public int FPS = 2;
     KeyPress keyPress = new KeyPress();
 
     Player player = new Player(0,0,5,5);
@@ -22,7 +22,7 @@ public class World implements Runnable {
     @Override
     public void run() {
 
-
+        keyPress.reset();
 
         double drawInterval = 1E9/FPS;
         double nextDrawTime = drawInterval + System.nanoTime();
@@ -50,6 +50,7 @@ public class World implements Runnable {
     }
 
     public void update() {
+
         if (keyPress.isDown()) {
             player.dive();
         }
@@ -62,9 +63,13 @@ public class World implements Runnable {
         if (keyPress.isRight()) {
             player.goRight();
         }
+
+        player.playerUpdate();
+
+        keyPress.reset();
     }
 
     public void repaint() {
-        System.out.println(player.getY());
+        System.out.println(player.getX() + " " + player.getY());
     }
 }

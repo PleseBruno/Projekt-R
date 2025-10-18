@@ -27,30 +27,37 @@ public class Player extends Entity {
 
     public void jump() {
         ForceY = 10;
-        while (getForceY() > 0 || getY() != 0) {
-            setY(getY() + getForceY());
-            setForceY(getForceY() - 1);
-        }
+        setForceY(ForceY);
     }
     public void dive() {
         ForceY = -10;
-        while (getForceY() < 0 || getY() != 0) {
-            setY(getY() - getForceY());
-            setForceY(getForceY() + 1);
-        }
+        setForceY(ForceY);
     }
     public void goRight() {
         ForceX = 10;
-        while (getForceX() != 0) {
-            setX(getX() + getForceX());
-            setForceX(getForceX() - 1);
-        }
+        setForceX(ForceX);
     }
     public void goLeft() {
         ForceX = -10;
-        while (getForceX() != 0) {
-            setX(getX() - getForceX());
-            setForceX(getForceX() + 1);
+        setForceX(ForceX);
+    }
+
+    public void playerUpdate() {
+        if (getForceX() > 0) {
+            setX(getX() + getForceX());
+            setForceX(getForceX() - 2);
+        }
+        if (getForceX() < 0) {
+            setX(getX() + getForceX());
+            setForceX(getForceX() + 2);
+        }
+        if (getForceY() > 0 || getY() != 0) {
+            setY(getY() + getForceY());
+            setForceY(getForceY() - 2);
+        }
+        if (getForceY() < 0 || getY() != 0) {
+            setY(getY() + getForceY());
+            setForceY(0);
         }
     }
 }

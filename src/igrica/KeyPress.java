@@ -44,4 +44,12 @@ public class KeyPress{
     public boolean isRight() {
         return Right;
     }
+
+    public void reset()
+    {
+        Up = false;
+        Down = false;
+        Left = false;
+        Right = false;
+    }
 }
