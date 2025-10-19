@@ -6,7 +6,6 @@ public class KeyPress{
 
     private boolean Up, Down, Left, Right;
 
-
     public void receiveKey()
     {
         Scanner sc = new Scanner(System.in);

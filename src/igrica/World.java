@@ -13,7 +13,8 @@ public class World implements Runnable {
     private int borderRight = 128;
 
     public int FPS = 2;
-    private double speed = 0;
+    public double refreshPerFps = 10;
+    private double speed = 1 / refreshPerFps;
     KeyPress keyPress = new KeyPress();
 
     Player player = new Player(-10, 0,5,5);
@@ -35,14 +36,18 @@ public class World implements Runnable {
 
         keyPress.reset();
 
-        double drawInterval = 1E9/FPS;
+        double drawInterval = 1E9/(FPS * refreshPerFps);
         double nextDrawTime = drawInterval + System.nanoTime();
+        int counter = 0;
 
         while (gameThread != null) {
 
             update();
 
-            repaint();
+            if (counter == 20) {
+                repaint();
+                counter = 0;
+            }
 
             try {
                 double remainingTime = nextDrawTime - System.nanoTime();
@@ -50,6 +55,8 @@ public class World implements Runnable {
                 if (remainingTime < 0) {
                     remainingTime = 0;
                 }
+
+                counter++;
                 Thread.sleep((long) (remainingTime / 1E6));
 
                 nextDrawTime = drawInterval + System.nanoTime();

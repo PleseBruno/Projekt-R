@@ -48,6 +48,4 @@ public abstract class Entity {
     public void setHeight(double height) {
         this.height = height;
     }
-
-
 }

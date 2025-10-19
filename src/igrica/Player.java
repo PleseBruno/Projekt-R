@@ -8,12 +8,15 @@ public class Player extends Entity {
         super(x, y, width, height);
     }
 
+    private final double scalar = 10;
+    
     private double ForceX = 0;
     private double ForceY = 0;
     private boolean jumped = false;
     private boolean dived = false;
-    private final double gravity = 1;
-    private final double buoyancy = 1.5;
+    private final double gravity = 1.25 / (scalar * scalar);
+    private final double friction = 1 / (scalar * scalar);
+    private final double buoyancy = 0.75 / (scalar * scalar);
 
     public double getGravity() {
         return gravity;
@@ -56,24 +59,24 @@ public class Player extends Entity {
     }
 
     public void jump() {
-        ForceY = 10;
+        ForceY = 10 / scalar;
         setJumped(true);
         setForceY(ForceY);
     }
 
     public void dive() {
-        ForceY = -10;
+        ForceY = -10 / scalar;
         setDived(true);
         setForceY(ForceY);
     }
 
     public void goRight() {
-        ForceX = 3;
+        ForceX = 3 / scalar;
         setForceX(ForceX);
     }
 
     public void goLeft() {
-        ForceX = -3;
+        ForceX = -3 / scalar;
         setForceX(ForceX);
     }
 
@@ -88,12 +91,22 @@ public class Player extends Entity {
     public void playerUpdate(List<Obstacle> obstacles) {
 
         if (getForceX() > 0) {
-            setX(getX() + getForceX());
-            setForceX(getForceX() - 1);
+            if (getForceX() - friction < 0) {
+                setForceX(0);
+            }
+            else {
+                setX(getX() + getForceX());
+                setForceX(getForceX() - friction);
+            }
         }
         if (getForceX() < 0) {
-            setX(getX() + getForceX());
-            setForceX(getForceX() + 1);
+            if (getForceX() + friction > 0) {
+                setForceX(0);
+            }
+            else {
+                setX(getX() + getForceX());
+                setForceX(getForceX() + friction);
+            }
         }
         if (isJumped()) {
             if (getY() + getForceY() < 0) {
@@ -126,38 +139,38 @@ public class Player extends Entity {
 
         for (Obstacle obstacle : obstacles) {
             int touch = touching(obstacle);
-            System.out.println("Touching: " + touch);
             switch (touch) {
                 case 1:
                 {
                     setForceY(0);
                     setY(obstacle.getY() + getHeight());
+                    break;
                 }
-
                 case 2:
                 {
                     setForceY(0);
                     setY(obstacle.getY() - obstacle.getHeight());
+                    break;
                 }
-
                 case 3:
                 {
                     setForceX(0);
                     setX(obstacle.getX() - getWidth());
+                    break;
                 }
             }
         }
     }
 
     public int touching(Obstacle obstacle){
-        if (getY()  >= (obstacle.getY() - obstacle.getHeight())
-                && (getY() - getHeight()) <= obstacle.getY()
-                && (getX() + getWidth()) >=  obstacle.getX()
-                && getX() <= (obstacle.getX() + obstacle.getWidth())
+        if (getY()  > (obstacle.getY() - obstacle.getHeight())
+                && (getY() - getHeight()) < obstacle.getY()
+                && (getX() + getWidth()) >  obstacle.getX()
+                && getX() < (obstacle.getX() + obstacle.getWidth())
         ){
-            if (getY() >= obstacle.getY()) return 1;
-            if ((getY() - getHeight()) <= obstacle.getY() - obstacle.getHeight())  return 2;
-            if (getX() <=  obstacle.getX()) return 3;
+            if (getY() > obstacle.getY()) return 1;
+            if ((getY() - getHeight()) < obstacle.getY() - obstacle.getHeight())  return 2;
+            if (getX() <  obstacle.getX()) return 3;
         }
         return 0;
     }

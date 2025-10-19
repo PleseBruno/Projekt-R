@@ -16,19 +16,16 @@ public class Obstacle extends Entity {
         }
     }
 
-
     public static Obstacle randomObstacle(){
         Random rand = new Random();
         int randomNum = rand.nextInt(3);
 
         switch (randomNum){
-            case 0: return new Obstacle(1, 20, 200, 40);
-            case 1: return new Obstacle(1, 20, 200, 60);
-            case 2: return new Obstacle(1, 20, 200, 60);
+            case 0: return new Obstacle(128, 20, 20, 40);
+            case 1: return new Obstacle(128, 60, 20, 80);
+            case 2: return new Obstacle(128, 20, 20, 60);
         }
 
         return null;
     }
-
-
 }
