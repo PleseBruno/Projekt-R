@@ -1,5 +1,7 @@
 package igrica;
 
+import java.util.List;
+
 public class Player extends Entity {
 
     public Player(double x, double y, double width, double height) {
@@ -55,11 +57,13 @@ public class Player extends Entity {
 
     public void jump() {
         ForceY = 10;
+        setJumped(true);
         setForceY(ForceY);
     }
 
     public void dive() {
         ForceY = -10;
+        setDived(true);
         setForceY(ForceY);
     }
 
@@ -73,7 +77,16 @@ public class Player extends Entity {
         setForceX(ForceX);
     }
 
-    public void playerUpdate() {
+    public boolean isJumping(){
+        return (getForceY() > 0 && getY() >= 0) || (getForceY() < 0 && getY() >= 0);
+    }
+
+    public boolean isDiving() {
+        return (getForceY() < 0 && getY() <= 0) || (getForceY() > 0 && getY() <= 0);
+    }
+
+    public void playerUpdate(List<Obstacle> obstacles) {
+
         if (getForceX() > 0) {
             setX(getX() + getForceX());
             setForceX(getForceX() - 1);

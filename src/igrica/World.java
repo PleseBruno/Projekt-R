@@ -1,5 +1,8 @@
 package igrica;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class World implements Runnable {
 
     Thread gameThread;
@@ -17,6 +20,8 @@ public class World implements Runnable {
 
     public World() {
         playerThread = new Thread(() -> keyPress.receiveKey());
+        obstacles = new ArrayList<Obstacle>();
+        obstacles.add(Obstacle.randomObstacle());
         playerThread.start();
     }
 
@@ -55,9 +60,15 @@ public class World implements Runnable {
         }
     }
 
+    public void generateObstacle() {
+       if(obstacles.getLast().getX() <= 0){
+           obstacles.add(Obstacle.randomObstacle());
+       }
+    }
+
     public void update() {
 
-        if (keyPress.isDown()) {
+        if (keyPress.isDown() && !player.isDived() && !player.isJumped()) {
             player.dive();
         }
         if (keyPress.isUp() && !player.isDived() && !player.isJumped()) {
