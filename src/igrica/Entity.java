@@ -2,6 +2,8 @@ package igrica;
 
 public abstract class Entity {
 
+    //top left coordinates
+
     private double x;
     private double y;
 
@@ -25,4 +27,22 @@ public abstract class Entity {
     public void setX(double x) {
         this.x = x;
     }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+
 }

@@ -4,10 +4,16 @@ public class World implements Runnable {
 
     Thread gameThread;
     Thread playerThread;
+    List<Obstacle> obstacles;
+
+    private int borderLeft = -128;
+    private int borderRight = 128;
+
     public int FPS = 2;
+    private double speed = 0;
     KeyPress keyPress = new KeyPress();
 
-    Player player = new Player(0,0,5,5);
+    Player player = new Player(-10, 0,5,5);
 
     public World() {
         playerThread = new Thread(() -> keyPress.receiveKey());
@@ -54,22 +60,48 @@ public class World implements Runnable {
         if (keyPress.isDown()) {
             player.dive();
         }
-        if (keyPress.isUp()) {
+        if (keyPress.isUp() && !player.isDived() && !player.isJumped()) {
             player.jump();
         }
-        if (keyPress.isLeft()) {
+        if (keyPress.isLeft() && player.getX() > borderLeft + 30) {
             player.goLeft();
         }
-        if (keyPress.isRight()) {
+        if (keyPress.isRight() && player.getX() < borderRight - 20) {
             player.goRight();
         }
 
-        player.playerUpdate();
+        if ((player.getX() + player.getForceX() < borderLeft + 30) && player.getForceX() != 0) {
+            player.setForceX(0);
+            player.setX(borderLeft + 30);
+        }
+
+        if ((player.getX() + player.getForceX() > borderRight - 20) && player.getForceX() != 0) {
+            player.setForceX(0);
+            player.setX(borderRight - 20);
+        }
+
+        if(player.isDead()) {
+            System.out.println("kraj");
+            gameThread.interrupt();
+        }
+
+        generateObstacle();
+
+        obstacles.removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= -128);
+
+        Obstacle.updateObstacles(speed , obstacles);
+
+        player.playerUpdate(obstacles);
 
         keyPress.reset();
     }
 
     public void repaint() {
-        System.out.println(player.getX() + " " + player.getY());
+        System.out.println("player: " + player.getX() + " " + player.getY() + " " + player.getForceX() + " " + player.getForceY());
+        int counter = 0;
+        for (Obstacle obstacle : obstacles){
+            System.out.println("obstacle " + counter + " " + obstacle.getX() + " " + obstacle.getY());
+            counter++;
+        }
     }
 }
