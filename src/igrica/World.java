@@ -5,15 +5,11 @@ import java.util.List;
 
 public class World {
 
-    List<Obstacle> obstacles;
-
+    private List<Obstacle> obstacles;
     private int borderLeft = -128;
     private int borderRight = 128;
-
-    public int FPS = 2;
-    public double refreshPerFps = 10;
-    private double speed = 1 / refreshPerFps;
-    KeyPress keyPress = new KeyPress();
+    public final double SCALAR = 10;
+    private final double speed = 1 / SCALAR;
 
     private Player player;
 
