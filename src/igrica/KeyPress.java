@@ -10,22 +10,19 @@ public class KeyPress{
     {
         Scanner sc = new Scanner(System.in);
 
-        while(true)
-        {
-            int code = sc.next().charAt(0);
+        int code = sc.next().charAt(0);
 
-            if (code == 'a') {
-                Left = true;
-            }
-            if (code == 'd') {
-                Right = true;
-            }
-            if (code == 'w' && !Down) {
-                Up = true;
-            }
-            if (code == 's' && !Up) {
-                Down = true;
-            }
+        if (code == 'a') {
+            Left = true;
+        }
+        if (code == 'd') {
+            Right = true;
+        }
+        if (code == 'w' && !Down) {
+            Up = true;
+        }
+        if (code == 's' && !Up) {
+            Down = true;
         }
     }
 

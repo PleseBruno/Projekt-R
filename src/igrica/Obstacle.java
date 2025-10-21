@@ -24,8 +24,7 @@ public class Obstacle extends Entity {
             case 0: return new Obstacle(128, 20, 20, 40);
             case 1: return new Obstacle(128, 60, 20, 80);
             case 2: return new Obstacle(128, 20, 20, 60);
+            default: throw new IllegalArgumentException("Exception in class Obstacle line 23");
         }
-
-        return null;
     }
 }
