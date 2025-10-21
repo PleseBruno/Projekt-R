@@ -14,16 +14,16 @@ public class Player extends Entity {
     private double moveY = 0;
     private boolean jumped = false;
     private boolean dived = false;
-    private final double gravity = 1.25 / (SCALER * SCALER);
-    private final double friction = 1 / (SCALER * SCALER);
-    private final double buoyancy = 0.75 / (SCALER * SCALER);
+    private final double GRAVITY = 1.25 / (SCALER * SCALER);
+    private final double FRICTION = 1 / (SCALER * SCALER);
+    private final double BOUYANCY = 0.75 / (SCALER * SCALER);
 
     public double getGravity() {
-        return gravity;
+        return GRAVITY;
     }
 
-    public double getBuoyancy() {
-        return buoyancy;
+    public double getBOUYANCY() {
+        return BOUYANCY;
     }
 
     public boolean isJumped() {
@@ -47,7 +47,7 @@ public class Player extends Entity {
     }
 
     public void setMoveX(double moveX) {
-        moveX = moveX;
+        this.moveX = moveX;
     }
 
     public double getMoveY() {
@@ -55,67 +55,56 @@ public class Player extends Entity {
     }
 
     public void setMoveY(double moveY) {
-        moveY = moveY;
+        this.moveY = moveY;
     }
 
     public void jump() {
-        moveY = 10 / SCALER;
         setJumped(true);
-        setMoveY(moveY);
+        setMoveY(10 / SCALER);
     }
 
     public void dive() {
-        moveY = -10 / SCALER;
         setDived(true);
-        setMoveY(moveY);
+        setMoveY(-10 / SCALER);
     }
 
-    public void goRight() {
+    public void moveRight() {
         moveX = 3 / SCALER;
         setMoveX(moveX);
     }
 
-    public void goLeft() {
+    public void moveLeft() {
         moveX = -3 / SCALER;
         setMoveX(moveX);
     }
 
-    public boolean isJumping(){
-        return (getMoveY() > 0 && getY() >= 0) || (getMoveY() < 0 && getY() >= 0);
-    }
-
-    public boolean isDiving() {
-        return (getMoveY() < 0 && getY() <= 0) || (getMoveY() > 0 && getY() <= 0);
-    }
-
-    public void playerUpdate(List<Obstacle> obstacles) {
-
+    public void moveVertical(List<Obstacle> obstacles) {
         if (getMoveX() > 0) {
-            if (getMoveX() - friction < 0) {
+            if (getMoveX() - FRICTION < 0) {
                 setMoveX(0);
             }
             else {
                 setX(getX() + getMoveX());
-                setMoveX(getMoveX() - friction);
+                setMoveX(getMoveX() - FRICTION);
             }
         }
         if (getMoveX() < 0) {
-            if (getMoveX() + friction > 0) {
+            if (getMoveX() + FRICTION > 0) {
                 setMoveX(0);
             }
             else {
                 setX(getX() + getMoveX());
-                setMoveX(getMoveX() + friction);
+                setMoveX(getMoveX() + FRICTION);
             }
         }
         if (isJumped()) {
             if (getY() + getMoveY() < 0) {
-                setY(0);
-                setMoveY(0);
+                    setY(0);
+                    setMoveY(0);
             }
             else {
                 setY(getY() + getMoveY());
-                setMoveY(getMoveY() - gravity);
+                setMoveY(getMoveY() - GRAVITY);
             }
         }
         if (isDived()) {
@@ -125,7 +114,7 @@ public class Player extends Entity {
             }
             else {
                 setY(getY() + getMoveY());
-                setMoveY(getMoveY() + buoyancy);
+                setMoveY(getMoveY() + BOUYANCY);
             }
         }
 
@@ -140,23 +129,39 @@ public class Player extends Entity {
         for (Obstacle obstacle : obstacles) {
             int touch = touching(obstacle);
             switch (touch) {
-                case 1:
+                case 1: //dolazi odozgo
                 {
+
                     setMoveY(0);
                     setY(obstacle.getY() + getHeight());
                     break;
                 }
-                case 2:
+                case 2: //dolazi odozdo
                 {
+
                     setMoveY(0);
                     setY(obstacle.getY() - obstacle.getHeight());
                     break;
+
                 }
-                case 3:
+                case 3: //dolazi slijeva
                 {
                     setMoveX(0);
                     setX(obstacle.getX() - getWidth());
                     break;
+                }
+                case 4: //dolazi sdesna
+                {
+                    setMoveX(0);
+                    setX(obstacle.getX() + getWidth());
+                    break;
+                }
+                case 0:{
+                    break;
+                }
+                default:
+                {
+                    throw new IllegalArgumentException("Exception in class Player line 152");
                 }
             }
         }
@@ -164,22 +169,19 @@ public class Player extends Entity {
 
     public int touching(Obstacle obstacle){
         if (getY()  > (obstacle.getY() - obstacle.getHeight())
-                && (getY() - getHeight()) < obstacle.getY()
-                && (getX() + getWidth()) >  obstacle.getX()
-                && getX() < (obstacle.getX() + obstacle.getWidth())
-        ){
-            if (getY() > obstacle.getY()) return 1;
-            if ((getY() - getHeight()) < obstacle.getY() - obstacle.getHeight())  return 2;
-            if (getX() <  obstacle.getX()) return 3;
+        && (getY() - getHeight()) < obstacle.getY()
+        && (getX() + getWidth()) >  obstacle.getX()
+        && getX() < (obstacle.getX() + obstacle.getWidth())){
+            if (getY() > obstacle.getY() && getMoveY() >= 0) return 1; //dolazi odozgo
+            if ((getY() - getHeight()) < obstacle.getY() - obstacle.getHeight() && getMoveY() <= 0)  return 2; //dolazi odozdo
+            if (getX() <  obstacle.getX()) return 3; //slijeva
+            if (getX() > obstacle.getX() + obstacle.getWidth()) return 4; //sdesna
         }
         return 0;
     }
 
     public boolean isDead() {
-        if (getX() + getWidth() < -98)
-            return true;
-        else
-            return false;
+        return getX() + getWidth() < -98;
     }
 }
 

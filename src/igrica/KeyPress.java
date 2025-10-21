@@ -6,24 +6,20 @@ public class KeyPress{
 
     private boolean Up, Down, Left, Right;
 
-    public void receiveKey()
+    public void receiveKey(String code)
     {
-        Scanner sc = new Scanner(System.in);
-
-        int code = sc.next().charAt(0);
-
-        if (code == 'a') {
-            Left = true;
-        }
-        if (code == 'd') {
-            Right = true;
-        }
-        if (code == 'w' && !Down) {
-            Up = true;
-        }
-        if (code == 's' && !Up) {
-            Down = true;
-        }
+            if (code.equals("a")) {
+                Left = true;
+            }
+            if (code.equals("d")) {
+                Right = true;
+            }
+            if (code.equals("w") && !Down) {
+                Up = true;
+            }
+            if (code.equals("s") && !Up) {
+                Down = true;
+            }
     }
 
     public boolean isUp() {

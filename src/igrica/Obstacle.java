@@ -9,10 +9,9 @@ public class Obstacle extends Entity {
         super(x, y, width, height);
     }
 
-    public static void updateObstacles(double speed, List<Obstacle> obstacles) {
-
+    public static void moveObstacles(double length, List<Obstacle> obstacles) {
         for (Obstacle obstacle : obstacles){
-            obstacle.setX(obstacle.getX() - speed);
+            obstacle.setX(obstacle.getX() - length);
         }
     }
 
