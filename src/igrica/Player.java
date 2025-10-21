@@ -172,8 +172,8 @@ public class Player extends Entity {
         && (getY() - getHeight()) < obstacle.getY()
         && (getX() + getWidth()) >  obstacle.getX()
         && getX() < (obstacle.getX() + obstacle.getWidth())){
-            if (getY() > obstacle.getY() && getMoveY() >= 0) return 1; //dolazi odozgo
-            if ((getY() - getHeight()) < obstacle.getY() - obstacle.getHeight() && getMoveY() <= 0)  return 2; //dolazi odozdo
+            if (getY() > obstacle.getY() && getMoveY() <= 0) return 1; //dolazi odozgo
+            if ((getY() - getHeight()) < obstacle.getY() - obstacle.getHeight() && getMoveY() >dive= 0)  return 2; //dolazi odozdo
             if (getX() <  obstacle.getX()) return 3; //slijeva
             if (getX() > obstacle.getX() + obstacle.getWidth()) return 4; //sdesna
         }
