@@ -1,6 +1,10 @@
-package igrica;
+package application;
 
-import java.util.ArrayList;
+import entities.Obstacle;
+import entities.Player;
+import temp.KeyPress;
+
+import java.util.LinkedList;
 import java.util.List;
 
 public class World implements Runnable {
@@ -21,7 +25,7 @@ public class World implements Runnable {
 
     public World() {
         playerThread = new Thread(() -> keyPress.receiveKey());
-        obstacles = new ArrayList<Obstacle>();
+        obstacles = new LinkedList<Obstacle>();
         obstacles.add(Obstacle.randomObstacle());
         playerThread.start();
     }
@@ -68,7 +72,7 @@ public class World implements Runnable {
     }
 
     public void generateObstacle() {
-       if(obstacles.getLast().getX() <= 0){
+       if(((LinkedList<Obstacle>) obstacles).getLast().getX() <= 0){
            obstacles.add(Obstacle.randomObstacle());
        }
     }

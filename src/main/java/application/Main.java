@@ -1,4 +1,4 @@
-package igrica;
+package application;
 
 import java.io.IOException;
 
