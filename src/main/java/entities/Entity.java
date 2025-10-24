@@ -1,4 +1,4 @@
-package igrica;
+package entities;
 
 public abstract class Entity {
 

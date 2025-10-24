@@ -1,4 +1,4 @@
-package igrica;
+package entities;
 
 import java.util.List;
 import java.util.Random;

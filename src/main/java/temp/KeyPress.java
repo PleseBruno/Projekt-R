@@ -1,4 +1,4 @@
-package igrica;
+package temp;
 
 import java.util.Scanner;
 
