@@ -9,10 +9,9 @@ public class Obstacle extends Entity {
         super(x, y, width, height);
     }
 
-    public static void updateObstacles(double speed, List<Obstacle> obstacles) {
-
+    public static void moveObstacles(double length, List<Obstacle> obstacles) {
         for (Obstacle obstacle : obstacles){
-            obstacle.setX(obstacle.getX() - speed);
+            obstacle.setX(obstacle.getX() - length);
         }
     }
 
@@ -24,8 +23,7 @@ public class Obstacle extends Entity {
             case 0: return new Obstacle(128, 10, 20, 40);
             case 1: return new Obstacle(128, 10, 20, 80);
             case 2: return new Obstacle(128, 10, 20, 60);
+            default: throw new IllegalArgumentException("Exception in class Obstacle line 23");
         }
-
-        return null;
     }
 }

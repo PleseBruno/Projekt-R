@@ -7,68 +7,28 @@ import temp.KeyPress;
 import java.util.LinkedList;
 import java.util.List;
 
-public class World implements Runnable {
+public class World {
 
-    Thread gameThread;
-    Thread playerThread;
-    List<Obstacle> obstacles;
-
+    private List<Obstacle> obstacles;
     private int borderLeft = -128;
     private int borderRight = 128;
+    public final double SCALAR = 10;
+    private final double speed = 1 / SCALAR;
 
-    public int FPS = 2;
-    public double refreshPerFps = 10;
-    private double speed = 1 / refreshPerFps;
-    KeyPress keyPress = new KeyPress();
+    private Player player;
 
-    Player player = new Player(-10, 0,5,5);
+    public Player getPlayer(){
+        return player;
+    }
+
+    public List<Obstacle> getObstacles(){
+        return obstacles;
+    }
 
     public World() {
-        playerThread = new Thread(() -> keyPress.receiveKey());
-        obstacles = new LinkedList<Obstacle>();
+        player = new Player(-10, 0,5,5);
+        obstacles = new ArrayList<Obstacle>();
         obstacles.add(Obstacle.randomObstacle());
-        playerThread.start();
-    }
-
-    public void startGameThread() {
-        gameThread = new Thread(this);
-        gameThread.start();
-    }
-
-    @Override
-    public void run() {
-
-        keyPress.reset();
-
-        double drawInterval = 1E9/(FPS * refreshPerFps);
-        double nextDrawTime = drawInterval + System.nanoTime();
-        int counter = 0;
-
-        while (gameThread != null) {
-
-            update();
-
-            if (counter == 20) {
-                repaint();
-                counter = 0;
-            }
-
-            try {
-                double remainingTime = nextDrawTime - System.nanoTime();
-
-                if (remainingTime < 0) {
-                    remainingTime = 0;
-                }
-
-                counter++;
-                Thread.sleep((long) (remainingTime / 1E6));
-
-                nextDrawTime = drawInterval + System.nanoTime();
-
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
     }
 
     public void generateObstacle() {
@@ -77,7 +37,7 @@ public class World implements Runnable {
        }
     }
 
-    public void update() {
+    public void step(KeyPress keyPress) {
 
         if (keyPress.isDown() && !player.isDived() && !player.isJumped()) {
             player.dive();
@@ -86,44 +46,30 @@ public class World implements Runnable {
             player.jump();
         }
         if (keyPress.isLeft() && player.getX() > borderLeft + 30) {
-            player.goLeft();
+            player.moveLeft();
         }
         if (keyPress.isRight() && player.getX() < borderRight - 20) {
-            player.goRight();
+            player.moveRight();
         }
 
-        if ((player.getX() + player.getForceX() < borderLeft + 30) && player.getForceX() != 0) {
-            player.setForceX(0);
+        if ((player.getX() + player.getMoveX() < borderLeft + 30) && player.getMoveX() != 0) {
+            player.setMoveX(0);
             player.setX(borderLeft + 30);
         }
 
-        if ((player.getX() + player.getForceX() > borderRight - 20) && player.getForceX() != 0) {
-            player.setForceX(0);
+        if ((player.getX() + player.getMoveX() > borderRight - 20) && player.getMoveX() != 0) {
+            player.setMoveX(0);
             player.setX(borderRight - 20);
-        }
-
-        if(player.isDead()) {
-            System.out.println("kraj");
-            gameThread.interrupt();
         }
 
         generateObstacle();
 
         obstacles.removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= -128);
 
-        Obstacle.updateObstacles(speed , obstacles);
+        Obstacle.moveObstacles(speed , obstacles);
 
-        player.playerUpdate(obstacles);
+        player.moveVertical(obstacles);
 
         keyPress.reset();
-    }
-
-    public void repaint() {
-        System.out.println("player: " + player.getX() + " " + player.getY() + " " + player.getForceX() + " " + player.getForceY());
-        int counter = 0;
-        for (Obstacle obstacle : obstacles){
-            System.out.println("obstacle " + counter + " " + obstacle.getX() + " " + obstacle.getY());
-            counter++;
-        }
     }
 }

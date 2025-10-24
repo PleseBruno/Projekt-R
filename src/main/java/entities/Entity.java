@@ -6,7 +6,6 @@ public abstract class Entity {
 
     private double x;
     private double y;
-
     private double width;
     private double height;
 
