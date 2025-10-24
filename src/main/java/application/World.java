@@ -4,6 +4,7 @@ import entities.Obstacle;
 import entities.Player;
 import temp.KeyPress;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class World {
 
     public World() {
         player = new Player(-10, 0,5,5);
-        obstacles = new ArrayList<Obstacle>();
+        obstacles = new LinkedList<Obstacle>();
         obstacles.add(Obstacle.randomObstacle());
     }
 

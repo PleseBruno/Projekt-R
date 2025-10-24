@@ -1,5 +1,9 @@
 package application;
 
+import entities.Obstacle;
+import entities.Player;
+import temp.KeyPress;
+
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.List;
