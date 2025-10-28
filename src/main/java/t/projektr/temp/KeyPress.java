@@ -1,13 +1,14 @@
-package temp;
+package  t.projektr.temp;
 
 import java.util.Scanner;
 import javafx.scene.input.KeyEvent;
 
 public class KeyPress{
 
-    private boolean Up, Down, Left, Right;
+    static private boolean Up, Down, Left, Right;
+    KeyEvent event;
 
-    public void receiveKey(String code)
+    public static void receiveKey(String code)
     {
             if (code.equals("a")) {
                 Left = true;

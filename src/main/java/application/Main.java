@@ -2,13 +2,18 @@ package application;
 
 import entities.Obstacle;
 import entities.Player;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 import temp.KeyPress;
-
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.List;
+import java.util.Scanner;
 
-public class Main {
+public class Main extends Application {
 
     public static void repaint(Player player, List<Obstacle> obstacles) {
         System.out.println("player: " + player.getX() + " " + player.getY() + " " + player.getMoveX() + " " + player.getMoveY());
@@ -19,12 +24,12 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    // Old headless loop preserved for debugging but not used by default.
+    public static void runHeadlessLoop(){
         World world = new World();
         int FPS = 2;
         double refreshPerFps = 10;
         double speed = 1 / refreshPerFps;
-
         Scanner scanner = new Scanner(System.in);
 
         KeyPress keyPress = new KeyPress();
@@ -63,5 +68,26 @@ public class Main {
             }
         }
         scanner.close();
+    }
+
+    public static void main(String[] args){
+        // Launch JavaFX application; if you want the headless console loop, call runHeadlessLoop() instead.
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Group root = new Group();
+        Scene scene = new Scene(root, Color.WHITE);
+        stage.setWidth(1280);
+        stage.setHeight(720);
+        stage.setResizable(false);
+        Rectangle duck = new Rectangle(25, 25, Color.YELLOW);
+        duck.setX(590);
+        duck.setY(335);
+        root.getChildren().add(duck);
+        stage.setScene(scene);
+        stage.setTitle("Patikica v.1.0");
+        stage.show();
     }
 }
