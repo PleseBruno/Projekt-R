@@ -1,10 +1,9 @@
-package  t.projektr.application;
+package projekt.application;
 
-import  t.projektr.entities.Obstacle;
-import  t.projektr.entities.Player;
-import  t.projektr.temp.KeyPress;
+import projekt.entities.Obstacle;
+import projekt.entities.Player;
+import projekt.temp.KeyPress;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package  t.projektr.entities;
+package projekt.entities;
 
 import java.util.List;
 
@@ -153,7 +153,7 @@ public class Player extends Entity {
                 case 4: //dolazi sdesna
                 {
                     setMoveX(0);
-                    setX(obstacle.getX() + getWidth());
+                    setX(obstacle.getX() + obstacle.getWidth());
                     break;
                 }
                 case 0:{
@@ -175,7 +175,7 @@ public class Player extends Entity {
             if (getY() > obstacle.getY() && getMoveY() <= 0) return 1; //dolazi odozgo
             if ((getY() - getHeight()) < obstacle.getY() - obstacle.getHeight() && getMoveY() >= 0)  return 2; //dolazi odozdo
             if (getX() <  obstacle.getX()) return 3; //slijeva
-            if (getX() > obstacle.getX() + obstacle.getWidth()) return 4; //sdesna
+            if (getX() + getWidth() > obstacle.getX() + obstacle.getWidth()) return 4; //sdesna
         }
         return 0;
     }

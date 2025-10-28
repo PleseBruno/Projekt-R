@@ -1,17 +1,17 @@
-package t.projektr.application;
+package projekt.application;
 
 import javafx.application.Platform;
 import javafx.scene.input.KeyCode;
-import t.projektr.entities.Obstacle;
-import t.projektr.entities.Player;
+import projekt.entities.Obstacle;
+import projekt.entities.Player;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import t.projektr.temp.KeyPress;
-import java.io.IOException;
+import projekt.temp.KeyPress;
+
 import java.util.List;
 
 public class Main extends Application {
@@ -28,19 +28,17 @@ public class Main extends Application {
     private static final int STAGE_PX_W = 1280;
     private static final int STAGE_PX_H = 720;
     private static final int WORLD_W = 256;    // world width in world units
-    private static final int WORLD_H = 140;    // world height in world units
+    private static final int WORLD_H = 144;    // world height in world units
     private static final int BORDER_LEFT = -128; // world left border
     private static double scaleX;
     private static double scaleY;
 
     private static double worldToPixelX(double worldX, double rectPixelWidth) {
-        double px = (worldX - BORDER_LEFT) * scaleX;
-        return px - rectPixelWidth / 2.0;
+        return (worldX - BORDER_LEFT) * scaleX;
     }
 
     private static double worldToPixelY(double worldY, double rectPixelHeight) {
-        double px = (WORLD_H / 2.0 - worldY) * scaleY;
-        return px - rectPixelHeight / 2.0;
+        return (WORLD_H / 2.0 - worldY) * scaleY;
     }
 
     public static void repaint(Player player, List<Obstacle> obstacles) {
@@ -71,7 +69,7 @@ public class Main extends Application {
                 for (Obstacle obstacle : obstacles) {
                     double obsPxW = obstacle.getWidth() * scaleX;
                     double obsPxH = obstacle.getHeight() * scaleY;
-                    Rectangle r = new Rectangle(obsPxW, obsPxH, Color.GREEN);
+                    Rectangle r = new Rectangle(obsPxW, obsPxH, Color.SADDLEBROWN);
                     r.setX(worldToPixelX(obstacle.getX(), obsPxW));
                     r.setY(worldToPixelY(obstacle.getY(), obsPxH));
                     obstaclesGroupRef.getChildren().add(r);
@@ -131,7 +129,9 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Group root = new Group();
-        Scene scene = new Scene(root, Color.WHITE);
+        Scene scene = new Scene(root, Color.LIGHTBLUE);
+        Rectangle bottom = new Rectangle(STAGE_PX_W, STAGE_PX_H / 2.0, Color.DODGERBLUE);
+        bottom.setY(STAGE_PX_H / 2.0 + 10);
         stage.setWidth(STAGE_PX_W);
         stage.setHeight(STAGE_PX_H);
         stage.setResizable(false);
@@ -147,7 +147,7 @@ public class Main extends Application {
 
         double duckPxW = uiPlayer.getWidth() * scaleX;
         double duckPxH = uiPlayer.getHeight() * scaleY;
-        Rectangle duck = new Rectangle(duckPxW, duckPxH, Color.YELLOW);
+        Rectangle duck = new Rectangle(duckPxW, duckPxH, Color.BLACK);
         duck.setX(worldToPixelX(uiPlayer.getX(), duckPxW));
         duck.setY(worldToPixelY(uiPlayer.getY(), duckPxH));
 
@@ -157,7 +157,7 @@ public class Main extends Application {
         for (Obstacle o : uiWorld.getObstacles()) {
             double obsPxW = o.getWidth() * scaleX;
             double obsPxH = o.getHeight() * scaleY;
-            Rectangle r = new Rectangle(obsPxW, obsPxH, Color.GREEN);
+            Rectangle r = new Rectangle(obsPxW, obsPxH, Color.BLUE);
             r.setX(worldToPixelX(o.getX(), obsPxW));
             r.setY(worldToPixelY(o.getY(), obsPxH));
             obstaclesGroup.getChildren().add(r);
@@ -180,8 +180,10 @@ public class Main extends Application {
         duckRef = duck;
         obstaclesGroupRef = obstaclesGroup;
 
+        root.getChildren().add(bottom);
 
         root.getChildren().addAll(obstaclesGroup, duck);
+
 
         stage.setScene(scene);
         stage.setTitle("Patikica v.0.1");

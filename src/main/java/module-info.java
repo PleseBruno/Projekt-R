@@ -11,9 +11,9 @@ module t.projektr {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens t.projektr to javafx.fxml;
-    opens t.projektr.application to javafx.graphics;
-    exports t.projektr.application;
-    exports t.projektr.entities;
-    exports t.projektr.temp;
+    opens projekt to javafx.fxml;
+    opens projekt.application to javafx.graphics;
+    exports projekt.application;
+    exports projekt.entities;
+    exports projekt.temp;
 }

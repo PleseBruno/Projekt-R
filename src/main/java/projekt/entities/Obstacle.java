@@ -1,4 +1,4 @@
-package  t.projektr.entities;
+package projekt.entities;
 
 import java.util.List;
 import java.util.Random;
@@ -20,9 +20,9 @@ public class Obstacle extends Entity {
         int randomNum = rand.nextInt(3);
 
         switch (randomNum){
-            case 0: return new Obstacle(128, 10, 50, 30);
-            case 1: return new Obstacle(128, 10, 50, 30);
-            case 2: return new Obstacle(128, 10, 50, 30);
+            case 0: return new Obstacle(128, 10, 40, 60);
+            case 1: return new Obstacle(128, 15, 60, 30);
+            case 2: return new Obstacle(128, 50, 40, 60);
             default: throw new IllegalArgumentException("Exception in class Obstacle line 23");
         }
     }

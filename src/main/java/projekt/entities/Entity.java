@@ -1,4 +1,4 @@
-package entities;
+package projekt.entities;
 
 public abstract class Entity {
 
