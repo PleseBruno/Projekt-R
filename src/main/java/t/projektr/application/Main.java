@@ -83,7 +83,7 @@ public class Main extends Application {
     // Old headless loop preserved for debugging. When RUN_HEADLESS is true this runs in a background thread.
     public static void oldMain(){
         World world = new World();
-        int FPS = 2;
+        int FPS = 30;
         double refreshPerFps = 10;
         double speed = 1 / refreshPerFps;
 

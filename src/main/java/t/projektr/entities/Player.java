@@ -16,7 +16,7 @@ public class Player extends Entity {
     private boolean dived = false;
     private final double GRAVITY = 1.25 / (SCALER * SCALER);
     private final double FRICTION = 1 / (SCALER * SCALER);
-    private final double BOUYANCY = 0.75 / (SCALER * SCALER);
+    private final double BOUYANCY = 0.9 / (SCALER * SCALER);
 
     public double getGravity() {
         return GRAVITY;

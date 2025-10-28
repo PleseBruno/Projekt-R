@@ -20,9 +20,9 @@ public class Obstacle extends Entity {
         int randomNum = rand.nextInt(3);
 
         switch (randomNum){
-            case 0: return new Obstacle(128, 10, 20, 40);
-            case 1: return new Obstacle(128, 10, 20, 80);
-            case 2: return new Obstacle(128, 10, 20, 60);
+            case 0: return new Obstacle(128, 10, 50, 30);
+            case 1: return new Obstacle(128, 10, 50, 30);
+            case 2: return new Obstacle(128, 10, 50, 30);
             default: throw new IllegalArgumentException("Exception in class Obstacle line 23");
         }
     }

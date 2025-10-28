@@ -13,7 +13,7 @@ module t.projektr {
 
     opens t.projektr to javafx.fxml;
     opens t.projektr.application to javafx.graphics;
-    exports t.projektr;
+    exports t.projektr.application;
     exports t.projektr.entities;
     exports t.projektr.temp;
 }
