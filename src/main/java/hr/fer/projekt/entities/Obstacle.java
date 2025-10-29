@@ -1,4 +1,4 @@
-package projekt.entities;
+package hr.fer.projekt.entities;
 
 import java.util.List;
 import java.util.Random;

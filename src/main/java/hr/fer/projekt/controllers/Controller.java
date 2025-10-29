@@ -1,4 +1,4 @@
-package projekt.controllers;
+package hr.fer.projekt.controllers;
 
 import javafx.beans.binding.Bindings;
 import javafx.fxml.Initializable;

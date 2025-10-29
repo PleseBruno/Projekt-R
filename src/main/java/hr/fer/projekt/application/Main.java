@@ -1,22 +1,27 @@
-package projekt.application;
+package application;
 
+import hr.fer.projekt.application.World;
+import hr.fer.projekt.entities.Obstacle;
+import hr.fer.projekt.entities.Player;
+import hr.fer.projekt.temp.KeyPress;
 import javafx.application.Platform;
 import javafx.scene.input.KeyCode;
-import projekt.entities.Obstacle;
-import projekt.entities.Player;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import projekt.temp.KeyPress;
 
 import java.util.List;
 
 public class Main extends Application {
 
     // Toggle to run the old headless loop concurrently with the JavaFX UI.
+    /**
+     * TODO: fix so that game runs normally when headless set to false
+     */
     public static boolean RUN_HEADLESS = true;
 
     // UI references used by repaint to update the scene.
@@ -41,6 +46,13 @@ public class Main extends Application {
         return (WORLD_H / 2.0 - worldY) * scaleY;
     }
 
+    /**
+     * The function is called when
+     *
+     *
+     * @param player
+     * @param obstacles
+     */
     public static void repaint(Player player, List<Obstacle> obstacles) {
         System.out.println("player: " + player.getX() + " " + player.getY() + " " + player.getMoveX() + " " + player.getMoveY());
         int counter = 0;
@@ -121,11 +133,15 @@ public class Main extends Application {
         }
     }
 
-    public static void main(String[] args){
 
-        launch(args);
-    }
-
+    /**
+     * This function is called on launch.
+     * <p>
+     * It sets up the JavaFX scene, computes the scale factors
+     *
+     * @param stage
+     * @throws Exception
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Group root = new Group();

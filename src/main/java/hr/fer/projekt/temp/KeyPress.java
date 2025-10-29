@@ -1,4 +1,4 @@
-package projekt.temp;
+package hr.fer.projekt.temp;
 
 import java.util.Scanner;
 import javafx.scene.input.KeyEvent;

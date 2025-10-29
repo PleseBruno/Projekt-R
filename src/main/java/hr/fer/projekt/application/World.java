@@ -1,8 +1,8 @@
-package projekt.application;
+package hr.fer.projekt.application;
 
-import projekt.entities.Obstacle;
-import projekt.entities.Player;
-import projekt.temp.KeyPress;
+import hr.fer.projekt.entities.Obstacle;
+import hr.fer.projekt.entities.Player;
+import hr.fer.projekt.temp.KeyPress;
 
 import java.util.LinkedList;
 import java.util.List;
