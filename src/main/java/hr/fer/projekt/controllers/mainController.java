@@ -1,5 +1,6 @@
 package hr.fer.projekt.controllers;
 
+import hr.fer.projekt.entities.Obstacle;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -38,41 +39,60 @@ public class mainController implements Initializable {
         gameLoop.start();
     }
 
-    @FXML
-    void keyPressed(KeyEvent event) {
-        if(event.getCode() == KeyCode.SPACE){
-            fly();
-        }
-    }
-
-    private void fly(){
-        if (player.getLayoutY() + player.getY() <= jumpHeight) {
-            moveBirdY(-(player.getLayoutY() + player.getY()));
-            time = 0;
-            return;
-        }
-
-        moveBirdY(-jumpHeight);
-        time = 0;
-    }
-
-    //Called every game frame
-    private void update() {
-        time ++;
-        moveBirdY(yDelta * time);
-
-        if(isBirdDead()){
-            resetBird();
-        }
-    }
-
     //Everything called once, at the game start
     private void load(){
         System.out.println("Game starting");
 
     }
 
-    private void moveBirdY(double positionChange){
+    //Called every game frame
+    private void update() {
+        time ++;
+        moveObstacles(yDelta * time);
+
+        if(isBirdDead()){
+            resetBird();
+        }
+    }
+
+    @FXML
+    void keyPressed(KeyEvent event) {
+        if (event.getCode() == KeyCode.SPACE) {
+            fly();
+        }
+        /*
+        if(event.getCode() == KeyCode.SPACE || event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
+            jump();
+        } else if(event.getCode() == KeyCode.DOWN || event.getCode() == KeyCode.S) {
+            dive();
+        } else if(event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.A) {
+            moveLeft();
+        } else if(event.getCode() == KeyCode.RIGHT || event.getCode() == KeyCode.D) {
+            moveRight();
+        }
+        */
+    }
+
+    private void fly(){
+        if (player.getLayoutY() + player.getY() <= jumpHeight) {
+            movePlayerY(-(player.getLayoutY() + player.getY()));
+            time = 0;
+            return;
+        }
+
+        movePlayerY(-jumpHeight);
+        time = 0;
+    }
+
+    private Obstacle createObstacle() {
+        return null;
+    }
+
+    private void moveObstacles(double positionChange){
+    }
+
+
+    private void movePlayerY(double positionChange){
         player.setY(player.getY() + positionChange);
     }
 

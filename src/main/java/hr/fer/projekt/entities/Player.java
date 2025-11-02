@@ -8,6 +8,9 @@ public class Player extends Entity {
         super(x, y, width, height);
     }
 
+    /**
+     * TODO: pizda materina :)
+     */
     private final double SCALER = 10;
     
     private double moveX = 0;
