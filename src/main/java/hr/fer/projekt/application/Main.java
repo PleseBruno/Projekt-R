@@ -1,4 +1,4 @@
-package application;
+package hr.fer.projekt.application;
 
 import hr.fer.projekt.application.World;
 import hr.fer.projekt.entities.Obstacle;
@@ -18,10 +18,6 @@ import java.util.List;
 
 public class Main extends Application {
 
-    // Toggle to run the old headless loop concurrently with the JavaFX UI.
-    /**
-     * TODO: fix so that game runs normally when headless set to false
-     */
     public static boolean RUN_HEADLESS = true;
 
     // UI references used by repaint to update the scene.
@@ -29,30 +25,6 @@ public class Main extends Application {
     private static Rectangle duckRef;
     private static Group obstaclesGroupRef;
 
-    // World-to-stage mapping constants
-    private static final int STAGE_PX_W = 1280;
-    private static final int STAGE_PX_H = 720;
-    private static final int WORLD_W = 256;    // world width in world units
-    private static final int WORLD_H = 144;    // world height in world units
-    private static final int BORDER_LEFT = -128; // world left border
-    private static double scaleX;
-    private static double scaleY;
-
-    private static double worldToPixelX(double worldX, double rectPixelWidth) {
-        return (worldX - BORDER_LEFT) * scaleX;
-    }
-
-    private static double worldToPixelY(double worldY, double rectPixelHeight) {
-        return (WORLD_H / 2.0 - worldY) * scaleY;
-    }
-
-    /**
-     * The function is called when
-     *
-     *
-     * @param player
-     * @param obstacles
-     */
     public static void repaint(Player player, List<Obstacle> obstacles) {
         System.out.println("player: " + player.getX() + " " + player.getY() + " " + player.getMoveX() + " " + player.getMoveY());
         int counter = 0;
@@ -61,20 +33,15 @@ public class Main extends Application {
             counter++;
         }
 
-        // If the JavaFX UI is available, update it on the JavaFX Application Thread.
         if (rootRef != null && duckRef != null && obstaclesGroupRef != null) {
             Platform.runLater(() -> {
                 // Compute pixel sizes from world sizes
                 double duckWorldW = player.getWidth();
                 double duckWorldH = player.getHeight();
-                double duckPxW = duckWorldW * scaleX;
-                double duckPxH = duckWorldH * scaleY;
 
                 // Update player (duck) size and position (centered on world coords)
-                duckRef.setWidth(duckPxW);
-                duckRef.setHeight(duckPxH);
-                duckRef.setX(worldToPixelX(player.getX(), duckPxW));
-                duckRef.setY(worldToPixelY(player.getY(), duckPxH));
+                duckRef.setWidth(player.getX());
+                duckRef.setHeight(player.getY());
 
                 // Redraw obstacles as green rectangles sized according to obstacle world size
                 obstaclesGroupRef.getChildren().clear();
@@ -108,7 +75,6 @@ public class Main extends Application {
                 keyPress.reset();
                 counter = 0;
             }
-            world.step(keyPress);
 
             if (counter % 20 == 0) {
                 // This now also triggers redraw in the JavaFX application (if running).
