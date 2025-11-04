@@ -4,12 +4,14 @@ import hr.fer.projekt.application.World;
 import hr.fer.projekt.entities.Obstacle;
 import hr.fer.projekt.temp.KeyPress;
 import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -28,7 +30,6 @@ public class mainController implements Initializable {
 
     @FXML
     private AnchorPane stage;
-
     
     private World world;
     
@@ -39,14 +40,30 @@ public class mainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        stage.requestFocus();
+
         world = new World();
+
+        player.setLayoutX(world.getPlayer().getX());
+        player.setLayoutY(world.getPlayer().getY());
+
+        for (Obstacle obstacle : world.getObstacles()) {
+            stage.getChildren().add(obstacle.getShape());
+        }
 
         load();
 
         gameLoop = new AnimationTimer() {
             @Override
             public void handle(long l) {
+
                 update();
+                step();
+
+                System.out.println(world.getObstacles().getFirst().getHeight() + " "  + world.getObstacles().getFirst().getWidth()
+                        + " " + world.getObstacles().getFirst().getX() + " " + world.getObstacles().getFirst().getY()
+                        + " " + player.getX() + " " + player.getY() + " " + player.getWidth() + " " + player.getHeight());
+
             }
         };
 
@@ -59,18 +76,19 @@ public class mainController implements Initializable {
 
     }
 
-    public void step(KeyPress keyPress) {
+    public void step() {
 
-        if (keyPress.isDown() && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
+        if (sPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
             world.getPlayer().dive();
         }
-        if (keyPress.isUp() && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
+        if (wPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
             world.getPlayer().jump();
         }
-        if (keyPress.isLeft() && world.getPlayer().getX() > world.getBorderLeft() + 30) {
+
+        if (aPressed && world.getPlayer().getX() > world.getBorderLeft() + 30) {
             world.getPlayer().moveLeft();
         }
-        if (keyPress.isRight() && world.getPlayer().getX() < world.getBorderRight() - 20) {
+        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 20) {
             world.getPlayer().moveRight();
         }
 
@@ -86,19 +104,26 @@ public class mainController implements Initializable {
 
         world.generateObstacle();
 
-        world.getObstacles().removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= -128);
+        world.getObstacles().removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= 0);
 
-        Obstacle.moveObstacles(1 , world.getObstacles());
-
+        Obstacle.moveObstacles(0, world.getObstacles());
+//ne 0 !!!!!!!!!!!!
         world.getPlayer().moveVertical(world.getObstacles());
 
-        keyPress.reset();
+        aPressed = false;
+        dPressed = false;
+        wPressed = false;
+        sPressed = false;
     }
 
     //Called every game frame
     private void update() {
         time ++;
-        moveObstacles(yDelta * time);
+        moveObstacles(0.5);
+//ne 0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+        player.setLayoutX(world.getPlayer().getX());
+        player.setLayoutY(world.getPlayer().getY());
+
 
         if(isBirdDead()){
             resetBird();
@@ -108,14 +133,16 @@ public class mainController implements Initializable {
     @FXML
     void keyPressed(KeyEvent event) {
 
+        if(event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.A) {
+            aPressed = true;
+        }
+        if(event.getCode() == KeyCode.RIGHT || event.getCode() == KeyCode.D) {
+            dPressed = true;
+        }
         if(event.getCode() == KeyCode.SPACE || event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
             wPressed = true;
         } else if(event.getCode() == KeyCode.DOWN || event.getCode() == KeyCode.S) {
             sPressed = true;
-        } else if(event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.A) {
-            aPressed = true;
-        } else if(event.getCode() == KeyCode.RIGHT || event.getCode() == KeyCode.D) {
-            dPressed = true;
         }
     }
 
@@ -123,7 +150,6 @@ public class mainController implements Initializable {
         if (player.getLayoutY() + player.getY() <= jumpHeight) {
             movePlayerY(-(player.getLayoutY() + player.getY()));
             time = 0;
-            return;
         }
 
         movePlayerY(-jumpHeight);
@@ -135,8 +161,12 @@ public class mainController implements Initializable {
     }
 
     private void moveObstacles(double positionChange){
-    }
 
+        for (Obstacle obstacle : world.getObstacles()) {
+            obstacle.setX(obstacle.getX() - positionChange);
+        }
+
+    }
 
     private void movePlayerY(double positionChange){
         player.setY(player.getY() + positionChange);

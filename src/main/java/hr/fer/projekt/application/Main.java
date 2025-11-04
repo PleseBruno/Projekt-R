@@ -20,7 +20,6 @@ public class Main extends Application {
 
     public static boolean RUN_HEADLESS = true;
 
-    // UI references used by repaint to update the scene.
     private static Group rootRef;
     private static Rectangle duckRef;
     private static Group obstaclesGroupRef;
@@ -35,29 +34,23 @@ public class Main extends Application {
 
         if (rootRef != null && duckRef != null && obstaclesGroupRef != null) {
             Platform.runLater(() -> {
-                // Compute pixel sizes from world sizes
-                double duckWorldW = player.getWidth();
-                double duckWorldH = player.getHeight();
 
-                // Update player (duck) size and position (centered on world coords)
-                duckRef.setWidth(player.getX());
-                duckRef.setHeight(player.getY());
+                duckRef.setWidth(player.getWidth());
+                duckRef.setHeight(player.getHeight());
 
-                // Redraw obstacles as green rectangles sized according to obstacle world size
                 obstaclesGroupRef.getChildren().clear();
                 for (Obstacle obstacle : obstacles) {
-                    double obsPxW = obstacle.getWidth() * scaleX;
-                    double obsPxH = obstacle.getHeight() * scaleY;
-                    Rectangle r = new Rectangle(obsPxW, obsPxH, Color.SADDLEBROWN);
-                    r.setX(worldToPixelX(obstacle.getX(), obsPxW));
-                    r.setY(worldToPixelY(obstacle.getY(), obsPxH));
+
+                    Rectangle r = new Rectangle(obstacle.getWidth(), obstacle.getHeight(), Color.SADDLEBROWN);
+                    r.setX(obstacle.getX());
+                    r.setY(obstacle.getY());
+
                     obstaclesGroupRef.getChildren().add(r);
                 }
             });
         }
     }
 
-    // Old headless loop preserved for debugging. When RUN_HEADLESS is true this runs in a background thread.
     public static void oldMain(){
         World world = new World();
         int FPS = 30;
@@ -68,18 +61,10 @@ public class Main extends Application {
 
         double drawInterval = 1E9/(FPS * refreshPerFps);
         double nextDrawTime = drawInterval + System.nanoTime();
-        int counter = 0;
-        String line;
-        while (!world.getPlayer().isDead()) {
-            if (counter % 60 == 0) {
-                keyPress.reset();
-                counter = 0;
-            }
 
-            if (counter % 20 == 0) {
-                // This now also triggers redraw in the JavaFX application (if running).
-                repaint(world.getPlayer(), world.getObstacles());
-            }
+        while (!world.getPlayer().isDead()) {
+
+            repaint(world.getPlayer(), world.getObstacles());
 
             try {
                 double remainingTime = nextDrawTime - System.nanoTime();
@@ -88,7 +73,6 @@ public class Main extends Application {
                     remainingTime = 0;
                 }
 
-                counter++;
                 Thread.sleep((long) (remainingTime / 1E6));
 
                 nextDrawTime = drawInterval + System.nanoTime();
@@ -99,62 +83,42 @@ public class Main extends Application {
         }
     }
 
-
-    /**
-     * This function is called on launch.
-     * <p>
-     * It sets up the JavaFX scene, computes the scale factors
-     *
-     * @param stage
-     * @throws Exception
-     */
     @Override
     public void start(Stage stage) throws Exception {
         Group root = new Group();
         Scene scene = new Scene(root, Color.LIGHTBLUE);
-        Rectangle bottom = new Rectangle(STAGE_PX_W, STAGE_PX_H / 2.0, Color.DODGERBLUE);
-        bottom.setY(STAGE_PX_H / 2.0 + 10);
-        stage.setWidth(STAGE_PX_W);
-        stage.setHeight(STAGE_PX_H);
+        Rectangle bottom = new Rectangle(600, 200, Color.DODGERBLUE);
+        bottom.setY(210);
+        stage.setWidth(600);
+        stage.setHeight(400);
         stage.setResizable(false);
-
-        // compute scale factors from stage and world sizes
-        scaleX = STAGE_PX_W / (double) WORLD_W;
-        scaleY = STAGE_PX_H / (double) WORLD_H;
-
 
         World uiWorld = new World();
         Player uiPlayer = uiWorld.getPlayer();
 
-
-        double duckPxW = uiPlayer.getWidth() * scaleX;
-        double duckPxH = uiPlayer.getHeight() * scaleY;
-        Rectangle duck = new Rectangle(duckPxW, duckPxH, Color.BLACK);
-        duck.setX(worldToPixelX(uiPlayer.getX(), duckPxW));
-        duck.setY(worldToPixelY(uiPlayer.getY(), duckPxH));
-
+        Rectangle duck = new Rectangle(uiPlayer.getWidth(), uiPlayer.getHeight(), Color.BLACK);
+        duck.setX(uiPlayer.getX());
+        duck.setY(uiPlayer.getY());
 
         Group obstaclesGroup = new Group();
 
-        for (Obstacle o : uiWorld.getObstacles()) {
-            double obsPxW = o.getWidth() * scaleX;
-            double obsPxH = o.getHeight() * scaleY;
-            Rectangle r = new Rectangle(obsPxW, obsPxH, Color.BLUE);
-            r.setX(worldToPixelX(o.getX(), obsPxW));
-            r.setY(worldToPixelY(o.getY(), obsPxH));
-            obstaclesGroup.getChildren().add(r);
+        for (Obstacle obs : uiWorld.getObstacles()) {
+            Rectangle rectangle = new Rectangle(obs.getWidth(), obs.getHeight(), Color.BLUE);
+            rectangle.setX(obs.getX());
+            rectangle.setY(obs.getY());
+            obstaclesGroup.getChildren().add(rectangle);
         }
-        scene.setOnKeyPressed(e -> {
-            if (e.getCode() == KeyCode.A) {
+        scene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.A) {
                 KeyPress.receiveKey("a");
-            }  if (e.getCode() == KeyCode.D) {
+            }  if (event.getCode() == KeyCode.D) {
                 KeyPress.receiveKey("d");
-            }  if (e.getCode() == KeyCode.W) {
+            }  if (event.getCode() == KeyCode.W) {
                 KeyPress.receiveKey("w");
-                e.consume();
-            }  if (e.getCode() == KeyCode.S) {
+                event.consume();
+            }  if (event.getCode() == KeyCode.S) {
                 KeyPress.receiveKey("s");
-                e.consume();
+                event.consume();
             }
         });
 
@@ -166,11 +130,9 @@ public class Main extends Application {
 
         root.getChildren().addAll(obstaclesGroup, duck);
 
-
         stage.setScene(scene);
-        stage.setTitle("Patikica v.0.1");
+        stage.setTitle("Patkica v.0.2");
         stage.show();
-
 
         if (RUN_HEADLESS) {
             Thread headless = new Thread(Main::oldMain, "HeadlessLoop");

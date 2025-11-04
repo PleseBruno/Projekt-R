@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -15,11 +16,12 @@ public class Launcher extends Application {
         scene.getRoot().requestFocus();
         stage.setTitle("Patkica");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
     public static void main(String[] args) {
-        boolean headless = true;
+        boolean headless = false;
 
         if (headless) {
             runModel();
