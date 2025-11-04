@@ -8,9 +8,6 @@ public class Player extends Entity {
         super(x, y, width, height);
     }
 
-    /**
-     * TODO: pizda materina :)
-     */
     private final double SCALER = 10;
 
     private double moveX = 0;
@@ -20,14 +17,6 @@ public class Player extends Entity {
     private final double GRAVITY = 1.2 / (SCALER * SCALER);
     private final double FRICTION = 1 / (SCALER * SCALER);
     private final double BOUYANCY = 0.9 / (SCALER * SCALER);
-
-    public double getGravity() {
-        return GRAVITY;
-    }
-
-    public double getBOUYANCY() {
-        return BOUYANCY;
-    }
 
     public boolean isJumped() {
         return jumped;
@@ -187,7 +176,7 @@ public class Player extends Entity {
     }
 
     public boolean isDead() {
-        return getX() + getWidth() < 70;
+        return getX() + getWidth() < 0;
     }
 }
 

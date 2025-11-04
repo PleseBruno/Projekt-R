@@ -8,11 +8,5 @@
       <Rectangle fx:id="nebo" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <Rectangle fx:id="more" arcHeight="5.0" arcWidth="5.0" fill="LIGHTBLUE" height="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <Rectangle fx:id="player" arcHeight="5.0" arcWidth="5.0" fill="#fcba03" height="44.0" layoutX="73.0" layoutY="178.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
-<!--      <Rectangle fx:id="iceberg" arcHeight="5.0" arcWidth="5.0" fill="ALICEBLUE" height="175" layoutX="600" layoutY="125"-->
-<!--                 stroke="BLACK" strokeType="INSIDE" width="75" />-->
-<!--      <Rectangle fx:id="boat" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75" layoutX="600" layoutY="160"-->
-<!--                 stroke="BLACK" strokeType="INSIDE" width="150" />-->
-<!--      <Rectangle fx:id="island" arcHeight="5.0" arcWidth="5.0" fill="SANDYBROWN" height="250" layoutX="600" layoutY="150"-->
-<!--                 stroke="BLACK" strokeType="INSIDE" width="100" />-->
    </children>
 </AnchorPane>

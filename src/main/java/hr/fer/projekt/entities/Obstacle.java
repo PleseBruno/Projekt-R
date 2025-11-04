@@ -4,33 +4,22 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Random;
 
 public class Obstacle extends Entity implements Comparable<Obstacle> {
 
-    private Color color;
-    private String ID;
+    private final Color COLOR;
+    private final String ID;
 
     public Obstacle(double x, double y, double width, double height, Color color, String ID) {
         super(x, y, width, height);
-        this.color = color;
+        this.COLOR = color;
         this.ID = ID;
-//        shape = new Rectangle(width, height);
-//        shape.setFill(color);
-//        shape.setArcHeight(5.0);
-//       shape.setArcWidth(5.0);
-//        shape.setStroke(Color.BLACK);
-//        shape.setStrokeType(StrokeType.INSIDE);
-//        shape.setLayoutX(x);
-
-//        shape.setLayoutY(y);
-//        shape.setId(this.toString());
     }
 
-    public Color getColor() {
-        return color;
+    public Color getCOLOR() {
+        return COLOR;
     }
 
     public String getID() {
@@ -45,12 +34,13 @@ public class Obstacle extends Entity implements Comparable<Obstacle> {
 
     public static Obstacle randomObstacle(String ID){
         Random rand = new Random();
-        int randomNum = rand.nextInt(3);
+        int randomNum = rand.nextInt(4);
 
         switch (randomNum){
-            case 0: return new Obstacle(700, 125, 75, 175, Color.ALICEBLUE, ID);
-            case 1: return new Obstacle(700, 160, 150, 75, Color.WHITE, ID);
-            case 2: return new Obstacle(700, 150, 100, 250, Color.SANDYBROWN, ID);
+            case 0: return new Obstacle(700, 125, 100, 175, Color.ALICEBLUE, ID); // iceberg
+            case 1: return new Obstacle(700, 135, 200, 100, Color.WHITE, ID); // boat
+            case 2: return new Obstacle(700, 175, 125, 300, Color.SANDYBROWN, ID); // island
+            case 3: return new Obstacle(700, 0, 100, 250, Color.SLATEGRAY, ID); // stalactite
             default: throw new IllegalArgumentException("Exception in class Obstacle line 23");
         }
     }
@@ -62,12 +52,11 @@ public class Obstacle extends Entity implements Comparable<Obstacle> {
         rectangle.setLayoutX(getX());
         rectangle.setLayoutY(getY());
         rectangle.setId(this.getID());
-        rectangle.setFill(getColor());
+        rectangle.setFill(getCOLOR());
         rectangle.setStrokeType(StrokeType.INSIDE);
         rectangle.setStroke(Color.BLACK);
         return rectangle;
     }
-
 
     @Override
     public int compareTo(Obstacle o) {

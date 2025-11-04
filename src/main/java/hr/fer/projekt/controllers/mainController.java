@@ -3,19 +3,13 @@ package hr.fer.projekt.controllers;
 import hr.fer.projekt.application.World;
 import hr.fer.projekt.entities.Obstacle;
 import javafx.animation.AnimationTimer;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
-
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -29,16 +23,8 @@ public class mainController implements Initializable {
             aPressed = false, dPressed = false,
             sPressed = false, wPressed = false, newObstacle = false;
 
-    AnimationTimer gameLoop;
-
     @FXML
     private Rectangle player;
-
-    @FXML
-    private Rectangle more;
-
-    @FXML
-    private Rectangle nebo;
 
     private Map<String, Rectangle> obstacles;
 
@@ -49,7 +35,6 @@ public class mainController implements Initializable {
     
     double yDelta = 0.02 ;
     double time = 0;
-    int jumpHeight = 100;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -68,25 +53,10 @@ public class mainController implements Initializable {
 
         load();
 
-        Thread physicsThread = new Thread(() -> {
-            try {
-                // physics loop: wake every 1 ms and perform GAME_SPEED_STEPS steps to speed simulation
-                while (!world.getPlayer().isDead()) {
-                    int steps = Math.max(1, GAME_SPEED_STEPS);
-                    for (int i = 0; i < steps; i++) {
-                        step();
-
-                    }
-                    Thread.sleep(5); // sleep 1ms as requested (physics tick)
-                }
-            } catch (InterruptedException ex) {
-                // thread interrupted -> exit
-            }
-        }, "PhysicsLoop");
-        physicsThread.setDaemon(true);
+        Thread physicsThread = getPhysicsThread();
         physicsThread.start();
 
-        // Rendering: AnimationTimer that repaints at configured FPS (does not affect physics)
+        // Rendering
         final long[] prev = {System.nanoTime()};
         final long intervalNanos = (long) (1e9 / Math.max(1, FPS));
         AnimationTimer painter = new AnimationTimer() {
@@ -99,27 +69,30 @@ public class mainController implements Initializable {
             }
         };
         painter.start();
-    };
-//
-//        gameLoop = new AnimationTimer() {
-//            @Override
-//            public void handle(long l) {
-//
-//                update();
-//                step();
-//
-//                System.out.println(world.getObstacles().getFirst().getHeight() + " "  + world.getObstacles().getFirst().getWidth()
-//                        + " " + world.getObstacles().getFirst().getX() + " " + world.getObstacles().getFirst().getY()
-//                        + " " + player.getX() + " " + player.getY() + " " + player.getWidth() + " " + player.getHeight());
-//            }
-//            gameLoop.start
+    }
+
+    private Thread getPhysicsThread() {
+        Thread physicsThread = new Thread(() -> {
+            try {
+                // physics loop
+                while (!world.getPlayer().isDead()) {
+                    int steps = Math.max(1, GAME_SPEED_STEPS);
+                    for (int i = 0; i < steps; i++) {
+                        step();
+
+                    }
+                    Thread.sleep(3);
+                }
+            } catch (InterruptedException ignored) {
+            }
+        }, "PhysicsLoop");
+        physicsThread.setDaemon(true);
+        return physicsThread;
+    }
 
     //Everything called once, at the game start
     private void load(){
         System.out.println("Game starting");
-
-
-
     }
 
     public void step() {
@@ -138,21 +111,20 @@ public class mainController implements Initializable {
             world.getPlayer().moveRight();
         }
 
-        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() < world.getBorderLeft() + 70) && world.getPlayer().getMoveX() != 0) {
+        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() < world.getBorderLeft() + 30) && world.getPlayer().getMoveX() != 0) {
             world.getPlayer().setMoveX(0);
-            world.getPlayer().setX(world.getBorderLeft() + 70);
+            world.getPlayer().setX(world.getBorderLeft() + 30);
         }
 
-        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() > world.getBorderRight() - 50) && world.getPlayer().getMoveX() != 0) {
+        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() > world.getBorderRight() - 70) && world.getPlayer().getMoveX() != 0) {
             world.getPlayer().setMoveX(0);
-            world.getPlayer().setX(world.getBorderRight() - 50);
+            world.getPlayer().setX(world.getBorderRight() - 70);
         }
         if (world.getObstacles().getLast().getX() < 250) {
 
             world.generateObstacle();
 
             newObstacle = true;
-
         }
 
         world.getObstacles().removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= 0);
@@ -177,14 +149,13 @@ public class mainController implements Initializable {
             newObstacle = false;
         }
 
-
         for(Obstacle obstacle : world.getObstacles()) {
             obstacles.get(obstacle.getID()).setLayoutX(obstacle.getX());
             obstacles.get(obstacle.getID()).setLayoutY(obstacle.getY());
         }
 
-        if(isBirdDead()){
-            resetBird();
+        if(world.getPlayer().isDead()){
+            System.out.println("Bird is dead");
         }
     }
 
@@ -219,14 +190,9 @@ public class mainController implements Initializable {
         }
     }
 
-    private boolean isBirdDead(){
-        return (player.getLayoutX() + player.getWidth() < 0);
-    }
-
     private void resetBird(){
         world.getPlayer().setX(73);
         world.getPlayer().setY(178);
         time = 0;
     }
-
 }

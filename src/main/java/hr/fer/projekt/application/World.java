@@ -2,10 +2,7 @@ package hr.fer.projekt.application;
 
 import hr.fer.projekt.entities.Obstacle;
 import hr.fer.projekt.entities.Player;
-import javafx.scene.Node;
-
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class World {
