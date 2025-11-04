@@ -62,25 +62,21 @@ public class Player extends Entity {
     }
 
     public void jump() {
-        System.out.println("jumping");
         setJumped(true);
         setMoveY(-17 / SCALER);
     }
 
     public void dive() {
-        System.out.println("diving");
         setDived(true);
         setMoveY(17 / SCALER);
     }
 
     public void moveRight() {
-        System.out.println("moving right");
         moveX = 6 / SCALER;
         setMoveX(moveX);
     }
 
     public void moveLeft() {
-        System.out.println("moving left");
         moveX = -6 / SCALER;
         setMoveX(moveX);
     }
@@ -137,7 +133,6 @@ public class Player extends Entity {
 
         for (Obstacle obstacle : obstacles) {
             int touch = touching(obstacle);
-            System.out.println(touch);
             switch (touch) {
 
                 case 1: //dolazi odozgo
@@ -179,7 +174,6 @@ public class Player extends Entity {
     }
 
     public int touching(Obstacle obstacle){
-        System.out.println(getX() + " " + getY() + " " + getMoveX() + " " + getMoveY());
         if (getY()  < (obstacle.getY() + obstacle.getHeight())
         && (getY() + getHeight()) > obstacle.getY()
         && (getX() + getWidth()) >  obstacle.getX()

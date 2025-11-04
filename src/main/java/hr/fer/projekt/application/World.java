@@ -2,9 +2,9 @@ package hr.fer.projekt.application;
 
 import hr.fer.projekt.entities.Obstacle;
 import hr.fer.projekt.entities.Player;
-import hr.fer.projekt.temp.KeyPress;
 import javafx.scene.Node;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,16 +24,17 @@ public class World {
         return obstacles;
     }
 
+    private int objectCounter = 1;
+
     public World() {
         player = new Player(73, 178,57,44);
-        obstacles = new LinkedList<Obstacle>();
-        obstacles.add(Obstacle.randomObstacle());
+        obstacles = new ArrayList<Obstacle>();
+        obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter)));
     }
 
     public void generateObstacle() {
-       if(obstacles.getLast().getX() <= 0){
-           obstacles.add(Obstacle.randomObstacle());
-       }
+        objectCounter++;
+        obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter)));
     }
 
     public int getBorderLeft() {
