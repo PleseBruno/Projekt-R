@@ -100,8 +100,10 @@ public class Player extends Entity {
                 setMoveX(0);
             }
             else {
+
                 setX(getX() + getMoveX());
                 setMoveX(getMoveX() + FRICTION);
+
             }
         }
         if (isJumped()) {
@@ -135,7 +137,9 @@ public class Player extends Entity {
 
         for (Obstacle obstacle : obstacles) {
             int touch = touching(obstacle);
+            System.out.println(touch);
             switch (touch) {
+
                 case 1: //dolazi odozgo
                 {
 
@@ -175,12 +179,13 @@ public class Player extends Entity {
     }
 
     public int touching(Obstacle obstacle){
+        System.out.println(getX() + " " + getY() + " " + getMoveX() + " " + getMoveY());
         if (getY()  < (obstacle.getY() + obstacle.getHeight())
         && (getY() + getHeight()) > obstacle.getY()
         && (getX() + getWidth()) >  obstacle.getX()
         && getX() < (obstacle.getX() + obstacle.getWidth())){
-            if (getY() < obstacle.getY() && getMoveY() <= 0) return 1; //dolazi odozgo
-            if ((getY() + getHeight()) > obstacle.getY() + obstacle.getHeight() && getMoveY() >= 0)  return 2; //dolazi odozdo
+            if (getY() < obstacle.getY() && getMoveY() >= 0) return 1; //dolazi odozgo
+            if ((getY() + getHeight()) > obstacle.getY() + obstacle.getHeight() && getMoveY() <= 0)  return 2; //dolazi odozdo
             if (getX() <  obstacle.getX()) return 3; //slijeva
             if (getX() + getWidth() > obstacle.getX() + obstacle.getWidth()) return 4; //sdesna
         }
@@ -188,7 +193,7 @@ public class Player extends Entity {
     }
 
     public boolean isDead() {
-        return getX() + getWidth() < 50;
+        return getX() + getWidth() < 70;
     }
 }
 

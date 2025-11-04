@@ -60,10 +60,9 @@ public class mainController implements Initializable {
                 update();
                 step();
 
-                System.out.println(world.getObstacles().getFirst().getHeight() + " "  + world.getObstacles().getFirst().getWidth()
-                        + " " + world.getObstacles().getFirst().getX() + " " + world.getObstacles().getFirst().getY()
-                        + " " + player.getX() + " " + player.getY() + " " + player.getWidth() + " " + player.getHeight());
-
+//                System.out.println(world.getObstacles().getFirst().getHeight() + " "  + world.getObstacles().getFirst().getWidth()
+//                        + " " + world.getObstacles().getFirst().getX() + " " + world.getObstacles().getFirst().getY()
+//                        + " " + player.getX() + " " + player.getY() + " " + player.getWidth() + " " + player.getHeight());
             }
         };
 
@@ -85,21 +84,21 @@ public class mainController implements Initializable {
             world.getPlayer().jump();
         }
 
-        if (aPressed && world.getPlayer().getX() > world.getBorderLeft() + 30) {
+        if (aPressed && world.getPlayer().getX() > world.getBorderLeft() + 70) {
             world.getPlayer().moveLeft();
         }
-        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 20) {
+        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 50) {
             world.getPlayer().moveRight();
         }
 
-        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() < world.getBorderLeft() + 30) && world.getPlayer().getMoveX() != 0) {
+        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() < world.getBorderLeft() + 70) && world.getPlayer().getMoveX() != 0) {
             world.getPlayer().setMoveX(0);
-            world.getPlayer().setX(world.getBorderLeft() + 30);
+            world.getPlayer().setX(world.getBorderLeft() + 70);
         }
 
-        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() > world.getBorderRight() - 20) && world.getPlayer().getMoveX() != 0) {
+        if ((world.getPlayer().getX() + world.getPlayer().getMoveX() > world.getBorderRight() - 50) && world.getPlayer().getMoveX() != 0) {
             world.getPlayer().setMoveX(0);
-            world.getPlayer().setX(world.getBorderRight() - 20);
+            world.getPlayer().setX(world.getBorderRight() - 50);
         }
 
         world.generateObstacle();
@@ -124,7 +123,6 @@ public class mainController implements Initializable {
         player.setLayoutX(world.getPlayer().getX());
         player.setLayoutY(world.getPlayer().getY());
 
-
         if(isBirdDead()){
             resetBird();
         }
@@ -145,16 +143,16 @@ public class mainController implements Initializable {
             sPressed = true;
         }
     }
-
-    private void fly(){
-        if (player.getLayoutY() + player.getY() <= jumpHeight) {
-            movePlayerY(-(player.getLayoutY() + player.getY()));
-            time = 0;
-        }
-
-        movePlayerY(-jumpHeight);
-        time = 0;
-    }
+//
+//    private void fly(){
+//        if (player.getLayoutY() + player.getY() <= jumpHeight) {
+//            movePlayerY(-(player.getLayoutY() + player.getY()));
+//            time = 0;
+//        }
+//
+//        movePlayerY(-jumpHeight);
+//        time = 0;
+//    }
 
     private Obstacle createObstacle() {
         return null;
@@ -167,18 +165,18 @@ public class mainController implements Initializable {
         }
 
     }
-
-    private void movePlayerY(double positionChange){
-        player.setY(player.getY() + positionChange);
-    }
+//
+//    private void movePlayerY(double positionChange){
+//        player.setY(world.getPlayer().getY() + positionChange);
+//    }
 
     private boolean isBirdDead(){
-        double playerY = player.getLayoutY() + player.getY();
-        return playerY >= stage.getHeight();
+        return (player.getLayoutX() + player.getWidth() < 0);
     }
 
     private void resetBird(){
-        player.setY(0);
+        world.getPlayer().setX(73);
+        world.getPlayer().setY(178);
         time = 0;
     }
 }
