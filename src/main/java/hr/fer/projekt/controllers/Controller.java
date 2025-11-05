@@ -1,15 +1,22 @@
+// language: java
 package hr.fer.projekt.controllers;
 
 import hr.fer.projekt.application.World;
 import hr.fer.projekt.entities.Obstacle;
 import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
+
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -17,7 +24,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     private final boolean graphicsOn = true;
-    private final int FPS = 120;
+    private final int FPS = 60;
     private final int GAME_SPEED_STEPS = 1;
     private final int TICK_TIME_MS= 3 ;
     private volatile double time = 0;
@@ -28,39 +35,40 @@ public class Controller implements Initializable {
 
     @FXML
     private Rectangle player;
+    @FXML
+    private Rectangle more;
+    @FXML
+    private Rectangle nebo;
 
     private Map<String, Rectangle> obstacles;
 
     @FXML
     private AnchorPane stage;
-    
+
     private volatile World world;
+
+    private AnimationTimer painter;
+    private Thread physicsThread;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        markGameStart();
         stage.requestFocus();
-
-        world = new World();
-
         obstacles = new HashMap<>();
-        obstacles.put(world.getObstacles().getLast().getID(), world.getObstacles().getLast().toRectangle());
-        stage.getChildren().add(obstacles.get(world.getObstacles().getLast().getID()));
+        startGame();
 
+    }
 
-        player.setLayoutX(world.getPlayer().getX());
-        player.setLayoutY(world.getPlayer().getY());
-
-        load();
-
-        Thread physicsThread = getPhysicsThread();
+    private void startPhysicsThread() {
+        physicsThread = getPhysicsThread();
         physicsThread.start();
+    }
 
-        // Rendering
+    private void startPainter() {
         final long[] prev = {System.nanoTime()};
         final long intervalNanos = (long) (1e9 / Math.max(1, FPS));
-        AnimationTimer painter = new AnimationTimer() {
+        painter = new AnimationTimer() {
             @Override
             public void handle(long now) {
                 if (now - prev[0] >= intervalNanos) {
@@ -74,12 +82,12 @@ public class Controller implements Initializable {
                 }
                 if(world.getPlayer().isDead()){
                     System.out.println("Game over! Your score: " + (time));
+                    saveScore(time);
                     this.stop();
                 }
             }
         };
         painter.start();
-
     }
 
     private Thread getPhysicsThread() {
@@ -101,10 +109,6 @@ public class Controller implements Initializable {
         return physicsThread;
     }
 
-    //Everything called once, at the game start
-    private void load(){
-        System.out.println("Game starting");
-    }
 
     public void step() {
 
@@ -167,7 +171,7 @@ public class Controller implements Initializable {
     }
 
     private void cosoleprint() {
-        time ++;
+        time++;
 
         System.out.println("Player position: X=" + world.getPlayer().getX() + " Y=" + world.getPlayer().getY());
 
@@ -192,6 +196,12 @@ public class Controller implements Initializable {
         } else if(event.getCode() == KeyCode.DOWN || event.getCode() == KeyCode.S) {
             sPressed = true;
         }
+
+        if (event.getCode() == KeyCode.R) {
+            if (world != null && world.getPlayer().isDead()) {
+                startGame();
+            }
+        }
     }
 
     @FXML
@@ -206,6 +216,53 @@ public class Controller implements Initializable {
             wPressed = false;
         } else if(event.getCode() == KeyCode.DOWN || event.getCode() == KeyCode.S) {
             sPressed = false;
+        }
+    }
+
+    private void startGame() {
+        Platform.runLater(() -> {
+            if (painter != null) {
+                painter.stop();
+            }
+            System.out.println("Game starting");
+            world = new World();
+            time = 0;
+            if (graphicsOn){
+                newObstacle = false;
+                obstacles.clear();
+
+                stage.getChildren().removeIf(node -> (node instanceof Rectangle) && node != player && node != more && node != nebo);
+
+                obstacles.put(world.getObstacles().getLast().getID(), world.getObstacles().getLast().toRectangle());
+                stage.getChildren().add(obstacles.get(world.getObstacles().getLast().getID()));
+
+                player.setLayoutX(world.getPlayer().getX());
+                player.setLayoutY(world.getPlayer().getY());
+
+            }
+
+            startPhysicsThread();
+            startPainter();
+        });
+    }
+
+    private void saveScore(double score) {
+        try {
+            String entry = ((long) score) + System.lineSeparator();
+            Files.write(Paths.get("scores.txt"), entry.getBytes(StandardCharsets.UTF_8),
+                    StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        } catch (Exception e) {
+            System.err.println("Failed to save score: " + e.getMessage());
+        }
+    }
+
+    private void markGameStart() {
+        try {
+            String entry = "New game started." + System.lineSeparator();
+            Files.write(Paths.get("scores.txt"), entry.getBytes(StandardCharsets.UTF_8),
+                    StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        } catch (Exception e) {
+            System.err.println("Failed to write game start: " + e.getMessage());
         }
     }
 
