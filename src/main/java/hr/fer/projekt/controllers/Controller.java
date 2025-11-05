@@ -27,6 +27,7 @@ public class Controller implements Initializable {
     private final int FPS = 60;
     private final int GAME_SPEED_STEPS = 1;
     private final int TICK_TIME_MS= 3 ;
+    private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
 
     public volatile Boolean
@@ -133,7 +134,7 @@ public class Controller implements Initializable {
             newObstacle = true;
         }
 
-        Obstacle.moveObstacles(0.5 + time / 1000.0, world.getObstacles());
+        Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 1000.0, world.getObstacles());
 
         world.getObstacles().removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= -50);
 
