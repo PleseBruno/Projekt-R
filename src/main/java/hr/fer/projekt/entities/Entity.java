@@ -1,4 +1,4 @@
-package entities;
+package hr.fer.projekt.entities;
 
 public abstract class Entity {
 
