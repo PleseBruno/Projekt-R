@@ -17,8 +17,10 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     private final boolean graphicsOn = true;
-    private final int FPS = 60;
+    private final int FPS = 120;
     private final int GAME_SPEED_STEPS = 1;
+    private final int TICK_TIME_MS= 3 ;
+    private volatile double time = 0;
 
     public volatile Boolean
             aPressed = false, dPressed = false,
@@ -33,9 +35,7 @@ public class Controller implements Initializable {
     private AnchorPane stage;
     
     private volatile World world;
-    
-    double yDelta = 0.02 ;
-    volatile double time = 0;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -92,7 +92,7 @@ public class Controller implements Initializable {
                         step();
 
                     }
-                    Thread.sleep(3);
+                    Thread.sleep(TICK_TIME_MS);
                 }
             } catch (InterruptedException ignored) {
             }
