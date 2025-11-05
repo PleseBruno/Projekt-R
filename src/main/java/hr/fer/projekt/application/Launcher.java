@@ -20,16 +20,6 @@ public class Launcher extends Application {
     }
 
     public static void main(String[] args) {
-        boolean headless = false;
-
-        if (headless) {
-            runModel();
-        } else {
             launch();
-        }
-    }
-
-    private static void runModel() {
-        System.out.println("Starting application...");
     }
 }
