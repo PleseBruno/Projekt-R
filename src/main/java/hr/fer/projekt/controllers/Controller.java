@@ -7,6 +7,7 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
@@ -40,6 +41,8 @@ public class Controller implements Initializable {
     private Rectangle more;
     @FXML
     private Rectangle nebo;
+    @FXML
+    private TextField scoreCounter;
 
     private Map<String, Rectangle> obstacles;
 
@@ -168,6 +171,8 @@ public class Controller implements Initializable {
             }
             return false;
         });
+
+        scoreCounter.setText("SCORE: " + String.valueOf((int) time));
 
     }
 
