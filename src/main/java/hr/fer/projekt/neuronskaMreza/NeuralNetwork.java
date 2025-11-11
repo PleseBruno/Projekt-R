@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NeuralNetwork {
-    private int inputNodes;
-    private int outputNodes;
-    private int[] hiddenLayers; // npr. [8, 6, 4]
+    private final int inputNodes;
+    private final int outputNodes;
+    private final int[] hiddenLayers; // npr. [8, 6, 4]
     private List<Matrix> weights; // lista matrica tezina
     private List<Matrix> biases;  // lista w0 tezina
 
@@ -69,6 +69,7 @@ public class NeuralNetwork {
             Matrix w = weights.get(i);
             Matrix b = biases.get(i);
 
+            // izracun net koeficijenata sloja ( wx + b )
             Matrix layer = Matrix.multiply(w, current);
             layer.add(b);
             layer.map(x -> sigmoid(x));
@@ -76,6 +77,16 @@ public class NeuralNetwork {
         }
 
         return current.toArray();
+    }
+
+    // Generiranje izlaza mreže za dani ulaz
+    public double[] generateOutput(double[] inputArray) {
+        double[] trenutni = inputArray;
+        for (int i = 0; i < weights.size(); i++) {
+            trenutni = sljedeciLayer(trenutni);
+        }
+        return trenutni;
+
     }
 
     // Mogućnost kloniranja
@@ -91,7 +102,6 @@ public class NeuralNetwork {
     private double sigmoid(double x) {
         return 1 / (1 + Math.exp(-x));
     }
-
 
 
     public void print() {
