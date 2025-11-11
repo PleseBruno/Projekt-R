@@ -13,6 +13,7 @@ public class NeuralNetwork {
     private List<Matrix> weights; // lista matrica tezina
     private List<Matrix> biases;  // lista w0 tezina
 
+    // Konstruktor za kreiranje nove neuronske mreze sa zadanim brojem ulaznih, skrivenih i izlaznih cvorova i nasumicnim inicijaliziranjem tezina
     public NeuralNetwork(int inputNodes, int[] hiddenLayers, int outputNodes) {
         this.inputNodes = inputNodes;
         this.outputNodes = outputNodes;
@@ -37,6 +38,7 @@ public class NeuralNetwork {
         randomizeParameters();
     }
 
+    // Konstruktor za harcodanje cijele neuronske mreze procitane u txt fileu
     public NeuralNetwork(int inputNodes, int[] hiddenLayers, int outputNodes, List<Matrix> weights, List<Matrix> biases) {
         this.inputNodes = inputNodes;
         this.outputNodes = outputNodes;
@@ -54,12 +56,13 @@ public class NeuralNetwork {
         }
     }
 
-
+    
     public void randomizeParameters() {
         for (Matrix w : weights) w.randomize();
         for (Matrix b : biases) b.randomize();
     }
 
+    // Izračun sljedećeg sloja za dani ulaz
     public double[] sljedeciLayer(double[] inputArray) {
         Matrix input = Matrix.fromArray(inputArray);
         Matrix current = input;
@@ -99,6 +102,7 @@ public class NeuralNetwork {
         return clone;
     }
 
+    // sigmuoidna funkcija za racunanje net koeficijenata
     private double sigmoid(double x) {
         return 1 / (1 + Math.exp(-x));
     }
