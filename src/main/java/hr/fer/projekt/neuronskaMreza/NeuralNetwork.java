@@ -56,7 +56,7 @@ public class NeuralNetwork {
         }
     }
 
-    
+
     public void randomizeParameters() {
         for (Matrix w : weights) w.randomize();
         for (Matrix b : biases) b.randomize();
@@ -114,5 +114,33 @@ public class NeuralNetwork {
         for (int h : hiddenLayers) System.out.print(h + " -> ");
         System.out.println("Output: " + outputNodes);
         System.out.println("Total layers: " + (hiddenLayers.length + 2));
+    }
+
+    public List<Matrix> getWeights() {
+        return weights;
+    }
+
+    public void setWeights(List<Matrix> weights) {
+        this.weights = weights;
+    }
+
+    public List<Matrix> getBiases() {
+        return biases;
+    }
+
+    public void setBiases(List<Matrix> biases) {
+        this.biases = biases;
+    }
+
+    public int getInputNodes() {
+        return inputNodes;
+    }
+
+    public int getOutputNodes() {
+        return outputNodes;
+    }
+
+    public int[] getHiddenLayers() {
+        return hiddenLayers;
     }
 }
