@@ -5,12 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="stage" maxHeight="400" maxWidth="600" minHeight="400.0" minWidth="600.0" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.fer.projekt.controllers.Controller">
+<AnchorPane fx:id="stage" maxHeight="400" maxWidth="600" minHeight="400.0" minWidth="600.0" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.fer.projekt.controllers.Controller">
    <children>
       <Rectangle fx:id="nebo" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <Rectangle fx:id="more" arcHeight="5.0" arcWidth="5.0" fill="LIGHTBLUE" height="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <Rectangle fx:id="player" arcHeight="5.0" arcWidth="5.0" fill="#fcba03" height="44.0" layoutX="73.0" layoutY="178.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
-      <TextField fx:id="scoreCounter" prefHeight="25.0" prefWidth="154.0" promptText="SCORE: 000000" style="-fx-background-color: transparend; -fx-font-weight: bold;">
+      <TextField fx:id="scoreCounter" prefHeight="25.0" prefWidth="154.0" promptText="SCORE: 000000" style="-fx-background-color: transparent; -fx-font-weight: bold;">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

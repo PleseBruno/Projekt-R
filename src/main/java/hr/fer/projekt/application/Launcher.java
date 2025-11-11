@@ -1,5 +1,6 @@
 package hr.fer.projekt.application;
 
+import hr.fer.projekt.neuronskaMreza.NeuralNetwork;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -35,6 +36,6 @@ public class Launcher extends Application {
     }
 
     public static void main(String[] args) {
-            launch();
+        launch();
     }
 }

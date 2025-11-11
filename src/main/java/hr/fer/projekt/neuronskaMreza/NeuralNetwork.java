@@ -62,8 +62,8 @@ public class NeuralNetwork {
         for (Matrix b : biases) b.randomize();
     }
 
-    // Izračun sljedećeg sloja za dani ulaz
-    public double[] sljedeciLayer(double[] inputArray) {
+    // Izracun izlaza mreze za dani ulazni niz podataka
+    public double[] generateOutput(double[] inputArray) {
         Matrix input = Matrix.fromArray(inputArray);
         Matrix current = input;
 
@@ -82,15 +82,6 @@ public class NeuralNetwork {
         return current.toArray();
     }
 
-    // Generiranje izlaza mreže za dani ulaz
-    public double[] generateOutput(double[] inputArray) {
-        double[] trenutni = inputArray;
-        for (int i = 0; i < weights.size(); i++) {
-            trenutni = sljedeciLayer(trenutni);
-        }
-        return trenutni;
-
-    }
 
     // Mogućnost kloniranja
     public NeuralNetwork copy() {
@@ -114,6 +105,24 @@ public class NeuralNetwork {
         for (int h : hiddenLayers) System.out.print(h + " -> ");
         System.out.println("Output: " + outputNodes);
         System.out.println("Total layers: " + (hiddenLayers.length + 2));
+        System.out.println("Weight matrices: ");
+        for (Matrix w : weights) {
+            for (int i = 0; i < w.rows; i++) {
+                for (int j = 0; j < w.cols; j++) {
+                    System.out.printf("%.4f ", w.data[i][j]);
+                }
+                System.out.println();
+            }
+        }
+        System.out.println("Bias matrices: ");
+        for (Matrix b : biases) {
+            for (int i = 0; i < b.rows; i++) {
+                for (int j = 0; j < b.cols; j++) {
+                    System.out.printf("%.4f ", b.data[i][j]);
+                }
+                System.out.println();
+            }
+        }
     }
 
     public List<Matrix> getWeights() {
@@ -142,5 +151,22 @@ public class NeuralNetwork {
 
     public int[] getHiddenLayers() {
         return hiddenLayers;
+    }
+
+    public static void main(String[] args) {
+        int inputNodes = 5;
+        int[] hiddenLayers = {4, 3};
+        int outputNodes = 2;
+
+        NeuralNetwork nn = new NeuralNetwork(inputNodes, hiddenLayers, outputNodes);
+        nn.print();
+
+        double[] input = {0.5, 0.2, 0.8, 0.1, 0.9};
+        double[] output = nn.generateOutput(input);
+
+        System.out.println("Output:");
+        for (double val : output) {
+            System.out.printf("%.4f ", val);
+        }
     }
 }
