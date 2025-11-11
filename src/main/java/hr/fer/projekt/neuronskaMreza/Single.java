@@ -1,8 +1,9 @@
 package hr.fer.projekt.neuronskaMreza;
 
-import hr.fer.projekt.temp.dataSet;
+
 import java.lang.Integer;
 import java.util.*;
+
 
 public class Single {
     Map<List<Integer>,List<Integer>> dataSetMap;
@@ -13,7 +14,7 @@ public class Single {
     double[] result;
 
     public Single() {
-        dataSetMap = dataSet.getDataSetMap();
+        //dataSetMap = DataSet.getDataSetMap();
         //TODO: implementirati generiranje random matrica
 
         //privremeno generiramo random input

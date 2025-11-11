@@ -1,15 +1,13 @@
 package hr.fer.projekt.genetskiAlgoritam;
 
 import hr.fer.projekt.neuronskaMreza.Single;
-import hr.fer.projekt.temp.dataSet;
-
 import java.util.*;
 
 public class GeneticAlgorithm {
 
     Single single = new Single();
 
-    Map<List<Integer>, List<Integer>> dataSetMap = dataSet.getDataSetMap();
+    Map<List<Integer>, List<Integer>> dataSetMap = new HashMap<>();
 
     private final int VELICINA_POP = 50;
 

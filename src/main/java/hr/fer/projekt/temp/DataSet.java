@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class dataSet {
+public class DataSet {
 
     public static Map<List<Integer>, List<Integer>> getDataSetMap() {
         Map<List<Integer>, List<Integer>> dataSetMap = new HashMap<List<Integer>, List<Integer>>();

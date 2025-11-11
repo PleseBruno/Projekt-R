@@ -1,0 +1,104 @@
+package hr.fer.projekt.neuronskaMreza;
+
+
+import hr.fer.projekt.matematika.Matrix;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NeuralNetwork {
+    private int inputNodes;
+    private int outputNodes;
+    private int[] hiddenLayers; // npr. [8, 6, 4]
+    private List<Matrix> weights; // lista matrica tezina
+    private List<Matrix> biases;  // lista w0 tezina
+
+    public NeuralNetwork(int inputNodes, int[] hiddenLayers, int outputNodes) {
+        this.inputNodes = inputNodes;
+        this.outputNodes = outputNodes;
+        this.hiddenLayers = hiddenLayers.clone();
+
+        weights = new ArrayList<>();
+        biases = new ArrayList<>();
+
+        // Broj slojeva = input + hidden + output
+        int prevNodes = inputNodes;
+        for (int hiddenNodes : hiddenLayers) {
+            weights.add(new Matrix(hiddenNodes, prevNodes));
+            biases.add(new Matrix(hiddenNodes, 1));
+            prevNodes = hiddenNodes;
+        }
+
+        // Zadnji sloj (output)
+        weights.add(new Matrix(outputNodes, prevNodes));
+        biases.add(new Matrix(outputNodes, 1));
+
+        // Inicijalizacija nasumično
+        randomizeParameters();
+    }
+
+    public NeuralNetwork(int inputNodes, int[] hiddenLayers, int outputNodes, List<Matrix> weights, List<Matrix> biases) {
+        this.inputNodes = inputNodes;
+        this.outputNodes = outputNodes;
+        this.hiddenLayers = hiddenLayers.clone();
+
+
+        this.weights = new ArrayList<>();
+        for (Matrix w : weights) {
+            this.weights.add(Matrix.copy(w));
+        }
+
+        this.biases = new ArrayList<>();
+        for (Matrix b : biases) {
+            this.biases.add(Matrix.copy(b));
+        }
+    }
+
+
+    public void randomizeParameters() {
+        for (Matrix w : weights) w.randomize();
+        for (Matrix b : biases) b.randomize();
+    }
+
+    public double[] sljedeciLayer(double[] inputArray) {
+        Matrix input = Matrix.fromArray(inputArray);
+        Matrix current = input;
+
+        // Prolazak kroz sve slojeve
+        for (int i = 0; i < weights.size(); i++) {
+            Matrix w = weights.get(i);
+            Matrix b = biases.get(i);
+
+            Matrix layer = Matrix.multiply(w, current);
+            layer.add(b);
+            layer.map(x -> sigmoid(x));
+            current = layer;
+        }
+
+        return current.toArray();
+    }
+
+    // Mogućnost kloniranja
+    public NeuralNetwork copy() {
+        NeuralNetwork clone = new NeuralNetwork(inputNodes, hiddenLayers, outputNodes);
+        for (int i = 0; i < weights.size(); i++) {
+            clone.weights.set(i, Matrix.copy(weights.get(i)));
+            clone.biases.set(i, Matrix.copy(biases.get(i)));
+        }
+        return clone;
+    }
+
+    private double sigmoid(double x) {
+        return 1 / (1 + Math.exp(-x));
+    }
+
+
+
+    public void print() {
+        System.out.println("Network structure:");
+        System.out.print("Input: " + inputNodes + " -> ");
+        for (int h : hiddenLayers) System.out.print(h + " -> ");
+        System.out.println("Output: " + outputNodes);
+        System.out.println("Total layers: " + (hiddenLayers.length + 2));
+    }
+}
