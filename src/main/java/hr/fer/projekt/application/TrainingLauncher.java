@@ -9,14 +9,14 @@ import hr.fer.projekt.temp.DataSet;
 import java.util.*;
 
 public class TrainingLauncher {
-    private final static int NUM_TESTS = 10;
+    private final static int NUM_TESTS = 30;
     private final static int NUM_NEURALNETWORKS = 50;
     private final static int NUM_GENS = 500;
     private static Random rand = new Random();
 
     public static void main(String[] args) {
         int inputNodes = 10;
-        int[] hiddenLayers = {10, 7, 6};
+        int[] hiddenLayers = {6, 8, 4};
         int outputNodes = 4;
         Map<Set<Integer>, Set<Integer>> dataSetMap = DataSet.getDataSetMap();
 

@@ -7,7 +7,13 @@ import java.util.*;
 
 public class GeneticAlgorithms {
 
-    public static Map<NeuralNetwork, Double> makeNewGen (Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen) {
+    private static final double MUTATION_CHANCE = 0.25;
+
+    private static final double ALPHA = 0.25;
+
+    private static Random rand = new Random();
+
+    public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         switch (geneticType) {
@@ -21,14 +27,21 @@ public class GeneticAlgorithms {
         return newGeneration;
     }
 
-    private static double BLX_ALPHA(double w1,double w2) {
+    private static double BLX_ALPHA(double w1, double w2, double alpha) {
         double length = Math.abs(w2 - w1);
-        if (length == 0) {length = 0.01;}
-        if (w1 >= w2) {
-            return new Random().nextDouble(w2 - 0.25*length < -1 ? -1 : w2 - 0.25*length, w1 + 0.25*length > 1 ? 1 : w1 + 0.25*length);
-        } else {
-            return new Random().nextDouble(w1 - 0.25*length < -1 ? -1 : w1 - 0.25*length, w2 + 0.25*length > 1 ? 1 : w2 + 0.25*length);
+        if (length == 0) {
+            length = 0.01;
         }
+        if (w1 >= w2) {
+            return new Random().nextDouble(w2 - alpha * length < -1 ? -1 : w2 - alpha * length, w1 + alpha * length > 1 ? 1 : w1 + alpha * length);
+        } else {
+            return new Random().nextDouble(w1 - alpha * length < -1 ? -1 : w1 - alpha * length, w2 + alpha * length > 1 ? 1 : w2 + alpha * length);
+        }
+    }
+
+    private static double mutate(double val, double MUTATION_CHANCE) {
+
+        return rand.nextDouble(0, 1) < MUTATION_CHANCE ? rand.nextDouble(-1, 1) : val;
     }
 
     private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen) {
@@ -55,7 +68,7 @@ public class GeneticAlgorithms {
             floor = 0;
             drugiClan = findRandomClan(oldGeneration, idxDrugiClan, floor);
 
-            newGeneration.put(createChild(prviClan, drugiClan, gen, i+1), null);
+            newGeneration.put(createChild(prviClan, drugiClan, gen, i + 1), null);
         }
 
         return newGeneration;
@@ -68,13 +81,13 @@ public class GeneticAlgorithms {
             if (idxPrviClan < value + floor && idxPrviClan >= floor) {
                 return entry.getKey();
             } else {
-            floor += value;
+                floor += value;
             }
         }
         throw new RuntimeException("Clan not found - Linija:78");
     }
 
-    private static NeuralNetwork createChild(NeuralNetwork prviClan, NeuralNetwork drugiClan, int gen,int id) {
+    private static NeuralNetwork createChild(NeuralNetwork prviClan, NeuralNetwork drugiClan, int gen, int id) {
         NeuralNetwork child = prviClan.copy();
         child.setID("NN-" + gen + "." + id);
 
@@ -87,11 +100,11 @@ public class GeneticAlgorithms {
         List<Matrix> childWeight = prviClanWeights;
         List<Matrix> childBias = prviClanBiases;
 
-        Iterator<Matrix> iteratorPrvogClanaWeights =  prviClanWeights.iterator();
-        Iterator<Matrix> iteratorPrvogClanaBiases =  prviClanBiases.iterator();
+        Iterator<Matrix> iteratorPrvogClanaWeights = prviClanWeights.iterator();
+        Iterator<Matrix> iteratorPrvogClanaBiases = prviClanBiases.iterator();
 
-        Iterator<Matrix> iteratorDrugogClanaWeights =  drugiClanWeights.iterator();
-        Iterator<Matrix> iteratorDrugogClanaBiases =  drugiClanBiases.iterator();
+        Iterator<Matrix> iteratorDrugogClanaWeights = drugiClanWeights.iterator();
+        Iterator<Matrix> iteratorDrugogClanaBiases = drugiClanBiases.iterator();
 
 
         generateNewValues(childWeight, iteratorPrvogClanaWeights, iteratorDrugogClanaWeights);
@@ -110,7 +123,13 @@ public class GeneticAlgorithms {
             double[] arrDrugi = w3.toArray();
             for (int i = 0; i < w1.rows; i++) {
                 for (int j = 0; j < w1.cols; j++) {
-                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i*w1.cols + j], arrDrugi[i*w1.cols + j]);
+                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], ALPHA);
+                }
+            }
+
+            for (int i = 0; i < w1.rows; i++) {
+                for (int j = 0; j < w1.cols; j++) {
+                    w1.data[i][j] = mutate(w1.data[i][j], MUTATION_CHANCE);
                 }
             }
         }
