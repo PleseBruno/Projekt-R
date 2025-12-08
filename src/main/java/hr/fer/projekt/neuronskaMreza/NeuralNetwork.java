@@ -7,14 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NeuralNetwork {
+    private final String ID;
     private final int inputNodes;
     private final int outputNodes;
     private final int[] hiddenLayers; // npr. [8, 6, 4]
     private List<Matrix> weights; // lista matrica tezina
-    private List<Matrix> biases;  // lista w0 tezina
+    private List<Matrix> biases; // lista w0 tezina
 
     // Konstruktor za kreiranje nove neuronske mreze sa zadanim brojem ulaznih, skrivenih i izlaznih cvorova i nasumicnim inicijaliziranjem tezina
-    public NeuralNetwork(int inputNodes, int[] hiddenLayers, int outputNodes) {
+    public NeuralNetwork(String id, int inputNodes, int[] hiddenLayers, int outputNodes) {
+        this.ID = id;
         this.inputNodes = inputNodes;
         this.outputNodes = outputNodes;
         this.hiddenLayers = hiddenLayers.clone();
@@ -39,7 +41,8 @@ public class NeuralNetwork {
     }
 
     // Konstruktor za harcodanje cijele neuronske mreze procitane u txt fileu
-    public NeuralNetwork(int inputNodes, int[] hiddenLayers, int outputNodes, List<Matrix> weights, List<Matrix> biases) {
+    public NeuralNetwork(String id, int inputNodes, int[] hiddenLayers, int outputNodes, List<Matrix> weights, List<Matrix> biases) {
+        this.ID = id;
         this.inputNodes = inputNodes;
         this.outputNodes = outputNodes;
         this.hiddenLayers = hiddenLayers.clone();
@@ -85,7 +88,7 @@ public class NeuralNetwork {
 
     // Mogućnost kloniranja
     public NeuralNetwork copy() {
-        NeuralNetwork clone = new NeuralNetwork(inputNodes, hiddenLayers, outputNodes);
+        NeuralNetwork clone = new NeuralNetwork(ID, inputNodes, hiddenLayers, outputNodes);
         for (int i = 0; i < weights.size(); i++) {
             clone.weights.set(i, Matrix.copy(weights.get(i)));
             clone.biases.set(i, Matrix.copy(biases.get(i)));
@@ -100,7 +103,7 @@ public class NeuralNetwork {
 
 
     public void print() {
-        System.out.println("Network structure:");
+        System.out.println("Network structure for [" + this.ID + "]:");
         System.out.print("Input: " + inputNodes + " -> ");
         for (int h : hiddenLayers) System.out.print(h + " -> ");
         System.out.println("Output: " + outputNodes);
@@ -116,14 +119,17 @@ public class NeuralNetwork {
         }
         System.out.println("Bias matrices: ");
         for (Matrix b : biases) {
+            System.out.printf("[ ");
             for (int i = 0; i < b.rows; i++) {
                 for (int j = 0; j < b.cols; j++) {
                     System.out.printf("%.4f ", b.data[i][j]);
                 }
-                System.out.println();
             }
+            System.out.println("]");
         }
     }
+
+    public String getID() {return ID;}
 
     public List<Matrix> getWeights() {
         return weights;
@@ -151,22 +157,5 @@ public class NeuralNetwork {
 
     public int[] getHiddenLayers() {
         return hiddenLayers;
-    }
-
-    public static void main(String[] args) {
-        int inputNodes = 5;
-        int[] hiddenLayers = {4, 3};
-        int outputNodes = 2;
-
-        NeuralNetwork nn = new NeuralNetwork(inputNodes, hiddenLayers, outputNodes);
-        nn.print();
-
-        double[] input = {0.5, 0.2, 0.8, 0.1, 0.9};
-        double[] output = nn.generateOutput(input);
-
-        System.out.println("Output:");
-        for (double val : output) {
-            System.out.printf("%.4f ", val);
-        }
     }
 }

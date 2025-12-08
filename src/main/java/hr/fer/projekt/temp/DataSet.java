@@ -1,45 +1,49 @@
 package hr.fer.projekt.temp;
 
 import java.util.HashMap;
-import java.util.List;
+import java.util.Set;
 import java.util.Map;
 
 
 public class DataSet {
 
-    public static Map<List<Integer>, List<Integer>> getDataSetMap() {
-        Map<List<Integer>, List<Integer>> dataSetMap = new HashMap<List<Integer>, List<Integer>>();
+    /**
+     * funkcija koja generira mapu sa zadanim outputima {1, 2, 3, 4} za inpute {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+     * @return dataSetMap
+     */
+    public static Map<Set<Integer>, Set<Integer>> getDataSetMap() {
+        Map<Set<Integer>, Set<Integer>> dataSetMap = new HashMap<Set<Integer>, Set<Integer>>();
 
-        dataSetMap.put(List.of(1, 2, 3), List.of(1));
-        dataSetMap.put(List.of(4, 5, 6), List.of(1, 2, 3));
-        dataSetMap.put(List.of(7, 8, 9), List.of(2, 3));
-        dataSetMap.put(List.of(0), List.of(4));
-        dataSetMap.put(List.of(1, 4, 6, 7), List.of(4, 1));
-        dataSetMap.put(List.of(1, 5, 6), List.of());
-        dataSetMap.put(List.of(4, 6), List.of(2, 4));
-        dataSetMap.put(List.of(0), List.of(1, 3));
-        dataSetMap.put(List.of(2, 7), List.of(1, 2, 3));
-        dataSetMap.put(List.of(1), List.of(1));
-        dataSetMap.put(List.of(2), List.of(2));
-        dataSetMap.put(List.of(3), List.of(3));
-        dataSetMap.put(List.of(4), List.of(4));
-        dataSetMap.put(List.of(), List.of(1, 2, 3, 4));
-        dataSetMap.put(List.of(5), List.of(1, 4));
-        dataSetMap.put(List.of(6), List.of(1, 2, 3));
-        dataSetMap.put(List.of(7), List.of(2, 3, 4));
-        dataSetMap.put(List.of(8), List.of(1));
-        dataSetMap.put(List.of(9), List.of(4));
-        dataSetMap.put(List.of(1, 2), List.of(1, 2));
-        dataSetMap.put(List.of(1, 3), List.of());
-        dataSetMap.put(List.of(1, 4), List.of(1));
-        dataSetMap.put(List.of(1, 5), List.of());
-        dataSetMap.put(List.of(2, 6), List.of(1, 4));
-        dataSetMap.put(List.of(2, 4, 5), List.of(1, 4));
-        dataSetMap.put(List.of(4, 5), List.of());
-        dataSetMap.put(List.of(8, 9), List.of(1, 2, 3));
-        dataSetMap.put(List.of(2, 3), List.of(1));
-        dataSetMap.put(List.of(6, 9), List.of(1, 2, 3));
-        dataSetMap.put(List.of(7, 9), List.of(1, 2, 3));
+        dataSetMap.put(Set.of(1, 2, 3), Set.of(1));
+        dataSetMap.put(Set.of(4, 5, 6), Set.of(1, 2, 3));
+        dataSetMap.put(Set.of(7, 8, 9), Set.of(2, 3));
+        dataSetMap.put(Set.of(0), Set.of(4));
+        dataSetMap.put(Set.of(1, 4, 6, 7), Set.of(4, 1));
+        dataSetMap.put(Set.of(1, 5, 6), Set.of());
+        dataSetMap.put(Set.of(4, 6), Set.of(2, 4));
+        dataSetMap.put(Set.of(0), Set.of(1, 3));
+        dataSetMap.put(Set.of(2, 7), Set.of(1, 2, 3));
+        dataSetMap.put(Set.of(1), Set.of(1));
+        dataSetMap.put(Set.of(2), Set.of(2));
+        dataSetMap.put(Set.of(3), Set.of(3));
+        dataSetMap.put(Set.of(4), Set.of(4));
+        dataSetMap.put(Set.of(), Set.of(1, 2, 3, 4));
+        dataSetMap.put(Set.of(5), Set.of(1, 4));
+        dataSetMap.put(Set.of(6), Set.of(1, 2, 3));
+        dataSetMap.put(Set.of(7), Set.of(2, 3, 4));
+        dataSetMap.put(Set.of(8), Set.of(1));
+        dataSetMap.put(Set.of(9), Set.of(4));
+        dataSetMap.put(Set.of(1, 2), Set.of(1, 2));
+        dataSetMap.put(Set.of(1, 3), Set.of());
+        dataSetMap.put(Set.of(1, 4), Set.of(1));
+        dataSetMap.put(Set.of(1, 5), Set.of());
+        dataSetMap.put(Set.of(2, 6), Set.of(1, 4));
+        dataSetMap.put(Set.of(2, 4, 5), Set.of(1, 4));
+        dataSetMap.put(Set.of(4, 5), Set.of());
+        dataSetMap.put(Set.of(8, 9), Set.of(1, 2, 3));
+        dataSetMap.put(Set.of(2, 3), Set.of(1));
+        dataSetMap.put(Set.of(6, 9), Set.of(1, 2, 3));
+        dataSetMap.put(Set.of(7, 9), Set.of(1, 2, 3));
         return dataSetMap;
     }
 }
