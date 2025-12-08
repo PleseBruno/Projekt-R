@@ -2,18 +2,32 @@ package hr.fer.projekt.matematika;
 
 // Matrix.java
 import java.util.Random;
+import java.util.UUID;
 import java.util.function.Function;
 
 public class Matrix {
     public int rows, cols;
     public double[][] data;
-    private static Random rand = new Random();
+
 
     // Konstruktor za inicijalizaciju matrice s danim redovima i stupcima
     public Matrix(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
         data = new double[rows][cols];
+    }
+
+
+    // Kreira matricu sa zadanim vrijednostima Arraya - kreira matricu dimenzija (rows*cols)
+    public void fill(int... integers) {
+        if (integers.length != rows * cols) {
+            throw new IllegalArgumentException("Number of integers does not fit in matrix");
+        }
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                data[i][j] = integers[i * cols + j];
+            }
+        }
     }
 
     // Stvara matricu iz jednodimenzionalnog niza (vektora) i rezultatna matrica je dimenzija (n x 1)
@@ -35,9 +49,10 @@ public class Matrix {
 
     // Popunjava matricu nasumičnim vrijednostima između 0 i 1
     public void randomize() {
+        Random rand = new Random(UUID.randomUUID().hashCode());
         for (int i = 0; i < rows; i++)
             for (int j = 0; j < cols; j++)
-                data[i][j] = rand.nextDouble(); // [0,1]
+                data[i][j] = rand.nextDouble(-1,1); // [0,1]
     }
 
     // Dodaje drugu matricu trenutnoj matrici tako da su dimenzije jednake i zbraja elemente na jednakim pozicijama
@@ -118,7 +133,7 @@ public class Matrix {
     public void print() {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++)
-                System.out.printf("% .4f ", data[i][j]);
+                System.out.printf("%10.4f ", data[i][j]);
             System.out.println();
         }
         System.out.println();

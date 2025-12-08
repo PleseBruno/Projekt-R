@@ -49,7 +49,7 @@ public class FitnessChecker {
         return set;
     }
 
-    private static Set<Integer> outputToSet(double[] output) {
+    public static Set<Integer> outputToSet(double[] output) {
         Set<Integer> set = new HashSet<>();
 
         for (int i = 0; i < output.length; i++) {

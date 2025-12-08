@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NeuralNetwork {
-    private final String ID;
+    private String ID;
     private final int inputNodes;
     private final int outputNodes;
     private final int[] hiddenLayers; // npr. [8, 6, 4]
@@ -78,7 +78,7 @@ public class NeuralNetwork {
             // izracun net koeficijenata sloja ( wx + b )
             Matrix layer = Matrix.multiply(w, current);
             layer.add(b);
-            layer.map(x -> sigmoid(x));
+            layer.map(this::sigmoid);
             current = layer;
         }
 
@@ -129,7 +129,41 @@ public class NeuralNetwork {
         }
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(this.ID).append("\n");
+        sb.append(hiddenLayers.length).append("\n");
+        sb.append(inputNodes).append("\n");
+        for (int h : hiddenLayers) sb.append(h).append("\n");
+        sb.append(outputNodes).append("\n");
+        for (Matrix w : weights) {
+            for (int i = 0; i < w.rows; i++) {
+                for (int j = 0; j < w.cols; j++) {
+                    sb.append(w.data[i][j]).append(" ");
+                }
+                sb.append("\n");
+            }
+        }
+        for (Matrix b : biases) {
+            //sb.append("[ ");
+            for (int i = 0; i < b.rows; i++) {
+                for (int j = 0; j < b.cols; j++) {
+                    sb.append(b.data[i][j]).append(" ");
+                }
+            }
+            //sb.append("]")
+            sb.append("\n");
+        }
+
+
+        return sb.toString();
+    }
+
     public String getID() {return ID;}
+
+    public void setID(String ID) {this.ID = ID;}
 
     public List<Matrix> getWeights() {
         return weights;
