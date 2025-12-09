@@ -31,8 +31,8 @@ public class NeuralNetworkTester {
             for (int i = 0; i < numHiddenLayers; i++) {
                 hiddenLayers[i] = input.nextInt();
             }
-            weights = new ArrayList<Matrix>();
-            biases = new ArrayList<Matrix>();
+            weights = new ArrayList<>();
+            biases = new ArrayList<>();
 
             // Broj slojeva = input + hidden + output
             int prevNodes = inputNodes;
@@ -50,12 +50,12 @@ public class NeuralNetworkTester {
                 for (int i = 0; i < w.cols * w.rows; i++) {
                     w.data[i/w.cols][i%w.cols] = input.nextDouble();
                 }
-            };
+            }
             for (Matrix b : biases) {
                 for (int i = 0; i < b.cols * b.rows; i++) {
                     b.data[i/b.cols][i%b.cols] = input.nextDouble();
                 }
-            };
+            }
 
             neuralNetwork = new NeuralNetwork(id, inputNodes, hiddenLayers, outputNodes, weights, biases);
 
@@ -71,14 +71,10 @@ public class NeuralNetworkTester {
         Map<Set<Integer>, Set<Integer>> dataSetMap = DataSet.getDataSetMap();
 
         List<Set<Integer>> inputsSet = dataSetMap.keySet().stream().toList();
-        List<double[]> inputs = new ArrayList<double[]>();
-        List<double[]> outputs = new ArrayList<double[]>();
 
-        Boolean hasMistakes = false;
+        boolean hasMistakes = false;
 
-        for (int i = 0; i < inputsSet.size(); i++) {
-            Set<Integer> set = inputsSet.get(i);
-
+        for (Set<Integer> set : inputsSet) {
             double[] arr = new double[10];
 
             for (int v : set) {
@@ -96,13 +92,9 @@ public class NeuralNetworkTester {
 
                 hasMistakes = true;
             }
-
         }
-
         if (!hasMistakes) {
             System.out.println("Neural network generated correct outputs!");
         }
-
-
     }
 }

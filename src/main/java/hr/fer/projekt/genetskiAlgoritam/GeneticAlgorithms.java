@@ -7,11 +7,7 @@ import java.util.*;
 
 public class GeneticAlgorithms {
 
-    private static final double MUTATION_CHANCE = 0.05;
-
-    private static final double ALPHA = 0.25;
-
-    private static Random rand = new Random();
+    private static final Random rand = new Random();
 
     public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
@@ -39,9 +35,9 @@ public class GeneticAlgorithms {
         }
     }
 
-    private static double mutate(double val, double MUTATION_CHANCE) {
+    private static double mutate(double val, double mutationChance) {
 
-        return rand.nextDouble(0, 1) < MUTATION_CHANCE ? rand.nextDouble(-1, 1) : val;
+        return rand.nextDouble(0, 1) < mutationChance ? rand.nextDouble(-1, 1) : val;
     }
 
     private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen) {
@@ -91,25 +87,20 @@ public class GeneticAlgorithms {
         NeuralNetwork child = prviClan.copy();
         child.setID("NN-" + gen + "." + id);
 
-        List<Matrix> prviClanWeights = prviClan.getWeights();
+        List<Matrix> childWeight = prviClan.getWeights();
         List<Matrix> drugiClanWeights = drugiClan.getWeights();
 
-        List<Matrix> prviClanBiases = prviClan.getBiases();
+        List<Matrix> childBias = prviClan.getBiases();
         List<Matrix> drugiClanBiases = drugiClan.getBiases();
 
-        List<Matrix> childWeight = prviClanWeights;
-        List<Matrix> childBias = prviClanBiases;
-
-        Iterator<Matrix> iteratorPrvogClanaWeights = prviClanWeights.iterator();
-        Iterator<Matrix> iteratorPrvogClanaBiases = prviClanBiases.iterator();
+        Iterator<Matrix> iteratorPrvogClanaWeights = childWeight.iterator();
+        Iterator<Matrix> iteratorPrvogClanaBiases = childBias.iterator();
 
         Iterator<Matrix> iteratorDrugogClanaWeights = drugiClanWeights.iterator();
         Iterator<Matrix> iteratorDrugogClanaBiases = drugiClanBiases.iterator();
 
-
         generateNewValues(childWeight, iteratorPrvogClanaWeights, iteratorDrugogClanaWeights);
         generateNewValues(childBias, iteratorPrvogClanaBiases, iteratorDrugogClanaBiases);
-
 
         return child;
     }
@@ -123,13 +114,13 @@ public class GeneticAlgorithms {
             double[] arrDrugi = w3.toArray();
             for (int i = 0; i < w1.rows; i++) {
                 for (int j = 0; j < w1.cols; j++) {
-                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], ALPHA);
+                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], 0.2);
                 }
             }
 
             for (int i = 0; i < w1.rows; i++) {
                 for (int j = 0; j < w1.cols; j++) {
-                    w1.data[i][j] = mutate(w1.data[i][j], MUTATION_CHANCE);
+                    w1.data[i][j] = mutate(w1.data[i][j], 0.05);
                 }
             }
         }

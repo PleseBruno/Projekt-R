@@ -2,7 +2,6 @@ package hr.fer.projekt.genetskiAlgoritam;
 
 import hr.fer.projekt.temp.DataSet;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -32,8 +31,6 @@ public class FitnessChecker {
                 }
             }
         }
-
-
         return score;
     }
 
@@ -45,7 +42,6 @@ public class FitnessChecker {
                 set.add(i);
             }
         }
-
         return set;
     }
 
@@ -57,7 +53,6 @@ public class FitnessChecker {
                 set.add(i+1);
             }
         }
-
         return set;
     }
 }

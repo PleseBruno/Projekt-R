@@ -19,7 +19,7 @@ public class Matrix {
 
 
     // Kreira matricu sa zadanim vrijednostima Arraya - kreira matricu dimenzija (rows*cols)
-    public void fill(int... integers) {
+    public void fill(double... integers) {
         if (integers.length != rows * cols) {
             throw new IllegalArgumentException("Number of integers does not fit in matrix");
         }

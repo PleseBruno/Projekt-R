@@ -47,7 +47,6 @@ public class NeuralNetwork {
         this.outputNodes = outputNodes;
         this.hiddenLayers = hiddenLayers.clone();
 
-
         this.weights = new ArrayList<>();
         for (Matrix w : weights) {
             this.weights.add(Matrix.copy(w));
@@ -59,7 +58,6 @@ public class NeuralNetwork {
         }
     }
 
-
     public void randomizeParameters() {
         for (Matrix w : weights) w.randomize();
         for (Matrix b : biases) b.randomize();
@@ -67,8 +65,7 @@ public class NeuralNetwork {
 
     // Izracun izlaza mreze za dani ulazni niz podataka
     public double[] generateOutput(double[] inputArray) {
-        Matrix input = Matrix.fromArray(inputArray);
-        Matrix current = input;
+        Matrix current = Matrix.fromArray(inputArray);
 
         // Prolazak kroz sve slojeve
         for (int i = 0; i < weights.size(); i++) {
@@ -85,7 +82,6 @@ public class NeuralNetwork {
         return current.toArray();
     }
 
-
     // Mogućnost kloniranja
     public NeuralNetwork copy() {
         NeuralNetwork clone = new NeuralNetwork(ID, inputNodes, hiddenLayers, outputNodes);
@@ -100,7 +96,6 @@ public class NeuralNetwork {
     private double sigmoid(double x) {
         return 1 / (1 + Math.exp(-x));
     }
-
 
     public void print() {
         System.out.println("Network structure for [" + this.ID + "]:");
@@ -147,16 +142,13 @@ public class NeuralNetwork {
             }
         }
         for (Matrix b : biases) {
-            //sb.append("[ ");
             for (int i = 0; i < b.rows; i++) {
                 for (int j = 0; j < b.cols; j++) {
                     sb.append(b.data[i][j]).append(" ");
                 }
             }
-            //sb.append("]")
             sb.append("\n");
         }
-
 
         return sb.toString();
     }
