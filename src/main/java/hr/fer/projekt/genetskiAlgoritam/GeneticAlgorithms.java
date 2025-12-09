@@ -7,7 +7,7 @@ import java.util.*;
 
 public class GeneticAlgorithms {
 
-    private static final double MUTATION_CHANCE = 0.25;
+    private static final double MUTATION_CHANCE = 0.05;
 
     private static final double ALPHA = 0.25;
 

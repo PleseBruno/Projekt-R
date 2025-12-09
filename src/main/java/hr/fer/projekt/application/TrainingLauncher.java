@@ -16,7 +16,7 @@ public class TrainingLauncher {
 
     public static void main(String[] args) {
         int inputNodes = 10;
-        int[] hiddenLayers = {6, 8, 4};
+        int[] hiddenLayers = {20};
         int outputNodes = 4;
         Map<Set<Integer>, Set<Integer>> dataSetMap = DataSet.getDataSetMap();
 
