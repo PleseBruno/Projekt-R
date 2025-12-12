@@ -7,9 +7,9 @@ import hr.fer.projekt.application.*;
 public class  HeadlessGameInstance {
     
     private final NeuralNetwork neuralNetwork;
-    private final int NETWORK_REACTION_TIME_MS = 20;
+    private final int NETWORK_REACTION_TIME_TICKS = 60;
     private final World world;
-    private final int TICK_TIME_MS = 3;
+    private final long TICK_TIME_MS = 0;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
     private volatile boolean gameRunning = true;
@@ -39,9 +39,8 @@ public class  HeadlessGameInstance {
         while (gameRunning && !world.getPlayer().isDead()) {
             
             step();
-            
-            timeCounter += TICK_TIME_MS;
-            if (timeCounter >= NETWORK_REACTION_TIME_MS) {
+
+            if (timeCounter >= NETWORK_REACTION_TIME_TICKS) {
                 processInputs();
                 timeCounter = 0;
             }
@@ -49,7 +48,7 @@ public class  HeadlessGameInstance {
             //if(time% 30 == 0 )consolePrint();
 
             Thread.sleep(TICK_TIME_MS);
-            timeCounter += TICK_TIME_MS;
+            timeCounter += 1;
             time++;
         }
         
