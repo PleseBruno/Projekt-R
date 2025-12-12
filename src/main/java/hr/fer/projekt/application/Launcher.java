@@ -39,7 +39,7 @@ public class Launcher extends Application {
 
             List<NeuralNetwork>  nns = new ArrayList<>();
             try {
-                for (int i = 0; i < 50; i++) {
+                for (int i = 0; i < 8; i++) {
                     NeuralNetwork nn = new NeuralNetwork(
                             "NN_" + i,
                             4,

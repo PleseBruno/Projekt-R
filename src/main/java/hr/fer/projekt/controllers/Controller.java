@@ -26,7 +26,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     private NeuralNetwork neuralNetwork = new NeuralNetwork("NN_1",4, new int[]{10,10}, 4);
-    private  boolean neuralNetworkPlaying = true;
+    private  boolean neuralNetworkPlaying = false;
     private final int FPS = 60;
     private final int NETWORK_REACTION_TIME_MS = 20;
     private final int TICK_TIME_MS= 3 ;
@@ -147,6 +147,7 @@ public class Controller implements Initializable {
 
     public void step() {
 
+        time++;
         if (sPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
             world.getPlayer().dive();
         }
@@ -168,7 +169,7 @@ public class Controller implements Initializable {
             newObstacle = true;
         }
 
-        Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 1000.0, world.getObstacles());
+        Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 5000.0, world.getObstacles());
 
         world.getObstacles().removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= -50);
 

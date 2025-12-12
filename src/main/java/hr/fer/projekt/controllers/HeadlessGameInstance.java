@@ -9,9 +9,9 @@ public class  HeadlessGameInstance {
     private final NeuralNetwork neuralNetwork;
     private final int NETWORK_REACTION_TIME_TICKS = 60;
     private final World world;
-    private final long TICK_TIME_MS = 0;
+    private final long TICK_TIME_MS = 3;
     private final double STARTING_GAME_SPEED = 0.5;
-    private volatile double time = 0;
+    private volatile int time = 0;
     private volatile boolean gameRunning = true;
 
     private boolean aPressed = false, dPressed = false,
@@ -40,16 +40,15 @@ public class  HeadlessGameInstance {
             
             step();
 
-            if (timeCounter >= NETWORK_REACTION_TIME_TICKS) {
+            if (timeCounter % NETWORK_REACTION_TIME_TICKS == 0) {
                 processInputs();
                 timeCounter = 0;
             }
-
+            time++;
             //if(time% 30 == 0 )consolePrint();
 
             Thread.sleep(TICK_TIME_MS);
-            timeCounter += 1;
-            time++;
+            timeCounter++;
         }
         
         // Fitness = survival time
@@ -129,7 +128,7 @@ public class  HeadlessGameInstance {
             world.generateObstacle();
         }
         
-        Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 1000.0, world.getObstacles());
+        Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 5000.0, world.getObstacles());
         world.getObstacles().removeIf(o -> o.getX() + o.getWidth() <= -50);
         world.getPlayer().moveVertical(world.getObstacles());
     }
