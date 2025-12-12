@@ -1,6 +1,7 @@
 // language: java
 package hr.fer.projekt.controllers;
 
+import hr.fer.projekt.neuronskaMreza.NeuralNetwork;
 import hr.fer.projekt.application.World;
 import hr.fer.projekt.entities.Obstacle;
 import javafx.animation.AnimationTimer;
@@ -24,9 +25,10 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    private final boolean graphicsOn = true;
+    private NeuralNetwork neuralNetwork = new NeuralNetwork("NN_1",4, new int[]{10,10}, 4);
+    private  boolean neuralNetworkPlaying = true;
     private final int FPS = 60;
-    private final int GAME_SPEED_STEPS = 1;
+    private final int NETWORK_REACTION_TIME_MS = 20;
     private final int TICK_TIME_MS= 3 ;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
@@ -76,12 +78,7 @@ public class Controller implements Initializable {
             @Override
             public void handle(long now) {
                 if (now - prev[0] >= intervalNanos) {
-                    if (graphicsOn){
                         update();
-                    }else {
-                        cosoleprint();
-                    }
-
                     prev[0] = now;
                 }
                 if(world.getPlayer().isDead()){
@@ -97,12 +94,13 @@ public class Controller implements Initializable {
     private Thread getPhysicsThread() {
         Thread physicsThread = new Thread(() -> {
             try {
-                // physics loop
+                int timeCounter = 0;
                 while (!world.getPlayer().isDead()) {
-                    int steps = Math.max(1, GAME_SPEED_STEPS);
-                    for (int i = 0; i < steps; i++) {
-                        step();
-
+                    step();
+                    timeCounter += TICK_TIME_MS;
+                    if (timeCounter >= NETWORK_REACTION_TIME_MS && neuralNetworkPlaying) {
+                        processInputs();
+                        timeCounter = 0;
                     }
                     Thread.sleep(TICK_TIME_MS);
                 }
@@ -113,6 +111,39 @@ public class Controller implements Initializable {
         return physicsThread;
     }
 
+    void processInputs() {
+        // Get sensor inputs from world
+        double[] sensors = getInputs();
+
+        // Get neural network output
+        double[] output = neuralNetwork.generateOutput(sensors);
+
+        if(output.length != 4) {
+            throw new IllegalArgumentException("Neural network output size must be 4.");
+        }
+
+        if (output[0] >= 0.5) {
+            aPressed = true;
+        } else {
+            aPressed = false;
+        }
+        if (output[1] >= 0.5) {
+            dPressed = true;
+        } else {
+            dPressed = false;
+        }
+        if (output[2] >= 0.5) {
+            wPressed = true;
+        } else {
+            wPressed = false;
+        }
+        if (output[3] >= 0.5) {
+            sPressed = true;
+        } else {
+            sPressed = false;
+        }
+
+    }
 
     public void step() {
 
@@ -176,20 +207,18 @@ public class Controller implements Initializable {
 
     }
 
-    private void cosoleprint() {
-        time++;
-
-        System.out.println("Player position: X=" + world.getPlayer().getX() + " Y=" + world.getPlayer().getY());
-
-        for(Obstacle obstacle : world.getObstacles()) {
-            System.out.println("Obstacle ID=" + obstacle.getID() + " position: X=" + obstacle.getX() + " Y=" + obstacle.getY());
-        }
-
-        System.out.println("-----");
-    }
-
     @FXML
     void keyPressed(KeyEvent event) {
+
+        if (event.getCode() == KeyCode.R) {
+            if (world != null && world.getPlayer().isDead()) {
+                startGame();
+            }
+        }
+
+        if (neuralNetworkPlaying) {
+            return;
+        }
 
         if(event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.A) {
             aPressed = true;
@@ -212,6 +241,11 @@ public class Controller implements Initializable {
 
     @FXML
     void keyReleased(KeyEvent event) {
+
+        if (neuralNetworkPlaying) {
+            return;
+        }
+
         if(event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.A) {
             aPressed = false;
         }
@@ -233,19 +267,16 @@ public class Controller implements Initializable {
             System.out.println("Game starting");
             world = new World();
             time = 0;
-            if (graphicsOn){
-                newObstacle = false;
-                obstacles.clear();
+            newObstacle = false;
+            obstacles.clear();
 
-                stage.getChildren().removeIf(node -> (node instanceof Rectangle) && node != player && node != more && node != nebo);
+            stage.getChildren().removeIf(node -> (node instanceof Rectangle) && node != player && node != more && node != nebo);
 
-                obstacles.put(world.getObstacles().getLast().getID(), world.getObstacles().getLast().toRectangle());
-                stage.getChildren().add(obstacles.get(world.getObstacles().getLast().getID()));
+            obstacles.put(world.getObstacles().getLast().getID(), world.getObstacles().getLast().toRectangle());
+            stage.getChildren().add(obstacles.get(world.getObstacles().getLast().getID()));
 
-                player.setLayoutX(world.getPlayer().getX());
-                player.setLayoutY(world.getPlayer().getY());
-
-            }
+            player.setLayoutX(world.getPlayer().getX());
+            player.setLayoutY(world.getPlayer().getY());
 
             startPhysicsThread();
             startPainter();
@@ -270,6 +301,17 @@ public class Controller implements Initializable {
         } catch (Exception e) {
             System.err.println("Failed to write game start: " + e.getMessage());
         }
+    }
+
+    private double[] getInputs() {
+        // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
+        Obstacle nearest = world.getObstacles().getFirst();
+        return new double[]{
+            nearest.getX(),
+            nearest.getWidth(),
+            nearest.getHeight(),
+            world.getPlayer().getX()
+        };
     }
 
 }

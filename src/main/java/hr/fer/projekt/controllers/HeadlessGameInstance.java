@@ -4,43 +4,52 @@ import hr.fer.projekt.neuronskaMreza.*;
 import hr.fer.projekt.entities.*;
 import hr.fer.projekt.application.*;
 
-public class HeadlessGameInstance {
+public class  HeadlessGameInstance {
     
     private final NeuralNetwork neuralNetwork;
+    private final int NETWORK_REACTION_TIME_MS = 20;
     private final World world;
-    private final int GAME_SPEED_STEPS = 1;
     private final int TICK_TIME_MS = 3;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
     private volatile boolean gameRunning = true;
-    private static final long MAX_GAME_TIME = 60000; // 60 seconds max
+
+    private boolean aPressed = false, dPressed = false,
+            sPressed = false, wPressed = false, newObstacle = false;
     
     public HeadlessGameInstance(NeuralNetwork nn) {
         this.neuralNetwork = nn;
         this.world = new World();
     }
+
+    private double[] getInputs() {
+        // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
+        Obstacle nearest = world.getObstacles().getFirst();
+        return new double[]{
+                nearest.getX(),
+                nearest.getWidth(),
+                nearest.getHeight(),
+                world.getPlayer().getX()
+        };
+    }
+
     
-    /**
-     * Run the game until player dies and return fitness score
-     */
-    public double run() {
-        long startTime = System.currentTimeMillis();
-        
+    public double run() throws InterruptedException {
+        int timeCounter = 0;
         while (gameRunning && !world.getPlayer().isDead()) {
-            // Timeout after max game time
-            if (System.currentTimeMillis() - startTime > MAX_GAME_TIME) {
-                break;
-            }
             
             step();
             
-            try {
-                Thread.sleep(TICK_TIME_MS);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                break;
+            timeCounter += TICK_TIME_MS;
+            if (timeCounter >= NETWORK_REACTION_TIME_MS) {
+                processInputs();
+                timeCounter = 0;
             }
-            
+
+            //if(time% 30 == 0 )consolePrint();
+
+            Thread.sleep(TICK_TIME_MS);
+            timeCounter += TICK_TIME_MS;
             time++;
         }
         
@@ -48,58 +57,75 @@ public class HeadlessGameInstance {
         return time;
     }
     
-    private void step() {
+
+    void consolePrint(){
+        System.out.println("Time: " + time +
+                " | Player Y: " + world.getPlayer().getY() +
+                " | Player X: " + world.getPlayer().getX() +
+                " | Nearest Obstacle X: " + world.getObstacles().getFirst().getX() +
+                " | Nearest Obstacle Y: " + world.getObstacles().getFirst().getY()
+        );
+    }
+
+    private void processInputs() {
         // Get sensor inputs from world
-        double[] sensors = getSensorInputs();
+        double[] sensors = getInputs();
         
         // Get neural network output
         double[] output = neuralNetwork.generateOutput(sensors);
         
-        // Convert output to actions (0=left, 1=right, 2=jump, 3=dive)
-        int action = argMax(output);
-        executeAction(action);
+        // Process output to control player
+        if (output.length != 4) {
+            throw new IllegalArgumentException("Neural network output size must be 4.");
+        }
         
+        if (output[0] >= 0.5) {
+            aPressed = true;
+        } else {
+            aPressed = false;
+        }
+        if (output[1] >= 0.5) {
+            dPressed = true;
+        } else {
+            dPressed = false;
+        }
+        if (output[2] >= 0.5) {
+            wPressed = true;
+        } else {
+            wPressed = false;
+        }
+        if (output[3] >= 0.5) {
+            sPressed = true;
+        } else {
+            sPressed = false;
+        }
+    }
+
+    private void step() {
+
         // Update world physics
         updatePhysics();
     }
     
-    private double[] getSensorInputs() {
-        // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
-        Obstacle nearest = world.getObstacles().getLast();
-        return new double[]{
-            nearest.getX(),
-            nearest.getWidth(),
-            nearest.getHeight(),
-            world.getPlayer().getX()
-        };
-    }
+
     
-    private void executeAction(int action) {
-        switch (action) {
-            case 0: // Move left
-                if (world.getPlayer().getX() > world.getBorderLeft() + 70) {
-                    world.getPlayer().moveLeft();
-                }
-                break;
-            case 1: // Move right
-                if (world.getPlayer().getX() < world.getBorderRight() - 57) {
-                    world.getPlayer().moveRight();
-                }
-                break;
-            case 2: // Jump
-                if (!world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
-                    world.getPlayer().jump();
-                }
-                break;
-            case 3: // Dive
-                if (!world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
-                    world.getPlayer().dive();
-                }
-                break;
-        }
-    }
+
     
     private void updatePhysics() {
+
+        if (sPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
+            world.getPlayer().dive();
+        }
+        if (wPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
+            world.getPlayer().jump();
+        }
+        if (aPressed && world.getPlayer().getX() > world.getBorderLeft() + 70) {
+            world.getPlayer().moveLeft();
+        }
+        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 57) {
+            world.getPlayer().moveRight();
+        }
+
         if (world.getObstacles().getLast().getX() + world.getObstacles().getLast().getWidth() < 250) {
             world.generateObstacle();
         }
@@ -108,16 +134,5 @@ public class HeadlessGameInstance {
         world.getObstacles().removeIf(o -> o.getX() + o.getWidth() <= -50);
         world.getPlayer().moveVertical(world.getObstacles());
     }
-    
-    private int argMax(double[] arr) {
-        int idx = 0;
-        double max = arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-                idx = i;
-            }
-        }
-        return idx;
-    }
+
 }
