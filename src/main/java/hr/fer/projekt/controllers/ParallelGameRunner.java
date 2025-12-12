@@ -46,8 +46,14 @@ public class ParallelGameRunner {
     }
     
     public void shutdown() {
-        executorService.shutdown();
 
+        try {
+            if (!executorService.awaitTermination(60, TimeUnit.MILLISECONDS)) {
+                System.exit(0);
+            }
+        } catch (InterruptedException e) {
+                System.exit(0);
+        }
     }
     
     // Inner class to hold results
