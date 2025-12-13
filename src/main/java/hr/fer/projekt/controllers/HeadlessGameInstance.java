@@ -9,13 +9,13 @@ public class  HeadlessGameInstance {
     private final NeuralNetwork neuralNetwork;
     private final int NETWORK_REACTION_TIME_TICKS = 60;
     private final World world;
-    private final long TICK_TIME_MS = 3;
+    private final long TICK_TIME_MS = 0;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile int time = 0;
     private volatile boolean gameRunning = true;
 
     private boolean aPressed = false, dPressed = false,
-            sPressed = false, wPressed = false, newObstacle = false;
+            sPressed = false, wPressed = false;
     
     public HeadlessGameInstance(NeuralNetwork nn) {
         this.neuralNetwork = nn;
@@ -27,9 +27,12 @@ public class  HeadlessGameInstance {
         Obstacle nearest = world.getObstacles().getFirst();
         return new double[]{
                 nearest.getX(),
+                nearest.getY(),
                 nearest.getWidth(),
                 nearest.getHeight(),
-                world.getPlayer().getX()
+                world.getPlayer().getX(),
+                world.getPlayer().getY(),
+                time
         };
     }
 

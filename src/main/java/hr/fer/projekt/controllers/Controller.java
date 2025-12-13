@@ -1,6 +1,7 @@
 // language: java
 package hr.fer.projekt.controllers;
 
+import hr.fer.projekt.matematika.Matrix;
 import hr.fer.projekt.neuronskaMreza.NeuralNetwork;
 import hr.fer.projekt.application.World;
 import hr.fer.projekt.entities.Obstacle;
@@ -19,14 +20,12 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Controller implements Initializable {
 
-    private NeuralNetwork neuralNetwork = new NeuralNetwork("NN_1",4, new int[]{10,10}, 4);
-    private  boolean neuralNetworkPlaying = false;
+    private NeuralNetwork neuralNetwork ;
+    private  boolean neuralNetworkPlaying = true;
     private final int FPS = 60;
     private final int NETWORK_REACTION_TIME_MS = 60;
     private final int TICK_TIME_MS= 3 ;
@@ -60,6 +59,58 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         markGameStart();
+        if (neuralNetworkPlaying){
+            String id;
+            int inputNodes;
+            int outputNodes;
+            int numHiddenLayers;
+            int[] hiddenLayers;
+            List<Matrix> weights;
+            List<Matrix> biases;
+            try (Scanner input = new Scanner(Files.newBufferedReader(Paths.get("best_network.txt")))) {
+                input.useLocale(Locale.US);
+
+                id = input.nextLine();
+                numHiddenLayers = input.nextInt();
+                inputNodes = input.nextInt();
+                outputNodes = input.nextInt();
+                hiddenLayers = new int[numHiddenLayers];
+                for (int i = 0; i < numHiddenLayers; i++) {
+                    hiddenLayers[i] = input.nextInt();
+                }
+                weights = new ArrayList<>();
+                biases = new ArrayList<>();
+
+                // Broj slojeva = input + hidden + output
+                int prevNodes = inputNodes;
+                for (int hiddenNodes : hiddenLayers) {
+                    weights.add(new Matrix(hiddenNodes, prevNodes));
+                    biases.add(new Matrix(hiddenNodes, 1));
+                    prevNodes = hiddenNodes;
+                }
+
+                // Zadnji sloj (output)
+                weights.add(new Matrix(outputNodes, prevNodes));
+                biases.add(new Matrix(outputNodes, 1));
+
+                for (Matrix w : weights) {
+                    for (int i = 0; i < w.cols * w.rows; i++) {
+                        w.data[i/w.cols][i%w.cols] = input.nextDouble();
+                    }
+                }
+                for (Matrix b : biases) {
+                    for (int i = 0; i < b.cols * b.rows; i++) {
+                        b.data[i/b.cols][i%b.cols] = input.nextDouble();
+                    }
+                }
+
+                neuralNetwork = new NeuralNetwork(id, inputNodes, hiddenLayers, outputNodes, weights, biases);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                throw new RuntimeException("Greška prilikom ucitavanja matrice" + e.getMessage());
+            }
+        }
         stage.requestFocus();
         obstacles = new HashMap<>();
         startGame();
