@@ -14,7 +14,7 @@ import java.util.List;
 
 public class Launcher extends Application {
 
-    private static final boolean HEADLESS = true;
+    private static final boolean HEADLESS = false;
 
     @Override
     public void start(Stage stage) throws IOException {

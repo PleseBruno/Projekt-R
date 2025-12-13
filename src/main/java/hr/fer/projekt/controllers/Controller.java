@@ -28,7 +28,7 @@ public class Controller implements Initializable {
     private NeuralNetwork neuralNetwork = new NeuralNetwork("NN_1",4, new int[]{10,10}, 4);
     private  boolean neuralNetworkPlaying = false;
     private final int FPS = 60;
-    private final int NETWORK_REACTION_TIME_MS = 20;
+    private final int NETWORK_REACTION_TIME_MS = 60;
     private final int TICK_TIME_MS= 3 ;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
