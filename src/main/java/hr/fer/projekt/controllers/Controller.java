@@ -24,7 +24,7 @@ import java.util.*;
 
 public class Controller implements Initializable {
 
-    private NeuralNetwork neuralNetwork ;
+    private NeuralNetwork neuralNetwork = null;
     private  boolean neuralNetworkPlaying = true;
     private final int FPS = 60;
     private final int NETWORK_REACTION_TIME_MS = 60;
@@ -56,59 +56,32 @@ public class Controller implements Initializable {
     private Thread physicsThread;
 
 
+    private double[] getInputs() {
+        // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
+        Obstacle nearest = world.getObstacles().getLast();
+        return new double[]{
+                nearest.getX(),
+                nearest.getY(),
+                nearest.getWidth(),
+                nearest.getHeight(),
+                world.getPlayer().getX(),
+                world.getPlayer().getY(),
+                STARTING_GAME_SPEED + time / 5000.0,
+                world.getPlayer().getMoveY(),
+                world.getPlayer().getMoveY()
+
+        };
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         markGameStart();
         if (neuralNetworkPlaying){
-            String id;
-            int inputNodes;
-            int outputNodes;
-            int numHiddenLayers;
-            int[] hiddenLayers;
-            List<Matrix> weights;
-            List<Matrix> biases;
-            try (Scanner input = new Scanner(Files.newBufferedReader(Paths.get("best_network.txt")))) {
-                input.useLocale(Locale.US);
-
-                id = input.nextLine();
-                numHiddenLayers = input.nextInt();
-                inputNodes = input.nextInt();
-                outputNodes = input.nextInt();
-                hiddenLayers = new int[numHiddenLayers];
-                for (int i = 0; i < numHiddenLayers; i++) {
-                    hiddenLayers[i] = input.nextInt();
-                }
-                weights = new ArrayList<>();
-                biases = new ArrayList<>();
-
-                // Broj slojeva = input + hidden + output
-                int prevNodes = inputNodes;
-                for (int hiddenNodes : hiddenLayers) {
-                    weights.add(new Matrix(hiddenNodes, prevNodes));
-                    biases.add(new Matrix(hiddenNodes, 1));
-                    prevNodes = hiddenNodes;
-                }
-
-                // Zadnji sloj (output)
-                weights.add(new Matrix(outputNodes, prevNodes));
-                biases.add(new Matrix(outputNodes, 1));
-
-                for (Matrix w : weights) {
-                    for (int i = 0; i < w.cols * w.rows; i++) {
-                        w.data[i/w.cols][i%w.cols] = input.nextDouble();
-                    }
-                }
-                for (Matrix b : biases) {
-                    for (int i = 0; i < b.cols * b.rows; i++) {
-                        b.data[i/b.cols][i%b.cols] = input.nextDouble();
-                    }
-                }
-
-                neuralNetwork = new NeuralNetwork(id, inputNodes, hiddenLayers, outputNodes, weights, biases);
-
+            try {
+                neuralNetwork = loadNeuralNetworkFromFile("best_network.txt");
             } catch (Exception e) {
                 e.printStackTrace();
-                throw new RuntimeException("Greška prilikom ucitavanja matrice" + e.getMessage());
+                throw new RuntimeException("Greška prilikom ucitavanja matrice: " + e.getMessage());
             }
         }
         stage.requestFocus();
@@ -355,15 +328,62 @@ public class Controller implements Initializable {
         }
     }
 
-    private double[] getInputs() {
-        // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
-        Obstacle nearest = world.getObstacles().getFirst();
-        return new double[]{
-            nearest.getX(),
-            nearest.getWidth(),
-            nearest.getHeight(),
-            world.getPlayer().getX()
-        };
+
+
+    // Loads a NeuralNetwork previously saved to a text file (format produced by NeuralNetwork.toString())
+    private NeuralNetwork loadNeuralNetworkFromFile(String filename) throws Exception {
+        try (Scanner input = new Scanner(Files.newBufferedReader(Paths.get(filename)))) {
+            input.useLocale(Locale.US);
+
+            // Read first non-empty line as ID
+            String id = "";
+            while (input.hasNextLine()) {
+                id = input.nextLine().trim();
+                if (!id.isEmpty()) break;
+            }
+
+            if (id.isEmpty()) throw new IllegalArgumentException("Empty network id in file: " + filename);
+
+            int numHiddenLayers = input.nextInt();
+            int inputNodes = input.nextInt();
+
+            int[] hiddenLayers = new int[numHiddenLayers];
+            for (int i = 0; i < numHiddenLayers; i++) {
+                hiddenLayers[i] = input.nextInt();
+            }
+            int outputNodes = input.nextInt();
+
+            List<Matrix> weights = new ArrayList<>();
+            List<Matrix> biases = new ArrayList<>();
+
+            int prevNodes = inputNodes;
+            for (int hiddenNodes : hiddenLayers) {
+                weights.add(new Matrix(hiddenNodes, prevNodes));
+                biases.add(new Matrix(hiddenNodes, 1));
+                prevNodes = hiddenNodes;
+            }
+
+            weights.add(new Matrix(outputNodes, prevNodes));
+            biases.add(new Matrix(outputNodes, 1));
+
+            // Fill weight matrices (row-major in file)
+            for (Matrix w : weights) {
+                for (int i = 0; i < w.rows * w.cols; i++) {
+                    if (!input.hasNextDouble()) throw new IllegalStateException("Not enough weight values in file");
+                    w.data[i / w.cols][i % w.cols] = input.nextDouble();
+                }
+            }
+
+            // Fill bias matrices
+            for (Matrix b : biases) {
+                for (int i = 0; i < b.rows * b.cols; i++) {
+                    if (!input.hasNextDouble()) throw new IllegalStateException("Not enough bias values in file");
+                    b.data[i / b.cols][i % b.cols] = input.nextDouble();
+                }
+            }
+
+            return new NeuralNetwork(id, inputNodes, hiddenLayers, outputNodes, weights, biases);
+        }
     }
 
 }

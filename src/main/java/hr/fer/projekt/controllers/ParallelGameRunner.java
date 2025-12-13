@@ -39,7 +39,6 @@ public class ParallelGameRunner {
     
 
     private GameResult runSingleGame(NeuralNetwork nn) throws InterruptedException {
-        System.out.println("Starting game for Neural Network: " + nn.getID());
         HeadlessGameInstance game = new HeadlessGameInstance(nn);
         double fitness = game.run(); // Blocks until game ends
         return new GameResult(nn, fitness);

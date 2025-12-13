@@ -24,7 +24,7 @@ public class  HeadlessGameInstance {
 
     private double[] getInputs() {
         // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
-        Obstacle nearest = world.getObstacles().getFirst();
+        Obstacle nearest = world.getObstacles().getLast();
         return new double[]{
                 nearest.getX(),
                 nearest.getY(),
@@ -32,7 +32,10 @@ public class  HeadlessGameInstance {
                 nearest.getHeight(),
                 world.getPlayer().getX(),
                 world.getPlayer().getY(),
-                time
+                STARTING_GAME_SPEED + time / 5000.0,
+                world.getPlayer().getMoveY(),
+                world.getPlayer().getMoveY()
+
         };
     }
 

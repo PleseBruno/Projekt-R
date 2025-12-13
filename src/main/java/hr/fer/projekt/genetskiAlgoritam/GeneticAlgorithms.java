@@ -114,7 +114,7 @@ public class GeneticAlgorithms {
             double[] arrDrugi = w3.toArray();
             for (int i = 0; i < w1.rows; i++) {
                 for (int j = 0; j < w1.cols; j++) {
-                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], 0.2);
+                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], 0.1);
                 }
             }
 
