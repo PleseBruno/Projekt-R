@@ -34,7 +34,7 @@ public class  HeadlessGameInstance {
                 world.getPlayer().getY(),
                 STARTING_GAME_SPEED + time / 5000.0,
                 world.getPlayer().getMoveY(),
-                world.getPlayer().getMoveY()
+                world.getPlayer().getMoveX()
 
         };
     }

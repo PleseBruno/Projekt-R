@@ -68,7 +68,7 @@ public class Controller implements Initializable {
                 world.getPlayer().getY(),
                 STARTING_GAME_SPEED + time / 5000.0,
                 world.getPlayer().getMoveY(),
-                world.getPlayer().getMoveY()
+                world.getPlayer().getMoveX()
 
         };
     }
@@ -131,7 +131,6 @@ public class Controller implements Initializable {
             } catch (InterruptedException ignored) {
             }
         }, "PhysicsLoop");
-        physicsThread.setDaemon(true);
         return physicsThread;
     }
 
@@ -288,6 +287,9 @@ public class Controller implements Initializable {
         Platform.runLater(() -> {
             if (painter != null) {
                 painter.stop();
+            }
+            if( physicsThread != null && physicsThread.isAlive()) {
+                physicsThread.interrupt();
             }
             System.out.println("Game starting");
             world = new World();

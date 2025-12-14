@@ -19,7 +19,7 @@ public class Launcher extends Application {
 
     private static final boolean HEADLESS = true;
     private final static int NUM_NEURALNETWORKS = 50;
-    private final static int NUM_GENS = 10000;
+    private final static int NUM_GENS = 2000;
     private final static int TESTS_PER_NETWORK = 30;
 
     @Override
@@ -39,7 +39,7 @@ public class Launcher extends Application {
 
         if (HEADLESS) {
             int inputNodes = 9;
-            int[] hiddenLayers = {10,15, 10};
+            int[] hiddenLayers = {30, 20 };
             int outputNodes = 4;
 
             ParallelGameRunner runner = new ParallelGameRunner(
@@ -55,29 +55,48 @@ public class Launcher extends Application {
                     Generacija.put(new NeuralNetwork("NN-1." + i + 1, inputNodes, hiddenLayers, outputNodes), null);
                 }
 
+                // Track best network found across all generations
+                NeuralNetwork bestNetwork = null;
+                double bestFitness = Double.NEGATIVE_INFINITY;
+
                 for (int j = 0; j < NUM_GENS; j++) {
                     System.out.println("Generation: " + j);
                     List<NeuralNetwork>  nns = new ArrayList<>(Generacija.keySet());
 
-                        // Use a temporary accumulator so we don't modify the population while testing
-                        Map<NeuralNetwork, Double> accumulator = new HashMap<>();
-                        for (NeuralNetwork nn : nns) accumulator.put(nn, 0.0);
+                    // Use a temporary accumulator so we don't modify the population while testing
+                    Map<NeuralNetwork, Double> accumulator = new HashMap<>();
+                    for (NeuralNetwork nn : nns) accumulator.put(nn, 0.0);
 
-                        for (int k = 0; k < TESTS_PER_NETWORK; k++) {
-                            var results = runner.runGamesInParallel(nns);
-                            for (var entry : results.entrySet()) {
-                                accumulator.put(entry.getKey(), accumulator.getOrDefault(entry.getKey(), 0.0) + entry.getValue());
-                            }
+                    for (int k = 0; k < TESTS_PER_NETWORK; k++) {
+                        var results = runner.runGamesInParallel(nns);
+                        for (var entry : results.entrySet()) {
+                            accumulator.put(entry.getKey(), accumulator.getOrDefault(entry.getKey(), 0.0) + entry.getValue());
                         }
+                    }
 
-                        // Compute averages into a new map (population remains the same during tests)
-                        Map<NeuralNetwork, Double> averaged = new HashMap<>();
-                        for (NeuralNetwork nn : nns) {
-                            double sum = accumulator.getOrDefault(nn, 0.0);
-                            averaged.put(nn, sum / TESTS_PER_NETWORK);
+                    // Compute averages into a new map (population remains the same during tests)
+                    Map<NeuralNetwork, Double> averaged = new HashMap<>();
+                    for (NeuralNetwork nn : nns) {
+                        double sum = accumulator.getOrDefault(nn, 0.0);
+                        double avg = sum / TESTS_PER_NETWORK;
+                        averaged.put(nn, avg);
+                        if (avg > bestFitness) {
+                            bestFitness = avg;
+                            bestNetwork = nn;
                         }
+                    }
+                    double totalFitnessThisGenAverage = averaged.values().stream().mapToDouble(Double::doubleValue).sum() / averaged.size();
+                    Generacija = GeneticAlgorithms.makeNewGen(averaged, GeneticType.DEFAULT, j);
+                    System.out.printf("  Average fitness this generation: %.4f%n", totalFitnessThisGenAverage);
+                }
 
-                        Generacija = GeneticAlgorithms.makeNewGen(averaged, GeneticType.DEFAULT, j);
+                // Print best network to stdout at the end
+                if (bestNetwork != null) {
+                    System.out.println("\n=== BEST NETWORK ===");
+                    System.out.println("ID: " + bestNetwork.getID() + " fitness=" + bestFitness);
+                    System.out.println(bestNetwork.toString());
+                } else {
+                    System.out.println("No best network found.");
                 }
 
 
