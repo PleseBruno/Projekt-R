@@ -55,7 +55,7 @@ public class Controller implements Initializable {
     private AnimationTimer painter;
     private Thread physicsThread;
 
-¸¸
+
     private double[] getInputs() {
     // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
         Obstacle nearest;
