@@ -9,12 +9,12 @@ public class GeneticAlgorithms {
 
     private static final Random rand = new Random();
 
-    public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen) {
+    public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen, double alpha, double crossChance, double mutationChance) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         switch (geneticType) {
             case DEFAULT:
-                newGeneration = makeBabies(oldGeneration, gen);
+                newGeneration = makeBabies(oldGeneration, gen, alpha, crossChance, mutationChance);
                 break;
             default:
                 throw new IllegalArgumentException("Genetic type not supported");
@@ -23,24 +23,8 @@ public class GeneticAlgorithms {
         return newGeneration;
     }
 
-    private static double BLX_ALPHA(double w1, double w2, double alpha) {
-        double length = Math.abs(w2 - w1);
-        if (length == 0) {
-            length = 0.01;
-        }
-        if (w1 >= w2) {
-            return new Random().nextDouble(w2 - alpha * length < -1 ? -1 : w2 - alpha * length, w1 + alpha * length > 1 ? 1 : w1 + alpha * length);
-        } else {
-            return new Random().nextDouble(w1 - alpha * length < -1 ? -1 : w1 - alpha * length, w2 + alpha * length > 1 ? 1 : w2 + alpha * length);
-        }
-    }
 
-    private static double mutate(double val, double mutationChance) {
-
-        return rand.nextDouble(0, 1) < mutationChance ? rand.nextDouble(-1, 1) : val;
-    }
-
-    private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen) {
+    private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen, double alpha, double crossChance, double mutationChance) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         // dodaje najboljeg stare generacije u novu i mice ga iz stare
@@ -64,7 +48,7 @@ public class GeneticAlgorithms {
             floor = 0;
             drugiClan = findRandomClan(oldGeneration, idxDrugiClan, floor);
 
-            newGeneration.put(createChild(prviClan, drugiClan, gen, i + 1), null);
+            newGeneration.put(createChild(prviClan, drugiClan, gen, i + 1, alpha, crossChance, mutationChance), null);
         }
 
         return newGeneration;
@@ -83,7 +67,7 @@ public class GeneticAlgorithms {
         throw new RuntimeException("Clan not found - Linija:78");
     }
 
-    private static NeuralNetwork createChild(NeuralNetwork prviClan, NeuralNetwork drugiClan, int gen, int id) {
+    private static NeuralNetwork createChild(NeuralNetwork prviClan, NeuralNetwork drugiClan, int gen, int id, double alpha, double crossChance, double mutationChance) {
         NeuralNetwork child = prviClan.copy();
         child.setID("NN-" + gen + "." + id);
 
@@ -99,13 +83,13 @@ public class GeneticAlgorithms {
         Iterator<Matrix> iteratorDrugogClanaWeights = drugiClanWeights.iterator();
         Iterator<Matrix> iteratorDrugogClanaBiases = drugiClanBiases.iterator();
 
-        generateNewValues(childWeight, iteratorPrvogClanaWeights, iteratorDrugogClanaWeights);
-        generateNewValues(childBias, iteratorPrvogClanaBiases, iteratorDrugogClanaBiases);
+        generateNewValues(childWeight, iteratorPrvogClanaWeights, iteratorDrugogClanaWeights, alpha, crossChance, mutationChance);
+        generateNewValues(childBias, iteratorPrvogClanaBiases, iteratorDrugogClanaBiases, alpha, crossChance, mutationChance);
 
         return child;
     }
 
-    private static void generateNewValues(List<Matrix> childBias, Iterator<Matrix> iteratorPrvogClanaBiases, Iterator<Matrix> iteratorDrugogClanaBiases) {
+    private static void generateNewValues(List<Matrix> childBias, Iterator<Matrix> iteratorPrvogClanaBiases, Iterator<Matrix> iteratorDrugogClanaBiases, double alpha, double crossChance, double mutationChance) {
         for (Matrix w1 : childBias) {
             Matrix w2 = iteratorPrvogClanaBiases.next();
             Matrix w3 = iteratorDrugogClanaBiases.next();
@@ -114,15 +98,33 @@ public class GeneticAlgorithms {
             double[] arrDrugi = w3.toArray();
             for (int i = 0; i < w1.rows; i++) {
                 for (int j = 0; j < w1.cols; j++) {
-                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], 0.1);
+                    w1.data[i][j] = rand.nextDouble(0, 1) < crossChance ? BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], alpha) : w1.data[i][j];
                 }
             }
 
             for (int i = 0; i < w1.rows; i++) {
                 for (int j = 0; j < w1.cols; j++) {
-                    w1.data[i][j] = mutate(w1.data[i][j], 0.05);
+                    w1.data[i][j] = rand.nextDouble(0, 1) < mutationChance ? mutate() : w1.data[i][j];
                 }
             }
         }
     }
+
+    private static double BLX_ALPHA(double w1, double w2, double alpha) {
+        double length = Math.abs(w2 - w1);
+        if (length == 0) {
+            length = 0.01;
+        }
+        if (w1 >= w2) {
+            return new Random().nextDouble(w2 - alpha * length < -1 ? -1 : w2 - alpha * length, w1 + alpha * length > 1 ? 1 : w1 + alpha * length);
+        } else {
+            return new Random().nextDouble(w1 - alpha * length < -1 ? -1 : w1 - alpha * length, w2 + alpha * length > 1 ? 1 : w2 + alpha * length);
+        }
+    }
+
+    private static double mutate () {
+        //TODO: dodati mogucnost za vise razlicitih vrsta mutacije
+        return rand.nextDouble(-1, 1);
+    }
+
 }

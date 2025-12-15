@@ -21,6 +21,10 @@ public class Launcher extends Application {
     private final static int NUM_NEURALNETWORKS = 50;
     private final static int NUM_GENS = 2000;
     private final static int TESTS_PER_NETWORK = 30;
+    private final static double ALPHA = 0.2;
+    private final static double CROSS_CHANCE = 0.1;
+    private final static double MUTATION_CHANCE = 0.05;
+
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -86,7 +90,7 @@ public class Launcher extends Application {
                         }
                     }
                     double totalFitnessThisGenAverage = averaged.values().stream().mapToDouble(Double::doubleValue).sum() / averaged.size();
-                    Generacija = GeneticAlgorithms.makeNewGen(averaged, GeneticType.DEFAULT, j);
+                    Generacija = GeneticAlgorithms.makeNewGen(averaged, GeneticType.DEFAULT, j, ALPHA, CROSS_CHANCE, MUTATION_CHANCE);
                     System.out.printf("  Average fitness this generation: %.4f%n", totalFitnessThisGenAverage);
                 }
 

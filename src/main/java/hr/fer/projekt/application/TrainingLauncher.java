@@ -12,6 +12,9 @@ public class TrainingLauncher {
     private final static int NUM_TESTS = 30;
     private final static int NUM_NEURALNETWORKS = 50;
     private final static int NUM_GENS = 500;
+    private final static double ALPHA = 0.2;
+    private final static double CROSS_CHANCE = 0.1;
+    private final static double MUTATION_CHANCE = 0.05;
 
     public static void main(String[] args) {
         int inputNodes = 10;
@@ -60,7 +63,7 @@ public class TrainingLauncher {
                 totalFitness /= NUM_TESTS;
                 Generacija.merge(n, totalFitness, (ov, nv) -> nv);
             }
-            Generacija = GeneticAlgorithms.makeNewGen(Generacija, GeneticType.DEFAULT, j);
+            Generacija = GeneticAlgorithms.makeNewGen(Generacija, GeneticType.DEFAULT, j, ALPHA,  CROSS_CHANCE, MUTATION_CHANCE);
         }
     }
 }

@@ -13,6 +13,10 @@ public class IrisTraining {
 
     private static final int NUM_NEURALNETWORKS = 50;
     private static final int NUM_GENS = 500;
+    private final static double ALPHA = 0.2;
+    private final static double CROSS_CHANCE = 0.1;
+    private final static double MUTATION_CHANCE = 0.05;
+
 
     private static class IrisSample {
         final double[] input;
@@ -82,7 +86,7 @@ public class IrisTraining {
             }
 
             // napravi novu generaciju (s null fitnessima)
-            generation = GeneticAlgorithms.makeNewGen(generation, GeneticType.DEFAULT, gen);
+            generation = GeneticAlgorithms.makeNewGen(generation, GeneticType.DEFAULT, gen, ALPHA, CROSS_CHANCE,  MUTATION_CHANCE);
         }
 
         if (bestOverall != null) {
