@@ -25,7 +25,7 @@ import java.util.*;
 public class Controller implements Initializable {
 
     private NeuralNetwork neuralNetwork = null;
-    private  boolean neuralNetworkPlaying = true;
+    private  boolean neuralNetworkPlaying = false;
     private final int FPS = 60;
     private final int NETWORK_REACTION_TIME_MS = 60;
     private final int TICK_TIME_MS= 3 ;
@@ -55,10 +55,17 @@ public class Controller implements Initializable {
     private AnimationTimer painter;
     private Thread physicsThread;
 
-
+¸¸
     private double[] getInputs() {
-        // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
-        Obstacle nearest = world.getObstacles().getLast();
+    // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
+        Obstacle nearest;
+        List<Obstacle> tempList = world.getObstacles().stream().
+                filter(o -> o.getX() >= world.getPlayer().getX() && o.getX() < world.getBorderRight()).toList();
+        if (tempList.isEmpty()) {
+            nearest =  world.getObstacles().getFirst();
+        }else {
+            nearest =  tempList.get(0);
+        }
         return new double[]{
                 nearest.getX(),
                 nearest.getY(),
@@ -72,6 +79,7 @@ public class Controller implements Initializable {
 
         };
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -102,7 +110,7 @@ public class Controller implements Initializable {
             @Override
             public void handle(long now) {
                 if (now - prev[0] >= intervalNanos) {
-                        update();
+                    update();
                     prev[0] = now;
                 }
                 if(world.getPlayer().isDead()){
