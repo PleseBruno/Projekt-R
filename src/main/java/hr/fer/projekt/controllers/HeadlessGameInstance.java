@@ -4,6 +4,9 @@ import hr.fer.projekt.neuronskaMreza.*;
 import hr.fer.projekt.entities.*;
 import hr.fer.projekt.application.*;
 
+import java.util.List;
+import java.util.Random;
+
 public class  HeadlessGameInstance {
     
     private final NeuralNetwork neuralNetwork;
@@ -17,14 +20,21 @@ public class  HeadlessGameInstance {
     private boolean aPressed = false, dPressed = false,
             sPressed = false, wPressed = false;
     
-    public HeadlessGameInstance(NeuralNetwork nn) {
+    public HeadlessGameInstance(NeuralNetwork nn, Random random) {
         this.neuralNetwork = nn;
-        this.world = new World();
+        this.world = new World(random);
     }
 
     private double[] getInputs() {
         // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
-        Obstacle nearest = world.getObstacles().getLast();
+        Obstacle nearest;
+        List<Obstacle> tempList = world.getObstacles().stream().
+                filter(o -> o.getX() >= world.getPlayer().getX() && o.getX() < world.getBorderRight()).toList();
+        if (tempList.isEmpty()) {
+            nearest =  world.getObstacles().getFirst();
+        }else {
+            nearest =  tempList.get(0);
+        }
         return new double[]{
                 nearest.getX(),
                 nearest.getY(),
@@ -50,8 +60,8 @@ public class  HeadlessGameInstance {
                 processInputs();
                 timeCounter = 0;
             }
-            time++;
-            //if(time% 30 == 0 )consolePrint();
+//            time++;
+//            if(time% 30 == 0 )consolePrint();
 
             Thread.sleep(TICK_TIME_MS);
             timeCounter++;

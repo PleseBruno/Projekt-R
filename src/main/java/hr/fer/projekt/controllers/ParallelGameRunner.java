@@ -17,14 +17,16 @@ public class ParallelGameRunner {
         this.results = new ConcurrentHashMap<>();
     }
     
-    public Map<NeuralNetwork, Double> runGamesInParallel(List<NeuralNetwork> neuralNetworks)
+    public Map<NeuralNetwork, Double> runGamesInParallel(List<NeuralNetwork> neuralNetworks, Long seed)
             throws InterruptedException, ExecutionException {
         
         List<Future<GameResult>> futures = new ArrayList<>();
-        
+
+
         // Submit all game instances to thread pool
         for (NeuralNetwork nn : neuralNetworks) {
-            Future<GameResult> future = executorService.submit(() -> runSingleGame(nn));
+            Random random = new Random(seed);
+            Future<GameResult> future = executorService.submit(() -> runSingleGame(nn, random));
             futures.add(future);
         }
         
@@ -38,8 +40,8 @@ public class ParallelGameRunner {
     }
     
 
-    private GameResult runSingleGame(NeuralNetwork nn) throws InterruptedException {
-        HeadlessGameInstance game = new HeadlessGameInstance(nn);
+    private GameResult runSingleGame(NeuralNetwork nn, Random random) throws InterruptedException {
+        HeadlessGameInstance game = new HeadlessGameInstance(nn, random);
         double fitness = game.run(); // Blocks until game ends
         return new GameResult(nn, fitness);
     }

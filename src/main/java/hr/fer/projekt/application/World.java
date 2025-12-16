@@ -4,6 +4,7 @@ import hr.fer.projekt.entities.Obstacle;
 import hr.fer.projekt.entities.Player;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class World {
 
@@ -17,21 +18,28 @@ public class World {
         return player;
     }
 
+    public Random rand;
+
     public List<Obstacle> getObstacles(){
         return obstacles;
     }
 
     private int objectCounter = 1;
 
-    public World() {
+    public World(Random rand) {
         player = new Player(73, 178,57,44);
         obstacles = new ArrayList<Obstacle>();
-        obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter)));
+        this.rand = rand;
+        obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter), rand));
     }
 
     public void generateObstacle() {
         objectCounter++;
-        obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter)));
+        obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter), rand));
+    }
+
+    public Random getRandom() {
+        return rand;
     }
 
     public int getBorderLeft() {

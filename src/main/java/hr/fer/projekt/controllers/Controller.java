@@ -31,7 +31,6 @@ public class Controller implements Initializable {
     private final int TICK_TIME_MS= 3 ;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
-
     public volatile Boolean
             aPressed = false, dPressed = false,
             sPressed = false, wPressed = false, newObstacle = false;
@@ -300,7 +299,7 @@ public class Controller implements Initializable {
                 physicsThread.interrupt();
             }
             System.out.println("Game starting");
-            world = new World();
+            world = new World(new Random());
             time = 0;
             newObstacle = false;
             obstacles.clear();

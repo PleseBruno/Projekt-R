@@ -17,14 +17,13 @@ import java.util.concurrent.ExecutionException;
 
 public class Launcher extends Application {
 
-    private static final boolean HEADLESS = true;
+    private static final boolean HEADLESS = false;
     private final static int NUM_NEURALNETWORKS = 50;
-    private final static int NUM_GENS = 2000;
-    private final static int TESTS_PER_NETWORK = 30;
+    private final static int NUM_GENS = 1000;
+    private final static int TESTS_PER_NETWORK = 50;
     private final static double ALPHA = 0.2;
-    private final static double CROSS_CHANCE = 0.1;
-    private final static double MUTATION_CHANCE = 0.05;
-
+    private final static double CROSS_CHANCE = 0.08;
+    private final static double MUTATION_CHANCE = 0.02;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -43,7 +42,7 @@ public class Launcher extends Application {
 
         if (HEADLESS) {
             int inputNodes = 9;
-            int[] hiddenLayers = {30, 20 };
+            int[] hiddenLayers = {10, 20};
             int outputNodes = 4;
 
             ParallelGameRunner runner = new ParallelGameRunner(
@@ -67,12 +66,20 @@ public class Launcher extends Application {
                     System.out.println("Generation: " + j);
                     List<NeuralNetwork>  nns = new ArrayList<>(Generacija.keySet());
 
+                    Random random = new Random(System.nanoTime());
+                    List<Long> seeds = new ArrayList<>();
+
+                    for (int i = 0; i < TESTS_PER_NETWORK; i++) {
+                        seeds.add(random.nextLong());
+                    }
+
                     // Use a temporary accumulator so we don't modify the population while testing
                     Map<NeuralNetwork, Double> accumulator = new HashMap<>();
                     for (NeuralNetwork nn : nns) accumulator.put(nn, 0.0);
 
                     for (int k = 0; k < TESTS_PER_NETWORK; k++) {
-                        var results = runner.runGamesInParallel(nns);
+                        Long seed = seeds.get(k);
+                        var results = runner.runGamesInParallel(nns, seed);
                         for (var entry : results.entrySet()) {
                             accumulator.put(entry.getKey(), accumulator.getOrDefault(entry.getKey(), 0.0) + entry.getValue());
                         }

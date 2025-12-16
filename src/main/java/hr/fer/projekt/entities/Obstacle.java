@@ -32,8 +32,8 @@ public class Obstacle extends Entity implements Comparable<Obstacle> {
         }
     }
 
-    public static Obstacle randomObstacle(String ID){
-        Random rand = new Random();
+    public static Obstacle randomObstacle(String ID, Random rand){
+
         int randomNum = rand.nextInt(4);
 
         switch (randomNum){
