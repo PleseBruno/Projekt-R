@@ -49,7 +49,6 @@ public class  HeadlessGameInstance {
         };
     }
 
-    
     public double run() throws InterruptedException {
         int timeCounter = 0;
         while (gameRunning && !world.getPlayer().isDead()) {
@@ -70,7 +69,6 @@ public class  HeadlessGameInstance {
         // Fitness = survival time
         return time;
     }
-    
 
     void consolePrint(){
         System.out.println("Time: " + time +
@@ -120,11 +118,7 @@ public class  HeadlessGameInstance {
         // Update world physics
         updatePhysics();
     }
-    
 
-    
-
-    
     private void updatePhysics() {
 
         if (sPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
@@ -148,5 +142,4 @@ public class  HeadlessGameInstance {
         world.getObstacles().removeIf(o -> o.getX() + o.getWidth() <= -50);
         world.getPlayer().moveVertical(world.getObstacles());
     }
-
 }

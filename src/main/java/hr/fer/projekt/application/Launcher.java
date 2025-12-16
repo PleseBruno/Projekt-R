@@ -35,7 +35,6 @@ public class Launcher extends Application {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-
     }
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -48,7 +47,6 @@ public class Launcher extends Application {
             ParallelGameRunner runner = new ParallelGameRunner(
                     Runtime.getRuntime().availableProcessors()
             );
-
 
             try {
 
@@ -109,7 +107,6 @@ public class Launcher extends Application {
                 } else {
                     System.out.println("No best network found.");
                 }
-
 
             } catch (Exception e) {
                 e.printStackTrace();
