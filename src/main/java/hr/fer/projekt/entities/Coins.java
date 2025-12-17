@@ -61,9 +61,10 @@ public class Coins {
 
     public Circle toCircle() {
         Circle circle = new Circle();
-        circle.setCenterX(x);
-        circle.setCenterY(y);
-        circle.setRadius(r);
+        circle.setLayoutX(getX());
+        circle.setLayoutY(getY());
+        circle.setRadius(getR());
+        circle.setId(this.getID());
         circle.setFill(Color.rgb(255, 215, 0));
         circle.setStrokeType(StrokeType.INSIDE);
         circle.setStroke(Color.BLACK);
@@ -76,7 +77,7 @@ public class Coins {
         }
     }
     public static Coins makeCoin(String ID, Random random, double x) {
-        int randomNum = random.nextInt(25, 175);
+        int randomNum = random.nextInt(50, 350);
         return new Coins(200, 12, x + 225, randomNum, ID);
     }
 }

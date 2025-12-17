@@ -41,7 +41,7 @@ public class Obstacle extends Entity implements Comparable<Obstacle> {
             case 1: return new Obstacle(700, 135, 200, 100, Color.WHITE, ID); // boat
             case 2: return new Obstacle(700, 175, 125, 300, Color.SANDYBROWN, ID); // island
             case 3: return new Obstacle(700, 0, 100, 250, Color.SLATEGRAY, ID); // stalactite
-            default: throw new IllegalArgumentException("Exception in class Obstacle line 23");
+            default: throw new IllegalArgumentException("Exception in class Obstacle line 44");
         }
     }
 

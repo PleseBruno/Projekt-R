@@ -136,8 +136,11 @@ public class  HeadlessGameInstance {
         }
         
         Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 5000.0, world.getObstacles());
-        Coins.moveCoins(STARTING_GAME_SPEED + time / 5000.0, world.getCoins());
         world.getObstacles().removeIf(o -> o.getX() + o.getWidth() <= -50);
+
+        Coins.moveCoins(STARTING_GAME_SPEED + time / 5000.0, world.getCoins());
+        world.getCoins().removeIf(c -> c.getX() + c.getR()*2 <= -50);
+
         world.getPlayer().moveVertical(world.getObstacles());
     }
 }

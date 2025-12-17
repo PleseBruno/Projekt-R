@@ -35,13 +35,13 @@ public class World {
     public World(Random rand) {
         this.rand = rand;
 
-        player = new Player(73, 178,57,44);
+        player = new Player(73, 178, 57, 44);
 
         obstacles = new ArrayList<Obstacle>();
         obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter), rand));
 
         coins = new ArrayList<Coins>();
-        coins.add((Coins.makeCoin(String.valueOf(objectCounter), rand, obstacles.getLast().getWidth() + obstacles.getLast().getX())));
+        coins.add((Coins.makeCoin(String.valueOf(objectCounter), rand, obstacles.getLast().getX() + obstacles.getLast().getWidth())));
     }
 
     public void generateObstacle() {
@@ -51,7 +51,7 @@ public class World {
 
     public void generateCoins() {
         coinCounter++;
-        coins.add(Coins.makeCoin(String.valueOf(coinCounter), rand, obstacles.getLast().getWidth() + obstacles.getLast().getX()));
+        coins.add(Coins.makeCoin(String.valueOf(coinCounter), rand, obstacles.getLast().getX() + obstacles.getLast().getWidth()));
     }
 
     public Random getRandom() {
