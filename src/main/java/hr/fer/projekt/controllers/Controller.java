@@ -1,6 +1,7 @@
 // language: java
 package hr.fer.projekt.controllers;
 
+import hr.fer.projekt.entities.Coins;
 import hr.fer.projekt.matematika.Matrix;
 import hr.fer.projekt.neuronskaMreza.NeuralNetwork;
 import hr.fer.projekt.application.World;
@@ -13,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
@@ -33,7 +35,8 @@ public class Controller implements Initializable {
     private volatile double time = 0;
     public volatile Boolean
             aPressed = false, dPressed = false,
-            sPressed = false, wPressed = false, newObstacle = false;
+            sPressed = false, wPressed = false,
+            newObstacle = false, newCoin = false;
 
     @FXML
     private Rectangle player;
@@ -46,6 +49,8 @@ public class Controller implements Initializable {
 
     private Map<String, Rectangle> obstacles;
 
+    private Map<String, Circle> coins;
+
     @FXML
     private AnchorPane stage;
 
@@ -54,9 +59,8 @@ public class Controller implements Initializable {
     private AnimationTimer painter;
     private Thread physicsThread;
 
-
     private double[] getInputs() {
-    // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
+
         Obstacle nearest;
         List<Obstacle> tempList = world.getObstacles().stream().
                 filter(o -> o.getX() >= world.getPlayer().getX() && o.getX() < world.getBorderRight()).toList();
@@ -75,10 +79,8 @@ public class Controller implements Initializable {
                 STARTING_GAME_SPEED + time / 5000.0,
                 world.getPlayer().getMoveY(),
                 world.getPlayer().getMoveX()
-
         };
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -93,8 +95,8 @@ public class Controller implements Initializable {
         }
         stage.requestFocus();
         obstacles = new HashMap<>();
+        coins = new  HashMap<>();
         startGame();
-
     }
 
     private void startPhysicsThread() {
@@ -172,12 +174,12 @@ public class Controller implements Initializable {
         } else {
             sPressed = false;
         }
-
     }
 
     public void step() {
 
-        time++;
+        time+=0.75;
+
         if (sPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
             world.getPlayer().dive();
         }
@@ -195,11 +197,13 @@ public class Controller implements Initializable {
         if (world.getObstacles().getLast().getX() + world.getObstacles().getLast().getWidth() < 250) {
 
             world.generateObstacle();
-
+            world.generateCoins();
             newObstacle = true;
+            newCoin = true;
         }
 
         Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 5000.0, world.getObstacles());
+        Coins.moveCoins(STARTING_GAME_SPEED + time / 5000.0, world.getCoins());
 
         world.getObstacles().removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= -50);
 
@@ -208,13 +212,12 @@ public class Controller implements Initializable {
 
     //Called every game frame
     private void update() {
-        time ++;
+        time++;
 
         player.setLayoutX(world.getPlayer().getX());
         player.setLayoutY(world.getPlayer().getY());
 
         if (newObstacle) {
-
             obstacles.put(world.getObstacles().getLast().getID(), world.getObstacles().getLast().toRectangle());
             stage.getChildren().add(obstacles.get(world.getObstacles().getLast().getID()));
 
@@ -226,16 +229,31 @@ public class Controller implements Initializable {
             obstacles.get(obstacle.getID()).setLayoutY(obstacle.getY());
         }
 
+        if (newCoin) {
+            coins.put(world.getCoins().getLast().getID(), world.getCoins().getLast().toCircle());
+            stage.getChildren().add(coins.get(world.getCoins().getLast().getID()));
+
+            newCoin = false;
+        }
+
+        for (Coins coin : world.getCoins()) {
+            coins.get(coin.getID()).setLayoutX(coin.getX());
+            coins.get(coin.getID()).setLayoutY(coin.getY());
+        }
+
         stage.getChildren().removeIf(node -> {
             if (node instanceof Rectangle) {
                 Rectangle rect = (Rectangle) node;
                 return rect.getLayoutX() <= -rect.getWidth() && obstacles.containsKey(rect.getId());
             }
+            if (node instanceof Circle) {
+                Circle circle = (Circle) node;
+                return circle.getLayoutX() <= -circle.getRadius()*2 && coins.containsKey(circle.getId());
+            }
             return false;
         });
 
         scoreCounter.setText("SCORE: " + String.valueOf((int) time));
-
     }
 
     @FXML
@@ -301,13 +319,20 @@ public class Controller implements Initializable {
             System.out.println("Game starting");
             world = new World(new Random());
             time = 0;
+
             newObstacle = false;
             obstacles.clear();
 
-            stage.getChildren().removeIf(node -> (node instanceof Rectangle) && node != player && node != more && node != nebo);
+            newCoin = false;
+            coins.clear();
+
+            stage.getChildren().removeIf(node -> (node instanceof Rectangle || node instanceof Circle) && node != player && node != more && node != nebo);
 
             obstacles.put(world.getObstacles().getLast().getID(), world.getObstacles().getLast().toRectangle());
             stage.getChildren().add(obstacles.get(world.getObstacles().getLast().getID()));
+
+            coins.put(world.getCoins().getLast().getID(), world.getCoins().getLast().toCircle());
+            stage.getChildren().add(coins.get(world.getCoins().getLast().getID()));
 
             player.setLayoutX(world.getPlayer().getX());
             player.setLayoutY(world.getPlayer().getY());
@@ -336,8 +361,6 @@ public class Controller implements Initializable {
             System.err.println("Failed to write game start: " + e.getMessage());
         }
     }
-
-
 
     // Loads a NeuralNetwork previously saved to a text file (format produced by NeuralNetwork.toString())
     private NeuralNetwork loadNeuralNetworkFromFile(String filename) throws Exception {
@@ -394,5 +417,4 @@ public class Controller implements Initializable {
             return new NeuralNetwork(id, inputNodes, hiddenLayers, outputNodes, weights, biases);
         }
     }
-
 }

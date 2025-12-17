@@ -26,7 +26,7 @@ public class  HeadlessGameInstance {
     }
 
     private double[] getInputs() {
-        // Example: 4 sensors (distance to obstacle, obstacle height, etc.)
+
         Obstacle nearest;
         List<Obstacle> tempList = world.getObstacles().stream().
                 filter(o -> o.getX() >= world.getPlayer().getX() && o.getX() < world.getBorderRight()).toList();
@@ -45,7 +45,6 @@ public class  HeadlessGameInstance {
                 STARTING_GAME_SPEED + time / 5000.0,
                 world.getPlayer().getMoveY(),
                 world.getPlayer().getMoveX()
-
         };
     }
 
@@ -59,8 +58,6 @@ public class  HeadlessGameInstance {
                 processInputs();
                 timeCounter = 0;
             }
-//            time++;
-//            if(time% 30 == 0 )consolePrint();
 
             Thread.sleep(TICK_TIME_MS);
             timeCounter++;
@@ -114,7 +111,6 @@ public class  HeadlessGameInstance {
     }
 
     private void step() {
-
         // Update world physics
         updatePhysics();
     }
@@ -130,15 +126,17 @@ public class  HeadlessGameInstance {
         if (aPressed && world.getPlayer().getX() > world.getBorderLeft() + 70) {
             world.getPlayer().moveLeft();
         }
-        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 57) {
+        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 65) {
             world.getPlayer().moveRight();
         }
 
         if (world.getObstacles().getLast().getX() + world.getObstacles().getLast().getWidth() < 250) {
             world.generateObstacle();
+            world.generateCoins();
         }
         
         Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 5000.0, world.getObstacles());
+        Coins.moveCoins(STARTING_GAME_SPEED + time / 5000.0, world.getCoins());
         world.getObstacles().removeIf(o -> o.getX() + o.getWidth() <= -50);
         world.getPlayer().moveVertical(world.getObstacles());
     }

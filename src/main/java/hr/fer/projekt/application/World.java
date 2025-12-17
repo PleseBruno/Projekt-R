@@ -1,5 +1,6 @@
 package hr.fer.projekt.application;
 
+import hr.fer.projekt.entities.Coins;
 import hr.fer.projekt.entities.Obstacle;
 import hr.fer.projekt.entities.Player;
 import java.util.ArrayList;
@@ -9,33 +10,48 @@ import java.util.Random;
 public class World {
 
     private List<Obstacle> obstacles;
+    private List<Coins> coins;
     private int borderLeft = 0;
     private int borderRight = 600;
+    public Random rand;
 
     private Player player;
+
+    private int objectCounter = 1;
+    private int coinCounter = 1;
 
     public Player getPlayer(){
         return player;
     }
 
-    public Random rand;
-
     public List<Obstacle> getObstacles(){
         return obstacles;
     }
 
-    private int objectCounter = 1;
+    public List<Coins> getCoins() {
+        return coins;
+    }
 
     public World(Random rand) {
-        player = new Player(73, 178,57,44);
-        obstacles = new ArrayList<Obstacle>();
         this.rand = rand;
+
+        player = new Player(73, 178,57,44);
+
+        obstacles = new ArrayList<Obstacle>();
         obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter), rand));
+
+        coins = new ArrayList<Coins>();
+        coins.add((Coins.makeCoin(String.valueOf(objectCounter), rand, obstacles.getLast().getWidth() + obstacles.getLast().getX())));
     }
 
     public void generateObstacle() {
         objectCounter++;
         obstacles.add(Obstacle.randomObstacle(String.valueOf(objectCounter), rand));
+    }
+
+    public void generateCoins() {
+        coinCounter++;
+        coins.add(Coins.makeCoin(String.valueOf(coinCounter), rand, obstacles.getLast().getWidth() + obstacles.getLast().getX()));
     }
 
     public Random getRandom() {

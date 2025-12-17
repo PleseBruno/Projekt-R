@@ -1,4 +1,4 @@
-package hr.fer.projekt.application;
+package hr.fer.projekt.temp;
 
 import hr.fer.projekt.genetskiAlgoritam.GeneticAlgorithms;
 import hr.fer.projekt.genetskiAlgoritam.GeneticType;
