@@ -20,7 +20,7 @@ public class Launcher extends Application {
     private static final boolean HEADLESS = false;
     private final static int NUM_NEURALNETWORKS = 50;
     private final static int NUM_GENS = 1000;
-    private final static int TESTS_PER_NETWORK = 50;
+    private final static int TESTS_PER_NETWORK = 30;
     private final static double ALPHA = 0.2;
     private final static double CROSS_CHANCE = 0.08;
     private final static double MUTATION_CHANCE = 0.02;
@@ -41,7 +41,7 @@ public class Launcher extends Application {
 
         if (HEADLESS) {
             int inputNodes = 12;
-            int[] hiddenLayers = {10, 20};
+            int[] hiddenLayers = {20, 40};
             int outputNodes = 4;
 
             ParallelGameRunner runner = new ParallelGameRunner(

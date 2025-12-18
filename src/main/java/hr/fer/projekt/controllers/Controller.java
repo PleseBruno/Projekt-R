@@ -77,14 +77,14 @@ public class Controller implements Initializable {
         if (tempListCoins.isEmpty()) {
             if (!world.getCoins().isEmpty()) {
                 first = world.getCoins().getFirst();
-                world.getCoins().removeIf(c -> c.getID().equals("10"));
+                world.getCoins().removeIf(c -> c.getID().equals("10000"));
             }
             else
-                first = Coins.makeCoin(String.valueOf(10), new Random(), 375);
+                first = Coins.makeCoin(String.valueOf(10000), new Random(), 375);
         }
         else {
             first =  tempListCoins.get(0);
-            world.getCoins().removeIf(c -> c.getID().equals("10"));
+            world.getCoins().removeIf(c -> c.getID().equals("10000"));
         }
 
         return new double[]{
@@ -226,11 +226,14 @@ public class Controller implements Initializable {
         Obstacle.moveObstacles(STARTING_GAME_SPEED + time / 5000.0, world.getObstacles());
         world.getObstacles().removeIf(obstacle -> obstacle.getX() + obstacle.getWidth() <= -50);
 
+        world.getPlayer().moveVertical(world.getObstacles());
+
         Coins.moveCoins(STARTING_GAME_SPEED + time / 5000.0, world.getCoins());
         world.getCoins().removeIf(c -> c.getX() + c.getR()*2 <= -50);
 
-        world.getPlayer().moveVertical(world.getObstacles());
-
+        if (!world.getCoins().isEmpty()) {
+            world.getCoins().removeIf(c -> c.getID().equals("10000"));
+        }
         world.getCoins().removeIf(c -> {
             if (world.getPlayer().collectCoin(c) == 1) {
 
