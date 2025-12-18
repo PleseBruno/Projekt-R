@@ -40,7 +40,7 @@ public class Launcher extends Application {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         if (HEADLESS) {
-            int inputNodes = 9;
+            int inputNodes = 12;
             int[] hiddenLayers = {10, 20};
             int outputNodes = 4;
 

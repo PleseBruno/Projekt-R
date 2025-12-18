@@ -175,8 +175,20 @@ public class Player extends Entity {
         return 0;
     }
 
+    public int collectCoin(Coins coin) {
+        double closestX = Math.max(getX(), Math.min(getX() + getWidth(), coin.getX()));
+        double closestY = Math.max(getY(), Math.min(getY() + getHeight(), coin.getY()));
+
+        double distanceX = Math.abs(coin.getX() - closestX);
+        double distanceY = Math.abs(coin.getY() - closestY);
+
+        if (distanceX*distanceX + distanceY*distanceY <= coin.getR()*coin.getR()) {
+            return 1;
+        }
+        return 0;
+    }
+
     public boolean isDead() {
         return getX() + getWidth() < 0;
     }
 }
-

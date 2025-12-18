@@ -10,6 +10,7 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -27,7 +28,7 @@ import java.util.*;
 public class Controller implements Initializable {
 
     private NeuralNetwork neuralNetwork = null;
-    private  boolean neuralNetworkPlaying = false;
+    private  boolean neuralNetworkPlaying = true;
     private final int FPS = 60;
     private final int NETWORK_REACTION_TIME_MS = 60;
     private final int TICK_TIME_MS= 3 ;
@@ -69,6 +70,23 @@ public class Controller implements Initializable {
         }else {
             nearest =  tempList.get(0);
         }
+
+        Coins first;
+        List<Coins> tempListCoins = world.getCoins().stream().
+                filter(c -> c.getX() >= world.getPlayer().getX() && c.getX() < world.getBorderRight()).toList();
+        if (tempListCoins.isEmpty()) {
+            if (!world.getCoins().isEmpty()) {
+                first = world.getCoins().getFirst();
+                world.getCoins().removeIf(c -> c.getID().equals("10"));
+            }
+            else
+                first = Coins.makeCoin(String.valueOf(10), new Random(), 375);
+        }
+        else {
+            first =  tempListCoins.get(0);
+            world.getCoins().removeIf(c -> c.getID().equals("10"));
+        }
+
         return new double[]{
                 nearest.getX(),
                 nearest.getY(),
@@ -78,7 +96,10 @@ public class Controller implements Initializable {
                 world.getPlayer().getY(),
                 STARTING_GAME_SPEED + time / 5000.0,
                 world.getPlayer().getMoveY(),
-                world.getPlayer().getMoveX()
+                world.getPlayer().getMoveX(),
+                first.getX(),
+                first.getY(),
+                first.getR()
         };
     }
 
@@ -190,7 +211,7 @@ public class Controller implements Initializable {
         if (aPressed && world.getPlayer().getX() > world.getBorderLeft() + 70) {
             world.getPlayer().moveLeft();
         }
-        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 57) {
+        if (dPressed && (world.getPlayer().getX() + world.getPlayer().getWidth()) < world.getBorderRight() - 30) {
             world.getPlayer().moveRight();
         }
 
@@ -209,6 +230,18 @@ public class Controller implements Initializable {
         world.getCoins().removeIf(c -> c.getX() + c.getR()*2 <= -50);
 
         world.getPlayer().moveVertical(world.getObstacles());
+
+        world.getCoins().removeIf(c -> {
+            if (world.getPlayer().collectCoin(c) == 1) {
+
+                c.setX(-50);
+                coins.get(c.getID()).setLayoutX(-50);
+
+                time += c.getPoints();
+                return true;
+            }
+            return false;
+        });
     }
 
     //Called every game frame

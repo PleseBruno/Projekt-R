@@ -13,6 +13,7 @@ public class Coins {
     private double r;
     private double x;
     private double y;
+    private Circle circle;
 
     private final String ID;
 
@@ -22,6 +23,14 @@ public class Coins {
         this.x = x;
         this.y = y;
         this.ID = ID;
+    }
+
+    public Circle getCircle() {
+        return circle;
+    }
+
+    public void setCircle(Circle circle) {
+        this.circle = circle;
     }
 
     public double getPoints() {
@@ -78,6 +87,6 @@ public class Coins {
     }
     public static Coins makeCoin(String ID, Random random, double x) {
         int randomNum = random.nextInt(50, 350);
-        return new Coins(200, 12, x + 225, randomNum, ID);
+        return new Coins(500, 12, x + 225, randomNum, ID);
     }
 }

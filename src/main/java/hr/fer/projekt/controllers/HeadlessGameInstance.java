@@ -32,8 +32,25 @@ public class  HeadlessGameInstance {
                 filter(o -> o.getX() >= world.getPlayer().getX() && o.getX() < world.getBorderRight()).toList();
         if (tempList.isEmpty()) {
             nearest =  world.getObstacles().getFirst();
-        }else {
+        }
+        else {
             nearest =  tempList.get(0);
+        }
+
+        Coins first;
+        List<Coins> tempListCoins = world.getCoins().stream().
+                filter(c -> c.getX() >= world.getPlayer().getX() && c.getX() < world.getBorderRight()).toList();
+        if (tempListCoins.isEmpty()) {
+            if (!world.getCoins().isEmpty()) {
+                first = world.getCoins().getFirst();
+                world.getCoins().removeIf(c -> c.getID().equals("10"));
+            }
+            else
+                first = Coins.makeCoin(String.valueOf(10), new Random(), 375);
+        }
+        else {
+            first =  tempListCoins.get(0);
+            world.getCoins().removeIf(c -> c.getID().equals("10"));
         }
         return new double[]{
                 nearest.getX(),
@@ -44,7 +61,10 @@ public class  HeadlessGameInstance {
                 world.getPlayer().getY(),
                 STARTING_GAME_SPEED + time / 5000.0,
                 world.getPlayer().getMoveY(),
-                world.getPlayer().getMoveX()
+                world.getPlayer().getMoveX(),
+                first.getX(),
+                first.getY(),
+                first.getR()
         };
     }
 
@@ -126,7 +146,7 @@ public class  HeadlessGameInstance {
         if (aPressed && world.getPlayer().getX() > world.getBorderLeft() + 70) {
             world.getPlayer().moveLeft();
         }
-        if (dPressed && world.getPlayer().getX() < world.getBorderRight() - 65) {
+        if (dPressed && (world.getPlayer().getX() + world.getPlayer().getWidth()) < world.getBorderRight() - 30) {
             world.getPlayer().moveRight();
         }
 
@@ -142,5 +162,16 @@ public class  HeadlessGameInstance {
         world.getCoins().removeIf(c -> c.getX() + c.getR()*2 <= -50);
 
         world.getPlayer().moveVertical(world.getObstacles());
+
+        world.getCoins().removeIf(c -> {
+            if (world.getPlayer().collectCoin(c) == 1) {
+
+                c.setX(-50);
+
+                time += c.getPoints();
+                return true;
+            }
+            return false;
+        });
     }
 }
