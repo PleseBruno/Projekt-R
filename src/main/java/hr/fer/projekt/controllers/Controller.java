@@ -34,6 +34,7 @@ public class Controller implements Initializable {
     private final int TICK_TIME_MS= 3 ;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
+    private volatile double bonusPoints = 0;
     public volatile Boolean
             aPressed = false, dPressed = false,
             sPressed = false, wPressed = false,
@@ -136,8 +137,9 @@ public class Controller implements Initializable {
                     prev[0] = now;
                 }
                 if(world.getPlayer().isDead()){
-                    System.out.println("Game over! Your score: " + (time));
-                    saveScore(time);
+                    double score = bonusPoints + time;
+                    System.out.println("Game over! Your score: " + (score));
+                    saveScore(score);
                     this.stop();
                 }
             }
@@ -240,7 +242,7 @@ public class Controller implements Initializable {
                 c.setX(-50);
                 coins.get(c.getID()).setLayoutX(-50);
 
-                time += c.getPoints();
+                bonusPoints += c.getPoints();
                 return true;
             }
             return false;
@@ -249,7 +251,6 @@ public class Controller implements Initializable {
 
     //Called every game frame
     private void update() {
-        time++;
 
         player.setLayoutX(world.getPlayer().getX());
         player.setLayoutY(world.getPlayer().getY());
@@ -290,7 +291,7 @@ public class Controller implements Initializable {
             return false;
         });
 
-        scoreCounter.setText("SCORE: " + String.valueOf((int) time));
+        scoreCounter.setText("SCORE: " + String.valueOf((int) (time + bonusPoints)));
     }
 
     @FXML
@@ -356,6 +357,7 @@ public class Controller implements Initializable {
             System.out.println("Game starting");
             world = new World(new Random());
             time = 0;
+            bonusPoints = 0;
 
             newObstacle = false;
             obstacles.clear();

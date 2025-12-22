@@ -14,7 +14,8 @@ public class  HeadlessGameInstance {
     private final World world;
     private final long TICK_TIME_MS = 0;
     private final double STARTING_GAME_SPEED = 0.5;
-    private volatile int time = 0;
+    private volatile double time = 0;
+    private volatile double bonusPoints = 0;
     private volatile boolean gameRunning = true;
 
     private boolean aPressed = false, dPressed = false,
@@ -84,7 +85,7 @@ public class  HeadlessGameInstance {
         }
         
         // Fitness = survival time
-        return time;
+        return time + bonusPoints;
     }
 
     void consolePrint(){
@@ -132,6 +133,7 @@ public class  HeadlessGameInstance {
 
     private void step() {
         // Update world physics
+        time += 0.75;
         updatePhysics();
     }
 
@@ -171,7 +173,7 @@ public class  HeadlessGameInstance {
 
                 c.setX(-50);
 
-                time += c.getPoints();
+                bonusPoints += c.getPoints();
                 return true;
             }
             return false;

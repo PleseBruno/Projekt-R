@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 
 public class Launcher extends Application {
 
-    private static final boolean HEADLESS = false;
+    private static final boolean HEADLESS = true;
     private final static int NUM_NEURALNETWORKS = 50;
     private final static int NUM_GENS = 1000;
     private final static int TESTS_PER_NETWORK = 30;
