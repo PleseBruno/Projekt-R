@@ -35,6 +35,7 @@ public class Controller implements Initializable {
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
     private volatile double bonusPoints = 0;
+    private volatile double coinsCollected = 0;
     public volatile Boolean
             aPressed = false, dPressed = false,
             sPressed = false, wPressed = false,
@@ -242,6 +243,7 @@ public class Controller implements Initializable {
                 c.setX(-50);
                 coins.get(c.getID()).setLayoutX(-50);
 
+                coinsCollected++;
                 bonusPoints += c.getPoints();
                 return true;
             }
@@ -358,6 +360,7 @@ public class Controller implements Initializable {
             world = new World(new Random());
             time = 0;
             bonusPoints = 0;
+            coinsCollected = 0;
 
             newObstacle = false;
             obstacles.clear();

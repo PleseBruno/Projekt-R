@@ -12,15 +12,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 
 public class Launcher extends Application {
 
-    private static final boolean HEADLESS = true;
+    private static final boolean HEADLESS = false;
     private final static int NUM_NEURALNETWORKS = 50;
-    private final static int NUM_GENS = 1000;
-    private final static int TESTS_PER_NETWORK = 30;
+    private final static int NUM_GENS = 200;
+    private final static int TESTS_PER_NETWORK = 40;
     private final static double ALPHA = 0.2;
     private final static double CROSS_CHANCE = 0.08;
     private final static double MUTATION_CHANCE = 0.02;
@@ -41,7 +43,7 @@ public class Launcher extends Application {
 
         if (HEADLESS) {
             int inputNodes = 12;
-            int[] hiddenLayers = {20, 40};
+            int[] hiddenLayers = {30, 30};
             int outputNodes = 4;
 
             ParallelGameRunner runner = new ParallelGameRunner(
@@ -67,7 +69,7 @@ public class Launcher extends Application {
                     Random random = new Random(System.nanoTime());
                     List<Long> seeds = new ArrayList<>();
 
-                    for (int i = 0; i < TESTS_PER_NETWORK; i++) {
+                    for (int k = 0; k < TESTS_PER_NETWORK; k++) {
                         seeds.add(random.nextLong());
                     }
 
@@ -75,8 +77,8 @@ public class Launcher extends Application {
                     Map<NeuralNetwork, Double> accumulator = new HashMap<>();
                     for (NeuralNetwork nn : nns) accumulator.put(nn, 0.0);
 
-                    for (int k = 0; k < TESTS_PER_NETWORK; k++) {
-                        Long seed = seeds.get(k);
+                    for (int l = 0; l < TESTS_PER_NETWORK; l++) {
+                        Long seed = seeds.get(l);
                         var results = runner.runGamesInParallel(nns, seed);
                         for (var entry : results.entrySet()) {
                             accumulator.put(entry.getKey(), accumulator.getOrDefault(entry.getKey(), 0.0) + entry.getValue());
@@ -104,6 +106,17 @@ public class Launcher extends Application {
                     System.out.println("\n=== BEST NETWORK ===");
                     System.out.println("ID: " + bestNetwork.getID() + " fitness=" + bestFitness);
                     System.out.println(bestNetwork.toString());
+
+                    Path fileName = Path.of("best_network.txt");
+
+                    try {
+                        Files.writeString(fileName, bestNetwork.toString());
+                    }
+                    catch (IOException e) {
+                        System.err.println("Neuronska mreža neuspješno učitana.");
+                    }
+
+
                 } else {
                     System.out.println("No best network found.");
                 }
