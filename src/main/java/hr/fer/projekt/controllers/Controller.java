@@ -1,4 +1,3 @@
-// language: java
 package hr.fer.projekt.controllers;
 
 import hr.fer.projekt.entities.Coins;
@@ -10,14 +9,13 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -28,14 +26,13 @@ import java.util.*;
 public class Controller implements Initializable {
 
     private NeuralNetwork neuralNetwork = null;
-    private  boolean neuralNetworkPlaying = true;
-    private final int FPS = 60;
+    private  boolean neuralNetworkPlaying;
+    private final int FPS = 120;
     private final int NETWORK_REACTION_TIME_MS = 60;
     private final int TICK_TIME_MS= 3 ;
     private final double STARTING_GAME_SPEED = 0.5;
     private volatile double time = 0;
     private volatile double bonusPoints = 0;
-    private volatile double coinsCollected = 0;
     public volatile Boolean
             aPressed = false, dPressed = false,
             sPressed = false, wPressed = false,
@@ -49,6 +46,11 @@ public class Controller implements Initializable {
     private Rectangle nebo;
     @FXML
     private TextField scoreCounter;
+
+    @FXML
+    private Button play;
+    @FXML
+    private Button aiPlay;
 
     private Map<String, Rectangle> obstacles;
 
@@ -108,14 +110,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         markGameStart();
-        if (neuralNetworkPlaying){
-            try {
-                neuralNetwork = loadNeuralNetworkFromFile("best_network.txt");
-            } catch (Exception e) {
-                e.printStackTrace();
-                throw new RuntimeException("Greška prilikom ucitavanja matrice: " + e.getMessage());
-            }
-        }
+
         stage.requestFocus();
         obstacles = new HashMap<>();
         coins = new  HashMap<>();
@@ -243,7 +238,6 @@ public class Controller implements Initializable {
                 c.setX(-50);
                 coins.get(c.getID()).setLayoutX(-50);
 
-                coinsCollected++;
                 bonusPoints += c.getPoints();
                 return true;
             }
@@ -360,7 +354,6 @@ public class Controller implements Initializable {
             world = new World(new Random());
             time = 0;
             bonusPoints = 0;
-            coinsCollected = 0;
 
             newObstacle = false;
             obstacles.clear();
@@ -455,8 +448,20 @@ public class Controller implements Initializable {
                     b.data[i / b.cols][i % b.cols] = input.nextDouble();
                 }
             }
-
             return new NeuralNetwork(id, inputNodes, hiddenLayers, outputNodes, weights, biases);
+        }
+    }
+
+    public void setNeuralNetworkPlaying(boolean neuralNetworkPlaying) throws Exception {
+        this.neuralNetworkPlaying = neuralNetworkPlaying;
+
+        if  (neuralNetworkPlaying) {
+            try {
+                neuralNetwork = loadNeuralNetworkFromFile("best_network.txt");
+            }
+            catch (Exception e) {
+                throw new Exception("Failed to load neural network from file: " + e.getMessage());
+            }
         }
     }
 }

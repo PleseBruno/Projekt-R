@@ -1,8 +1,6 @@
 package hr.fer.projekt.application;
 
-import hr.fer.projekt.controllers.HeadlessGameInstance;
 import hr.fer.projekt.controllers.ParallelGameRunner;
-import hr.fer.projekt.genetskiAlgoritam.FitnessChecker;
 import hr.fer.projekt.genetskiAlgoritam.GeneticAlgorithms;
 import hr.fer.projekt.genetskiAlgoritam.GeneticType;
 import hr.fer.projekt.neuronskaMreza.NeuralNetwork;
@@ -10,7 +8,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,13 +27,15 @@ public class Launcher extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            scene.getRoot().requestFocus();
-            stage.setTitle("Patkica");
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("startScreen.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        scene.getStylesheets().add(getClass().getResource("button.css").toExternalForm());
+        stage.setScene(scene);
+        stage.setTitle("Patkica");
+        stage.setResizable(false);
+        stage.show();
+
     }
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -126,7 +125,7 @@ public class Launcher extends Application {
             } finally {
                 runner.shutdown();
             }
-            
+
         }else launch();
     }
 }

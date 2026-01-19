@@ -11,9 +11,6 @@
       <Rectangle fx:id="more" arcHeight="5.0" arcWidth="5.0" fill="LIGHTBLUE" height="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <Rectangle fx:id="player" arcHeight="5.0" arcWidth="5.0" fill="#fcba03" height="44.0" layoutX="73.0" layoutY="178.0" stroke="BLACK" strokeType="INSIDE" width="57.0" />
       <TextField fx:id="scoreCounter" prefHeight="25.0" prefWidth="154.0" promptText="SCORE: 000000" style="-fx-background-color: transparent; -fx-font-weight: bold;">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
       </TextField>
    </children>
 </AnchorPane>
