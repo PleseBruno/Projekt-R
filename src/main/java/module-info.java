@@ -8,6 +8,5 @@ module hr.fer.projekt {
 
     opens hr.fer.projekt.controllers to javafx.fxml;
     exports hr.fer.projekt.controllers;
-    exports hr.fer.projekt.temp;
-    opens hr.fer.projekt.temp to javafx.fxml;
+
 }

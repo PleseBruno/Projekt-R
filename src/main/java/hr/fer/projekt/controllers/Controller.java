@@ -9,7 +9,7 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -47,11 +47,6 @@ public class Controller implements Initializable {
     @FXML
     private TextField scoreCounter;
 
-    @FXML
-    private Button play;
-    @FXML
-    private Button aiPlay;
-
     private Map<String, Rectangle> obstacles;
 
     private Map<String, Circle> coins;
@@ -72,7 +67,7 @@ public class Controller implements Initializable {
         if (tempList.isEmpty()) {
             nearest =  world.getObstacles().getFirst();
         }else {
-            nearest =  tempList.get(0);
+            nearest =  tempList.getFirst();
         }
 
         Coins first;
@@ -87,7 +82,7 @@ public class Controller implements Initializable {
                 first = Coins.makeCoin(String.valueOf(10000), new Random(), 375);
         }
         else {
-            first =  tempListCoins.get(0);
+            first =  tempListCoins.getFirst();
             world.getCoins().removeIf(c -> c.getID().equals("10000"));
         }
 
