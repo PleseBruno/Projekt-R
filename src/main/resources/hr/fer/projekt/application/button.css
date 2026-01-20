@@ -4,7 +4,7 @@
     src: url('../../../../fonts/Stepalange.otf');
 }
 
-.text-field{
+.label{
     -fx-font-family: "Stepalange";
     -fx-font-size: 70;
     -fx-background-color: transparent;
