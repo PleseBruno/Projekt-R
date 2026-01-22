@@ -392,67 +392,12 @@ public class Controller implements Initializable {
         }
     }
 
-    // Loads a NeuralNetwork previously saved to a text file (format produced by NeuralNetwork.toString())
-    private NeuralNetwork loadNeuralNetworkFromFile(String filename) throws Exception {
-        try (Scanner input = new Scanner(Files.newBufferedReader(Paths.get(filename)))) {
-            input.useLocale(Locale.US);
-
-            // Read first non-empty line as ID
-            String id = "";
-            while (input.hasNextLine()) {
-                id = input.nextLine().trim();
-                if (!id.isEmpty()) break;
-            }
-
-            if (id.isEmpty()) throw new IllegalArgumentException("Empty network id in file: " + filename);
-
-            int numHiddenLayers = input.nextInt();
-            int inputNodes = input.nextInt();
-
-            int[] hiddenLayers = new int[numHiddenLayers];
-            for (int i = 0; i < numHiddenLayers; i++) {
-                hiddenLayers[i] = input.nextInt();
-            }
-            int outputNodes = input.nextInt();
-
-            List<Matrix> weights = new ArrayList<>();
-            List<Matrix> biases = new ArrayList<>();
-
-            int prevNodes = inputNodes;
-            for (int hiddenNodes : hiddenLayers) {
-                weights.add(new Matrix(hiddenNodes, prevNodes));
-                biases.add(new Matrix(hiddenNodes, 1));
-                prevNodes = hiddenNodes;
-            }
-
-            weights.add(new Matrix(outputNodes, prevNodes));
-            biases.add(new Matrix(outputNodes, 1));
-
-            // Fill weight matrices (row-major in file)
-            for (Matrix w : weights) {
-                for (int i = 0; i < w.rows * w.cols; i++) {
-                    if (!input.hasNextDouble()) throw new IllegalStateException("Not enough weight values in file");
-                    w.data[i / w.cols][i % w.cols] = input.nextDouble();
-                }
-            }
-
-            // Fill bias matrices
-            for (Matrix b : biases) {
-                for (int i = 0; i < b.rows * b.cols; i++) {
-                    if (!input.hasNextDouble()) throw new IllegalStateException("Not enough bias values in file");
-                    b.data[i / b.cols][i % b.cols] = input.nextDouble();
-                }
-            }
-            return new NeuralNetwork(id, inputNodes, hiddenLayers, outputNodes, weights, biases);
-        }
-    }
-
     public void setNeuralNetworkPlaying(boolean neuralNetworkPlaying) throws Exception {
         this.neuralNetworkPlaying = neuralNetworkPlaying;
 
         if  (neuralNetworkPlaying) {
             try {
-                neuralNetwork = loadNeuralNetworkFromFile("best_network.txt");
+                neuralNetwork = NeuralNetwork.loadNeuralNetworkFromFile("best_network.txt");
             }
             catch (Exception e) {
                 throw new Exception("Failed to load neural network from file: " + e.getMessage());

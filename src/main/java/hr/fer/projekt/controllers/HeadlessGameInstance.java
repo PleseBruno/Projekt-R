@@ -173,7 +173,11 @@ public class  HeadlessGameInstance {
 
                 c.setX(-50);
 
-                bonusPoints += c.getPoints();
+                if (time <= 5000) {
+                    bonusPoints += c.getPoints();
+                } else {
+                    bonusPoints += c.getPoints() / (time);
+                }
                 return true;
             }
             return false;

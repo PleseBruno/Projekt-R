@@ -1,0 +1,5988 @@
+Generation: 0
+  Average fitness this generation: 2543,9548
+  Elite Fitness: 5226.577474364023
+  ID: NN-1.311
+Generation: 1
+  Average fitness this generation: 2159,1754
+  Elite Fitness: 4736.114555171669
+  ID: NN-0.4
+Generation: 2
+  Average fitness this generation: 2820,5171
+  Elite Fitness: 5021.962396590445
+  ID: NN-0.4
+Generation: 3
+  Average fitness this generation: 2802,6940
+  Elite Fitness: 5285.159846784483
+  ID: NN-2.28
+Generation: 4
+  Average fitness this generation: 2949,4495
+  Elite Fitness: 5222.123669783301
+  ID: NN-3.1
+Generation: 5
+  Average fitness this generation: 3152,3879
+  Elite Fitness: 5878.206179102131
+  ID: NN-4.32
+Generation: 6
+  Average fitness this generation: 2410,1529
+  Elite Fitness: 5482.854258796673
+  ID: NN-5.25
+Generation: 7
+  Average fitness this generation: 3361,9374
+  Elite Fitness: 7334.185572406025
+  ID: NN-6.28
+Generation: 8
+  Average fitness this generation: 3135,4049
+  Elite Fitness: 7107.066604570592
+  ID: NN-6.28
+Generation: 9
+  Average fitness this generation: 3056,8963
+  Elite Fitness: 6893.054377790746
+  ID: NN-8.5
+Generation: 10
+  Average fitness this generation: 3169,1039
+  Elite Fitness: 6511.96805672358
+  ID: NN-9.5
+Generation: 11
+  Average fitness this generation: 3427,9914
+  Elite Fitness: 7346.065975973428
+  ID: NN-10.1
+Generation: 12
+  Average fitness this generation: 3595,4979
+  Elite Fitness: 7112.863983469676
+  ID: NN-11.1
+Generation: 13
+  Average fitness this generation: 3629,2744
+  Elite Fitness: 6901.594394805108
+  ID: NN-12.39
+Generation: 14
+  Average fitness this generation: 3785,8616
+  Elite Fitness: 7206.444969418728
+  ID: NN-13.2
+Generation: 15
+  Average fitness this generation: 3529,8216
+  Elite Fitness: 7013.075578345541
+  ID: NN-14.18
+Generation: 16
+  Average fitness this generation: 3458,2568
+  Elite Fitness: 6962.774626662021
+  ID: NN-15.15
+Generation: 17
+  Average fitness this generation: 3772,5103
+  Elite Fitness: 6936.760249488727
+  ID: NN-16.49
+Generation: 18
+  Average fitness this generation: 3794,7953
+  Elite Fitness: 6542.391246707147
+  ID: NN-17.14
+Generation: 19
+  Average fitness this generation: 3406,4086
+  Elite Fitness: 7128.761855740998
+  ID: NN-18.10
+Generation: 20
+  Average fitness this generation: 4246,8934
+  Elite Fitness: 7484.0548413645865
+  ID: NN-19.20
+Generation: 21
+  Average fitness this generation: 3961,8132
+  Elite Fitness: 8037.219394492064
+  ID: NN-20.13
+Generation: 22
+  Average fitness this generation: 4176,9559
+  Elite Fitness: 7920.20954216283
+  ID: NN-21.4
+Generation: 23
+  Average fitness this generation: 4283,4914
+  Elite Fitness: 8900.245933374019
+  ID: NN-22.11
+Generation: 24
+  Average fitness this generation: 4122,4326
+  Elite Fitness: 8207.757773849127
+  ID: NN-23.6
+Generation: 25
+  Average fitness this generation: 4099,2129
+  Elite Fitness: 8022.317943118335
+  ID: NN-24.25
+Generation: 26
+  Average fitness this generation: 3771,9861
+  Elite Fitness: 8564.253507973506
+  ID: NN-25.24
+Generation: 27
+  Average fitness this generation: 4451,8237
+  Elite Fitness: 8203.369396107904
+  ID: NN-26.24
+Generation: 28
+  Average fitness this generation: 4254,6770
+  Elite Fitness: 7749.095451411771
+  ID: NN-27.3
+Generation: 29
+  Average fitness this generation: 4630,7134
+  Elite Fitness: 8277.11762875222
+  ID: NN-28.39
+Generation: 30
+  Average fitness this generation: 4649,3024
+  Elite Fitness: 8255.7916556348
+  ID: NN-28.39
+Generation: 31
+  Average fitness this generation: 4521,4935
+  Elite Fitness: 7897.86736131076
+  ID: NN-30.4
+Generation: 32
+  Average fitness this generation: 4620,3170
+  Elite Fitness: 7991.8375450448775
+  ID: NN-31.5
+Generation: 33
+  Average fitness this generation: 4204,6208
+  Elite Fitness: 8740.199407857119
+  ID: NN-32.32
+Generation: 34
+  Average fitness this generation: 4360,5369
+  Elite Fitness: 8767.031724607778
+  ID: NN-33.43
+Generation: 35
+  Average fitness this generation: 4724,6308
+  Elite Fitness: 8895.736518213036
+  ID: NN-34.34
+Generation: 36
+  Average fitness this generation: 4392,2887
+  Elite Fitness: 9034.488893886308
+  ID: NN-35.1
+Generation: 37
+  Average fitness this generation: 4343,2275
+  Elite Fitness: 8370.474023114555
+  ID: NN-36.46
+Generation: 38
+  Average fitness this generation: 4168,9742
+  Elite Fitness: 8342.128262599854
+  ID: NN-37.2
+Generation: 39
+  Average fitness this generation: 3793,7385
+  Elite Fitness: 8449.343264868286
+  ID: NN-38.17
+Generation: 40
+  Average fitness this generation: 4213,1502
+  Elite Fitness: 8121.4332093924095
+  ID: NN-39.4
+Generation: 41
+  Average fitness this generation: 4732,2570
+  Elite Fitness: 8603.978492700031
+  ID: NN-40.4
+Generation: 42
+  Average fitness this generation: 4794,0373
+  Elite Fitness: 8615.17780600475
+  ID: NN-41.19
+Generation: 43
+  Average fitness this generation: 4680,3458
+  Elite Fitness: 9218.623319036427
+  ID: NN-42.23
+Generation: 44
+  Average fitness this generation: 4176,5639
+  Elite Fitness: 8062.6752688429
+  ID: NN-43.2
+Generation: 45
+  Average fitness this generation: 4186,9671
+  Elite Fitness: 8077.784833095512
+  ID: NN-44.32
+Generation: 46
+  Average fitness this generation: 4707,7606
+  Elite Fitness: 8519.76486308681
+  ID: NN-45.29
+Generation: 47
+  Average fitness this generation: 4532,2469
+  Elite Fitness: 8453.066259179244
+  ID: NN-46.16
+Generation: 48
+  Average fitness this generation: 4505,9203
+  Elite Fitness: 8732.346593867402
+  ID: NN-47.31
+Generation: 49
+  Average fitness this generation: 5014,2566
+  Elite Fitness: 7929.928882474572
+  ID: NN-48.4
+Generation: 50
+  Average fitness this generation: 4354,8237
+  Elite Fitness: 8442.54450662927
+  ID: NN-49.36
+Generation: 51
+  Average fitness this generation: 4619,2188
+  Elite Fitness: 8317.66381301652
+  ID: NN-50.33
+Generation: 52
+  Average fitness this generation: 4524,7975
+  Elite Fitness: 9004.803793461268
+  ID: NN-51.40
+Generation: 53
+  Average fitness this generation: 4813,9612
+  Elite Fitness: 8605.15271652956
+  ID: NN-52.17
+Generation: 54
+  Average fitness this generation: 5104,5346
+  Elite Fitness: 9154.325601262506
+  ID: NN-53.30
+Generation: 55
+  Average fitness this generation: 4748,7690
+  Elite Fitness: 8454.533576348751
+  ID: NN-54.30
+Generation: 56
+  Average fitness this generation: 4621,4144
+  Elite Fitness: 8770.261641710586
+  ID: NN-55.5
+Generation: 57
+  Average fitness this generation: 5001,9359
+  Elite Fitness: 8273.484311215809
+  ID: NN-56.17
+Generation: 58
+  Average fitness this generation: 4559,8555
+  Elite Fitness: 9156.311346876499
+  ID: NN-57.20
+Generation: 59
+  Average fitness this generation: 5115,1715
+  Elite Fitness: 8904.357949080473
+  ID: NN-58.10
+Generation: 60
+  Average fitness this generation: 4927,7129
+  Elite Fitness: 8561.003829575984
+  ID: NN-59.7
+Generation: 61
+  Average fitness this generation: 4935,2188
+  Elite Fitness: 9270.7330019248
+  ID: NN-60.18
+Generation: 62
+  Average fitness this generation: 4979,6998
+  Elite Fitness: 8453.797056159226
+  ID: NN-61.23
+Generation: 63
+  Average fitness this generation: 5265,2948
+  Elite Fitness: 8834.429220684013
+  ID: NN-62.6
+Generation: 64
+  Average fitness this generation: 5078,3031
+  Elite Fitness: 8877.168787702216
+  ID: NN-63.31
+Generation: 65
+  Average fitness this generation: 4948,5068
+  Elite Fitness: 8783.973612490374
+  ID: NN-64.5
+Generation: 66
+  Average fitness this generation: 5531,8065
+  Elite Fitness: 9526.661674073464
+  ID: NN-65.39
+Generation: 67
+  Average fitness this generation: 5411,5558
+  Elite Fitness: 9356.87031490963
+  ID: NN-66.5
+Generation: 68
+  Average fitness this generation: 4779,7107
+  Elite Fitness: 8303.865216592121
+  ID: NN-67.3
+Generation: 69
+  Average fitness this generation: 5467,3742
+  Elite Fitness: 9359.45709772724
+  ID: NN-68.2
+Generation: 70
+  Average fitness this generation: 4820,3952
+  Elite Fitness: 8623.449453676092
+  ID: NN-69.15
+Generation: 71
+  Average fitness this generation: 4488,7231
+  Elite Fitness: 8413.896816239965
+  ID: NN-70.12
+Generation: 72
+  Average fitness this generation: 5059,3017
+  Elite Fitness: 9599.749477983558
+  ID: NN-71.3
+Generation: 73
+  Average fitness this generation: 5230,4343
+  Elite Fitness: 8776.46573133393
+  ID: NN-72.4
+Generation: 74
+  Average fitness this generation: 5419,7600
+  Elite Fitness: 8986.763085498784
+  ID: NN-73.25
+Generation: 75
+  Average fitness this generation: 5136,6367
+  Elite Fitness: 9424.85550860484
+  ID: NN-74.13
+Generation: 76
+  Average fitness this generation: 5353,5113
+  Elite Fitness: 9156.794216544993
+  ID: NN-75.20
+Generation: 77
+  Average fitness this generation: 5243,3360
+  Elite Fitness: 8944.675824808925
+  ID: NN-76.17
+Generation: 78
+  Average fitness this generation: 5223,5557
+  Elite Fitness: 8938.936058620511
+  ID: NN-77.37
+Generation: 79
+  Average fitness this generation: 5094,4408
+  Elite Fitness: 9131.619643010472
+  ID: NN-78.1
+Generation: 80
+  Average fitness this generation: 5136,2818
+  Elite Fitness: 9201.52979506019
+  ID: NN-79.12
+Generation: 81
+  Average fitness this generation: 5393,4210
+  Elite Fitness: 9226.899150594563
+  ID: NN-80.15
+Generation: 82
+  Average fitness this generation: 5072,1175
+  Elite Fitness: 9272.098379216342
+  ID: NN-81.13
+Generation: 83
+  Average fitness this generation: 4795,1023
+  Elite Fitness: 8874.924740115273
+  ID: NN-82.42
+Generation: 84
+  Average fitness this generation: 4846,7615
+  Elite Fitness: 9268.794189750844
+  ID: NN-83.14
+Generation: 85
+  Average fitness this generation: 4897,5933
+  Elite Fitness: 8811.389413687231
+  ID: NN-83.14
+Generation: 86
+  Average fitness this generation: 5024,3470
+  Elite Fitness: 8988.87182764638
+  ID: NN-85.31
+Generation: 87
+  Average fitness this generation: 4709,9627
+  Elite Fitness: 9344.309408989138
+  ID: NN-86.11
+Generation: 88
+  Average fitness this generation: 5105,7888
+  Elite Fitness: 9922.61998790849
+  ID: NN-87.34
+Generation: 89
+  Average fitness this generation: 5071,1160
+  Elite Fitness: 9587.07521358833
+  ID: NN-87.34
+Generation: 90
+  Average fitness this generation: 5141,3560
+  Elite Fitness: 9181.874532533617
+  ID: NN-89.10
+Generation: 91
+  Average fitness this generation: 4746,2241
+  Elite Fitness: 9133.972909597936
+  ID: NN-90.11
+Generation: 92
+  Average fitness this generation: 4873,5304
+  Elite Fitness: 8921.091728530135
+  ID: NN-91.17
+Generation: 93
+  Average fitness this generation: 5042,6148
+  Elite Fitness: 8999.157889041842
+  ID: NN-92.28
+Generation: 94
+  Average fitness this generation: 4893,0635
+  Elite Fitness: 9146.767739965911
+  ID: NN-93.19
+Generation: 95
+  Average fitness this generation: 4783,4177
+  Elite Fitness: 9227.086493649958
+  ID: NN-94.21
+Generation: 96
+  Average fitness this generation: 5552,9154
+  Elite Fitness: 8875.976234637108
+  ID: NN-95.13
+Generation: 97
+  Average fitness this generation: 5219,1215
+  Elite Fitness: 9084.833422745187
+  ID: NN-96.11
+Generation: 98
+  Average fitness this generation: 5118,8724
+  Elite Fitness: 8824.260442015948
+  ID: NN-97.27
+Generation: 99
+  Average fitness this generation: 5010,7304
+  Elite Fitness: 8909.499546912617
+  ID: NN-98.41
+Generation: 100
+  Average fitness this generation: 5432,0907
+  Elite Fitness: 9432.640647725466
+  ID: NN-99.40
+Generation: 101
+  Average fitness this generation: 5535,4215
+  Elite Fitness: 9104.714449512938
+  ID: NN-99.40
+Generation: 102
+  Average fitness this generation: 5169,1786
+  Elite Fitness: 8898.080451819756
+  ID: NN-101.1
+Generation: 103
+  Average fitness this generation: 4802,6126
+  Elite Fitness: 9206.733459760366
+  ID: NN-102.31
+Generation: 104
+  Average fitness this generation: 4968,9474
+  Elite Fitness: 9709.465664782352
+  ID: NN-102.31
+Generation: 105
+  Average fitness this generation: 5056,0091
+  Elite Fitness: 8593.773041843317
+  ID: NN-104.13
+Generation: 106
+  Average fitness this generation: 5532,3790
+  Elite Fitness: 9254.436089517107
+  ID: NN-105.7
+Generation: 107
+  Average fitness this generation: 5232,0380
+  Elite Fitness: 9058.340712374003
+  ID: NN-106.5
+Generation: 108
+  Average fitness this generation: 4823,7603
+  Elite Fitness: 8973.771291509576
+  ID: NN-107.9
+Generation: 109
+  Average fitness this generation: 4402,4300
+  Elite Fitness: 9070.17115811939
+  ID: NN-108.9
+Generation: 110
+  Average fitness this generation: 4650,5058
+  Elite Fitness: 8949.755221875103
+  ID: NN-108.9
+Generation: 111
+  Average fitness this generation: 4315,1187
+  Elite Fitness: 9440.33406456435
+  ID: NN-110.9
+Generation: 112
+  Average fitness this generation: 4572,2640
+  Elite Fitness: 8643.91397383976
+  ID: NN-111.10
+Generation: 113
+  Average fitness this generation: 4801,1043
+  Elite Fitness: 8559.107276916786
+  ID: NN-112.11
+Generation: 114
+  Average fitness this generation: 4660,8742
+  Elite Fitness: 9181.766946007194
+  ID: NN-113.3
+Generation: 115
+  Average fitness this generation: 4429,2021
+  Elite Fitness: 8496.396606291188
+  ID: NN-114.23
+Generation: 116
+  Average fitness this generation: 4388,6772
+  Elite Fitness: 8956.150022944556
+  ID: NN-114.23
+Generation: 117
+  Average fitness this generation: 4491,4058
+  Elite Fitness: 9162.856763361331
+  ID: NN-114.23
+Generation: 118
+  Average fitness this generation: 4690,3475
+  Elite Fitness: 8553.240876020469
+  ID: NN-117.12
+Generation: 119
+  Average fitness this generation: 4584,5465
+  Elite Fitness: 8737.0967798963
+  ID: NN-118.7
+Generation: 120
+  Average fitness this generation: 3780,5103
+  Elite Fitness: 8976.603604822025
+  ID: NN-119.2
+Generation: 121
+  Average fitness this generation: 3740,7859
+  Elite Fitness: 9396.187078822584
+  ID: NN-120.7
+Generation: 122
+  Average fitness this generation: 4323,6074
+  Elite Fitness: 9084.014859984283
+  ID: NN-121.5
+Generation: 123
+  Average fitness this generation: 4429,5697
+  Elite Fitness: 9664.392668290157
+  ID: NN-122.34
+Generation: 124
+  Average fitness this generation: 4142,0519
+  Elite Fitness: 8802.810949989742
+  ID: NN-123.2
+Generation: 125
+  Average fitness this generation: 4487,4190
+  Elite Fitness: 9759.064304144968
+  ID: NN-124.19
+Generation: 126
+  Average fitness this generation: 4941,5802
+  Elite Fitness: 9198.627951861632
+  ID: NN-125.12
+Generation: 127
+  Average fitness this generation: 4564,1503
+  Elite Fitness: 8614.04871315014
+  ID: NN-125.12
+Generation: 128
+  Average fitness this generation: 4684,7900
+  Elite Fitness: 9447.89699823116
+  ID: NN-127.34
+Generation: 129
+  Average fitness this generation: 4882,7916
+  Elite Fitness: 9014.619843135806
+  ID: NN-128.13
+Generation: 130
+  Average fitness this generation: 4861,5319
+  Elite Fitness: 9445.918065222631
+  ID: NN-129.31
+Generation: 131
+  Average fitness this generation: 4164,1936
+  Elite Fitness: 9010.155890206905
+  ID: NN-130.13
+Generation: 132
+  Average fitness this generation: 4840,6103
+  Elite Fitness: 8934.765805585204
+  ID: NN-131.19
+Generation: 133
+  Average fitness this generation: 4735,6769
+  Elite Fitness: 8969.698459703006
+  ID: NN-132.27
+Generation: 134
+  Average fitness this generation: 4227,5077
+  Elite Fitness: 9363.112705432224
+  ID: NN-133.41
+Generation: 135
+  Average fitness this generation: 4444,1140
+  Elite Fitness: 8411.947396303778
+  ID: NN-134.18
+Generation: 136
+  Average fitness this generation: 4822,5931
+  Elite Fitness: 9029.190853948876
+  ID: NN-135.16
+Generation: 137
+  Average fitness this generation: 4360,9568
+  Elite Fitness: 9012.687304235234
+  ID: NN-136.18
+Generation: 138
+  Average fitness this generation: 4322,6874
+  Elite Fitness: 9145.69166469687
+  ID: NN-136.18
+Generation: 139
+  Average fitness this generation: 4905,1170
+  Elite Fitness: 9019.024417383222
+  ID: NN-138.31
+Generation: 140
+  Average fitness this generation: 4551,3702
+  Elite Fitness: 9123.03220031808
+  ID: NN-139.10
+Generation: 141
+  Average fitness this generation: 4475,7907
+  Elite Fitness: 8762.324237681994
+  ID: NN-140.3
+Generation: 142
+  Average fitness this generation: 4955,1564
+  Elite Fitness: 8871.263998675215
+  ID: NN-141.18
+Generation: 143
+  Average fitness this generation: 4702,4082
+  Elite Fitness: 8727.951305163762
+  ID: NN-142.1
+Generation: 144
+  Average fitness this generation: 4978,1341
+  Elite Fitness: 8864.35477471754
+  ID: NN-143.3
+Generation: 145
+  Average fitness this generation: 4902,3022
+  Elite Fitness: 9001.803062836232
+  ID: NN-144.42
+Generation: 146
+  Average fitness this generation: 4942,8655
+  Elite Fitness: 8912.48017955502
+  ID: NN-145.30
+Generation: 147
+  Average fitness this generation: 5438,9193
+  Elite Fitness: 8630.094389908065
+  ID: NN-146.22
+Generation: 148
+  Average fitness this generation: 5296,7637
+  Elite Fitness: 8887.23346869895
+  ID: NN-147.2
+Generation: 149
+  Average fitness this generation: 4901,6366
+  Elite Fitness: 8807.691913753162
+  ID: NN-148.20
+Generation: 150
+  Average fitness this generation: 5622,8236
+  Elite Fitness: 9314.599674699388
+  ID: NN-149.27
+Generation: 151
+  Average fitness this generation: 5097,8149
+  Elite Fitness: 8702.918004607713
+  ID: NN-150.1
+Generation: 152
+  Average fitness this generation: 4534,7548
+  Elite Fitness: 8894.943873642238
+  ID: NN-151.45
+Generation: 153
+  Average fitness this generation: 5012,7751
+  Elite Fitness: 8211.031743602973
+  ID: NN-152.22
+Generation: 154
+  Average fitness this generation: 4865,6986
+  Elite Fitness: 8309.233397695003
+  ID: NN-153.34
+Generation: 155
+  Average fitness this generation: 4611,1241
+  Elite Fitness: 9070.361665241135
+  ID: NN-154.12
+Generation: 156
+  Average fitness this generation: 4385,2587
+  Elite Fitness: 9648.084020538625
+  ID: NN-155.28
+Generation: 157
+  Average fitness this generation: 4886,4451
+  Elite Fitness: 8457.964038165783
+  ID: NN-155.28
+Generation: 158
+  Average fitness this generation: 4887,4792
+  Elite Fitness: 8363.822067196681
+  ID: NN-157.29
+Generation: 159
+  Average fitness this generation: 4375,8198
+  Elite Fitness: 8616.826823473244
+  ID: NN-158.17
+Generation: 160
+  Average fitness this generation: 4887,2987
+  Elite Fitness: 8438.420256109417
+  ID: NN-159.10
+Generation: 161
+  Average fitness this generation: 4811,3292
+  Elite Fitness: 8925.684775317792
+  ID: NN-160.16
+Generation: 162
+  Average fitness this generation: 4889,3309
+  Elite Fitness: 8926.8794094972
+  ID: NN-161.20
+Generation: 163
+  Average fitness this generation: 4850,7980
+  Elite Fitness: 8595.918096437228
+  ID: NN-162.10
+Generation: 164
+  Average fitness this generation: 4467,9643
+  Elite Fitness: 8192.100225302867
+  ID: NN-163.35
+Generation: 165
+  Average fitness this generation: 4792,5567
+  Elite Fitness: 8977.838405339706
+  ID: NN-164.16
+Generation: 166
+  Average fitness this generation: 4621,1019
+  Elite Fitness: 8501.267126015486
+  ID: NN-165.25
+Generation: 167
+  Average fitness this generation: 4413,7188
+  Elite Fitness: 8530.859463508448
+  ID: NN-166.29
+Generation: 168
+  Average fitness this generation: 4487,6922
+  Elite Fitness: 8711.2783149348
+  ID: NN-167.49
+Generation: 169
+  Average fitness this generation: 4625,3352
+  Elite Fitness: 8587.019615702742
+  ID: NN-167.49
+Generation: 170
+  Average fitness this generation: 4676,7295
+  Elite Fitness: 8700.463932096554
+  ID: NN-169.7
+Generation: 171
+  Average fitness this generation: 4611,8845
+  Elite Fitness: 8872.563109073424
+  ID: NN-169.7
+Generation: 172
+  Average fitness this generation: 4930,2943
+  Elite Fitness: 9163.858128288215
+  ID: NN-171.24
+Generation: 173
+  Average fitness this generation: 5398,6687
+  Elite Fitness: 8633.953059796726
+  ID: NN-172.8
+Generation: 174
+  Average fitness this generation: 4839,0162
+  Elite Fitness: 8952.343239785212
+  ID: NN-173.41
+Generation: 175
+  Average fitness this generation: 5000,0890
+  Elite Fitness: 8671.968642329392
+  ID: NN-174.36
+Generation: 176
+  Average fitness this generation: 5111,0081
+  Elite Fitness: 8459.089528036184
+  ID: NN-175.22
+Generation: 177
+  Average fitness this generation: 4855,6137
+  Elite Fitness: 9144.708971963051
+  ID: NN-176.10
+Generation: 178
+  Average fitness this generation: 4830,5048
+  Elite Fitness: 8949.563193698345
+  ID: NN-177.37
+Generation: 179
+  Average fitness this generation: 4986,8237
+  Elite Fitness: 8612.778745672043
+  ID: NN-177.37
+Generation: 180
+  Average fitness this generation: 4869,4191
+  Elite Fitness: 8594.05977613889
+  ID: NN-179.4
+Generation: 181
+  Average fitness this generation: 5442,6295
+  Elite Fitness: 8453.841852852203
+  ID: NN-180.8
+Generation: 182
+  Average fitness this generation: 5018,2495
+  Elite Fitness: 8686.657676910432
+  ID: NN-181.11
+Generation: 183
+  Average fitness this generation: 5051,1235
+  Elite Fitness: 8866.779291963578
+  ID: NN-182.16
+Generation: 184
+  Average fitness this generation: 4773,5136
+  Elite Fitness: 8917.862415529782
+  ID: NN-182.16
+Generation: 185
+  Average fitness this generation: 5026,1299
+  Elite Fitness: 8063.494631733418
+  ID: NN-184.31
+Generation: 186
+  Average fitness this generation: 4943,4972
+  Elite Fitness: 8226.854777001196
+  ID: NN-185.21
+Generation: 187
+  Average fitness this generation: 5300,6613
+  Elite Fitness: 8609.480981884903
+  ID: NN-186.15
+Generation: 188
+  Average fitness this generation: 4729,0257
+  Elite Fitness: 8417.009323116607
+  ID: NN-186.15
+Generation: 189
+  Average fitness this generation: 4865,1747
+  Elite Fitness: 9261.72614142748
+  ID: NN-188.16
+Generation: 190
+  Average fitness this generation: 4423,4108
+  Elite Fitness: 8333.208622571718
+  ID: NN-189.9
+Generation: 191
+  Average fitness this generation: 4309,0768
+  Elite Fitness: 8915.015716609274
+  ID: NN-190.4
+Generation: 192
+  Average fitness this generation: 4907,7342
+  Elite Fitness: 8609.768516216425
+  ID: NN-191.17
+Generation: 193
+  Average fitness this generation: 4351,8131
+  Elite Fitness: 8713.32479261505
+  ID: NN-192.20
+Generation: 194
+  Average fitness this generation: 4655,1429
+  Elite Fitness: 8703.31047715856
+  ID: NN-193.16
+Generation: 195
+  Average fitness this generation: 4643,3962
+  Elite Fitness: 8786.24577290969
+  ID: NN-194.14
+Generation: 196
+  Average fitness this generation: 4477,7824
+  Elite Fitness: 8923.449040917376
+  ID: NN-195.4
+Generation: 197
+  Average fitness this generation: 4892,1214
+  Elite Fitness: 8975.548114467345
+  ID: NN-196.4
+Generation: 198
+  Average fitness this generation: 4854,7810
+  Elite Fitness: 8859.760579383052
+  ID: NN-197.37
+Generation: 199
+  Average fitness this generation: 4640,8966
+  Elite Fitness: 9056.562189850838
+  ID: NN-198.1
+Generation: 200
+  Average fitness this generation: 4699,3888
+  Elite Fitness: 8349.085451419154
+  ID: NN-199.17
+Generation: 201
+  Average fitness this generation: 4896,0402
+  Elite Fitness: 8520.611872406975
+  ID: NN-200.3
+Generation: 202
+  Average fitness this generation: 4234,2937
+  Elite Fitness: 8243.703643293167
+  ID: NN-201.3
+Generation: 203
+  Average fitness this generation: 4534,9771
+  Elite Fitness: 8443.427859058425
+  ID: NN-202.40
+Generation: 204
+  Average fitness this generation: 4253,5829
+  Elite Fitness: 8273.847319621747
+  ID: NN-203.31
+Generation: 205
+  Average fitness this generation: 4614,0761
+  Elite Fitness: 9079.592797814406
+  ID: NN-204.28
+Generation: 206
+  Average fitness this generation: 4527,4742
+  Elite Fitness: 8639.273702965522
+  ID: NN-205.38
+Generation: 207
+  Average fitness this generation: 4971,6206
+  Elite Fitness: 8190.35938421406
+  ID: NN-206.14
+Generation: 208
+  Average fitness this generation: 4984,8250
+  Elite Fitness: 8539.778800040507
+  ID: NN-207.14
+Generation: 209
+  Average fitness this generation: 5109,4993
+  Elite Fitness: 8479.654138517895
+  ID: NN-208.1
+Generation: 210
+  Average fitness this generation: 5441,9716
+  Elite Fitness: 9384.764582297872
+  ID: NN-209.35
+Generation: 211
+  Average fitness this generation: 5183,1897
+  Elite Fitness: 9443.002158509757
+  ID: NN-210.7
+Generation: 212
+  Average fitness this generation: 4870,0231
+  Elite Fitness: 9352.622967818075
+  ID: NN-211.33
+Generation: 213
+  Average fitness this generation: 4599,1236
+  Elite Fitness: 9537.89516182017
+  ID: NN-212.5
+Generation: 214
+  Average fitness this generation: 4846,5252
+  Elite Fitness: 9101.155613653415
+  ID: NN-213.9
+Generation: 215
+  Average fitness this generation: 4955,2035
+  Elite Fitness: 9281.683271353751
+  ID: NN-214.8
+Generation: 216
+  Average fitness this generation: 5254,9831
+  Elite Fitness: 9572.479631784263
+  ID: NN-215.43
+Generation: 217
+  Average fitness this generation: 4742,3219
+  Elite Fitness: 9207.585442499965
+  ID: NN-216.7
+Generation: 218
+  Average fitness this generation: 4981,7271
+  Elite Fitness: 8948.821581912745
+  ID: NN-217.17
+Generation: 219
+  Average fitness this generation: 4596,7868
+  Elite Fitness: 9710.020348931435
+  ID: NN-218.13
+Generation: 220
+  Average fitness this generation: 4683,1704
+  Elite Fitness: 9337.098927094075
+  ID: NN-218.13
+Generation: 221
+  Average fitness this generation: 4571,8472
+  Elite Fitness: 9333.92924656404
+  ID: NN-220.4
+Generation: 222
+  Average fitness this generation: 4599,8296
+  Elite Fitness: 8977.416641979546
+  ID: NN-221.49
+Generation: 223
+  Average fitness this generation: 4311,7846
+  Elite Fitness: 8815.85994016028
+  ID: NN-222.48
+Generation: 224
+  Average fitness this generation: 4770,4529
+  Elite Fitness: 9146.141038288499
+  ID: NN-223.13
+Generation: 225
+  Average fitness this generation: 4704,8063
+  Elite Fitness: 9044.591304296117
+  ID: NN-224.28
+Generation: 226
+  Average fitness this generation: 5149,8150
+  Elite Fitness: 9348.786131809651
+  ID: NN-225.6
+Generation: 227
+  Average fitness this generation: 4863,0888
+  Elite Fitness: 9169.608135693627
+  ID: NN-226.9
+Generation: 228
+  Average fitness this generation: 5041,3725
+  Elite Fitness: 8844.97620991185
+  ID: NN-227.22
+Generation: 229
+  Average fitness this generation: 4772,1290
+  Elite Fitness: 8937.996021517096
+  ID: NN-228.1
+Generation: 230
+  Average fitness this generation: 5036,0225
+  Elite Fitness: 9171.040142716689
+  ID: NN-229.18
+Generation: 231
+  Average fitness this generation: 5223,8824
+  Elite Fitness: 9810.937002517861
+  ID: NN-229.18
+Generation: 232
+  Average fitness this generation: 4912,9888
+  Elite Fitness: 9074.492699642973
+  ID: NN-231.28
+Generation: 233
+  Average fitness this generation: 5225,2599
+  Elite Fitness: 9481.479531909261
+  ID: NN-231.28
+Generation: 234
+  Average fitness this generation: 4773,6409
+  Elite Fitness: 9102.079539391803
+  ID: NN-233.8
+Generation: 235
+  Average fitness this generation: 4960,4328
+  Elite Fitness: 9096.8909432826
+  ID: NN-234.14
+Generation: 236
+  Average fitness this generation: 5288,7010
+  Elite Fitness: 9345.5264296254
+  ID: NN-235.15
+Generation: 237
+  Average fitness this generation: 5223,3980
+  Elite Fitness: 9700.70212635981
+  ID: NN-236.5
+Generation: 238
+  Average fitness this generation: 5061,7196
+  Elite Fitness: 9633.243790521668
+  ID: NN-237.23
+Generation: 239
+  Average fitness this generation: 4483,3469
+  Elite Fitness: 8887.623482064117
+  ID: NN-238.2
+Generation: 240
+  Average fitness this generation: 4685,6783
+  Elite Fitness: 9424.333994618048
+  ID: NN-239.40
+Generation: 241
+  Average fitness this generation: 4458,4321
+  Elite Fitness: 8757.725365127608
+  ID: NN-240.32
+Generation: 242
+  Average fitness this generation: 4598,9310
+  Elite Fitness: 9213.640625181073
+  ID: NN-241.14
+Generation: 243
+  Average fitness this generation: 4925,0259
+  Elite Fitness: 9124.048600003138
+  ID: NN-242.25
+Generation: 244
+  Average fitness this generation: 4763,9911
+  Elite Fitness: 9550.968056935028
+  ID: NN-243.9
+Generation: 245
+  Average fitness this generation: 4695,3849
+  Elite Fitness: 8900.798190470168
+  ID: NN-244.33
+Generation: 246
+  Average fitness this generation: 4638,9767
+  Elite Fitness: 9499.625383927756
+  ID: NN-245.12
+Generation: 247
+  Average fitness this generation: 4557,7361
+  Elite Fitness: 9263.687593036439
+  ID: NN-246.21
+Generation: 248
+  Average fitness this generation: 4836,6675
+  Elite Fitness: 8848.16136035687
+  ID: NN-247.1
+Generation: 249
+  Average fitness this generation: 4484,4228
+  Elite Fitness: 9372.099240486601
+  ID: NN-248.27
+Generation: 250
+  Average fitness this generation: 4706,5789
+  Elite Fitness: 8893.417856014528
+  ID: NN-249.14
+Generation: 251
+  Average fitness this generation: 4695,6904
+  Elite Fitness: 9392.686277216162
+  ID: NN-250.17
+Generation: 252
+  Average fitness this generation: 5302,3515
+  Elite Fitness: 9891.034207550678
+  ID: NN-251.14
+Generation: 253
+  Average fitness this generation: 5226,8819
+  Elite Fitness: 9138.769563749174
+  ID: NN-252.2
+Generation: 254
+  Average fitness this generation: 5185,8440
+  Elite Fitness: 8487.384297799044
+  ID: NN-253.48
+Generation: 255
+  Average fitness this generation: 4748,5501
+  Elite Fitness: 9471.827324666448
+  ID: NN-254.32
+Generation: 256
+  Average fitness this generation: 4580,8909
+  Elite Fitness: 9508.234615946481
+  ID: NN-255.49
+Generation: 257
+  Average fitness this generation: 4935,4335
+  Elite Fitness: 9152.134891508842
+  ID: NN-256.10
+Generation: 258
+  Average fitness this generation: 5024,3683
+  Elite Fitness: 9027.066190287302
+  ID: NN-257.36
+Generation: 259
+  Average fitness this generation: 5229,2127
+  Elite Fitness: 9219.712756996934
+  ID: NN-258.26
+Generation: 260
+  Average fitness this generation: 5446,0746
+  Elite Fitness: 9065.394852594509
+  ID: NN-259.19
+Generation: 261
+  Average fitness this generation: 5219,1338
+  Elite Fitness: 8789.857683821967
+  ID: NN-260.17
+Generation: 262
+  Average fitness this generation: 4604,4460
+  Elite Fitness: 9219.732749800927
+  ID: NN-261.5
+Generation: 263
+  Average fitness this generation: 4843,6381
+  Elite Fitness: 9430.061391632125
+  ID: NN-262.25
+Generation: 264
+  Average fitness this generation: 4981,2847
+  Elite Fitness: 9603.980800723877
+  ID: NN-262.25
+Generation: 265
+  Average fitness this generation: 4740,3293
+  Elite Fitness: 8846.041005738169
+  ID: NN-262.25
+Generation: 266
+  Average fitness this generation: 5153,6139
+  Elite Fitness: 9278.719693767485
+  ID: NN-265.15
+Generation: 267
+  Average fitness this generation: 5120,2318
+  Elite Fitness: 8905.487549863108
+  ID: NN-266.24
+Generation: 268
+  Average fitness this generation: 5532,3213
+  Elite Fitness: 9042.922567118127
+  ID: NN-267.8
+Generation: 269
+  Average fitness this generation: 5382,9066
+  Elite Fitness: 9033.643525358106
+  ID: NN-268.15
+Generation: 270
+  Average fitness this generation: 4781,6933
+  Elite Fitness: 9259.496868882863
+  ID: NN-269.1
+Generation: 271
+  Average fitness this generation: 5142,7905
+  Elite Fitness: 8969.203281270837
+  ID: NN-270.11
+Generation: 272
+  Average fitness this generation: 5318,3512
+  Elite Fitness: 8928.378245362537
+  ID: NN-271.20
+Generation: 273
+  Average fitness this generation: 4884,3857
+  Elite Fitness: 9105.446630620434
+  ID: NN-272.38
+Generation: 274
+  Average fitness this generation: 5427,1370
+  Elite Fitness: 8712.587437580696
+  ID: NN-273.15
+Generation: 275
+  Average fitness this generation: 4604,5044
+  Elite Fitness: 9930.47116230312
+  ID: NN-274.46
+Generation: 276
+  Average fitness this generation: 4331,5107
+  Elite Fitness: 9364.817083346132
+  ID: NN-275.34
+Generation: 277
+  Average fitness this generation: 4829,5557
+  Elite Fitness: 9514.700478123399
+  ID: NN-276.28
+Generation: 278
+  Average fitness this generation: 4770,9325
+  Elite Fitness: 9037.617762357575
+  ID: NN-277.9
+Generation: 279
+  Average fitness this generation: 4589,6018
+  Elite Fitness: 8953.337115867393
+  ID: NN-278.48
+Generation: 280
+  Average fitness this generation: 4003,0412
+  Elite Fitness: 8611.177215118169
+  ID: NN-279.26
+Generation: 281
+  Average fitness this generation: 4931,9418
+  Elite Fitness: 8515.511546951111
+  ID: NN-280.37
+Generation: 282
+  Average fitness this generation: 4271,7513
+  Elite Fitness: 8379.575686961096
+  ID: NN-281.5
+Generation: 283
+  Average fitness this generation: 4886,8588
+  Elite Fitness: 8992.881148944976
+  ID: NN-282.34
+Generation: 284
+  Average fitness this generation: 4687,3735
+  Elite Fitness: 9048.65564584964
+  ID: NN-283.3
+Generation: 285
+  Average fitness this generation: 5123,1853
+  Elite Fitness: 9220.698333825623
+  ID: NN-284.5
+Generation: 286
+  Average fitness this generation: 5210,8403
+  Elite Fitness: 8502.508726144439
+  ID: NN-285.21
+Generation: 287
+  Average fitness this generation: 4644,2987
+  Elite Fitness: 8644.412417133277
+  ID: NN-286.14
+Generation: 288
+  Average fitness this generation: 4477,8419
+  Elite Fitness: 8458.774516704229
+  ID: NN-287.42
+Generation: 289
+  Average fitness this generation: 4833,1677
+  Elite Fitness: 9016.512172819175
+  ID: NN-288.15
+Generation: 290
+  Average fitness this generation: 4720,3197
+  Elite Fitness: 9253.966640848044
+  ID: NN-289.46
+Generation: 291
+  Average fitness this generation: 4285,4534
+  Elite Fitness: 8225.213534554616
+  ID: NN-290.16
+Generation: 292
+  Average fitness this generation: 4621,5237
+  Elite Fitness: 8413.36698529285
+  ID: NN-291.1
+Generation: 293
+  Average fitness this generation: 5178,9667
+  Elite Fitness: 8851.052322292217
+  ID: NN-292.19
+Generation: 294
+  Average fitness this generation: 5204,5649
+  Elite Fitness: 8921.351097972254
+  ID: NN-293.11
+Generation: 295
+  Average fitness this generation: 4813,0928
+  Elite Fitness: 8616.206183630917
+  ID: NN-294.36
+Generation: 296
+  Average fitness this generation: 4591,3726
+  Elite Fitness: 9493.635774032115
+  ID: NN-295.37
+Generation: 297
+  Average fitness this generation: 4731,5934
+  Elite Fitness: 9321.292606888808
+  ID: NN-296.18
+Generation: 298
+  Average fitness this generation: 4783,0579
+  Elite Fitness: 9589.256120437103
+  ID: NN-297.4
+Generation: 299
+  Average fitness this generation: 5278,2466
+  Elite Fitness: 9083.553928074241
+  ID: NN-298.40
+Generation: 300
+  Average fitness this generation: 5219,4694
+  Elite Fitness: 9131.932937798892
+  ID: NN-299.3
+Generation: 301
+  Average fitness this generation: 4841,7575
+  Elite Fitness: 9086.784116859182
+  ID: NN-300.6
+Generation: 302
+  Average fitness this generation: 4781,0842
+  Elite Fitness: 9120.928459982777
+  ID: NN-301.30
+Generation: 303
+  Average fitness this generation: 4764,1614
+  Elite Fitness: 9343.005885577892
+  ID: NN-302.9
+Generation: 304
+  Average fitness this generation: 4298,0584
+  Elite Fitness: 8969.154057884953
+  ID: NN-303.1
+Generation: 305
+  Average fitness this generation: 5266,9451
+  Elite Fitness: 9248.192082565858
+  ID: NN-304.4
+Generation: 306
+  Average fitness this generation: 5250,2195
+  Elite Fitness: 9421.853164973643
+  ID: NN-304.4
+Generation: 307
+  Average fitness this generation: 4836,5167
+  Elite Fitness: 10018.210429811625
+  ID: NN-306.24
+Generation: 308
+  Average fitness this generation: 5125,3944
+  Elite Fitness: 9319.937941764214
+  ID: NN-307.23
+Generation: 309
+  Average fitness this generation: 5303,7769
+  Elite Fitness: 9751.696282719748
+  ID: NN-308.14
+Generation: 310
+  Average fitness this generation: 5378,0476
+  Elite Fitness: 10037.000469125096
+  ID: NN-309.17
+Generation: 311
+  Average fitness this generation: 5060,7446
+  Elite Fitness: 10159.968554781579
+  ID: NN-309.17
+Generation: 312
+  Average fitness this generation: 4759,1905
+  Elite Fitness: 9712.856701560548
+  ID: NN-309.17
+Generation: 313
+  Average fitness this generation: 4226,9240
+  Elite Fitness: 9409.092128624688
+  ID: NN-312.12
+Generation: 314
+  Average fitness this generation: 4833,8584
+  Elite Fitness: 9587.593667711537
+  ID: NN-313.19
+Generation: 315
+  Average fitness this generation: 5118,8205
+  Elite Fitness: 9442.262787783586
+  ID: NN-314.27
+Generation: 316
+  Average fitness this generation: 4888,0632
+  Elite Fitness: 9611.100868483474
+  ID: NN-315.4
+Generation: 317
+  Average fitness this generation: 4567,7258
+  Elite Fitness: 9279.058749771582
+  ID: NN-315.4
+Generation: 318
+  Average fitness this generation: 4977,0072
+  Elite Fitness: 9330.948213666381
+  ID: NN-317.24
+Generation: 319
+  Average fitness this generation: 5135,3754
+  Elite Fitness: 9473.030433859283
+  ID: NN-318.16
+Generation: 320
+  Average fitness this generation: 5774,4723
+  Elite Fitness: 9708.397613387033
+  ID: NN-319.6
+Generation: 321
+  Average fitness this generation: 5602,1335
+  Elite Fitness: 9988.348185520796
+  ID: NN-320.3
+Generation: 322
+  Average fitness this generation: 5345,1226
+  Elite Fitness: 8854.963554752158
+  ID: NN-321.21
+Generation: 323
+  Average fitness this generation: 5693,2686
+  Elite Fitness: 10726.566761292279
+  ID: NN-322.44
+Generation: 324
+  Average fitness this generation: 5357,1081
+  Elite Fitness: 9961.51231712745
+  ID: NN-323.2
+Generation: 325
+  Average fitness this generation: 5170,6778
+  Elite Fitness: 10192.81859536403
+  ID: NN-324.27
+Generation: 326
+  Average fitness this generation: 5148,1097
+  Elite Fitness: 10272.457292171353
+  ID: NN-325.16
+Generation: 327
+  Average fitness this generation: 5294,8748
+  Elite Fitness: 10068.444474571343
+  ID: NN-326.23
+Generation: 328
+  Average fitness this generation: 4939,6464
+  Elite Fitness: 9821.929128107031
+  ID: NN-327.29
+Generation: 329
+  Average fitness this generation: 4736,3390
+  Elite Fitness: 9761.024967523777
+  ID: NN-328.8
+Generation: 330
+  Average fitness this generation: 5193,9872
+  Elite Fitness: 9794.774065279958
+  ID: NN-329.5
+Generation: 331
+  Average fitness this generation: 5249,9725
+  Elite Fitness: 9966.921108830238
+  ID: NN-330.7
+Generation: 332
+  Average fitness this generation: 5381,8602
+  Elite Fitness: 9857.089597009333
+  ID: NN-331.24
+Generation: 333
+  Average fitness this generation: 4893,6962
+  Elite Fitness: 9928.641418505891
+  ID: NN-332.6
+Generation: 334
+  Average fitness this generation: 4781,5393
+  Elite Fitness: 9528.374329795723
+  ID: NN-333.7
+Generation: 335
+  Average fitness this generation: 4870,4601
+  Elite Fitness: 10041.846472638576
+  ID: NN-334.41
+Generation: 336
+  Average fitness this generation: 5021,6067
+  Elite Fitness: 10274.170879017367
+  ID: NN-334.41
+Generation: 337
+  Average fitness this generation: 4731,0179
+  Elite Fitness: 9584.976874456157
+  ID: NN-336.9
+Generation: 338
+  Average fitness this generation: 4497,3181
+  Elite Fitness: 9865.135417054422
+  ID: NN-336.9
+Generation: 339
+  Average fitness this generation: 5062,8846
+  Elite Fitness: 10071.146588852303
+  ID: NN-336.9
+Generation: 340
+  Average fitness this generation: 4580,1877
+  Elite Fitness: 9588.968610795218
+  ID: NN-339.44
+Generation: 341
+  Average fitness this generation: 5206,3356
+  Elite Fitness: 10045.893694934446
+  ID: NN-340.23
+Generation: 342
+  Average fitness this generation: 5125,5945
+  Elite Fitness: 10048.526988484617
+  ID: NN-341.25
+Generation: 343
+  Average fitness this generation: 4531,9815
+  Elite Fitness: 9933.690649915783
+  ID: NN-342.5
+Generation: 344
+  Average fitness this generation: 4743,9185
+  Elite Fitness: 10049.258285206135
+  ID: NN-343.17
+Generation: 345
+  Average fitness this generation: 5109,6871
+  Elite Fitness: 9704.252813282857
+  ID: NN-344.16
+Generation: 346
+  Average fitness this generation: 4588,3816
+  Elite Fitness: 9807.099534336538
+  ID: NN-345.44
+Generation: 347
+  Average fitness this generation: 4554,1661
+  Elite Fitness: 10001.906980243226
+  ID: NN-346.2
+Generation: 348
+  Average fitness this generation: 4763,3244
+  Elite Fitness: 9895.002616450613
+  ID: NN-347.3
+Generation: 349
+  Average fitness this generation: 5008,7459
+  Elite Fitness: 9301.07046226953
+  ID: NN-347.3
+Generation: 350
+  Average fitness this generation: 4866,9407
+  Elite Fitness: 9821.871967006758
+  ID: NN-349.38
+Generation: 351
+  Average fitness this generation: 5059,7906
+  Elite Fitness: 9475.204711046137
+  ID: NN-349.38
+Generation: 352
+  Average fitness this generation: 4860,7565
+  Elite Fitness: 9702.409919666034
+  ID: NN-351.9
+Generation: 353
+  Average fitness this generation: 5220,8368
+  Elite Fitness: 9636.121756372308
+  ID: NN-352.44
+Generation: 354
+  Average fitness this generation: 5242,3934
+  Elite Fitness: 9486.502610384694
+  ID: NN-353.5
+Generation: 355
+  Average fitness this generation: 5761,1108
+  Elite Fitness: 9789.200827383245
+  ID: NN-354.19
+Generation: 356
+  Average fitness this generation: 5073,7617
+  Elite Fitness: 9960.826856786296
+  ID: NN-355.5
+Generation: 357
+  Average fitness this generation: 5135,1682
+  Elite Fitness: 10072.614678437883
+  ID: NN-356.7
+Generation: 358
+  Average fitness this generation: 4787,7576
+  Elite Fitness: 9649.333302890627
+  ID: NN-356.7
+Generation: 359
+  Average fitness this generation: 4487,3918
+  Elite Fitness: 10267.003424055301
+  ID: NN-358.45
+Generation: 360
+  Average fitness this generation: 4696,9735
+  Elite Fitness: 9752.277604848772
+  ID: NN-359.28
+Generation: 361
+  Average fitness this generation: 4827,7383
+  Elite Fitness: 9896.012635238894
+  ID: NN-360.1
+Generation: 362
+  Average fitness this generation: 4813,1453
+  Elite Fitness: 10067.580215240427
+  ID: NN-361.1
+Generation: 363
+  Average fitness this generation: 5131,3421
+  Elite Fitness: 10249.73044694081
+  ID: NN-362.2
+Generation: 364
+  Average fitness this generation: 5308,4642
+  Elite Fitness: 9999.332920211298
+  ID: NN-362.2
+Generation: 365
+  Average fitness this generation: 5527,2153
+  Elite Fitness: 9468.732991884584
+  ID: NN-364.10
+Generation: 366
+  Average fitness this generation: 5410,1487
+  Elite Fitness: 10421.783358365408
+  ID: NN-365.3
+Generation: 367
+  Average fitness this generation: 5430,5182
+  Elite Fitness: 10187.322134585924
+  ID: NN-366.46
+Generation: 368
+  Average fitness this generation: 5335,2748
+  Elite Fitness: 9738.95987899916
+  ID: NN-367.12
+Generation: 369
+  Average fitness this generation: 5230,2737
+  Elite Fitness: 9689.397342962446
+  ID: NN-367.12
+Generation: 370
+  Average fitness this generation: 5050,1060
+  Elite Fitness: 9770.893715243157
+  ID: NN-369.5
+Generation: 371
+  Average fitness this generation: 5163,3079
+  Elite Fitness: 10244.032383804331
+  ID: NN-370.10
+Generation: 372
+  Average fitness this generation: 5322,6718
+  Elite Fitness: 10439.873678632473
+  ID: NN-371.18
+Generation: 373
+  Average fitness this generation: 5165,1624
+  Elite Fitness: 9960.374926106666
+  ID: NN-371.18
+Generation: 374
+  Average fitness this generation: 4816,2959
+  Elite Fitness: 10123.070610057963
+  ID: NN-373.8
+Generation: 375
+  Average fitness this generation: 5003,3416
+  Elite Fitness: 9928.365531208783
+  ID: NN-374.29
+Generation: 376
+  Average fitness this generation: 4556,9448
+  Elite Fitness: 9898.545537842005
+  ID: NN-375.42
+Generation: 377
+  Average fitness this generation: 4737,6781
+  Elite Fitness: 10048.01630933443
+  ID: NN-376.1
+Generation: 378
+  Average fitness this generation: 4936,1120
+  Elite Fitness: 9851.114244212795
+  ID: NN-377.21
+Generation: 379
+  Average fitness this generation: 5184,5211
+  Elite Fitness: 10098.024070137242
+  ID: NN-378.5
+Generation: 380
+  Average fitness this generation: 5487,4909
+  Elite Fitness: 9844.346318240776
+  ID: NN-379.16
+Generation: 381
+  Average fitness this generation: 4755,8047
+  Elite Fitness: 9860.86116418889
+  ID: NN-380.7
+Generation: 382
+  Average fitness this generation: 4900,2483
+  Elite Fitness: 10140.805857440071
+  ID: NN-381.18
+Generation: 383
+  Average fitness this generation: 4679,7918
+  Elite Fitness: 9506.582903060367
+  ID: NN-382.11
+Generation: 384
+  Average fitness this generation: 4464,3758
+  Elite Fitness: 9747.501039064682
+  ID: NN-383.14
+Generation: 385
+  Average fitness this generation: 4660,6857
+  Elite Fitness: 9726.284908500158
+  ID: NN-384.16
+Generation: 386
+  Average fitness this generation: 4726,7965
+  Elite Fitness: 9449.544351564908
+  ID: NN-385.12
+Generation: 387
+  Average fitness this generation: 5015,4461
+  Elite Fitness: 10026.283090365356
+  ID: NN-386.21
+Generation: 388
+  Average fitness this generation: 5211,3624
+  Elite Fitness: 10438.93785203813
+  ID: NN-387.37
+Generation: 389
+  Average fitness this generation: 4421,4067
+  Elite Fitness: 9848.570088000717
+  ID: NN-387.37
+Generation: 390
+  Average fitness this generation: 4904,9061
+  Elite Fitness: 9744.08356451195
+  ID: NN-389.3
+Generation: 391
+  Average fitness this generation: 4450,2030
+  Elite Fitness: 9552.697405986997
+  ID: NN-390.19
+Generation: 392
+  Average fitness this generation: 4577,4149
+  Elite Fitness: 9768.715942883613
+  ID: NN-391.7
+Generation: 393
+  Average fitness this generation: 4243,7429
+  Elite Fitness: 10415.40362301681
+  ID: NN-392.2
+Generation: 394
+  Average fitness this generation: 4458,0320
+  Elite Fitness: 10090.392958757935
+  ID: NN-393.6
+Generation: 395
+  Average fitness this generation: 4593,5035
+  Elite Fitness: 9503.255116332026
+  ID: NN-394.18
+Generation: 396
+  Average fitness this generation: 4452,1064
+  Elite Fitness: 10489.64046355441
+  ID: NN-395.41
+Generation: 397
+  Average fitness this generation: 4260,5233
+  Elite Fitness: 9566.533913960655
+  ID: NN-396.24
+Generation: 398
+  Average fitness this generation: 4552,9282
+  Elite Fitness: 9953.101256781552
+  ID: NN-397.9
+Generation: 399
+  Average fitness this generation: 5386,8345
+  Elite Fitness: 10169.153743173925
+  ID: NN-397.9
+Generation: 400
+  Average fitness this generation: 4846,0471
+  Elite Fitness: 10139.606917436791
+  ID: NN-397.9
+Generation: 401
+  Average fitness this generation: 5100,9178
+  Elite Fitness: 9768.231190079283
+  ID: NN-400.23
+Generation: 402
+  Average fitness this generation: 5124,4724
+  Elite Fitness: 9683.386628197255
+  ID: NN-401.14
+Generation: 403
+  Average fitness this generation: 5050,2661
+  Elite Fitness: 10238.642777555664
+  ID: NN-402.16
+Generation: 404
+  Average fitness this generation: 4703,7398
+  Elite Fitness: 9891.684890892884
+  ID: NN-403.5
+Generation: 405
+  Average fitness this generation: 5418,2470
+  Elite Fitness: 9882.541471346178
+  ID: NN-404.21
+Generation: 406
+  Average fitness this generation: 5571,5841
+  Elite Fitness: 9808.12843789296
+  ID: NN-405.6
+Generation: 407
+  Average fitness this generation: 4999,0767
+  Elite Fitness: 10200.058656242965
+  ID: NN-406.2
+Generation: 408
+  Average fitness this generation: 4692,5795
+  Elite Fitness: 10185.140499342946
+  ID: NN-407.15
+Generation: 409
+  Average fitness this generation: 4213,0506
+  Elite Fitness: 10047.578092032696
+  ID: NN-408.27
+Generation: 410
+  Average fitness this generation: 4749,6296
+  Elite Fitness: 10014.530731094743
+  ID: NN-409.2
+Generation: 411
+  Average fitness this generation: 4916,8856
+  Elite Fitness: 10028.567671995195
+  ID: NN-410.45
+Generation: 412
+  Average fitness this generation: 4881,7180
+  Elite Fitness: 10233.339110865121
+  ID: NN-411.1
+Generation: 413
+  Average fitness this generation: 4858,9760
+  Elite Fitness: 10033.176996479535
+  ID: NN-412.2
+Generation: 414
+  Average fitness this generation: 4954,9753
+  Elite Fitness: 9815.258278467032
+  ID: NN-413.32
+Generation: 415
+  Average fitness this generation: 4618,8291
+  Elite Fitness: 10461.874394923007
+  ID: NN-414.1
+Generation: 416
+  Average fitness this generation: 4669,8785
+  Elite Fitness: 9839.607736872164
+  ID: NN-415.3
+Generation: 417
+  Average fitness this generation: 5191,4752
+  Elite Fitness: 10615.07367834856
+  ID: NN-416.10
+Generation: 418
+  Average fitness this generation: 4691,9372
+  Elite Fitness: 9733.442286437026
+  ID: NN-417.19
+Generation: 419
+  Average fitness this generation: 5164,4914
+  Elite Fitness: 9967.460397466599
+  ID: NN-418.7
+Generation: 420
+  Average fitness this generation: 5074,4912
+  Elite Fitness: 9777.397079713515
+  ID: NN-418.7
+Generation: 421
+  Average fitness this generation: 5272,1920
+  Elite Fitness: 9981.85933696843
+  ID: NN-420.4
+Generation: 422
+  Average fitness this generation: 4558,1532
+  Elite Fitness: 10326.569765498883
+  ID: NN-420.4
+Generation: 423
+  Average fitness this generation: 5141,5424
+  Elite Fitness: 9978.99928800276
+  ID: NN-422.2
+Generation: 424
+  Average fitness this generation: 5246,4891
+  Elite Fitness: 10118.388857327242
+  ID: NN-423.5
+Generation: 425
+  Average fitness this generation: 4968,2606
+  Elite Fitness: 9710.002108616141
+  ID: NN-424.18
+Generation: 426
+  Average fitness this generation: 5024,5749
+  Elite Fitness: 9807.01591380858
+  ID: NN-425.22
+Generation: 427
+  Average fitness this generation: 4107,9775
+  Elite Fitness: 10051.796894679663
+  ID: NN-426.13
+Generation: 428
+  Average fitness this generation: 4493,8044
+  Elite Fitness: 10145.972960838288
+  ID: NN-427.9
+Generation: 429
+  Average fitness this generation: 4857,1698
+  Elite Fitness: 10321.55024507208
+  ID: NN-428.21
+Generation: 430
+  Average fitness this generation: 4628,5514
+  Elite Fitness: 10107.966666034352
+  ID: NN-429.2
+Generation: 431
+  Average fitness this generation: 4683,3019
+  Elite Fitness: 9987.936852884883
+  ID: NN-430.21
+Generation: 432
+  Average fitness this generation: 5195,5806
+  Elite Fitness: 10163.025669683808
+  ID: NN-431.15
+Generation: 433
+  Average fitness this generation: 5042,6894
+  Elite Fitness: 10083.054991170533
+  ID: NN-432.15
+Generation: 434
+  Average fitness this generation: 5034,0675
+  Elite Fitness: 10190.237313785083
+  ID: NN-433.17
+Generation: 435
+  Average fitness this generation: 4553,7830
+  Elite Fitness: 10125.267027917409
+  ID: NN-434.15
+Generation: 436
+  Average fitness this generation: 3852,4233
+  Elite Fitness: 9912.929497139092
+  ID: NN-434.15
+Generation: 437
+  Average fitness this generation: 4089,1538
+  Elite Fitness: 10189.341341090092
+  ID: NN-436.48
+Generation: 438
+  Average fitness this generation: 5028,9961
+  Elite Fitness: 10074.00343761926
+  ID: NN-437.30
+Generation: 439
+  Average fitness this generation: 4578,6584
+  Elite Fitness: 9970.272173290645
+  ID: NN-438.1
+Generation: 440
+  Average fitness this generation: 4480,6423
+  Elite Fitness: 9660.935301520374
+  ID: NN-439.10
+Generation: 441
+  Average fitness this generation: 4826,8460
+  Elite Fitness: 10550.552411606117
+  ID: NN-440.34
+Generation: 442
+  Average fitness this generation: 4867,5949
+  Elite Fitness: 9803.669005325999
+  ID: NN-441.7
+Generation: 443
+  Average fitness this generation: 4853,9132
+  Elite Fitness: 10468.252158627127
+  ID: NN-442.5
+Generation: 444
+  Average fitness this generation: 4966,1755
+  Elite Fitness: 9718.04677256634
+  ID: NN-443.41
+Generation: 445
+  Average fitness this generation: 5121,6018
+  Elite Fitness: 10331.189383676461
+  ID: NN-444.21
+Generation: 446
+  Average fitness this generation: 5170,6999
+  Elite Fitness: 9703.612113143035
+  ID: NN-444.21
+Generation: 447
+  Average fitness this generation: 5026,0573
+  Elite Fitness: 10046.314233526791
+  ID: NN-446.13
+Generation: 448
+  Average fitness this generation: 4834,7054
+  Elite Fitness: 9856.232811327147
+  ID: NN-447.34
+Generation: 449
+  Average fitness this generation: 4796,9949
+  Elite Fitness: 10501.900156413076
+  ID: NN-448.25
+Generation: 450
+  Average fitness this generation: 4581,1661
+  Elite Fitness: 9962.832540794398
+  ID: NN-449.43
+Generation: 451
+  Average fitness this generation: 4380,9190
+  Elite Fitness: 9307.98611968962
+  ID: NN-450.30
+Generation: 452
+  Average fitness this generation: 5052,9306
+  Elite Fitness: 9697.036393457445
+  ID: NN-451.4
+Generation: 453
+  Average fitness this generation: 4953,5361
+  Elite Fitness: 9832.143852110788
+  ID: NN-452.17
+Generation: 454
+  Average fitness this generation: 5201,5572
+  Elite Fitness: 10375.2746697752
+  ID: NN-453.9
+Generation: 455
+  Average fitness this generation: 5037,6074
+  Elite Fitness: 9939.056123769642
+  ID: NN-454.4
+Generation: 456
+  Average fitness this generation: 4952,6782
+  Elite Fitness: 9850.39191586773
+  ID: NN-454.4
+Generation: 457
+  Average fitness this generation: 4660,9573
+  Elite Fitness: 9904.325610068825
+  ID: NN-454.4
+Generation: 458
+  Average fitness this generation: 4889,2376
+  Elite Fitness: 10278.681558271517
+  ID: NN-457.21
+Generation: 459
+  Average fitness this generation: 4600,5323
+  Elite Fitness: 10017.240317682517
+  ID: NN-458.5
+Generation: 460
+  Average fitness this generation: 4363,4696
+  Elite Fitness: 9784.912004530592
+  ID: NN-459.1
+Generation: 461
+  Average fitness this generation: 4107,2176
+  Elite Fitness: 9782.39458050391
+  ID: NN-459.1
+Generation: 462
+  Average fitness this generation: 4311,8918
+  Elite Fitness: 10249.864764350172
+  ID: NN-459.1
+Generation: 463
+  Average fitness this generation: 4161,8711
+  Elite Fitness: 9961.254236890974
+  ID: NN-462.16
+Generation: 464
+  Average fitness this generation: 4494,1571
+  Elite Fitness: 9788.503244661882
+  ID: NN-463.15
+Generation: 465
+  Average fitness this generation: 4547,8465
+  Elite Fitness: 9700.562993771422
+  ID: NN-464.29
+Generation: 466
+  Average fitness this generation: 4444,7355
+  Elite Fitness: 10038.62993214541
+  ID: NN-465.37
+Generation: 467
+  Average fitness this generation: 4352,6854
+  Elite Fitness: 9788.782310818868
+  ID: NN-466.9
+Generation: 468
+  Average fitness this generation: 4621,5409
+  Elite Fitness: 9902.415123526078
+  ID: NN-467.5
+Generation: 469
+  Average fitness this generation: 4719,9909
+  Elite Fitness: 10236.1809291088
+  ID: NN-467.5
+Generation: 470
+  Average fitness this generation: 4666,8586
+  Elite Fitness: 10492.207540023157
+  ID: NN-469.24
+Generation: 471
+  Average fitness this generation: 4568,8780
+  Elite Fitness: 9995.349148863108
+  ID: NN-470.19
+Generation: 472
+  Average fitness this generation: 4778,5630
+  Elite Fitness: 9908.019643675865
+  ID: NN-471.1
+Generation: 473
+  Average fitness this generation: 4665,3910
+  Elite Fitness: 10042.176212916276
+  ID: NN-472.10
+Generation: 474
+  Average fitness this generation: 4439,5024
+  Elite Fitness: 9904.584468671997
+  ID: NN-472.10
+Generation: 475
+  Average fitness this generation: 4610,2356
+  Elite Fitness: 10416.43242559148
+  ID: NN-474.13
+Generation: 476
+  Average fitness this generation: 4220,8350
+  Elite Fitness: 10432.277819912804
+  ID: NN-475.24
+Generation: 477
+  Average fitness this generation: 4832,9961
+  Elite Fitness: 10270.611161887004
+  ID: NN-476.25
+Generation: 478
+  Average fitness this generation: 4604,3831
+  Elite Fitness: 9600.229635638088
+  ID: NN-477.31
+Generation: 479
+  Average fitness this generation: 4836,8144
+  Elite Fitness: 9864.886784836879
+  ID: NN-478.22
+Generation: 480
+  Average fitness this generation: 4607,3275
+  Elite Fitness: 9694.035307161714
+  ID: NN-479.7
+Generation: 481
+  Average fitness this generation: 5224,5773
+  Elite Fitness: 10271.272324139814
+  ID: NN-480.5
+Generation: 482
+  Average fitness this generation: 5178,4944
+  Elite Fitness: 9948.01338054542
+  ID: NN-481.15
+Generation: 483
+  Average fitness this generation: 4897,7169
+  Elite Fitness: 9625.929384838062
+  ID: NN-482.6
+Generation: 484
+  Average fitness this generation: 5094,3750
+  Elite Fitness: 10053.15361760699
+  ID: NN-483.18
+Generation: 485
+  Average fitness this generation: 5059,0750
+  Elite Fitness: 10181.563864213913
+  ID: NN-484.28
+Generation: 486
+  Average fitness this generation: 4579,6531
+  Elite Fitness: 9617.836004920688
+  ID: NN-485.7
+Generation: 487
+  Average fitness this generation: 4843,8012
+  Elite Fitness: 10033.077863560478
+  ID: NN-486.9
+Generation: 488
+  Average fitness this generation: 4350,6353
+  Elite Fitness: 10317.074736809898
+  ID: NN-486.9
+Generation: 489
+  Average fitness this generation: 5046,3017
+  Elite Fitness: 10032.383157256012
+  ID: NN-488.5
+Generation: 490
+  Average fitness this generation: 4605,4928
+  Elite Fitness: 10142.548452861429
+  ID: NN-489.33
+Generation: 491
+  Average fitness this generation: 5101,0983
+  Elite Fitness: 10382.68565389776
+  ID: NN-490.11
+Generation: 492
+  Average fitness this generation: 4829,6622
+  Elite Fitness: 10469.968630015337
+  ID: NN-491.12
+Generation: 493
+  Average fitness this generation: 4832,4264
+  Elite Fitness: 10178.35283739774
+  ID: NN-492.34
+Generation: 494
+  Average fitness this generation: 5047,7113
+  Elite Fitness: 9587.33944143898
+  ID: NN-493.27
+Generation: 495
+  Average fitness this generation: 5341,3877
+  Elite Fitness: 9603.731417010224
+  ID: NN-494.40
+Generation: 496
+  Average fitness this generation: 5208,9208
+  Elite Fitness: 9760.677345730846
+  ID: NN-494.40
+Generation: 497
+  Average fitness this generation: 5267,1788
+  Elite Fitness: 9756.412682008158
+  ID: NN-496.10
+Generation: 498
+  Average fitness this generation: 4615,8545
+  Elite Fitness: 9573.842867846222
+  ID: NN-497.21
+Generation: 499
+  Average fitness this generation: 5358,2022
+  Elite Fitness: 10287.7792612336
+  ID: NN-498.16
+Generation: 500
+  Average fitness this generation: 4894,4565
+  Elite Fitness: 9723.872572461913
+  ID: NN-499.21
+Generation: 501
+  Average fitness this generation: 4776,8058
+  Elite Fitness: 10115.249592639258
+  ID: NN-500.28
+Generation: 502
+  Average fitness this generation: 5282,8814
+  Elite Fitness: 9916.303482181112
+  ID: NN-501.29
+Generation: 503
+  Average fitness this generation: 5265,9341
+  Elite Fitness: 10066.214690685265
+  ID: NN-502.4
+Generation: 504
+  Average fitness this generation: 5182,6975
+  Elite Fitness: 9875.440943714257
+  ID: NN-503.40
+Generation: 505
+  Average fitness this generation: 4628,6387
+  Elite Fitness: 10320.544110376035
+  ID: NN-504.6
+Generation: 506
+  Average fitness this generation: 4663,1131
+  Elite Fitness: 10350.33797344637
+  ID: NN-505.8
+Generation: 507
+  Average fitness this generation: 4812,9715
+  Elite Fitness: 10018.768786617557
+  ID: NN-506.10
+Generation: 508
+  Average fitness this generation: 4325,0132
+  Elite Fitness: 9501.452643910696
+  ID: NN-507.11
+Generation: 509
+  Average fitness this generation: 4311,3543
+  Elite Fitness: 10446.213830031293
+  ID: NN-508.6
+Generation: 510
+  Average fitness this generation: 4068,4910
+  Elite Fitness: 10223.21583753179
+  ID: NN-509.10
+Generation: 511
+  Average fitness this generation: 4540,3917
+  Elite Fitness: 10059.645400516041
+  ID: NN-510.5
+Generation: 512
+  Average fitness this generation: 4779,9088
+  Elite Fitness: 10199.88130139247
+  ID: NN-510.5
+Generation: 513
+  Average fitness this generation: 4687,6849
+  Elite Fitness: 9835.658172687472
+  ID: NN-512.6
+Generation: 514
+  Average fitness this generation: 4827,8261
+  Elite Fitness: 10562.535894028371
+  ID: NN-513.8
+Generation: 515
+  Average fitness this generation: 4661,7495
+  Elite Fitness: 10258.136910108762
+  ID: NN-514.4
+Generation: 516
+  Average fitness this generation: 4196,3173
+  Elite Fitness: 10415.76575887864
+  ID: NN-515.2
+Generation: 517
+  Average fitness this generation: 4257,9922
+  Elite Fitness: 10152.64712300964
+  ID: NN-516.24
+Generation: 518
+  Average fitness this generation: 4798,0004
+  Elite Fitness: 9952.670193515285
+  ID: NN-517.3
+Generation: 519
+  Average fitness this generation: 4812,8240
+  Elite Fitness: 9425.744724215894
+  ID: NN-518.21
+Generation: 520
+  Average fitness this generation: 4741,2708
+  Elite Fitness: 10438.87046326117
+  ID: NN-518.21
+Generation: 521
+  Average fitness this generation: 5146,1022
+  Elite Fitness: 10745.222557443358
+  ID: NN-520.4
+Generation: 522
+  Average fitness this generation: 5243,9367
+  Elite Fitness: 10366.663672170338
+  ID: NN-520.4
+Generation: 523
+  Average fitness this generation: 4763,6051
+  Elite Fitness: 9758.02011052673
+  ID: NN-520.4
+Generation: 524
+  Average fitness this generation: 5161,5323
+  Elite Fitness: 9965.731727555558
+  ID: NN-523.16
+Generation: 525
+  Average fitness this generation: 4998,7169
+  Elite Fitness: 10260.909220733765
+  ID: NN-524.29
+Generation: 526
+  Average fitness this generation: 4846,8352
+  Elite Fitness: 10183.10927316334
+  ID: NN-525.6
+Generation: 527
+  Average fitness this generation: 4718,2400
+  Elite Fitness: 10026.094376892104
+  ID: NN-526.12
+Generation: 528
+  Average fitness this generation: 4948,0139
+  Elite Fitness: 9611.063513352481
+  ID: NN-526.12
+Generation: 529
+  Average fitness this generation: 4509,3067
+  Elite Fitness: 10212.034287164937
+  ID: NN-526.12
+Generation: 530
+  Average fitness this generation: 4573,2749
+  Elite Fitness: 10030.070144867877
+  ID: NN-529.17
+Generation: 531
+  Average fitness this generation: 5269,9880
+  Elite Fitness: 10001.146333753079
+  ID: NN-530.3
+Generation: 532
+  Average fitness this generation: 5470,3861
+  Elite Fitness: 10060.795239617804
+  ID: NN-531.31
+Generation: 533
+  Average fitness this generation: 5055,8885
+  Elite Fitness: 9841.957135982997
+  ID: NN-532.26
+Generation: 534
+  Average fitness this generation: 5035,6219
+  Elite Fitness: 10426.476409247807
+  ID: NN-532.26
+Generation: 535
+  Average fitness this generation: 4939,4856
+  Elite Fitness: 10240.417341851315
+  ID: NN-534.15
+Generation: 536
+  Average fitness this generation: 4820,9691
+  Elite Fitness: 10279.46721932053
+  ID: NN-535.15
+Generation: 537
+  Average fitness this generation: 4552,2509
+  Elite Fitness: 10233.742474395593
+  ID: NN-536.15
+Generation: 538
+  Average fitness this generation: 4870,0907
+  Elite Fitness: 9564.540191853772
+  ID: NN-537.1
+Generation: 539
+  Average fitness this generation: 5351,7539
+  Elite Fitness: 10587.558320027885
+  ID: NN-538.9
+Generation: 540
+  Average fitness this generation: 5210,5634
+  Elite Fitness: 10445.293860829432
+  ID: NN-539.32
+Generation: 541
+  Average fitness this generation: 4761,0644
+  Elite Fitness: 10384.595619366148
+  ID: NN-540.23
+Generation: 542
+  Average fitness this generation: 4599,3394
+  Elite Fitness: 10570.401804981364
+  ID: NN-540.23
+Generation: 543
+  Average fitness this generation: 4649,4545
+  Elite Fitness: 10356.958326027972
+  ID: NN-542.15
+Generation: 544
+  Average fitness this generation: 4086,4933
+  Elite Fitness: 10215.112424156101
+  ID: NN-543.29
+Generation: 545
+  Average fitness this generation: 4414,5993
+  Elite Fitness: 10604.727941729381
+  ID: NN-544.29
+Generation: 546
+  Average fitness this generation: 4642,1212
+  Elite Fitness: 10140.342683215404
+  ID: NN-545.33
+Generation: 547
+  Average fitness this generation: 5164,4666
+  Elite Fitness: 10588.344619790585
+  ID: NN-546.39
+Generation: 548
+  Average fitness this generation: 5477,7311
+  Elite Fitness: 10534.744734313485
+  ID: NN-547.16
+Generation: 549
+  Average fitness this generation: 6331,6354
+  Elite Fitness: 10754.702743074646
+  ID: NN-547.16
+Generation: 550
+  Average fitness this generation: 5742,8446
+  Elite Fitness: 10394.965589746984
+  ID: NN-549.8
+Generation: 551
+  Average fitness this generation: 5601,4599
+  Elite Fitness: 10472.976389708208
+  ID: NN-550.8
+Generation: 552
+  Average fitness this generation: 5442,8927
+  Elite Fitness: 10355.066010250259
+  ID: NN-551.30
+Generation: 553
+  Average fitness this generation: 5046,4244
+  Elite Fitness: 10574.688318381308
+  ID: NN-552.1
+Generation: 554
+  Average fitness this generation: 4903,3100
+  Elite Fitness: 9838.177340197577
+  ID: NN-552.1
+Generation: 555
+  Average fitness this generation: 5037,9986
+  Elite Fitness: 10014.375795107127
+  ID: NN-554.6
+Generation: 556
+  Average fitness this generation: 4799,2643
+  Elite Fitness: 10615.575244691356
+  ID: NN-554.6
+Generation: 557
+  Average fitness this generation: 5264,0449
+  Elite Fitness: 10198.930469957684
+  ID: NN-556.11
+Generation: 558
+  Average fitness this generation: 4239,4612
+  Elite Fitness: 10066.572708033109
+  ID: NN-556.11
+Generation: 559
+  Average fitness this generation: 4121,8726
+  Elite Fitness: 10235.17553690002
+  ID: NN-556.11
+Generation: 560
+  Average fitness this generation: 4623,8255
+  Elite Fitness: 10276.890415364793
+  ID: NN-559.33
+Generation: 561
+  Average fitness this generation: 4729,8094
+  Elite Fitness: 10170.293372795239
+  ID: NN-560.7
+Generation: 562
+  Average fitness this generation: 4540,3261
+  Elite Fitness: 10243.138172390816
+  ID: NN-561.5
+Generation: 563
+  Average fitness this generation: 4862,8350
+  Elite Fitness: 10692.805416590014
+  ID: NN-562.8
+Generation: 564
+  Average fitness this generation: 4768,6845
+  Elite Fitness: 10385.919129854503
+  ID: NN-563.7
+Generation: 565
+  Average fitness this generation: 4844,9074
+  Elite Fitness: 9689.860008619135
+  ID: NN-564.25
+Generation: 566
+  Average fitness this generation: 4611,8409
+  Elite Fitness: 10426.414430072658
+  ID: NN-565.43
+Generation: 567
+  Average fitness this generation: 4323,1251
+  Elite Fitness: 9961.594011203597
+  ID: NN-566.38
+Generation: 568
+  Average fitness this generation: 5025,7192
+  Elite Fitness: 10479.649688011405
+  ID: NN-567.18
+Generation: 569
+  Average fitness this generation: 4844,1260
+  Elite Fitness: 10257.50931096348
+  ID: NN-567.18
+Generation: 570
+  Average fitness this generation: 4679,9245
+  Elite Fitness: 10407.447603974093
+  ID: NN-569.31
+Generation: 571
+  Average fitness this generation: 4578,3179
+  Elite Fitness: 10126.373740385745
+  ID: NN-570.13
+Generation: 572
+  Average fitness this generation: 4942,1599
+  Elite Fitness: 10178.290786984595
+  ID: NN-571.11
+Generation: 573
+  Average fitness this generation: 4524,3038
+  Elite Fitness: 9493.126023378984
+  ID: NN-572.35
+Generation: 574
+  Average fitness this generation: 4995,1479
+  Elite Fitness: 10013.269310899683
+  ID: NN-573.28
+Generation: 575
+  Average fitness this generation: 5201,6880
+  Elite Fitness: 9802.937155046462
+  ID: NN-574.27
+Generation: 576
+  Average fitness this generation: 5505,9740
+  Elite Fitness: 9995.913177994062
+  ID: NN-575.3
+Generation: 577
+  Average fitness this generation: 4933,0024
+  Elite Fitness: 9994.618558602668
+  ID: NN-576.20
+Generation: 578
+  Average fitness this generation: 5035,5108
+  Elite Fitness: 9699.782011997117
+  ID: NN-577.20
+Generation: 579
+  Average fitness this generation: 5471,1952
+  Elite Fitness: 10150.476435235796
+  ID: NN-577.20
+Generation: 580
+  Average fitness this generation: 5706,2210
+  Elite Fitness: 9976.70199818166
+  ID: NN-579.11
+Generation: 581
+  Average fitness this generation: 4903,2085
+  Elite Fitness: 9835.242583584819
+  ID: NN-579.11
+Generation: 582
+  Average fitness this generation: 5458,1444
+  Elite Fitness: 10799.581984201566
+  ID: NN-581.33
+Generation: 583
+  Average fitness this generation: 4927,8234
+  Elite Fitness: 10058.149748769385
+  ID: NN-582.5
+Generation: 584
+  Average fitness this generation: 5431,8348
+  Elite Fitness: 10412.737772474191
+  ID: NN-583.5
+Generation: 585
+  Average fitness this generation: 5471,8342
+  Elite Fitness: 10647.150109130114
+  ID: NN-584.36
+Generation: 586
+  Average fitness this generation: 4870,9288
+  Elite Fitness: 9716.039519908567
+  ID: NN-585.19
+Generation: 587
+  Average fitness this generation: 4832,1362
+  Elite Fitness: 10264.706855997945
+  ID: NN-586.1
+Generation: 588
+  Average fitness this generation: 4722,8494
+  Elite Fitness: 10375.247615120601
+  ID: NN-587.11
+Generation: 589
+  Average fitness this generation: 4825,9445
+  Elite Fitness: 10503.76543865572
+  ID: NN-588.6
+Generation: 590
+  Average fitness this generation: 5056,4962
+  Elite Fitness: 11268.136067292618
+  ID: NN-589.5
+Generation: 591
+  Average fitness this generation: 5247,9747
+  Elite Fitness: 10445.032081678684
+  ID: NN-590.7
+Generation: 592
+  Average fitness this generation: 5299,4582
+  Elite Fitness: 11440.352023413969
+  ID: NN-591.22
+Generation: 593
+  Average fitness this generation: 5294,1827
+  Elite Fitness: 10509.577235914268
+  ID: NN-592.27
+Generation: 594
+  Average fitness this generation: 5851,8869
+  Elite Fitness: 10558.095143234865
+  ID: NN-593.32
+Generation: 595
+  Average fitness this generation: 6461,2241
+  Elite Fitness: 10702.559578337165
+  ID: NN-594.11
+Generation: 596
+  Average fitness this generation: 5636,9001
+  Elite Fitness: 10737.01854566099
+  ID: NN-595.2
+Generation: 597
+  Average fitness this generation: 4848,1400
+  Elite Fitness: 10470.250623689575
+  ID: NN-596.1
+Generation: 598
+  Average fitness this generation: 4969,2465
+  Elite Fitness: 10626.905931276244
+  ID: NN-597.31
+Generation: 599
+  Average fitness this generation: 4817,8421
+  Elite Fitness: 10392.815278744052
+  ID: NN-598.42
+Generation: 600
+  Average fitness this generation: 4664,9817
+  Elite Fitness: 10373.956965620482
+  ID: NN-599.31
+Generation: 601
+  Average fitness this generation: 4380,2569
+  Elite Fitness: 10687.00853466307
+  ID: NN-600.20
+Generation: 602
+  Average fitness this generation: 4543,5652
+  Elite Fitness: 10301.469570857054
+  ID: NN-601.3
+Generation: 603
+  Average fitness this generation: 4381,1435
+  Elite Fitness: 10245.40104825862
+  ID: NN-602.4
+Generation: 604
+  Average fitness this generation: 4414,3243
+  Elite Fitness: 10272.973653313518
+  ID: NN-603.35
+Generation: 605
+  Average fitness this generation: 3877,0919
+  Elite Fitness: 10406.587147433558
+  ID: NN-604.8
+Generation: 606
+  Average fitness this generation: 3876,2089
+  Elite Fitness: 10511.687830718085
+  ID: NN-605.4
+Generation: 607
+  Average fitness this generation: 4007,1366
+  Elite Fitness: 10786.586049065925
+  ID: NN-606.5
+Generation: 608
+  Average fitness this generation: 4294,0674
+  Elite Fitness: 10477.501219122447
+  ID: NN-607.12
+Generation: 609
+  Average fitness this generation: 4307,3484
+  Elite Fitness: 11065.498334331427
+  ID: NN-608.4
+Generation: 610
+  Average fitness this generation: 4052,1500
+  Elite Fitness: 10066.464122309682
+  ID: NN-609.8
+Generation: 611
+  Average fitness this generation: 4170,4012
+  Elite Fitness: 10353.55364239482
+  ID: NN-610.26
+Generation: 612
+  Average fitness this generation: 4509,4399
+  Elite Fitness: 10660.23666412241
+  ID: NN-611.8
+Generation: 613
+  Average fitness this generation: 4699,0413
+  Elite Fitness: 11265.598727530527
+  ID: NN-612.26
+Generation: 614
+  Average fitness this generation: 4836,2421
+  Elite Fitness: 11010.711780672824
+  ID: NN-613.3
+Generation: 615
+  Average fitness this generation: 4462,9417
+  Elite Fitness: 10717.951805432504
+  ID: NN-614.19
+Generation: 616
+  Average fitness this generation: 4502,8622
+  Elite Fitness: 10912.803108777374
+  ID: NN-615.29
+Generation: 617
+  Average fitness this generation: 5066,9527
+  Elite Fitness: 10892.56639457302
+  ID: NN-616.14
+Generation: 618
+  Average fitness this generation: 4989,2690
+  Elite Fitness: 10283.82622175353
+  ID: NN-616.14
+Generation: 619
+  Average fitness this generation: 4740,7240
+  Elite Fitness: 10344.891507276217
+  ID: NN-618.1
+Generation: 620
+  Average fitness this generation: 4499,5107
+  Elite Fitness: 10452.816389783531
+  ID: NN-619.13
+Generation: 621
+  Average fitness this generation: 4368,6304
+  Elite Fitness: 10029.159739986486
+  ID: NN-620.45
+Generation: 622
+  Average fitness this generation: 4879,0032
+  Elite Fitness: 10516.302695185597
+  ID: NN-621.6
+Generation: 623
+  Average fitness this generation: 5306,1128
+  Elite Fitness: 10350.112023503154
+  ID: NN-622.19
+Generation: 624
+  Average fitness this generation: 4768,9628
+  Elite Fitness: 10312.318534543414
+  ID: NN-623.14
+Generation: 625
+  Average fitness this generation: 4353,3150
+  Elite Fitness: 10225.769843608387
+  ID: NN-624.9
+Generation: 626
+  Average fitness this generation: 4400,0061
+  Elite Fitness: 10955.942175470376
+  ID: NN-625.17
+Generation: 627
+  Average fitness this generation: 4486,5816
+  Elite Fitness: 10590.927275006941
+  ID: NN-626.5
+Generation: 628
+  Average fitness this generation: 4658,9407
+  Elite Fitness: 10391.631471237488
+  ID: NN-627.3
+Generation: 629
+  Average fitness this generation: 4544,0027
+  Elite Fitness: 10607.375532820406
+  ID: NN-628.6
+Generation: 630
+  Average fitness this generation: 4814,0468
+  Elite Fitness: 9714.547131602743
+  ID: NN-629.23
+Generation: 631
+  Average fitness this generation: 5015,0338
+  Elite Fitness: 10127.370845135336
+  ID: NN-630.23
+Generation: 632
+  Average fitness this generation: 5079,2423
+  Elite Fitness: 10637.099971552278
+  ID: NN-630.23
+Generation: 633
+  Average fitness this generation: 4927,7073
+  Elite Fitness: 11100.778504669639
+  ID: NN-632.27
+Generation: 634
+  Average fitness this generation: 5305,5789
+  Elite Fitness: 10331.383205624374
+  ID: NN-633.1
+Generation: 635
+  Average fitness this generation: 5489,3434
+  Elite Fitness: 10796.707706935109
+  ID: NN-634.39
+Generation: 636
+  Average fitness this generation: 5193,5734
+  Elite Fitness: 10383.182102597542
+  ID: NN-635.42
+Generation: 637
+  Average fitness this generation: 5404,5213
+  Elite Fitness: 11131.69501995078
+  ID: NN-636.3
+Generation: 638
+  Average fitness this generation: 5043,7598
+  Elite Fitness: 10545.965150285345
+  ID: NN-637.8
+Generation: 639
+  Average fitness this generation: 5025,3594
+  Elite Fitness: 10028.290255344742
+  ID: NN-638.3
+Generation: 640
+  Average fitness this generation: 4978,7322
+  Elite Fitness: 10744.363160573175
+  ID: NN-639.42
+Generation: 641
+  Average fitness this generation: 4950,1516
+  Elite Fitness: 10012.780775085896
+  ID: NN-640.11
+Generation: 642
+  Average fitness this generation: 5533,7914
+  Elite Fitness: 10497.778207495303
+  ID: NN-641.20
+Generation: 643
+  Average fitness this generation: 5431,8373
+  Elite Fitness: 10774.080457383887
+  ID: NN-642.6
+Generation: 644
+  Average fitness this generation: 4617,8160
+  Elite Fitness: 10545.527796597464
+  ID: NN-643.2
+Generation: 645
+  Average fitness this generation: 5076,2661
+  Elite Fitness: 10889.597064103491
+  ID: NN-643.2
+Generation: 646
+  Average fitness this generation: 5160,5684
+  Elite Fitness: 9862.494866694791
+  ID: NN-645.44
+Generation: 647
+  Average fitness this generation: 5194,1549
+  Elite Fitness: 10667.5397219575
+  ID: NN-646.30
+Generation: 648
+  Average fitness this generation: 5258,6365
+  Elite Fitness: 10045.722581139831
+  ID: NN-647.16
+Generation: 649
+  Average fitness this generation: 5568,8412
+  Elite Fitness: 10515.67952485591
+  ID: NN-648.32
+Generation: 650
+  Average fitness this generation: 5553,4739
+  Elite Fitness: 10276.467192575867
+  ID: NN-649.4
+Generation: 651
+  Average fitness this generation: 5579,9808
+  Elite Fitness: 9990.637478400955
+  ID: NN-650.34
+Generation: 652
+  Average fitness this generation: 5619,6742
+  Elite Fitness: 10696.04195175289
+  ID: NN-651.10
+Generation: 653
+  Average fitness this generation: 5399,4998
+  Elite Fitness: 10376.767203468911
+  ID: NN-652.8
+Generation: 654
+  Average fitness this generation: 5140,4397
+  Elite Fitness: 10218.18483602254
+  ID: NN-653.38
+Generation: 655
+  Average fitness this generation: 4936,2166
+  Elite Fitness: 11295.580255197934
+  ID: NN-654.34
+Generation: 656
+  Average fitness this generation: 4443,2084
+  Elite Fitness: 9905.03233703536
+  ID: NN-655.9
+Generation: 657
+  Average fitness this generation: 4917,8100
+  Elite Fitness: 10458.664051171178
+  ID: NN-655.9
+Generation: 658
+  Average fitness this generation: 4668,5600
+  Elite Fitness: 10343.145815719665
+  ID: NN-657.8
+Generation: 659
+  Average fitness this generation: 5038,3683
+  Elite Fitness: 10405.11522643629
+  ID: NN-658.2
+Generation: 660
+  Average fitness this generation: 5638,1879
+  Elite Fitness: 10101.832691079211
+  ID: NN-659.34
+Generation: 661
+  Average fitness this generation: 5417,1270
+  Elite Fitness: 10448.93269241034
+  ID: NN-660.23
+Generation: 662
+  Average fitness this generation: 5469,9531
+  Elite Fitness: 10857.561993014064
+  ID: NN-660.23
+Generation: 663
+  Average fitness this generation: 5059,6879
+  Elite Fitness: 10488.127155328591
+  ID: NN-662.20
+Generation: 664
+  Average fitness this generation: 5047,0175
+  Elite Fitness: 11016.657629703277
+  ID: NN-663.1
+Generation: 665
+  Average fitness this generation: 5190,6126
+  Elite Fitness: 10171.321787276325
+  ID: NN-664.15
+Generation: 666
+  Average fitness this generation: 4908,1106
+  Elite Fitness: 10943.696063100044
+  ID: NN-665.14
+Generation: 667
+  Average fitness this generation: 5404,3984
+  Elite Fitness: 10080.266351066968
+  ID: NN-666.17
+Generation: 668
+  Average fitness this generation: 4919,6504
+  Elite Fitness: 10429.900733850582
+  ID: NN-667.1
+Generation: 669
+  Average fitness this generation: 5339,5032
+  Elite Fitness: 10422.333798001393
+  ID: NN-668.16
+Generation: 670
+  Average fitness this generation: 5358,3918
+  Elite Fitness: 10253.738932331726
+  ID: NN-669.10
+Generation: 671
+  Average fitness this generation: 4921,0692
+  Elite Fitness: 10673.17166121407
+  ID: NN-670.18
+Generation: 672
+  Average fitness this generation: 4863,7587
+  Elite Fitness: 10052.133828116643
+  ID: NN-671.35
+Generation: 673
+  Average fitness this generation: 4841,3409
+  Elite Fitness: 9787.664915441595
+  ID: NN-671.35
+Generation: 674
+  Average fitness this generation: 5416,6925
+  Elite Fitness: 9969.401896748821
+  ID: NN-673.41
+Generation: 675
+  Average fitness this generation: 5454,4403
+  Elite Fitness: 10241.966311797547
+  ID: NN-674.30
+Generation: 676
+  Average fitness this generation: 4935,1430
+  Elite Fitness: 10964.307547241036
+  ID: NN-675.49
+Generation: 677
+  Average fitness this generation: 5480,5842
+  Elite Fitness: 10216.85655334286
+  ID: NN-676.13
+Generation: 678
+  Average fitness this generation: 5988,4946
+  Elite Fitness: 10690.939581376579
+  ID: NN-677.8
+Generation: 679
+  Average fitness this generation: 5210,1516
+  Elite Fitness: 10502.19838193638
+  ID: NN-678.20
+Generation: 680
+  Average fitness this generation: 5207,2222
+  Elite Fitness: 10979.719097399231
+  ID: NN-679.23
+Generation: 681
+  Average fitness this generation: 5161,6196
+  Elite Fitness: 10857.719633514003
+  ID: NN-680.5
+Generation: 682
+  Average fitness this generation: 5075,7538
+  Elite Fitness: 11282.038080906086
+  ID: NN-681.17
+Generation: 683
+  Average fitness this generation: 5528,3578
+  Elite Fitness: 10699.659029426655
+  ID: NN-682.4
+Generation: 684
+  Average fitness this generation: 4568,1188
+  Elite Fitness: 10195.08682227276
+  ID: NN-683.20
+Generation: 685
+  Average fitness this generation: 4484,9436
+  Elite Fitness: 9983.70723310968
+  ID: NN-684.35
+Generation: 686
+  Average fitness this generation: 4412,9951
+  Elite Fitness: 10097.81888412969
+  ID: NN-684.35
+Generation: 687
+  Average fitness this generation: 4286,1585
+  Elite Fitness: 9825.868051814896
+  ID: NN-686.1
+Generation: 688
+  Average fitness this generation: 5300,9262
+  Elite Fitness: 11288.981948342302
+  ID: NN-687.3
+Generation: 689
+  Average fitness this generation: 4785,8364
+  Elite Fitness: 10373.637863932416
+  ID: NN-688.38
+Generation: 690
+  Average fitness this generation: 4237,0050
+  Elite Fitness: 9746.173581637313
+  ID: NN-689.7
+Generation: 691
+  Average fitness this generation: 4483,5697
+  Elite Fitness: 10249.710953350506
+  ID: NN-690.26
+Generation: 692
+  Average fitness this generation: 4330,0554
+  Elite Fitness: 9782.184832850155
+  ID: NN-691.14
+Generation: 693
+  Average fitness this generation: 4253,9478
+  Elite Fitness: 9514.11221729039
+  ID: NN-692.9
+Generation: 694
+  Average fitness this generation: 4401,4260
+  Elite Fitness: 9605.253036510581
+  ID: NN-693.10
+Generation: 695
+  Average fitness this generation: 4390,5820
+  Elite Fitness: 9685.868651624167
+  ID: NN-694.8
+Generation: 696
+  Average fitness this generation: 4569,8686
+  Elite Fitness: 9855.113780875301
+  ID: NN-695.34
+Generation: 697
+  Average fitness this generation: 4866,0497
+  Elite Fitness: 9625.937711444125
+  ID: NN-696.8
+Generation: 698
+  Average fitness this generation: 5039,6438
+  Elite Fitness: 9566.19527386294
+  ID: NN-697.28
+Generation: 699
+  Average fitness this generation: 4848,6999
+  Elite Fitness: 9376.280223734804
+  ID: NN-698.1
+Generation: 700
+  Average fitness this generation: 4643,9928
+  Elite Fitness: 10394.98630116867
+  ID: NN-699.36
+Generation: 701
+  Average fitness this generation: 4894,0653
+  Elite Fitness: 10035.568703487425
+  ID: NN-700.1
+Generation: 702
+  Average fitness this generation: 4496,6043
+  Elite Fitness: 9921.10861421046
+  ID: NN-701.2
+Generation: 703
+  Average fitness this generation: 4457,3330
+  Elite Fitness: 9435.987081125515
+  ID: NN-702.41
+Generation: 704
+  Average fitness this generation: 4428,2640
+  Elite Fitness: 9421.533190634122
+  ID: NN-703.17
+Generation: 705
+  Average fitness this generation: 4762,6587
+  Elite Fitness: 9616.704378951901
+  ID: NN-703.17
+Generation: 706
+  Average fitness this generation: 4928,1748
+  Elite Fitness: 10302.8515979255
+  ID: NN-705.41
+Generation: 707
+  Average fitness this generation: 4960,9576
+  Elite Fitness: 9974.13836584121
+  ID: NN-706.5
+Generation: 708
+  Average fitness this generation: 5216,0511
+  Elite Fitness: 10018.84687870566
+  ID: NN-707.39
+Generation: 709
+  Average fitness this generation: 5056,8739
+  Elite Fitness: 9985.40109537489
+  ID: NN-708.9
+Generation: 710
+  Average fitness this generation: 4970,8417
+  Elite Fitness: 9850.522256488592
+  ID: NN-709.18
+Generation: 711
+  Average fitness this generation: 4719,2309
+  Elite Fitness: 10058.038026207461
+  ID: NN-710.25
+Generation: 712
+  Average fitness this generation: 5271,1708
+  Elite Fitness: 9857.745507835938
+  ID: NN-711.7
+Generation: 713
+  Average fitness this generation: 4726,2977
+  Elite Fitness: 9580.127451287159
+  ID: NN-711.7
+Generation: 714
+  Average fitness this generation: 5048,9688
+  Elite Fitness: 9913.779431367275
+  ID: NN-711.7
+Generation: 715
+  Average fitness this generation: 4973,5436
+  Elite Fitness: 9374.41521554504
+  ID: NN-714.15
+Generation: 716
+  Average fitness this generation: 4644,5048
+  Elite Fitness: 10109.468669347894
+  ID: NN-714.15
+Generation: 717
+  Average fitness this generation: 5028,4734
+  Elite Fitness: 9522.103040993525
+  ID: NN-714.15
+Generation: 718
+  Average fitness this generation: 4985,5408
+  Elite Fitness: 9808.419449485136
+  ID: NN-717.6
+Generation: 719
+  Average fitness this generation: 4617,0792
+  Elite Fitness: 9284.065923972983
+  ID: NN-718.10
+Generation: 720
+  Average fitness this generation: 4584,6614
+  Elite Fitness: 9773.237048395062
+  ID: NN-719.22
+Generation: 721
+  Average fitness this generation: 4367,8256
+  Elite Fitness: 10102.902238595929
+  ID: NN-720.22
+Generation: 722
+  Average fitness this generation: 4192,5739
+  Elite Fitness: 10248.386036277163
+  ID: NN-721.5
+Generation: 723
+  Average fitness this generation: 4723,0463
+  Elite Fitness: 9595.718050318497
+  ID: NN-722.9
+Generation: 724
+  Average fitness this generation: 4432,4523
+  Elite Fitness: 9589.939333444698
+  ID: NN-723.6
+Generation: 725
+  Average fitness this generation: 4217,7736
+  Elite Fitness: 10065.6595688375
+  ID: NN-724.27
+Generation: 726
+  Average fitness this generation: 4516,0850
+  Elite Fitness: 10143.65502108388
+  ID: NN-725.6
+Generation: 727
+  Average fitness this generation: 4749,4919
+  Elite Fitness: 9821.955031482063
+  ID: NN-726.20
+Generation: 728
+  Average fitness this generation: 4981,1779
+  Elite Fitness: 9649.35229257088
+  ID: NN-726.20
+Generation: 729
+  Average fitness this generation: 5296,4414
+  Elite Fitness: 9456.092783472932
+  ID: NN-728.31
+Generation: 730
+  Average fitness this generation: 5438,9333
+  Elite Fitness: 10293.188815339161
+  ID: NN-729.15
+Generation: 731
+  Average fitness this generation: 5374,4887
+  Elite Fitness: 9529.07495399366
+  ID: NN-730.4
+Generation: 732
+  Average fitness this generation: 5119,3373
+  Elite Fitness: 9447.175315724891
+  ID: NN-731.25
+Generation: 733
+  Average fitness this generation: 4794,7465
+  Elite Fitness: 9787.518818919729
+  ID: NN-732.5
+Generation: 734
+  Average fitness this generation: 4616,9071
+  Elite Fitness: 9717.14851890023
+  ID: NN-733.46
+Generation: 735
+  Average fitness this generation: 4954,1055
+  Elite Fitness: 9817.023775646681
+  ID: NN-734.24
+Generation: 736
+  Average fitness this generation: 4608,5109
+  Elite Fitness: 9282.837713262543
+  ID: NN-735.2
+Generation: 737
+  Average fitness this generation: 4937,7774
+  Elite Fitness: 9128.289917094819
+  ID: NN-736.40
+Generation: 738
+  Average fitness this generation: 5196,5584
+  Elite Fitness: 9458.271189480418
+  ID: NN-737.17
+Generation: 739
+  Average fitness this generation: 5473,9550
+  Elite Fitness: 9882.456015597314
+  ID: NN-738.18
+Generation: 740
+  Average fitness this generation: 5310,5859
+  Elite Fitness: 9627.72051245307
+  ID: NN-739.18
+Generation: 741
+  Average fitness this generation: 5439,5747
+  Elite Fitness: 9958.834822736411
+  ID: NN-740.7
+Generation: 742
+  Average fitness this generation: 5544,2821
+  Elite Fitness: 10125.66469452133
+  ID: NN-741.4
+Generation: 743
+  Average fitness this generation: 5351,5859
+  Elite Fitness: 9444.208187179875
+  ID: NN-742.7
+Generation: 744
+  Average fitness this generation: 5226,7875
+  Elite Fitness: 9512.325726770441
+  ID: NN-743.28
+Generation: 745
+  Average fitness this generation: 4939,8416
+  Elite Fitness: 9753.408036392277
+  ID: NN-743.28
+Generation: 746
+  Average fitness this generation: 4967,3139
+  Elite Fitness: 9305.046151723722
+  ID: NN-745.37
+Generation: 747
+  Average fitness this generation: 5388,5151
+  Elite Fitness: 9871.289607145842
+  ID: NN-746.26
+Generation: 748
+  Average fitness this generation: 5326,4703
+  Elite Fitness: 9452.437794368701
+  ID: NN-747.1
+Generation: 749
+  Average fitness this generation: 4867,4184
+  Elite Fitness: 9984.869677608935
+  ID: NN-748.17
+Generation: 750
+  Average fitness this generation: 5035,6931
+  Elite Fitness: 9114.712455242534
+  ID: NN-749.33
+Generation: 751
+  Average fitness this generation: 5466,7808
+  Elite Fitness: 9602.182061460231
+  ID: NN-750.2
+Generation: 752
+  Average fitness this generation: 5240,4383
+  Elite Fitness: 9658.863421276683
+  ID: NN-751.7
+Generation: 753
+  Average fitness this generation: 5476,8017
+  Elite Fitness: 9448.24342356848
+  ID: NN-752.25
+Generation: 754
+  Average fitness this generation: 5605,5261
+  Elite Fitness: 9570.302610007377
+  ID: NN-753.1
+Generation: 755
+  Average fitness this generation: 5526,6590
+  Elite Fitness: 9217.654995493449
+  ID: NN-754.39
+Generation: 756
+  Average fitness this generation: 5267,8467
+  Elite Fitness: 9287.07327102587
+  ID: NN-755.1
+Generation: 757
+  Average fitness this generation: 5028,9581
+  Elite Fitness: 9392.750989589944
+  ID: NN-756.24
+Generation: 758
+  Average fitness this generation: 4730,3741
+  Elite Fitness: 9880.736796792286
+  ID: NN-756.24
+Generation: 759
+  Average fitness this generation: 4947,5411
+  Elite Fitness: 10071.800678967102
+  ID: NN-758.38
+Generation: 760
+  Average fitness this generation: 4958,2252
+  Elite Fitness: 9748.697805538182
+  ID: NN-759.24
+Generation: 761
+  Average fitness this generation: 4810,7305
+  Elite Fitness: 10029.365287019527
+  ID: NN-760.30
+Generation: 762
+  Average fitness this generation: 4846,4196
+  Elite Fitness: 9884.63666893402
+  ID: NN-761.5
+Generation: 763
+  Average fitness this generation: 5048,6720
+  Elite Fitness: 9831.96923807793
+  ID: NN-762.18
+Generation: 764
+  Average fitness this generation: 5441,1973
+  Elite Fitness: 9548.982006569711
+  ID: NN-763.18
+Generation: 765
+  Average fitness this generation: 4930,3804
+  Elite Fitness: 9740.280913235323
+  ID: NN-764.8
+Generation: 766
+  Average fitness this generation: 5352,7630
+  Elite Fitness: 9557.549519784696
+  ID: NN-765.28
+Generation: 767
+  Average fitness this generation: 6168,6370
+  Elite Fitness: 10177.360381505077
+  ID: NN-766.3
+Generation: 768
+  Average fitness this generation: 5678,8161
+  Elite Fitness: 10156.299715487981
+  ID: NN-767.11
+Generation: 769
+  Average fitness this generation: 6647,6439
+  Elite Fitness: 9780.222073339739
+  ID: NN-768.3
+Generation: 770
+  Average fitness this generation: 6228,3137
+  Elite Fitness: 9948.899955906201
+  ID: NN-769.48
+Generation: 771
+  Average fitness this generation: 6393,2550
+  Elite Fitness: 10021.233924443384
+  ID: NN-770.10
+Generation: 772
+  Average fitness this generation: 6727,1495
+  Elite Fitness: 9789.056996580923
+  ID: NN-771.49
+Generation: 773
+  Average fitness this generation: 6766,8848
+  Elite Fitness: 9945.199390964139
+  ID: NN-772.16
+Generation: 774
+  Average fitness this generation: 6024,9507
+  Elite Fitness: 10320.699510622799
+  ID: NN-773.25
+Generation: 775
+  Average fitness this generation: 6230,1586
+  Elite Fitness: 10144.851996928526
+  ID: NN-774.10
+Generation: 776
+  Average fitness this generation: 5951,6076
+  Elite Fitness: 10154.193465054606
+  ID: NN-775.16
+Generation: 777
+  Average fitness this generation: 5628,9433
+  Elite Fitness: 9879.47183012874
+  ID: NN-776.34
+Generation: 778
+  Average fitness this generation: 5848,2175
+  Elite Fitness: 10568.30054130754
+  ID: NN-777.19
+Generation: 779
+  Average fitness this generation: 6055,3133
+  Elite Fitness: 9853.154545081092
+  ID: NN-777.19
+Generation: 780
+  Average fitness this generation: 6553,5333
+  Elite Fitness: 10069.71310287766
+  ID: NN-779.35
+Generation: 781
+  Average fitness this generation: 6164,0552
+  Elite Fitness: 10332.222229604606
+  ID: NN-780.6
+Generation: 782
+  Average fitness this generation: 6063,1382
+  Elite Fitness: 9853.571853306996
+  ID: NN-781.22
+Generation: 783
+  Average fitness this generation: 6285,0196
+  Elite Fitness: 9905.97205885903
+  ID: NN-782.1
+Generation: 784
+  Average fitness this generation: 5852,3850
+  Elite Fitness: 10369.66438919469
+  ID: NN-783.29
+Generation: 785
+  Average fitness this generation: 6158,2568
+  Elite Fitness: 10114.362890950648
+  ID: NN-784.44
+Generation: 786
+  Average fitness this generation: 5693,8878
+  Elite Fitness: 9606.70606947254
+  ID: NN-785.37
+Generation: 787
+  Average fitness this generation: 5527,7216
+  Elite Fitness: 9599.947582663846
+  ID: NN-786.31
+Generation: 788
+  Average fitness this generation: 5258,3863
+  Elite Fitness: 9500.379168012014
+  ID: NN-787.32
+Generation: 789
+  Average fitness this generation: 5545,4878
+  Elite Fitness: 9713.690653317224
+  ID: NN-788.8
+Generation: 790
+  Average fitness this generation: 5248,2407
+  Elite Fitness: 10029.473897272645
+  ID: NN-789.28
+Generation: 791
+  Average fitness this generation: 5584,9469
+  Elite Fitness: 10483.103582159052
+  ID: NN-790.2
+Generation: 792
+  Average fitness this generation: 5380,5778
+  Elite Fitness: 10045.659139628844
+  ID: NN-791.4
+Generation: 793
+  Average fitness this generation: 5861,9080
+  Elite Fitness: 10085.319701295008
+  ID: NN-792.9
+Generation: 794
+  Average fitness this generation: 5933,5317
+  Elite Fitness: 10014.449066801928
+  ID: NN-793.3
+Generation: 795
+  Average fitness this generation: 5538,5419
+  Elite Fitness: 9762.096189725537
+  ID: NN-794.25
+Generation: 796
+  Average fitness this generation: 5683,2581
+  Elite Fitness: 9789.038521786166
+  ID: NN-795.21
+Generation: 797
+  Average fitness this generation: 5053,3347
+  Elite Fitness: 9848.736464336693
+  ID: NN-796.25
+Generation: 798
+  Average fitness this generation: 4901,2141
+  Elite Fitness: 10167.357921833622
+  ID: NN-797.44
+Generation: 799
+  Average fitness this generation: 5624,9574
+  Elite Fitness: 10153.57613459413
+  ID: NN-798.23
+Generation: 800
+  Average fitness this generation: 5520,6663
+  Elite Fitness: 10254.117373465251
+  ID: NN-799.4
+Generation: 801
+  Average fitness this generation: 5071,8295
+  Elite Fitness: 10119.13377795261
+  ID: NN-799.4
+Generation: 802
+  Average fitness this generation: 5279,5960
+  Elite Fitness: 9681.061282424369
+  ID: NN-801.12
+Generation: 803
+  Average fitness this generation: 5026,9376
+  Elite Fitness: 9822.994944446202
+  ID: NN-802.4
+Generation: 804
+  Average fitness this generation: 5571,6162
+  Elite Fitness: 9733.719375644714
+  ID: NN-803.16
+Generation: 805
+  Average fitness this generation: 5772,3246
+  Elite Fitness: 9627.389426954864
+  ID: NN-804.23
+Generation: 806
+  Average fitness this generation: 5493,3233
+  Elite Fitness: 9860.830118195825
+  ID: NN-805.36
+Generation: 807
+  Average fitness this generation: 5815,7505
+  Elite Fitness: 9870.614080578225
+  ID: NN-806.4
+Generation: 808
+  Average fitness this generation: 5297,1720
+  Elite Fitness: 9859.69780657801
+  ID: NN-807.7
+Generation: 809
+  Average fitness this generation: 5462,4016
+  Elite Fitness: 9728.031346339398
+  ID: NN-808.22
+Generation: 810
+  Average fitness this generation: 5138,6223
+  Elite Fitness: 9662.097918467794
+  ID: NN-809.1
+Generation: 811
+  Average fitness this generation: 5362,7124
+  Elite Fitness: 10069.233619455543
+  ID: NN-809.1
+Generation: 812
+  Average fitness this generation: 5016,4138
+  Elite Fitness: 9995.606506952237
+  ID: NN-811.14
+Generation: 813
+  Average fitness this generation: 5123,6318
+  Elite Fitness: 9777.855060894932
+  ID: NN-812.32
+Generation: 814
+  Average fitness this generation: 5077,3749
+  Elite Fitness: 9726.902928669644
+  ID: NN-813.7
+Generation: 815
+  Average fitness this generation: 5476,0499
+  Elite Fitness: 9972.368662394907
+  ID: NN-814.37
+Generation: 816
+  Average fitness this generation: 5434,0441
+  Elite Fitness: 10496.692132853996
+  ID: NN-815.42
+Generation: 817
+  Average fitness this generation: 5381,8811
+  Elite Fitness: 9259.963894736693
+  ID: NN-816.9
+Generation: 818
+  Average fitness this generation: 5536,5821
+  Elite Fitness: 9977.132754689688
+  ID: NN-817.27
+Generation: 819
+  Average fitness this generation: 5610,7154
+  Elite Fitness: 10459.81190323165
+  ID: NN-818.20
+Generation: 820
+  Average fitness this generation: 5097,7620
+  Elite Fitness: 9818.90866374582
+  ID: NN-819.26
+Generation: 821
+  Average fitness this generation: 5398,4921
+  Elite Fitness: 9845.543526411433
+  ID: NN-820.9
+Generation: 822
+  Average fitness this generation: 4994,2030
+  Elite Fitness: 9690.006031122693
+  ID: NN-821.9
+Generation: 823
+  Average fitness this generation: 5237,0899
+  Elite Fitness: 9725.744913497201
+  ID: NN-822.19
+Generation: 824
+  Average fitness this generation: 5507,7371
+  Elite Fitness: 10327.708307759549
+  ID: NN-823.21
+Generation: 825
+  Average fitness this generation: 5849,8571
+  Elite Fitness: 9701.288855650866
+  ID: NN-824.2
+Generation: 826
+  Average fitness this generation: 5398,7929
+  Elite Fitness: 10287.678960228912
+  ID: NN-825.14
+Generation: 827
+  Average fitness this generation: 5537,5775
+  Elite Fitness: 9903.014715172181
+  ID: NN-826.12
+Generation: 828
+  Average fitness this generation: 5634,9498
+  Elite Fitness: 9953.492248747641
+  ID: NN-827.26
+Generation: 829
+  Average fitness this generation: 5642,8464
+  Elite Fitness: 10149.168926312643
+  ID: NN-827.26
+Generation: 830
+  Average fitness this generation: 5458,4298
+  Elite Fitness: 9797.227224537926
+  ID: NN-829.1
+Generation: 831
+  Average fitness this generation: 5227,3409
+  Elite Fitness: 10147.532705638545
+  ID: NN-830.27
+Generation: 832
+  Average fitness this generation: 5130,0543
+  Elite Fitness: 9999.028334325352
+  ID: NN-831.8
+Generation: 833
+  Average fitness this generation: 5109,3980
+  Elite Fitness: 10192.646897935289
+  ID: NN-832.16
+Generation: 834
+  Average fitness this generation: 5129,3339
+  Elite Fitness: 10005.773164878749
+  ID: NN-833.7
+Generation: 835
+  Average fitness this generation: 5246,5959
+  Elite Fitness: 9920.391284343244
+  ID: NN-834.28
+Generation: 836
+  Average fitness this generation: 5147,4851
+  Elite Fitness: 9852.70940021126
+  ID: NN-835.3
+Generation: 837
+  Average fitness this generation: 5051,5223
+  Elite Fitness: 9732.746621377868
+  ID: NN-836.2
+Generation: 838
+  Average fitness this generation: 4772,9938
+  Elite Fitness: 9929.238902708417
+  ID: NN-837.23
+Generation: 839
+  Average fitness this generation: 5154,3749
+  Elite Fitness: 9831.102881133087
+  ID: NN-838.6
+Generation: 840
+  Average fitness this generation: 5183,3652
+  Elite Fitness: 9667.015335060274
+  ID: NN-839.28
+Generation: 841
+  Average fitness this generation: 4343,1380
+  Elite Fitness: 9918.201826455412
+  ID: NN-839.28
+Generation: 842
+  Average fitness this generation: 4740,2394
+  Elite Fitness: 10008.58947809855
+  ID: NN-841.26
+Generation: 843
+  Average fitness this generation: 4812,4124
+  Elite Fitness: 9887.664498648748
+  ID: NN-841.26
+Generation: 844
+  Average fitness this generation: 4829,4976
+  Elite Fitness: 9793.142624814533
+  ID: NN-843.13
+Generation: 845
+  Average fitness this generation: 4765,2057
+  Elite Fitness: 9314.085040831476
+  ID: NN-844.22
+Generation: 846
+  Average fitness this generation: 5699,6082
+  Elite Fitness: 9863.083657570165
+  ID: NN-845.8
+Generation: 847
+  Average fitness this generation: 5310,3754
+  Elite Fitness: 9591.678931587372
+  ID: NN-846.33
+Generation: 848
+  Average fitness this generation: 5374,8977
+  Elite Fitness: 9817.212967287405
+  ID: NN-847.10
+Generation: 849
+  Average fitness this generation: 4858,1692
+  Elite Fitness: 9591.493200337276
+  ID: NN-848.13
+Generation: 850
+  Average fitness this generation: 5219,8892
+  Elite Fitness: 10202.171575153192
+  ID: NN-849.39
+Generation: 851
+  Average fitness this generation: 4881,4805
+  Elite Fitness: 10512.432673562369
+  ID: NN-849.39
+Generation: 852
+  Average fitness this generation: 5176,9588
+  Elite Fitness: 9952.301971736817
+  ID: NN-849.39
+Generation: 853
+  Average fitness this generation: 4725,5853
+  Elite Fitness: 9798.505696089549
+  ID: NN-852.24
+Generation: 854
+  Average fitness this generation: 4664,5169
+  Elite Fitness: 10416.186164207695
+  ID: NN-852.24
+Generation: 855
+  Average fitness this generation: 4775,1649
+  Elite Fitness: 9948.555548477967
+  ID: NN-854.10
+Generation: 856
+  Average fitness this generation: 5497,3564
+  Elite Fitness: 9958.478101173903
+  ID: NN-855.20
+Generation: 857
+  Average fitness this generation: 5327,0083
+  Elite Fitness: 9653.749619579521
+  ID: NN-856.19
+Generation: 858
+  Average fitness this generation: 5449,4178
+  Elite Fitness: 10223.517561380395
+  ID: NN-857.2
+Generation: 859
+  Average fitness this generation: 5354,8096
+  Elite Fitness: 10177.841499756152
+  ID: NN-857.2
+Generation: 860
+  Average fitness this generation: 5094,9873
+  Elite Fitness: 9458.322364335017
+  ID: NN-859.17
+Generation: 861
+  Average fitness this generation: 5515,0236
+  Elite Fitness: 10044.454987831567
+  ID: NN-860.44
+Generation: 862
+  Average fitness this generation: 5733,7383
+  Elite Fitness: 10165.742442924198
+  ID: NN-861.39
+Generation: 863
+  Average fitness this generation: 5761,8495
+  Elite Fitness: 9638.214955656766
+  ID: NN-861.39
+Generation: 864
+  Average fitness this generation: 6421,9486
+  Elite Fitness: 10304.023516062443
+  ID: NN-863.33
+Generation: 865
+  Average fitness this generation: 5436,1812
+  Elite Fitness: 9658.68444261486
+  ID: NN-864.16
+Generation: 866
+  Average fitness this generation: 5379,3239
+  Elite Fitness: 9862.815598366718
+  ID: NN-865.10
+Generation: 867
+  Average fitness this generation: 5304,3124
+  Elite Fitness: 10404.790236574716
+  ID: NN-865.10
+Generation: 868
+  Average fitness this generation: 5384,1958
+  Elite Fitness: 9900.099076212176
+  ID: NN-867.17
+Generation: 869
+  Average fitness this generation: 5497,7047
+  Elite Fitness: 9670.296979590083
+  ID: NN-868.19
+Generation: 870
+  Average fitness this generation: 5269,0663
+  Elite Fitness: 9789.074772808479
+  ID: NN-869.8
+Generation: 871
+  Average fitness this generation: 5411,9923
+  Elite Fitness: 9213.599439508016
+  ID: NN-870.14
+Generation: 872
+  Average fitness this generation: 5633,0257
+  Elite Fitness: 9784.755035445494
+  ID: NN-871.3
+Generation: 873
+  Average fitness this generation: 5502,9483
+  Elite Fitness: 10283.508287132085
+  ID: NN-872.12
+Generation: 874
+  Average fitness this generation: 5547,4882
+  Elite Fitness: 10139.055315651454
+  ID: NN-873.36
+Generation: 875
+  Average fitness this generation: 4905,5613
+  Elite Fitness: 9610.960012788117
+  ID: NN-874.25
+Generation: 876
+  Average fitness this generation: 5135,6035
+  Elite Fitness: 10074.23688950211
+  ID: NN-875.17
+Generation: 877
+  Average fitness this generation: 4947,2144
+  Elite Fitness: 9509.398237317004
+  ID: NN-876.24
+Generation: 878
+  Average fitness this generation: 5226,5636
+  Elite Fitness: 9731.630102801222
+  ID: NN-877.34
+Generation: 879
+  Average fitness this generation: 5222,7680
+  Elite Fitness: 10405.69766563939
+  ID: NN-878.3
+Generation: 880
+  Average fitness this generation: 5480,1021
+  Elite Fitness: 10156.081957908156
+  ID: NN-878.3
+Generation: 881
+  Average fitness this generation: 5403,2570
+  Elite Fitness: 10071.63579144178
+  ID: NN-880.36
+Generation: 882
+  Average fitness this generation: 5339,4099
+  Elite Fitness: 9961.209164855127
+  ID: NN-881.24
+Generation: 883
+  Average fitness this generation: 5868,8789
+  Elite Fitness: 9751.351122240045
+  ID: NN-882.29
+Generation: 884
+  Average fitness this generation: 5998,2074
+  Elite Fitness: 9901.877569922954
+  ID: NN-882.29
+Generation: 885
+  Average fitness this generation: 5318,6747
+  Elite Fitness: 9941.848451078658
+  ID: NN-884.7
+Generation: 886
+  Average fitness this generation: 5659,8364
+  Elite Fitness: 9805.97879764571
+  ID: NN-885.39
+Generation: 887
+  Average fitness this generation: 5566,4548
+  Elite Fitness: 9919.3430581143
+  ID: NN-886.33
+Generation: 888
+  Average fitness this generation: 5495,2496
+  Elite Fitness: 10015.497098190483
+  ID: NN-887.23
+Generation: 889
+  Average fitness this generation: 5319,2650
+  Elite Fitness: 9711.275056934808
+  ID: NN-888.25
+Generation: 890
+  Average fitness this generation: 5109,0632
+  Elite Fitness: 9550.976596340912
+  ID: NN-889.49
+Generation: 891
+  Average fitness this generation: 5593,0754
+  Elite Fitness: 9882.975530296451
+  ID: NN-890.15
+Generation: 892
+  Average fitness this generation: 5575,6365
+  Elite Fitness: 10142.128459551344
+  ID: NN-891.25
+Generation: 893
+  Average fitness this generation: 5311,1325
+  Elite Fitness: 10146.568804645569
+  ID: NN-892.33
+Generation: 894
+  Average fitness this generation: 5937,6825
+  Elite Fitness: 10261.330734073854
+  ID: NN-893.21
+Generation: 895
+  Average fitness this generation: 5035,1592
+  Elite Fitness: 9589.264864698833
+  ID: NN-893.21
+Generation: 896
+  Average fitness this generation: 5120,3660
+  Elite Fitness: 9918.814677550621
+  ID: NN-895.43
+Generation: 897
+  Average fitness this generation: 5257,2302
+  Elite Fitness: 9936.224567698817
+  ID: NN-896.22
+Generation: 898
+  Average fitness this generation: 5412,5180
+  Elite Fitness: 9970.282164979428
+  ID: NN-897.12
+Generation: 899
+  Average fitness this generation: 5159,2095
+  Elite Fitness: 9636.073301837863
+  ID: NN-898.6
+Generation: 900
+  Average fitness this generation: 5510,7762
+  Elite Fitness: 9868.880714763529
+  ID: NN-899.43
+Generation: 901
+  Average fitness this generation: 5029,1908
+  Elite Fitness: 9579.61535237726
+  ID: NN-900.11
+Generation: 902
+  Average fitness this generation: 5309,7264
+  Elite Fitness: 9970.956495208631
+  ID: NN-901.20
+Generation: 903
+  Average fitness this generation: 4951,7028
+  Elite Fitness: 9785.094852753691
+  ID: NN-902.33
+Generation: 904
+  Average fitness this generation: 5615,5034
+  Elite Fitness: 9803.629647563217
+  ID: NN-903.15
+Generation: 905
+  Average fitness this generation: 5405,5338
+  Elite Fitness: 9867.400780385942
+  ID: NN-904.23
+Generation: 906
+  Average fitness this generation: 5315,8834
+  Elite Fitness: 10475.39050604215
+  ID: NN-905.25
+Generation: 907
+  Average fitness this generation: 5880,9015
+  Elite Fitness: 10046.416672447622
+  ID: NN-905.25
+Generation: 908
+  Average fitness this generation: 5738,9323
+  Elite Fitness: 9845.61156665234
+  ID: NN-907.1
+Generation: 909
+  Average fitness this generation: 5702,9107
+  Elite Fitness: 10058.893317951462
+  ID: NN-908.34
+Generation: 910
+  Average fitness this generation: 5305,4648
+  Elite Fitness: 9930.044471962472
+  ID: NN-909.5
+Generation: 911
+  Average fitness this generation: 5838,7835
+  Elite Fitness: 9994.21543747605
+  ID: NN-910.23
+Generation: 912
+  Average fitness this generation: 5408,8567
+  Elite Fitness: 9854.789591463847
+  ID: NN-911.10
+Generation: 913
+  Average fitness this generation: 5282,0105
+  Elite Fitness: 9641.599330615612
+  ID: NN-912.44
+Generation: 914
+  Average fitness this generation: 5568,1561
+  Elite Fitness: 9969.117760034333
+  ID: NN-913.45
+Generation: 915
+  Average fitness this generation: 5449,8455
+  Elite Fitness: 9931.871907186636
+  ID: NN-914.7
+Generation: 916
+  Average fitness this generation: 4633,8773
+  Elite Fitness: 9233.704303355877
+  ID: NN-915.15
+Generation: 917
+  Average fitness this generation: 5224,9780
+  Elite Fitness: 9255.534637610532
+  ID: NN-916.2
+Generation: 918
+  Average fitness this generation: 4906,7140
+  Elite Fitness: 9665.35254050347
+  ID: NN-917.5
+Generation: 919
+  Average fitness this generation: 5498,8104
+  Elite Fitness: 10014.958050709034
+  ID: NN-918.24
+Generation: 920
+  Average fitness this generation: 5813,1804
+  Elite Fitness: 9878.52964536983
+  ID: NN-919.18
+Generation: 921
+  Average fitness this generation: 5630,2446
+  Elite Fitness: 9958.762937760579
+  ID: NN-920.13
+Generation: 922
+  Average fitness this generation: 5506,8316
+  Elite Fitness: 9770.9355661661
+  ID: NN-921.8
+Generation: 923
+  Average fitness this generation: 5411,6602
+  Elite Fitness: 9664.13274157968
+  ID: NN-921.8
+Generation: 924
+  Average fitness this generation: 5733,6873
+  Elite Fitness: 9457.461263354204
+  ID: NN-923.28
+Generation: 925
+  Average fitness this generation: 5328,0743
+  Elite Fitness: 9766.704410892491
+  ID: NN-924.16
+Generation: 926
+  Average fitness this generation: 5170,9736
+  Elite Fitness: 10325.602800080476
+  ID: NN-925.10
+Generation: 927
+  Average fitness this generation: 5205,1660
+  Elite Fitness: 9567.345135921216
+  ID: NN-926.29
+Generation: 928
+  Average fitness this generation: 5266,8633
+  Elite Fitness: 9709.732448143091
+  ID: NN-927.44
+Generation: 929
+  Average fitness this generation: 5119,9677
+  Elite Fitness: 9715.98466357702
+  ID: NN-928.32
+Generation: 930
+  Average fitness this generation: 4872,8781
+  Elite Fitness: 9881.80773446131
+  ID: NN-929.41
+Generation: 931
+  Average fitness this generation: 4574,5297
+  Elite Fitness: 9881.091028256478
+  ID: NN-929.41
+Generation: 932
+  Average fitness this generation: 4851,3144
+  Elite Fitness: 9518.4230155829
+  ID: NN-929.41
+Generation: 933
+  Average fitness this generation: 4583,7617
+  Elite Fitness: 9860.53537477355
+  ID: NN-932.13
+Generation: 934
+  Average fitness this generation: 4628,0489
+  Elite Fitness: 9703.534961122547
+  ID: NN-933.21
+Generation: 935
+  Average fitness this generation: 4539,6960
+  Elite Fitness: 9481.196950600135
+  ID: NN-934.14
+Generation: 936
+  Average fitness this generation: 4385,8619
+  Elite Fitness: 9143.905101034181
+  ID: NN-934.14
+Generation: 937
+  Average fitness this generation: 4998,8702
+  Elite Fitness: 9836.544113793829
+  ID: NN-936.34
+Generation: 938
+  Average fitness this generation: 5074,2759
+  Elite Fitness: 9508.054787559096
+  ID: NN-937.1
+Generation: 939
+  Average fitness this generation: 5036,2595
+  Elite Fitness: 9370.145539216452
+  ID: NN-938.2
+Generation: 940
+  Average fitness this generation: 4822,6779
+  Elite Fitness: 9298.547732962197
+  ID: NN-939.3
+Generation: 941
+  Average fitness this generation: 4960,9838
+  Elite Fitness: 10006.017230278085
+  ID: NN-939.3
+Generation: 942
+  Average fitness this generation: 5151,9362
+  Elite Fitness: 9771.321385045458
+  ID: NN-941.1
+Generation: 943
+  Average fitness this generation: 4922,4076
+  Elite Fitness: 10173.59723470321
+  ID: NN-942.37
+Generation: 944
+  Average fitness this generation: 4538,7405
+  Elite Fitness: 9426.809106277648
+  ID: NN-943.7
+Generation: 945
+  Average fitness this generation: 4978,1051
+  Elite Fitness: 9578.741969781582
+  ID: NN-944.11
+Generation: 946
+  Average fitness this generation: 4465,4043
+  Elite Fitness: 9529.849129266051
+  ID: NN-945.1
+Generation: 947
+  Average fitness this generation: 4323,1426
+  Elite Fitness: 9381.179960599133
+  ID: NN-946.1
+Generation: 948
+  Average fitness this generation: 4850,4678
+  Elite Fitness: 9652.712570856713
+  ID: NN-947.6
+Generation: 949
+  Average fitness this generation: 4331,1687
+  Elite Fitness: 9275.388264661324
+  ID: NN-948.14
+Generation: 950
+  Average fitness this generation: 5194,6876
+  Elite Fitness: 9347.365790870974
+  ID: NN-949.15
+Generation: 951
+  Average fitness this generation: 5241,8022
+  Elite Fitness: 9607.86775717603
+  ID: NN-950.41
+Generation: 952
+  Average fitness this generation: 5127,7551
+  Elite Fitness: 9566.252007887253
+  ID: NN-951.17
+Generation: 953
+  Average fitness this generation: 5343,3194
+  Elite Fitness: 9126.777955810718
+  ID: NN-952.20
+Generation: 954
+  Average fitness this generation: 4625,9809
+  Elite Fitness: 9789.673439872258
+  ID: NN-953.17
+Generation: 955
+  Average fitness this generation: 4885,3558
+  Elite Fitness: 9477.170420547332
+  ID: NN-954.3
+Generation: 956
+  Average fitness this generation: 5157,7192
+  Elite Fitness: 9793.096539033404
+  ID: NN-955.10
+Generation: 957
+  Average fitness this generation: 5018,3546
+  Elite Fitness: 9753.397372021933
+  ID: NN-956.5
+Generation: 958
+  Average fitness this generation: 4251,0571
+  Elite Fitness: 10095.497686265064
+  ID: NN-957.1
+Generation: 959
+  Average fitness this generation: 4692,6317
+  Elite Fitness: 9588.092023492478
+  ID: NN-958.7
+Generation: 960
+  Average fitness this generation: 5011,0203
+  Elite Fitness: 9564.46018664534
+  ID: NN-958.7
+Generation: 961
+  Average fitness this generation: 5041,2632
+  Elite Fitness: 9675.070949587871
+  ID: NN-960.2
+Generation: 962
+  Average fitness this generation: 5344,2956
+  Elite Fitness: 10249.16456045791
+  ID: NN-961.27
+Generation: 963
+  Average fitness this generation: 4846,6871
+  Elite Fitness: 9589.086011991065
+  ID: NN-961.27
+Generation: 964
+  Average fitness this generation: 5154,3214
+  Elite Fitness: 9742.354999493775
+  ID: NN-963.42
+Generation: 965
+  Average fitness this generation: 4706,0762
+  Elite Fitness: 9999.011143232874
+  ID: NN-964.20
+Generation: 966
+  Average fitness this generation: 4885,9136
+  Elite Fitness: 9756.725124229084
+  ID: NN-965.48
+Generation: 967
+  Average fitness this generation: 4883,6329
+  Elite Fitness: 9101.028809189664
+  ID: NN-966.3
+Generation: 968
+  Average fitness this generation: 4908,3119
+  Elite Fitness: 9598.168800923657
+  ID: NN-967.14
+Generation: 969
+  Average fitness this generation: 5036,9869
+  Elite Fitness: 9184.657694311127
+  ID: NN-968.6
+Generation: 970
+  Average fitness this generation: 5687,0476
+  Elite Fitness: 9986.574335409026
+  ID: NN-969.15
+Generation: 971
+  Average fitness this generation: 5780,5575
+  Elite Fitness: 10183.819073328805
+  ID: NN-970.47
+Generation: 972
+  Average fitness this generation: 5220,5291
+  Elite Fitness: 9057.166202296243
+  ID: NN-971.11
+Generation: 973
+  Average fitness this generation: 5545,8880
+  Elite Fitness: 10343.659711057331
+  ID: NN-972.1
+Generation: 974
+  Average fitness this generation: 4872,1738
+  Elite Fitness: 9456.717934481154
+  ID: NN-973.5
+Generation: 975
+  Average fitness this generation: 4925,7714
+  Elite Fitness: 10017.066483168179
+  ID: NN-974.31
+Generation: 976
+  Average fitness this generation: 4872,5481
+  Elite Fitness: 9177.035529860712
+  ID: NN-974.31
+Generation: 977
+  Average fitness this generation: 4557,6469
+  Elite Fitness: 9744.360674291087
+  ID: NN-976.23
+Generation: 978
+  Average fitness this generation: 4798,1823
+  Elite Fitness: 10055.466392650884
+  ID: NN-977.13
+Generation: 979
+  Average fitness this generation: 5092,8576
+  Elite Fitness: 9760.843519951177
+  ID: NN-978.1
+Generation: 980
+  Average fitness this generation: 5303,5794
+  Elite Fitness: 9781.8352997651
+  ID: NN-978.1
+Generation: 981
+  Average fitness this generation: 5314,0492
+  Elite Fitness: 9976.838336819314
+  ID: NN-980.1
+Generation: 982
+  Average fitness this generation: 5021,5309
+  Elite Fitness: 9815.279794531589
+  ID: NN-981.11
+Generation: 983
+  Average fitness this generation: 5163,7682
+  Elite Fitness: 10400.749145307815
+  ID: NN-982.31
+Generation: 984
+  Average fitness this generation: 5007,6078
+  Elite Fitness: 9432.861202625023
+  ID: NN-983.1
+Generation: 985
+  Average fitness this generation: 5115,2991
+  Elite Fitness: 9854.458133994636
+  ID: NN-984.31
+Generation: 986
+  Average fitness this generation: 5109,4519
+  Elite Fitness: 9701.828885870902
+  ID: NN-985.9
+Generation: 987
+  Average fitness this generation: 5280,4630
+  Elite Fitness: 9157.53682146547
+  ID: NN-985.9
+Generation: 988
+  Average fitness this generation: 5226,5261
+  Elite Fitness: 9948.116056097067
+  ID: NN-987.7
+Generation: 989
+  Average fitness this generation: 4952,6991
+  Elite Fitness: 9846.054258566975
+  ID: NN-988.14
+Generation: 990
+  Average fitness this generation: 5068,1884
+  Elite Fitness: 9521.011228147929
+  ID: NN-989.14
+Generation: 991
+  Average fitness this generation: 5115,9089
+  Elite Fitness: 9396.154827796949
+  ID: NN-990.42
+Generation: 992
+  Average fitness this generation: 4750,9504
+  Elite Fitness: 9253.963257441941
+  ID: NN-991.4
+Generation: 993
+  Average fitness this generation: 4972,9952
+  Elite Fitness: 9616.228073355127
+  ID: NN-992.25
+Generation: 994
+  Average fitness this generation: 4801,7700
+  Elite Fitness: 8792.45554762641
+  ID: NN-993.26
+Generation: 995
+  Average fitness this generation: 4415,5265
+  Elite Fitness: 9024.016329721093
+  ID: NN-994.18
+Generation: 996
+  Average fitness this generation: 5240,3709
+  Elite Fitness: 9141.408621064777
+  ID: NN-995.8
+Generation: 997
+  Average fitness this generation: 4678,5015
+  Elite Fitness: 9446.988948636488
+  ID: NN-996.13
+Generation: 998
+  Average fitness this generation: 4934,7562
+  Elite Fitness: 9281.144411212828
+  ID: NN-997.22
+Generation: 999
+  Average fitness this generation: 4827,4056
+  Elite Fitness: 9561.217943149424
+  ID: NN-998.19
+Generation: 1000
+  Average fitness this generation: 4506,3448
+  Elite Fitness: 8341.909863923478
+  ID: NN-999.9
+Generation: 1001
+  Average fitness this generation: 5447,9742
+  Elite Fitness: 9337.581645158849
+  ID: NN-1000.4
+Generation: 1002
+  Average fitness this generation: 5473,6080
+  Elite Fitness: 9390.167265720609
+  ID: NN-1001.18
+Generation: 1003
+  Average fitness this generation: 4835,6501
+  Elite Fitness: 8746.574551079126
+  ID: NN-1002.5
+Generation: 1004
+  Average fitness this generation: 5770,2355
+  Elite Fitness: 9207.509276646839
+  ID: NN-1003.6
+Generation: 1005
+  Average fitness this generation: 5060,6309
+  Elite Fitness: 9886.843294766313
+  ID: NN-1004.2
+Generation: 1006
+  Average fitness this generation: 4892,2148
+  Elite Fitness: 8920.174865483532
+  ID: NN-1005.8
+Generation: 1007
+  Average fitness this generation: 4886,2199
+  Elite Fitness: 8533.225881206874
+  ID: NN-1006.15
+Generation: 1008
+  Average fitness this generation: 5085,6518
+  Elite Fitness: 9226.374714213283
+  ID: NN-1007.14
+Generation: 1009
+  Average fitness this generation: 5653,9861
+  Elite Fitness: 9277.40111323263
+  ID: NN-1008.6
+Generation: 1010
+  Average fitness this generation: 5195,8950
+  Elite Fitness: 9743.207579415504
+  ID: NN-1009.12
+Generation: 1011
+  Average fitness this generation: 5041,7557
+  Elite Fitness: 9435.32985091844
+  ID: NN-1010.10
+Generation: 1012
+  Average fitness this generation: 5248,0992
+  Elite Fitness: 9949.12784945264
+  ID: NN-1011.8
+Generation: 1013
+  Average fitness this generation: 5086,0251
+  Elite Fitness: 9810.508597452066
+  ID: NN-1012.22
+Generation: 1014
+  Average fitness this generation: 4959,8633
+  Elite Fitness: 9058.172701016842
+  ID: NN-1013.14
+Generation: 1015
+  Average fitness this generation: 5439,4906
+  Elite Fitness: 9653.814294440137
+  ID: NN-1014.15
+Generation: 1016
+  Average fitness this generation: 5348,7559
+  Elite Fitness: 9583.519516138684
+  ID: NN-1015.6
+Generation: 1017
+  Average fitness this generation: 5444,2327
+  Elite Fitness: 9323.719327740615
+  ID: NN-1016.10
+Generation: 1018
+  Average fitness this generation: 5059,7336
+  Elite Fitness: 9241.742214249774
+  ID: NN-1016.10
+Generation: 1019
+  Average fitness this generation: 5137,5789
+  Elite Fitness: 9760.180809368827
+  ID: NN-1018.2
+Generation: 1020
+  Average fitness this generation: 4663,1829
+  Elite Fitness: 9483.640121423668
+  ID: NN-1019.14
+Generation: 1021
+  Average fitness this generation: 4766,4168
+  Elite Fitness: 9661.343665776689
+  ID: NN-1019.14
+Generation: 1022
+  Average fitness this generation: 5245,8167
+  Elite Fitness: 9690.392866500662
+  ID: NN-1021.6
+Generation: 1023
+  Average fitness this generation: 5313,7970
+  Elite Fitness: 9815.885200248928
+  ID: NN-1022.18
+Generation: 1024
+  Average fitness this generation: 5031,8556
+  Elite Fitness: 10028.926286877278
+  ID: NN-1023.5
+Generation: 1025
+  Average fitness this generation: 4920,7974
+  Elite Fitness: 9269.946821298188
+  ID: NN-1024.6
+Generation: 1026
+  Average fitness this generation: 5203,0913
+  Elite Fitness: 9678.153884626126
+  ID: NN-1025.29
+Generation: 1027
+  Average fitness this generation: 5675,5358
+  Elite Fitness: 9290.4925622644
+  ID: NN-1026.15
+Generation: 1028
+  Average fitness this generation: 5627,2128
+  Elite Fitness: 10371.059239636434
+  ID: NN-1027.22
+Generation: 1029
+  Average fitness this generation: 5493,6353
+  Elite Fitness: 9935.635782723348
+  ID: NN-1028.1
+Generation: 1030
+  Average fitness this generation: 5528,8326
+  Elite Fitness: 9859.681595895583
+  ID: NN-1029.20
+Generation: 1031
+  Average fitness this generation: 4885,5482
+  Elite Fitness: 9212.459410535728
+  ID: NN-1030.5
+Generation: 1032
+  Average fitness this generation: 5204,8994
+  Elite Fitness: 8654.364760885966
+  ID: NN-1031.13
+Generation: 1033
+  Average fitness this generation: 5019,8924
+  Elite Fitness: 10003.76449964191
+  ID: NN-1032.13
+Generation: 1034
+  Average fitness this generation: 4532,2146
+  Elite Fitness: 8722.548549293913
+  ID: NN-1033.19
+Generation: 1035
+  Average fitness this generation: 4200,8257
+  Elite Fitness: 9651.368423888674
+  ID: NN-1033.19
+Generation: 1036
+  Average fitness this generation: 4521,6105
+  Elite Fitness: 9803.280003093063
+  ID: NN-1035.4
+Generation: 1037
+  Average fitness this generation: 5243,9535
+  Elite Fitness: 8711.30940644604
+  ID: NN-1036.3
+Generation: 1038
+  Average fitness this generation: 4256,4417
+  Elite Fitness: 8597.992272606478
+  ID: NN-1037.17
+Generation: 1039
+  Average fitness this generation: 4894,1641
+  Elite Fitness: 9414.258231505619
+  ID: NN-1038.6
+Generation: 1040
+  Average fitness this generation: 5755,4316
+  Elite Fitness: 9847.599560298404
+  ID: NN-1039.11
+Generation: 1041
+  Average fitness this generation: 5015,2323
+  Elite Fitness: 9429.648245894585
+  ID: NN-1040.5
+Generation: 1042
+  Average fitness this generation: 4510,5140
+  Elite Fitness: 8894.46320060382
+  ID: NN-1041.6
+Generation: 1043
+  Average fitness this generation: 4319,4392
+  Elite Fitness: 9058.223656332466
+  ID: NN-1042.19
+Generation: 1044
+  Average fitness this generation: 5008,6902
+  Elite Fitness: 9420.575034703423
+  ID: NN-1043.8
+Generation: 1045
+  Average fitness this generation: 4259,2116
+  Elite Fitness: 9066.31050089156
+  ID: NN-1044.3
+Generation: 1046
+  Average fitness this generation: 4690,4882
+  Elite Fitness: 10186.149454637121
+  ID: NN-1045.9
+Generation: 1047
+  Average fitness this generation: 4689,1970
+  Elite Fitness: 10031.276765416971
+  ID: NN-1046.4
+Generation: 1048
+  Average fitness this generation: 4616,3125
+  Elite Fitness: 9329.378758017847
+  ID: NN-1046.4
+Generation: 1049
+  Average fitness this generation: 4954,7026
+  Elite Fitness: 9380.940861424027
+  ID: NN-1048.21
+Generation: 1050
+  Average fitness this generation: 5139,1991
+  Elite Fitness: 9112.02387978496
+  ID: NN-1049.28
+Generation: 1051
+  Average fitness this generation: 4753,8430
+  Elite Fitness: 9275.903364528547
+  ID: NN-1049.28
+Generation: 1052
+  Average fitness this generation: 5302,7785
+  Elite Fitness: 9786.559832816103
+  ID: NN-1051.9
+Generation: 1053
+  Average fitness this generation: 4420,0208
+  Elite Fitness: 9339.032164006045
+  ID: NN-1051.9
+Generation: 1054
+  Average fitness this generation: 4603,2961
+  Elite Fitness: 9251.509239750214
+  ID: NN-1053.4
+Generation: 1055
+  Average fitness this generation: 4773,6334
+  Elite Fitness: 10223.69579689481
+  ID: NN-1054.8
+Generation: 1056
+  Average fitness this generation: 5159,8395
+  Elite Fitness: 9972.809435786487
+  ID: NN-1054.8
+Generation: 1057
+  Average fitness this generation: 4938,1133
+  Elite Fitness: 9633.136759044797
+  ID: NN-1056.2
+Generation: 1058
+  Average fitness this generation: 4609,6559
+  Elite Fitness: 9017.141440122088
+  ID: NN-1057.5
+Generation: 1059
+  Average fitness this generation: 4794,9100
+  Elite Fitness: 10081.992547726397
+  ID: NN-1058.21
+Generation: 1060
+  Average fitness this generation: 4339,9849
+  Elite Fitness: 9473.344303832104
+  ID: NN-1059.14
+Generation: 1061
+  Average fitness this generation: 4016,2904
+  Elite Fitness: 9956.614227485557
+  ID: NN-1060.8
+Generation: 1062
+  Average fitness this generation: 4715,8817
+  Elite Fitness: 9970.2207187968
+  ID: NN-1061.1
+Generation: 1063
+  Average fitness this generation: 4180,4293
+  Elite Fitness: 10375.147125684016
+  ID: NN-1062.7
+Generation: 1064
+  Average fitness this generation: 4904,6804
+  Elite Fitness: 10810.963556691053
+  ID: NN-1063.12
+Generation: 1065
+  Average fitness this generation: 5194,2842
+  Elite Fitness: 10182.298593184845
+  ID: NN-1064.5
+Generation: 1066
+  Average fitness this generation: 5533,9063
+  Elite Fitness: 9011.491688260634
+  ID: NN-1065.22
+Generation: 1067
+  Average fitness this generation: 5279,6081
+  Elite Fitness: 8574.707122215976
+  ID: NN-1066.28
+Generation: 1068
+  Average fitness this generation: 5050,0742
+  Elite Fitness: 9527.940423457572
+  ID: NN-1067.11
+Generation: 1069
+  Average fitness this generation: 5520,6492
+  Elite Fitness: 9760.866738605735
+  ID: NN-1067.11
+Generation: 1070
+  Average fitness this generation: 5532,6109
+  Elite Fitness: 9347.804307237728
+  ID: NN-1067.11
+Generation: 1071
+  Average fitness this generation: 5128,9286
+  Elite Fitness: 9667.962024313423
+  ID: NN-1070.15
+Generation: 1072
+  Average fitness this generation: 4279,7029
+  Elite Fitness: 9321.415239571228
+  ID: NN-1070.15
+Generation: 1073
+  Average fitness this generation: 4902,1730
+  Elite Fitness: 9038.858653046767
+  ID: NN-1072.1
+Generation: 1074
+  Average fitness this generation: 5934,6400
+  Elite Fitness: 9873.975867212343
+  ID: NN-1073.17
+Generation: 1075
+  Average fitness this generation: 4720,9178
+  Elite Fitness: 9869.157441058178
+  ID: NN-1074.3
+Generation: 1076
+  Average fitness this generation: 4119,4637
+  Elite Fitness: 9585.99427491781
+  ID: NN-1075.2
+Generation: 1077
+  Average fitness this generation: 5202,3850
+  Elite Fitness: 10596.604954014521
+  ID: NN-1076.27
+Generation: 1078
+  Average fitness this generation: 5146,1071
+  Elite Fitness: 9249.93153132802
+  ID: NN-1077.28
+Generation: 1079
+  Average fitness this generation: 5139,4344
+  Elite Fitness: 8456.501572864781
+  ID: NN-1078.11
+Generation: 1080
+  Average fitness this generation: 5194,8629
+  Elite Fitness: 9550.30346347252
+  ID: NN-1079.5
+Generation: 1081
+  Average fitness this generation: 5382,7843
+  Elite Fitness: 10137.47025181885
+  ID: NN-1080.16
+Generation: 1082
+  Average fitness this generation: 5698,0060
+  Elite Fitness: 9382.937917411999
+  ID: NN-1081.11
+Generation: 1083
+  Average fitness this generation: 5855,3952
+  Elite Fitness: 9417.182657873982
+  ID: NN-1082.10
+Generation: 1084
+  Average fitness this generation: 5991,8157
+  Elite Fitness: 9293.816311093322
+  ID: NN-1083.14
+Generation: 1085
+  Average fitness this generation: 5712,9886
+  Elite Fitness: 9437.884824215758
+  ID: NN-1084.17
+Generation: 1086
+  Average fitness this generation: 5196,4646
+  Elite Fitness: 9768.114199678615
+  ID: NN-1085.24
+Generation: 1087
+  Average fitness this generation: 5345,9826
+  Elite Fitness: 9304.207129716498
+  ID: NN-1086.11
+Generation: 1088
+  Average fitness this generation: 5241,4157
+  Elite Fitness: 9957.927747401529
+  ID: NN-1087.2
+Generation: 1089
+  Average fitness this generation: 4728,3776
+  Elite Fitness: 8717.544445396412
+  ID: NN-1088.6
+Generation: 1090
+  Average fitness this generation: 4584,7165
+  Elite Fitness: 8611.516036440344
+  ID: NN-1089.3
+Generation: 1091
+  Average fitness this generation: 5096,6471
+  Elite Fitness: 8574.36139468955
+  ID: NN-1090.7
+Generation: 1092
+  Average fitness this generation: 4806,7160
+  Elite Fitness: 8287.354325448205
+  ID: NN-1091.5
+Generation: 1093
+  Average fitness this generation: 4471,4871
+  Elite Fitness: 9142.127837538881
+  ID: NN-1092.8
+Generation: 1094
+  Average fitness this generation: 5548,7961
+  Elite Fitness: 9344.640631933962
+  ID: NN-1092.8
+Generation: 1095
+  Average fitness this generation: 4859,8316
+  Elite Fitness: 8668.591039994017
+  ID: NN-1094.8
+Generation: 1096
+  Average fitness this generation: 4797,6438
+  Elite Fitness: 8837.882562453498
+  ID: NN-1095.1
+Generation: 1097
+  Average fitness this generation: 4444,5126
+  Elite Fitness: 7811.766548782252
+  ID: NN-1096.10
+Generation: 1098
+  Average fitness this generation: 3869,5317
+  Elite Fitness: 8153.214885208562
+  ID: NN-1097.6
+Generation: 1099
+  Average fitness this generation: 3903,6035
+  Elite Fitness: 8073.377397042956
+  ID: NN-1098.16
+Generation: 1100
+  Average fitness this generation: 4537,1492
+  Elite Fitness: 8132.591988163023
+  ID: NN-1099.10
+Generation: 1101
+  Average fitness this generation: 4786,2925
+  Elite Fitness: 8728.99571059086
+  ID: NN-1099.10
+Generation: 1102
+  Average fitness this generation: 4906,7155
+  Elite Fitness: 9284.761814184909
+  ID: NN-1101.1
+Generation: 1103
+  Average fitness this generation: 4063,9466
+  Elite Fitness: 8369.395446861077
+  ID: NN-1102.11
+Generation: 1104
+  Average fitness this generation: 4001,6495
+  Elite Fitness: 7494.793260916966
+  ID: NN-1103.4
+Generation: 1105
+  Average fitness this generation: 3797,2333
+  Elite Fitness: 8135.527350122767
+  ID: NN-1104.20
+Generation: 1106
+  Average fitness this generation: 4207,6199
+  Elite Fitness: 9326.50235398381
+  ID: NN-1105.5
+Generation: 1107
+  Average fitness this generation: 4211,4971
+  Elite Fitness: 8515.538963590076
+  ID: NN-1106.4
+Generation: 1108
+  Average fitness this generation: 4136,2169
+  Elite Fitness: 9286.540292987198
+  ID: NN-1107.9
+Generation: 1109
+  Average fitness this generation: 4449,8763
+  Elite Fitness: 9292.803810425943
+  ID: NN-1108.1
+Generation: 1110
+  Average fitness this generation: 4192,8313
+  Elite Fitness: 8640.812259153183
+  ID: NN-1108.1
+Generation: 1111
+  Average fitness this generation: 4406,9965
+  Elite Fitness: 9031.675941823236
+  ID: NN-1110.7
+Generation: 1112
+  Average fitness this generation: 4438,4339
+  Elite Fitness: 8951.714217357612
+  ID: NN-1111.13
+Generation: 1113
+  Average fitness this generation: 5195,9648
+  Elite Fitness: 9344.343400496546
+  ID: NN-1112.1
+Generation: 1114
+  Average fitness this generation: 5417,5278
+  Elite Fitness: 9250.739488604884
+  ID: NN-1113.4
+Generation: 1115
+  Average fitness this generation: 5746,5664
+  Elite Fitness: 9457.25946393966
+  ID: NN-1114.6
+Generation: 1116
+  Average fitness this generation: 5191,7161
+  Elite Fitness: 9058.735364153728
+  ID: NN-1115.9
+Generation: 1117
+  Average fitness this generation: 5201,3861
+  Elite Fitness: 8461.83109690682
+  ID: NN-1116.26
+Generation: 1118
+  Average fitness this generation: 5026,4089
+  Elite Fitness: 8184.192972544595
+  ID: NN-1117.20
+Generation: 1119
+  Average fitness this generation: 5211,8378
+  Elite Fitness: 8904.439907745578
+  ID: NN-1118.23
+Generation: 1120
+  Average fitness this generation: 5533,1936
+  Elite Fitness: 8838.369981212369
+  ID: NN-1118.23
+Generation: 1121
+  Average fitness this generation: 4369,2178
+  Elite Fitness: 9312.979787889373
+  ID: NN-1118.23
+Generation: 1122
+  Average fitness this generation: 4419,1591
+  Elite Fitness: 8222.568342426548
+  ID: NN-1118.23
+Generation: 1123
+  Average fitness this generation: 5109,2674
+  Elite Fitness: 8332.782513885018
+  ID: NN-1122.28
+Generation: 1124
+  Average fitness this generation: 5226,2799
+  Elite Fitness: 8410.05959706071
+  ID: NN-1123.2
+Generation: 1125
+  Average fitness this generation: 5293,3884
+  Elite Fitness: 8547.890846397931
+  ID: NN-1124.11
+Generation: 1126
+  Average fitness this generation: 5232,7674
+  Elite Fitness: 8817.379176162029
+  ID: NN-1125.9
+Generation: 1127
+  Average fitness this generation: 5023,2249
+  Elite Fitness: 8206.887380713652
+  ID: NN-1126.1
+Generation: 1128
+  Average fitness this generation: 5092,3741
+  Elite Fitness: 9221.480301901816
+  ID: NN-1127.13
+Generation: 1129
+  Average fitness this generation: 5323,5317
+  Elite Fitness: 8411.369899492835
+  ID: NN-1128.4
+Generation: 1130
+  Average fitness this generation: 5632,1873
+  Elite Fitness: 8963.789809736461
+  ID: NN-1129.20
+Generation: 1131
+  Average fitness this generation: 5154,7791
+  Elite Fitness: 9134.534282069615
+  ID: NN-1130.7
+Generation: 1132
+  Average fitness this generation: 5155,1587
+  Elite Fitness: 8501.478878772687
+  ID: NN-1131.8
+Generation: 1133
+  Average fitness this generation: 4888,4883
+  Elite Fitness: 8402.233004479216
+  ID: NN-1132.15
+Generation: 1134
+  Average fitness this generation: 4716,1187
+  Elite Fitness: 8144.764837490002
+  ID: NN-1133.6
+Generation: 1135
+  Average fitness this generation: 4501,7686
+  Elite Fitness: 9451.549767666522
+  ID: NN-1134.10
+Generation: 1136
+  Average fitness this generation: 5374,2893
+  Elite Fitness: 9758.35795321068
+  ID: NN-1135.3
+Generation: 1137
+  Average fitness this generation: 5301,7172
+  Elite Fitness: 8895.170923510212
+  ID: NN-1136.24
+Generation: 1138
+  Average fitness this generation: 5426,1721
+  Elite Fitness: 9214.725515662636
+  ID: NN-1137.10
+Generation: 1139
+  Average fitness this generation: 5287,4139
+  Elite Fitness: 8682.158207976096
+  ID: NN-1138.8
+Generation: 1140
+  Average fitness this generation: 4600,3147
+  Elite Fitness: 8462.604865497116
+  ID: NN-1139.23
+Generation: 1141
+  Average fitness this generation: 5069,4331
+  Elite Fitness: 8086.588772024312
+  ID: NN-1140.9
+Generation: 1142
+  Average fitness this generation: 4634,5338
+  Elite Fitness: 8024.331303206712
+  ID: NN-1141.1
+Generation: 1143
+  Average fitness this generation: 5042,0663
+  Elite Fitness: 8695.741836233885
+  ID: NN-1141.1
+Generation: 1144
+  Average fitness this generation: 4570,9749
+  Elite Fitness: 9167.698612726143
+  ID: NN-1143.13
+Generation: 1145
+  Average fitness this generation: 4380,1811
+  Elite Fitness: 10053.73487024938
+  ID: NN-1144.11
+Generation: 1146
+  Average fitness this generation: 4790,8940
+  Elite Fitness: 9612.839113015678
+  ID: NN-1145.5
+Generation: 1147
+  Average fitness this generation: 4394,1563
+  Elite Fitness: 8446.701933756887
+  ID: NN-1146.4
+Generation: 1148
+  Average fitness this generation: 4352,7504
+  Elite Fitness: 9084.756971401417
+  ID: NN-1146.4
+Generation: 1149
+  Average fitness this generation: 4824,8586
+  Elite Fitness: 8191.373004716258
+  ID: NN-1148.15
+Generation: 1150
+  Average fitness this generation: 4968,8159
+  Elite Fitness: 9820.00185629392
+  ID: NN-1149.2
+Generation: 1151
+  Average fitness this generation: 5189,1157
+  Elite Fitness: 10001.172573131622
+  ID: NN-1150.12
+Generation: 1152
+  Average fitness this generation: 4925,8362
+  Elite Fitness: 9395.931733343488
+  ID: NN-1151.8
+Generation: 1153
+  Average fitness this generation: 5658,4550
+  Elite Fitness: 10236.477668864127
+  ID: NN-1152.1
+Generation: 1154
+  Average fitness this generation: 5435,7989
+  Elite Fitness: 9037.209772657265
+  ID: NN-1153.4
+Generation: 1155
+  Average fitness this generation: 5781,9051
+  Elite Fitness: 9769.513528669977
+  ID: NN-1154.13
+Generation: 1156
+  Average fitness this generation: 5836,3179
+  Elite Fitness: 9818.59335732534
+  ID: NN-1155.19
+Generation: 1157
+  Average fitness this generation: 5910,1220
+  Elite Fitness: 9779.077377278621
+  ID: NN-1156.28
+Generation: 1158
+  Average fitness this generation: 5404,3356
+  Elite Fitness: 8969.057101869303
+  ID: NN-1157.23
+Generation: 1159
+  Average fitness this generation: 6236,4984
+  Elite Fitness: 9048.345679060807
+  ID: NN-1158.7
+Generation: 1160
+  Average fitness this generation: 6321,6926
+  Elite Fitness: 9564.222686957339
+  ID: NN-1159.1
+Generation: 1161
+  Average fitness this generation: 5872,2406
+  Elite Fitness: 9458.87019950426
+  ID: NN-1160.20
+Generation: 1162
+  Average fitness this generation: 5960,9880
+  Elite Fitness: 9279.712831446643
+  ID: NN-1161.28
+Generation: 1163
+  Average fitness this generation: 4952,5425
+  Elite Fitness: 9212.469898235919
+  ID: NN-1162.29
+Generation: 1164
+  Average fitness this generation: 5582,9522
+  Elite Fitness: 9224.484869870896
+  ID: NN-1163.6
+Generation: 1165
+  Average fitness this generation: 4533,0115
+  Elite Fitness: 8901.542862908269
+  ID: NN-1164.10
+Generation: 1166
+  Average fitness this generation: 5412,2273
+  Elite Fitness: 9624.845306802914
+  ID: NN-1165.1
+Generation: 1167
+  Average fitness this generation: 5213,4553
+  Elite Fitness: 9474.310122268831
+  ID: NN-1166.27
+Generation: 1168
+  Average fitness this generation: 5173,3453
+  Elite Fitness: 9603.886591537464
+  ID: NN-1167.15
+Generation: 1169
+  Average fitness this generation: 5267,5237
+  Elite Fitness: 9159.532708099108
+  ID: NN-1168.27
+Generation: 1170
+  Average fitness this generation: 5048,7826
+  Elite Fitness: 9211.104797420656
+  ID: NN-1169.22
+Generation: 1171
+  Average fitness this generation: 5575,7022
+  Elite Fitness: 9222.825204458895
+  ID: NN-1170.22
+Generation: 1172
+  Average fitness this generation: 5553,8311
+  Elite Fitness: 9483.726289277769
+  ID: NN-1171.16
+Generation: 1173
+  Average fitness this generation: 6142,3391
+  Elite Fitness: 9254.433928687513
+  ID: NN-1172.4
+Generation: 1174
+  Average fitness this generation: 6189,8067
+  Elite Fitness: 10228.891144847532
+  ID: NN-1173.15
+Generation: 1175
+  Average fitness this generation: 4901,6043
+  Elite Fitness: 9312.655317451181
+  ID: NN-1174.2
+Generation: 1176
+  Average fitness this generation: 4522,8160
+  Elite Fitness: 8566.24732244484
+  ID: NN-1175.22
+Generation: 1177
+  Average fitness this generation: 4271,7341
+  Elite Fitness: 8330.909690369535
+  ID: NN-1176.1
+Generation: 1178
+  Average fitness this generation: 4709,1581
+  Elite Fitness: 9542.638782128928
+  ID: NN-1177.17
+Generation: 1179
+  Average fitness this generation: 4871,6292
+  Elite Fitness: 9590.620639648136
+  ID: NN-1178.8
+Generation: 1180
+  Average fitness this generation: 4911,7858
+  Elite Fitness: 9168.945589590861
+  ID: NN-1179.12
+Generation: 1181
+  Average fitness this generation: 5540,8891
+  Elite Fitness: 8994.963026421901
+  ID: NN-1180.6
+Generation: 1182
+  Average fitness this generation: 5284,8836
+  Elite Fitness: 9242.200220425753
+  ID: NN-1181.2
+Generation: 1183
+  Average fitness this generation: 5172,4327
+  Elite Fitness: 9311.420886758906
+  ID: NN-1182.26
+Generation: 1184
+  Average fitness this generation: 5137,4797
+  Elite Fitness: 9733.104079576602
+  ID: NN-1183.19
+Generation: 1185
+  Average fitness this generation: 5231,6716
+  Elite Fitness: 9582.26297745546
+  ID: NN-1184.11
+Generation: 1186
+  Average fitness this generation: 5201,5020
+  Elite Fitness: 8968.569467684716
+  ID: NN-1185.6
+Generation: 1187
+  Average fitness this generation: 4564,4087
+  Elite Fitness: 9469.019716678438
+  ID: NN-1186.12
+Generation: 1188
+  Average fitness this generation: 5075,2979
+  Elite Fitness: 8922.392636238748
+  ID: NN-1186.12
+Generation: 1189
+  Average fitness this generation: 5310,1039
+  Elite Fitness: 8951.21376934682
+  ID: NN-1186.12
+Generation: 1190
+  Average fitness this generation: 5787,5395
+  Elite Fitness: 10079.680916292691
+  ID: NN-1189.4
+Generation: 1191
+  Average fitness this generation: 5714,1199
+  Elite Fitness: 9054.568159428654
+  ID: NN-1190.20
+Generation: 1192
+  Average fitness this generation: 5977,8123
+  Elite Fitness: 9612.639095691351
+  ID: NN-1191.29
+Generation: 1193
+  Average fitness this generation: 5792,0591
+  Elite Fitness: 9204.47417976847
+  ID: NN-1192.1
+Generation: 1194
+  Average fitness this generation: 4955,0064
+  Elite Fitness: 8812.063547364905
+  ID: NN-1193.13
+Generation: 1195
+  Average fitness this generation: 4881,9673
+  Elite Fitness: 8922.899035924538
+  ID: NN-1194.8
+Generation: 1196
+  Average fitness this generation: 5411,6729
+  Elite Fitness: 9736.671832750679
+  ID: NN-1195.7
+Generation: 1197
+  Average fitness this generation: 4829,3184
+  Elite Fitness: 8779.135253093915
+  ID: NN-1196.13
+Generation: 1198
+  Average fitness this generation: 4812,3085
+  Elite Fitness: 9768.192315818764
+  ID: NN-1197.4
+Generation: 1199
+  Average fitness this generation: 4912,5915
+  Elite Fitness: 9127.606273551255
+  ID: NN-1198.1
+Generation: 1200
+  Average fitness this generation: 4897,9919
+  Elite Fitness: 8906.804066758938
+  ID: NN-1199.2
+Generation: 1201
+  Average fitness this generation: 4904,6586
+  Elite Fitness: 9057.840427483838
+  ID: NN-1200.4
+Generation: 1202
+  Average fitness this generation: 5090,6524
+  Elite Fitness: 8672.436611419897
+  ID: NN-1201.8
+Generation: 1203
+  Average fitness this generation: 4988,5892
+  Elite Fitness: 8843.000225231895
+  ID: NN-1201.8
+Generation: 1204
+  Average fitness this generation: 5227,5134
+  Elite Fitness: 9024.930008032366
+  ID: NN-1203.9
+Generation: 1205
+  Average fitness this generation: 4577,5732
+  Elite Fitness: 8424.002078501027
+  ID: NN-1204.14
+Generation: 1206
+  Average fitness this generation: 4649,4832
+  Elite Fitness: 8632.153012379928
+  ID: NN-1205.2
+Generation: 1207
+  Average fitness this generation: 4493,4977
+  Elite Fitness: 9682.90247527074
+  ID: NN-1206.26
+Generation: 1208
+  Average fitness this generation: 4669,7204
+  Elite Fitness: 8737.89936530458
+  ID: NN-1207.3
+Generation: 1209
+  Average fitness this generation: 5225,3900
+  Elite Fitness: 9009.96078040607
+  ID: NN-1208.7
+Generation: 1210
+  Average fitness this generation: 5266,2328
+  Elite Fitness: 8684.606361346134
+  ID: NN-1209.4
+Generation: 1211
+  Average fitness this generation: 5468,7909
+  Elite Fitness: 9838.387728792053
+  ID: NN-1210.24
+Generation: 1212
+  Average fitness this generation: 5083,9611
+  Elite Fitness: 8569.5202548068
+  ID: NN-1211.19
+Generation: 1213
+  Average fitness this generation: 6078,1847
+  Elite Fitness: 9663.026944521062
+  ID: NN-1212.1
+Generation: 1214
+  Average fitness this generation: 5394,5199
+  Elite Fitness: 9361.946740283038
+  ID: NN-1213.6
+Generation: 1215
+  Average fitness this generation: 5296,3885
+  Elite Fitness: 9280.413939142925
+  ID: NN-1214.1
+Generation: 1216
+  Average fitness this generation: 4955,5025
+  Elite Fitness: 9060.696777794192
+  ID: NN-1215.1
+Generation: 1217
+  Average fitness this generation: 5456,6292
+  Elite Fitness: 9690.849919691138
+  ID: NN-1216.26
+Generation: 1218
+  Average fitness this generation: 4641,9665
+  Elite Fitness: 9245.265067215503
+  ID: NN-1217.12
+Generation: 1219
+  Average fitness this generation: 5166,0553
+  Elite Fitness: 10011.606168345317
+  ID: NN-1218.4
+Generation: 1220
+  Average fitness this generation: 5050,3556
+  Elite Fitness: 8517.310464503042
+  ID: NN-1219.9
+Generation: 1221
+  Average fitness this generation: 4879,5629
+  Elite Fitness: 8540.479559138039
+  ID: NN-1219.9
+Generation: 1222
+  Average fitness this generation: 4728,4031
+  Elite Fitness: 8458.982273655438
+  ID: NN-1221.20
+Generation: 1223
+  Average fitness this generation: 4936,9496
+  Elite Fitness: 8928.668488290188
+  ID: NN-1222.12
+Generation: 1224
+  Average fitness this generation: 4806,2652
+  Elite Fitness: 9599.845994038269
+  ID: NN-1223.5
+Generation: 1225
+  Average fitness this generation: 5095,2924
+  Elite Fitness: 8869.381293475033
+  ID: NN-1224.23
+Generation: 1226
+  Average fitness this generation: 5636,2738
+  Elite Fitness: 8998.787716624263
+  ID: NN-1225.22
+Generation: 1227
+  Average fitness this generation: 4807,5701
+  Elite Fitness: 8978.823580102282
+  ID: NN-1226.5
+Generation: 1228
+  Average fitness this generation: 5226,9636
+  Elite Fitness: 9773.204259101945
+  ID: NN-1227.3
+Generation: 1229
+  Average fitness this generation: 4848,5765
+  Elite Fitness: 9156.534055101667
+  ID: NN-1228.10
+Generation: 1230
+  Average fitness this generation: 4781,9296
+  Elite Fitness: 8374.469269632333
+  ID: NN-1229.1
+Generation: 1231
+  Average fitness this generation: 5035,7827
+  Elite Fitness: 10032.704787406092
+  ID: NN-1230.1
+Generation: 1232
+  Average fitness this generation: 4481,9402
+  Elite Fitness: 7871.299088337202
+  ID: NN-1231.6
+Generation: 1233
+  Average fitness this generation: 4817,0875
+  Elite Fitness: 8607.622836947676
+  ID: NN-1232.28
+Generation: 1234
+  Average fitness this generation: 4364,7484
+  Elite Fitness: 9279.674966212462
+  ID: NN-1233.11
+Generation: 1235
+  Average fitness this generation: 4421,3628
+  Elite Fitness: 8975.750306086373
+  ID: NN-1234.25
+Generation: 1236
+  Average fitness this generation: 4910,6276
+  Elite Fitness: 9079.100973992077
+  ID: NN-1235.13
+Generation: 1237
+  Average fitness this generation: 4293,0831
+  Elite Fitness: 8967.718450812445
+  ID: NN-1236.9
+Generation: 1238
+  Average fitness this generation: 4449,3789
+  Elite Fitness: 10204.698876984488
+  ID: NN-1237.22
+Generation: 1239
+  Average fitness this generation: 4952,3672
+  Elite Fitness: 9780.095984697191
+  ID: NN-1237.22
+Generation: 1240
+  Average fitness this generation: 5018,9753
+  Elite Fitness: 10171.582847310976
+  ID: NN-1237.22
+Generation: 1241
+  Average fitness this generation: 5427,4673
+  Elite Fitness: 10601.562315528616
+  ID: NN-1240.15
+Generation: 1242
+  Average fitness this generation: 5801,7345
+  Elite Fitness: 10274.495122478076
+  ID: NN-1241.14
+Generation: 1243
+  Average fitness this generation: 5715,8403
+  Elite Fitness: 10102.853290586283
+  ID: NN-1242.16
+Generation: 1244
+  Average fitness this generation: 5953,6316
+  Elite Fitness: 10076.937748409518
+  ID: NN-1243.11
+Generation: 1245
+  Average fitness this generation: 6235,4151
+  Elite Fitness: 10355.044602674125
+  ID: NN-1244.9
+Generation: 1246
+  Average fitness this generation: 6182,3166
+  Elite Fitness: 10075.63510684245
+  ID: NN-1245.4
+Generation: 1247
+  Average fitness this generation: 6458,9623
+  Elite Fitness: 9926.85357033839
+  ID: NN-1246.15
+Generation: 1248
+  Average fitness this generation: 6153,5137
+  Elite Fitness: 10202.885904860668
+  ID: NN-1247.29
+Generation: 1249
+  Average fitness this generation: 6422,5898
+  Elite Fitness: 10208.014417354052
+  ID: NN-1248.25
+Generation: 1250
+  Average fitness this generation: 6291,1748
+  Elite Fitness: 9975.736800747396
+  ID: NN-1249.12
+Generation: 1251
+  Average fitness this generation: 6470,5962
+  Elite Fitness: 9906.107087039574
+  ID: NN-1250.17
+Generation: 1252
+  Average fitness this generation: 5789,4755
+  Elite Fitness: 10384.983988522936
+  ID: NN-1251.18
+Generation: 1253
+  Average fitness this generation: 5753,2504
+  Elite Fitness: 10828.693082735404
+  ID: NN-1252.17
+Generation: 1254
+  Average fitness this generation: 5620,1205
+  Elite Fitness: 10171.304803561634
+  ID: NN-1253.18
+Generation: 1255
+  Average fitness this generation: 5493,9500
+  Elite Fitness: 10507.44251745929
+  ID: NN-1254.3
+Generation: 1256
+  Average fitness this generation: 5953,7629
+  Elite Fitness: 10229.165469242907
+  ID: NN-1255.20
+Generation: 1257
+  Average fitness this generation: 6123,8783
+  Elite Fitness: 10563.443328046844
+  ID: NN-1256.27
+Generation: 1258
+  Average fitness this generation: 6280,9262
+  Elite Fitness: 9747.704881720718
+  ID: NN-1257.12
+Generation: 1259
+  Average fitness this generation: 5724,3538
+  Elite Fitness: 10447.35392252098
+  ID: NN-1258.14
+Generation: 1260
+  Average fitness this generation: 6071,5824
+  Elite Fitness: 9978.712794818375
+  ID: NN-1259.2
+Generation: 1261
+  Average fitness this generation: 5914,6500
+  Elite Fitness: 10338.591539704712
+  ID: NN-1260.9
+Generation: 1262
+  Average fitness this generation: 4997,0075
+  Elite Fitness: 9677.670991772118
+  ID: NN-1261.16
+Generation: 1263
+  Average fitness this generation: 5017,1867
+  Elite Fitness: 9618.737772108112
+  ID: NN-1262.21
+Generation: 1264
+  Average fitness this generation: 6139,5578
+  Elite Fitness: 10339.296170151769
+  ID: NN-1262.21
+Generation: 1265
+  Average fitness this generation: 5633,1114
+  Elite Fitness: 9674.205050157016
+  ID: NN-1264.3
+Generation: 1266
+  Average fitness this generation: 5237,8328
+  Elite Fitness: 9623.537768402184
+  ID: NN-1265.25
+Generation: 1267
+  Average fitness this generation: 5521,3576
+  Elite Fitness: 9715.07219416484
+  ID: NN-1266.13
+Generation: 1268
+  Average fitness this generation: 5898,4646
+  Elite Fitness: 10622.396776184456
+  ID: NN-1267.20
+Generation: 1269
+  Average fitness this generation: 5108,6499
+  Elite Fitness: 10401.71898372238
+  ID: NN-1268.7
+Generation: 1270
+  Average fitness this generation: 4783,5284
+  Elite Fitness: 9891.03086247822
+  ID: NN-1269.10
+Generation: 1271
+  Average fitness this generation: 5607,0239
+  Elite Fitness: 10347.32187808259
+  ID: NN-1270.29
+Generation: 1272
+  Average fitness this generation: 4764,1963
+  Elite Fitness: 10068.49961299327
+  ID: NN-1271.5
+Generation: 1273
+  Average fitness this generation: 5178,0863
+  Elite Fitness: 9664.914925551839
+  ID: NN-1272.4
+Generation: 1274
+  Average fitness this generation: 5430,2087
+  Elite Fitness: 10154.055244235473
+  ID: NN-1272.4
+Generation: 1275
+  Average fitness this generation: 5464,9688
+  Elite Fitness: 9847.950072725074
+  ID: NN-1274.7
+Generation: 1276
+  Average fitness this generation: 5265,0685
+  Elite Fitness: 9799.463712574914
+  ID: NN-1275.18
+Generation: 1277
+  Average fitness this generation: 6203,7783
+  Elite Fitness: 10242.345596239407
+  ID: NN-1276.9
+Generation: 1278
+  Average fitness this generation: 6276,1643
+  Elite Fitness: 9957.521830453628
+  ID: NN-1277.19
+Generation: 1279
+  Average fitness this generation: 5831,9612
+  Elite Fitness: 9746.370722942387
+  ID: NN-1278.9
+Generation: 1280
+  Average fitness this generation: 6938,7267
+  Elite Fitness: 10322.798844849403
+  ID: NN-1279.23
+Generation: 1281
+  Average fitness this generation: 7335,2649
+  Elite Fitness: 10543.04911794994
+  ID: NN-1280.3
+Generation: 1282
+  Average fitness this generation: 6452,4081
+  Elite Fitness: 9625.179979835082
+  ID: NN-1281.14
+Generation: 1283
+  Average fitness this generation: 6411,5879
+  Elite Fitness: 10145.182625680834
+  ID: NN-1282.14
+Generation: 1284
+  Average fitness this generation: 6299,1792
+  Elite Fitness: 9937.011086969389
+  ID: NN-1283.22
+Generation: 1285
+  Average fitness this generation: 5761,5256
+  Elite Fitness: 10146.738502611746
+  ID: NN-1284.2
+Generation: 1286
+  Average fitness this generation: 5544,9342
+  Elite Fitness: 9623.605948808083
+  ID: NN-1285.2
+Generation: 1287
+  Average fitness this generation: 4964,7131
+  Elite Fitness: 9714.466833829145
+  ID: NN-1286.2
+Generation: 1288
+  Average fitness this generation: 5146,3682
+  Elite Fitness: 10240.018507848128
+  ID: NN-1286.2
+Generation: 1289
+  Average fitness this generation: 5439,4239
+  Elite Fitness: 10328.353456094748
+  ID: NN-1288.9
+Generation: 1290
+  Average fitness this generation: 6016,1249
+  Elite Fitness: 9743.741995812154
+  ID: NN-1289.1
+Generation: 1291
+  Average fitness this generation: 5617,2184
+  Elite Fitness: 9935.840230168717
+  ID: NN-1290.4
+Generation: 1292
+  Average fitness this generation: 5636,8735
+  Elite Fitness: 10602.6961078036
+  ID: NN-1290.4
+Generation: 1293
+  Average fitness this generation: 6470,7540
+  Elite Fitness: 9974.894274585236
+  ID: NN-1292.1
+Generation: 1294
+  Average fitness this generation: 5432,5999
+  Elite Fitness: 9794.763076299241
+  ID: NN-1293.3
+Generation: 1295
+  Average fitness this generation: 5165,4151
+  Elite Fitness: 9901.466934242077
+  ID: NN-1293.3
+Generation: 1296
+  Average fitness this generation: 5884,1899
+  Elite Fitness: 9117.405454703601
+  ID: NN-1295.4
+Generation: 1297
+  Average fitness this generation: 5950,5324
+  Elite Fitness: 9585.466261775819
+  ID: NN-1296.17
+Generation: 1298
+  Average fitness this generation: 5485,4008
+  Elite Fitness: 10841.135169655028
+  ID: NN-1297.27
+Generation: 1299
+  Average fitness this generation: 5879,5141
+  Elite Fitness: 9548.902030857853
+  ID: NN-1298.6
+Generation: 1300
+  Average fitness this generation: 6236,2024
+  Elite Fitness: 10259.133710159484
+  ID: NN-1298.6
+Generation: 1301
+  Average fitness this generation: 6153,5501
+  Elite Fitness: 9614.314737205452
+  ID: NN-1300.7
+Generation: 1302
+  Average fitness this generation: 5993,3324
+  Elite Fitness: 9508.218438434873
+  ID: NN-1301.21
+Generation: 1303
+  Average fitness this generation: 5898,4450
+  Elite Fitness: 10081.188428901216
+  ID: NN-1302.13
+Generation: 1304
+  Average fitness this generation: 6417,9384
+  Elite Fitness: 9627.888969131325
+  ID: NN-1303.2
+Generation: 1305
+  Average fitness this generation: 5969,4086
+  Elite Fitness: 8859.472127727338
+  ID: NN-1303.2
+Generation: 1306
+  Average fitness this generation: 7193,7021
+  Elite Fitness: 9697.045216821398
+  ID: NN-1305.13
+Generation: 1307
+  Average fitness this generation: 6672,7305
+  Elite Fitness: 9210.719775545045
+  ID: NN-1306.3
+Generation: 1308
+  Average fitness this generation: 7095,3720
+  Elite Fitness: 10403.851503714617
+  ID: NN-1307.26
+Generation: 1309
+  Average fitness this generation: 6153,4006
+  Elite Fitness: 9608.47095536
+  ID: NN-1308.15
+Generation: 1310
+  Average fitness this generation: 6902,8968
+  Elite Fitness: 10088.740032653774
+  ID: NN-1308.15
+Generation: 1311
+  Average fitness this generation: 6295,1264
+  Elite Fitness: 9982.795387311304
+  ID: NN-1310.13
+Generation: 1312
+  Average fitness this generation: 6132,3801
+  Elite Fitness: 9614.197151496624
+  ID: NN-1311.15
+Generation: 1313
+  Average fitness this generation: 6093,3418
+  Elite Fitness: 10049.868623935876
+  ID: NN-1312.17
+Generation: 1314
+  Average fitness this generation: 6355,4420
+  Elite Fitness: 9295.135933299234
+  ID: NN-1313.12
+Generation: 1315
+  Average fitness this generation: 5792,2786
+  Elite Fitness: 9758.91611772374
+  ID: NN-1314.23
+Generation: 1316
+  Average fitness this generation: 5876,7262
+  Elite Fitness: 9965.636606224876
+  ID: NN-1314.23
+Generation: 1317
+  Average fitness this generation: 5993,0483
+  Elite Fitness: 8950.945548513066
+  ID: NN-1314.23
+Generation: 1318
+  Average fitness this generation: 5130,6502
+  Elite Fitness: 10175.591342508358
+  ID: NN-1317.10
+Generation: 1319
+  Average fitness this generation: 6013,4866
+  Elite Fitness: 9740.40322358248
+  ID: NN-1318.5
+Generation: 1320
+  Average fitness this generation: 5934,2016
+  Elite Fitness: 9410.9855555148
+  ID: NN-1318.5
+Generation: 1321
+  Average fitness this generation: 6202,8318
+  Elite Fitness: 9165.3537666022
+  ID: NN-1320.11
+Generation: 1322
+  Average fitness this generation: 5395,8200
+  Elite Fitness: 9103.462146183261
+  ID: NN-1321.5
+Generation: 1323
+  Average fitness this generation: 6312,8572
+  Elite Fitness: 10376.1953662184
+  ID: NN-1322.11
+Generation: 1324
+  Average fitness this generation: 5140,5552
+  Elite Fitness: 9206.362100141989
+  ID: NN-1323.2
+Generation: 1325
+  Average fitness this generation: 6972,1569
+  Elite Fitness: 9738.499708820735
+  ID: NN-1324.20
+Generation: 1326
+  Average fitness this generation: 6280,2547
+  Elite Fitness: 9669.439221275332
+  ID: NN-1325.20
+Generation: 1327
+  Average fitness this generation: 6658,7963
+  Elite Fitness: 9870.35100958869
+  ID: NN-1325.20
+Generation: 1328
+  Average fitness this generation: 6165,6901
+  Elite Fitness: 10532.849324137225
+  ID: NN-1327.9
+Generation: 1329
+  Average fitness this generation: 6360,6882
+  Elite Fitness: 10094.138518340804
+  ID: NN-1328.18
+Generation: 1330
+  Average fitness this generation: 6547,3855
+  Elite Fitness: 9718.516197446213
+  ID: NN-1328.18
+Generation: 1331
+  Average fitness this generation: 5576,6453
+  Elite Fitness: 9739.115532230135
+  ID: NN-1330.21
+Generation: 1332
+  Average fitness this generation: 5814,0728
+  Elite Fitness: 9384.283306405086
+  ID: NN-1331.23
+Generation: 1333
+  Average fitness this generation: 6320,1009
+  Elite Fitness: 10007.084955417275
+  ID: NN-1332.1
+Generation: 1334
+  Average fitness this generation: 5921,6638
+  Elite Fitness: 9531.257568254663
+  ID: NN-1333.29
+Generation: 1335
+  Average fitness this generation: 6514,1607
+  Elite Fitness: 9967.26820415017
+  ID: NN-1334.22
+Generation: 1336
+  Average fitness this generation: 6128,6444
+  Elite Fitness: 9541.804903343229
+  ID: NN-1335.24
+Generation: 1337
+  Average fitness this generation: 5612,5726
+  Elite Fitness: 10211.212066890526
+  ID: NN-1336.7
+Generation: 1338
+  Average fitness this generation: 5176,4061
+  Elite Fitness: 9812.084365241
+  ID: NN-1337.17
+Generation: 1339
+  Average fitness this generation: 5332,4324
+  Elite Fitness: 9273.1503377407
+  ID: NN-1337.17
+Generation: 1340
+  Average fitness this generation: 5851,4015
+  Elite Fitness: 9551.676643915744
+  ID: NN-1339.5
+Generation: 1341
+  Average fitness this generation: 5662,1753
+  Elite Fitness: 9678.945785001768
+  ID: NN-1340.3
+Generation: 1342
+  Average fitness this generation: 6967,1547
+  Elite Fitness: 10032.177731176755
+  ID: NN-1341.9
+Generation: 1343
+  Average fitness this generation: 7265,4346
+  Elite Fitness: 10286.897633403323
+  ID: NN-1342.20
+Generation: 1344
+  Average fitness this generation: 6535,8198
+  Elite Fitness: 10336.198782869662
+  ID: NN-1343.8
+Generation: 1345
+  Average fitness this generation: 6944,4176
+  Elite Fitness: 10324.168149392193
+  ID: NN-1344.7
+Generation: 1346
+  Average fitness this generation: 6560,8874
+  Elite Fitness: 10288.023233222619
+  ID: NN-1345.7
+Generation: 1347
+  Average fitness this generation: 6760,0457
+  Elite Fitness: 10239.060684567277
+  ID: NN-1346.14
+Generation: 1348
+  Average fitness this generation: 6772,5320
+  Elite Fitness: 9613.430883407387
+  ID: NN-1347.1
+Generation: 1349
+  Average fitness this generation: 6412,3288
+  Elite Fitness: 9382.045468489143
+  ID: NN-1348.3
+Generation: 1350
+  Average fitness this generation: 6461,7215
+  Elite Fitness: 10271.123999415013
+  ID: NN-1349.23
+Generation: 1351
+  Average fitness this generation: 6630,4534
+  Elite Fitness: 9998.359524208563
+  ID: NN-1350.25
+Generation: 1352
+  Average fitness this generation: 6169,8380
+  Elite Fitness: 9970.167723562126
+  ID: NN-1351.26
+Generation: 1353
+  Average fitness this generation: 6576,4000
+  Elite Fitness: 9722.215697763802
+  ID: NN-1352.26
+Generation: 1354
+  Average fitness this generation: 6235,4198
+  Elite Fitness: 10156.672049064036
+  ID: NN-1353.8
+Generation: 1355
+  Average fitness this generation: 6146,2450
+  Elite Fitness: 9808.458637990327
+  ID: NN-1354.18
+Generation: 1356
+  Average fitness this generation: 5450,6228
+  Elite Fitness: 9451.894968751783
+  ID: NN-1355.20
+Generation: 1357
+  Average fitness this generation: 5966,3230
+  Elite Fitness: 10264.387721458017
+  ID: NN-1356.14
+Generation: 1358
+  Average fitness this generation: 5314,5075
+  Elite Fitness: 9824.166351625468
+  ID: NN-1357.10
+Generation: 1359
+  Average fitness this generation: 5176,4735
+  Elite Fitness: 9693.792578151699
+  ID: NN-1358.6
+Generation: 1360
+  Average fitness this generation: 5077,5721
+  Elite Fitness: 9896.959680080448
+  ID: NN-1359.7
+Generation: 1361
+  Average fitness this generation: 5636,3217
+  Elite Fitness: 10132.58304185757
+  ID: NN-1360.12
+Generation: 1362
+  Average fitness this generation: 5485,5658
+  Elite Fitness: 10333.85318107051
+  ID: NN-1361.11
+Generation: 1363
+  Average fitness this generation: 5701,6954
+  Elite Fitness: 10093.332012904162
+  ID: NN-1362.4
+Generation: 1364
+  Average fitness this generation: 6062,6899
+  Elite Fitness: 9824.312033575898
+  ID: NN-1363.9
+Generation: 1365
+  Average fitness this generation: 6127,6633
+  Elite Fitness: 10304.469803680851
+  ID: NN-1364.5
+Generation: 1366
+  Average fitness this generation: 6498,5724
+  Elite Fitness: 9702.728560374002
+  ID: NN-1365.10
+Generation: 1367
+  Average fitness this generation: 5962,8119
+  Elite Fitness: 9551.090514807174
+  ID: NN-1366.20
+Generation: 1368
+  Average fitness this generation: 7428,5697
+  Elite Fitness: 9893.138481783843
+  ID: NN-1367.6
+Generation: 1369
+  Average fitness this generation: 6526,9665
+  Elite Fitness: 10271.292680059212
+  ID: NN-1368.2
+Generation: 1370
+  Average fitness this generation: 5547,3670
+  Elite Fitness: 9780.832148826701
+  ID: NN-1369.3
+Generation: 1371
+  Average fitness this generation: 5579,7173
+  Elite Fitness: 10018.809126233775
+  ID: NN-1370.14
+Generation: 1372
+  Average fitness this generation: 5906,6531
+  Elite Fitness: 9638.72362569169
+  ID: NN-1371.2
+Generation: 1373
+  Average fitness this generation: 5671,1666
+  Elite Fitness: 9754.341306878607
+  ID: NN-1371.2
+Generation: 1374
+  Average fitness this generation: 6012,9116
+  Elite Fitness: 9351.245756534974
+  ID: NN-1371.2
+Generation: 1375
+  Average fitness this generation: 5951,2538
+  Elite Fitness: 9648.225667871695
+  ID: NN-1374.14
+Generation: 1376
+  Average fitness this generation: 6027,1297
+  Elite Fitness: 9525.665454101689
+  ID: NN-1375.25
+Generation: 1377
+  Average fitness this generation: 6039,0409
+  Elite Fitness: 10282.472062127996
+  ID: NN-1375.25
+Generation: 1378
+  Average fitness this generation: 5836,8124
+  Elite Fitness: 9299.59139230791
+  ID: NN-1377.21
+Generation: 1379
+  Average fitness this generation: 5869,7643
+  Elite Fitness: 9375.952154328363
+  ID: NN-1378.18
+Generation: 1380
+  Average fitness this generation: 5282,8483
+  Elite Fitness: 9151.85199040687
+  ID: NN-1379.14
+Generation: 1381
+  Average fitness this generation: 4938,1785
+  Elite Fitness: 8753.364789661075
+  ID: NN-1380.17
+Generation: 1382
+  Average fitness this generation: 5278,3097
+  Elite Fitness: 9481.244184979723
+  ID: NN-1381.2
+Generation: 1383
+  Average fitness this generation: 4252,3091
+  Elite Fitness: 8508.349297044599
+  ID: NN-1382.18
+Generation: 1384
+  Average fitness this generation: 4927,0796
+  Elite Fitness: 8159.397616301596
+  ID: NN-1383.27
+Generation: 1385
+  Average fitness this generation: 5110,6098
+  Elite Fitness: 8933.90244714177
+  ID: NN-1384.2
+Generation: 1386
+  Average fitness this generation: 4880,9728
+  Elite Fitness: 8866.723379049934
+  ID: NN-1385.2
+Generation: 1387
+  Average fitness this generation: 4721,6690
+  Elite Fitness: 8927.738825572309
+  ID: NN-1386.27
+Generation: 1388
+  Average fitness this generation: 4994,6063
+  Elite Fitness: 7795.468203975468
+  ID: NN-1387.23
+Generation: 1389
+  Average fitness this generation: 4670,5129
+  Elite Fitness: 8765.517892810432
+  ID: NN-1388.16
+Generation: 1390
+  Average fitness this generation: 4583,8358
+  Elite Fitness: 8060.149153385219
+  ID: NN-1388.16
+Generation: 1391
+  Average fitness this generation: 4923,8347
+  Elite Fitness: 8618.074539337864
+  ID: NN-1390.1
+Generation: 1392
+  Average fitness this generation: 4909,8835
+  Elite Fitness: 9614.948538197297
+  ID: NN-1391.9
+Generation: 1393
+  Average fitness this generation: 4450,8301
+  Elite Fitness: 7677.741049567789
+  ID: NN-1392.8
+Generation: 1394
+  Average fitness this generation: 3944,2404
+  Elite Fitness: 7360.207796280056
+  ID: NN-1393.9
+Generation: 1395
+  Average fitness this generation: 4030,9367
+  Elite Fitness: 8744.412578325388
+  ID: NN-1394.21
+Generation: 1396
+  Average fitness this generation: 4230,8007
+  Elite Fitness: 8448.227767321387
+  ID: NN-1395.6
+Generation: 1397
+  Average fitness this generation: 3560,2493
+  Elite Fitness: 9243.625666232896
+  ID: NN-1396.3
+Generation: 1398
+  Average fitness this generation: 3887,6221
+  Elite Fitness: 8999.048674886708
+  ID: NN-1397.10
+Generation: 1399
+  Average fitness this generation: 4184,0669
+  Elite Fitness: 8264.77909372117
+  ID: NN-1398.2
+Generation: 1400
+  Average fitness this generation: 4476,0079
+  Elite Fitness: 8669.68243657104
+  ID: NN-1399.22
+Generation: 1401
+  Average fitness this generation: 4215,4507
+  Elite Fitness: 9202.562384163306
+  ID: NN-1400.10
+Generation: 1402
+  Average fitness this generation: 4823,6007
+  Elite Fitness: 9314.53744798214
+  ID: NN-1401.6
+Generation: 1403
+  Average fitness this generation: 4655,6575
+  Elite Fitness: 9504.706411370213
+  ID: NN-1402.17
+Generation: 1404
+  Average fitness this generation: 4500,6913
+  Elite Fitness: 9216.672109848316
+  ID: NN-1402.17
+Generation: 1405
+  Average fitness this generation: 3244,9693
+  Elite Fitness: 7769.930819817596
+  ID: NN-1404.1
+Generation: 1406
+  Average fitness this generation: 3917,4272
+  Elite Fitness: 9698.368673456378
+  ID: NN-1404.1
+Generation: 1407
+  Average fitness this generation: 3778,2076
+  Elite Fitness: 8462.611558768778
+  ID: NN-1404.1
+Generation: 1408
+  Average fitness this generation: 4206,3438
+  Elite Fitness: 8971.819703581208
+  ID: NN-1407.2
+Generation: 1409
+  Average fitness this generation: 4474,0924
+  Elite Fitness: 8608.96263212348
+  ID: NN-1408.1
+Generation: 1410
+  Average fitness this generation: 3812,9093
+  Elite Fitness: 8182.3754851390695
+  ID: NN-1409.15
+Generation: 1411
+  Average fitness this generation: 3567,7721
+  Elite Fitness: 8150.14801513569
+  ID: NN-1410.6
+Generation: 1412
+  Average fitness this generation: 3907,5479
+  Elite Fitness: 8421.87330422811
+  ID: NN-1411.16
+Generation: 1413
+  Average fitness this generation: 3756,7826
+  Elite Fitness: 8433.248724431856
+  ID: NN-1411.16
+Generation: 1414
+  Average fitness this generation: 3890,4444
+  Elite Fitness: 9771.635486006588
+  ID: NN-1411.16
+Generation: 1415
+  Average fitness this generation: 3544,6392
+  Elite Fitness: 8486.79769731931
+  ID: NN-1414.22
+Generation: 1416
+  Average fitness this generation: 3691,6416
+  Elite Fitness: 9271.41611169669
+  ID: NN-1415.6
+Generation: 1417
+  Average fitness this generation: 4214,6742
+  Elite Fitness: 9080.568331532266
+  ID: NN-1416.2
+Generation: 1418
+  Average fitness this generation: 4260,5884
+  Elite Fitness: 9055.980815824809
+  ID: NN-1417.24
+Generation: 1419
+  Average fitness this generation: 4314,6574
+  Elite Fitness: 8769.65933289231
+  ID: NN-1418.19
+Generation: 1420
+  Average fitness this generation: 3908,9285
+  Elite Fitness: 9521.832019408837
+  ID: NN-1418.19
+Generation: 1421
+  Average fitness this generation: 4011,3377
+  Elite Fitness: 9470.870734435131
+  ID: NN-1420.2
+Generation: 1422
+  Average fitness this generation: 4121,2846
+  Elite Fitness: 8721.368549736542
+  ID: NN-1421.4
+Generation: 1423
+  Average fitness this generation: 4036,3651
+  Elite Fitness: 8680.212090845569
+  ID: NN-1422.27
+Generation: 1424
+  Average fitness this generation: 4129,4560
+  Elite Fitness: 8919.720506750964
+  ID: NN-1423.28
+Generation: 1425
+  Average fitness this generation: 3619,9392
+  Elite Fitness: 9314.375304812927
+  ID: NN-1424.24
+Generation: 1426
+  Average fitness this generation: 3983,1307
+  Elite Fitness: 9685.82520709813
+  ID: NN-1425.1
+Generation: 1427
+  Average fitness this generation: 4466,6437
+  Elite Fitness: 9703.10741267954
+  ID: NN-1426.23
+Generation: 1428
+  Average fitness this generation: 4503,8623
+  Elite Fitness: 9228.846056641532
+  ID: NN-1427.5
+Generation: 1429
+  Average fitness this generation: 4965,6930
+  Elite Fitness: 9871.23175235915
+  ID: NN-1428.9
+Generation: 1430
+  Average fitness this generation: 4994,7305
+  Elite Fitness: 10057.10968735579
+  ID: NN-1429.8
+Generation: 1431
+  Average fitness this generation: 4582,3015
+  Elite Fitness: 9818.305286553172
+  ID: NN-1430.16
+Generation: 1432
+  Average fitness this generation: 4760,1724
+  Elite Fitness: 9569.6877595111
+  ID: NN-1431.10
+Generation: 1433
+  Average fitness this generation: 4995,9104
+  Elite Fitness: 9531.781209550365
+  ID: NN-1432.8
+Generation: 1434
+  Average fitness this generation: 4735,9922
+  Elite Fitness: 9621.695573201929
+  ID: NN-1433.11
+Generation: 1435
+  Average fitness this generation: 5169,8782
+  Elite Fitness: 9267.968055592546
+  ID: NN-1434.8
+Generation: 1436
+  Average fitness this generation: 5331,1139
+  Elite Fitness: 10086.744788001703
+  ID: NN-1435.1
+Generation: 1437
+  Average fitness this generation: 4830,0088
+  Elite Fitness: 10753.219856378297
+  ID: NN-1436.18
+Generation: 1438
+  Average fitness this generation: 4327,3899
+  Elite Fitness: 9612.717227981548
+  ID: NN-1437.3
+Generation: 1439
+  Average fitness this generation: 5236,5595
+  Elite Fitness: 10074.399511284984
+  ID: NN-1438.6
+Generation: 1440
+  Average fitness this generation: 6005,9215
+  Elite Fitness: 10007.969829080892
+  ID: NN-1439.22
+Generation: 1441
+  Average fitness this generation: 6464,1388
+  Elite Fitness: 9754.70796581273
+  ID: NN-1440.5
+Generation: 1442
+  Average fitness this generation: 6757,9887
+  Elite Fitness: 10351.378409255283
+  ID: NN-1441.9
+Generation: 1443
+  Average fitness this generation: 6546,4650
+  Elite Fitness: 10142.189286797548
+  ID: NN-1442.6
+Generation: 1444
+  Average fitness this generation: 5896,4524
+  Elite Fitness: 9656.270206692892
+  ID: NN-1443.4
+Generation: 1445
+  Average fitness this generation: 5501,5182
+  Elite Fitness: 9599.281469322046
+  ID: NN-1444.2
+Generation: 1446
+  Average fitness this generation: 4842,2373
+  Elite Fitness: 9386.547193436672
+  ID: NN-1445.6
+Generation: 1447
+  Average fitness this generation: 5334,0470
+  Elite Fitness: 10242.08423712841
+  ID: NN-1446.1
+Generation: 1448
+  Average fitness this generation: 4861,9400
+  Elite Fitness: 8675.505983893743
+  ID: NN-1447.13
+Generation: 1449
+  Average fitness this generation: 4964,9560
+  Elite Fitness: 9294.234838116161
+  ID: NN-1448.24
+Generation: 1450
+  Average fitness this generation: 4639,6029
+  Elite Fitness: 8840.481167735696
+  ID: NN-1449.11
+Generation: 1451
+  Average fitness this generation: 5315,4712
+  Elite Fitness: 9753.047432799609
+  ID: NN-1450.7
+Generation: 1452
+  Average fitness this generation: 6242,5904
+  Elite Fitness: 10368.81740739828
+  ID: NN-1450.7
+Generation: 1453
+  Average fitness this generation: 5574,0962
+  Elite Fitness: 9743.390348221143
+  ID: NN-1452.3
+Generation: 1454
+  Average fitness this generation: 5906,1559
+  Elite Fitness: 9988.234523464962
+  ID: NN-1453.5
+Generation: 1455
+  Average fitness this generation: 5810,1379
+  Elite Fitness: 9437.183440936085
+  ID: NN-1454.25
+Generation: 1456
+  Average fitness this generation: 6319,9432
+  Elite Fitness: 9869.93432212779
+  ID: NN-1455.20
+Generation: 1457
+  Average fitness this generation: 5635,5386
+  Elite Fitness: 9504.119042655107
+  ID: NN-1456.15
+Generation: 1458
+  Average fitness this generation: 6111,4636
+  Elite Fitness: 10175.234545411226
+  ID: NN-1456.15
+Generation: 1459
+  Average fitness this generation: 6152,7449
+  Elite Fitness: 9806.943902688643
+  ID: NN-1458.20
+Generation: 1460
+  Average fitness this generation: 6281,5368
+  Elite Fitness: 9734.359117329284
+  ID: NN-1459.12
+Generation: 1461
+  Average fitness this generation: 5795,2695
+  Elite Fitness: 9201.547855997629
+  ID: NN-1460.7
+Generation: 1462
+  Average fitness this generation: 5795,6817
+  Elite Fitness: 9848.420286372098
+  ID: NN-1461.1
+Generation: 1463
+  Average fitness this generation: 5794,1965
+  Elite Fitness: 9457.029849054305
+  ID: NN-1462.1
+Generation: 1464
+  Average fitness this generation: 5583,2476
+  Elite Fitness: 9349.953103934018
+  ID: NN-1463.11
+Generation: 1465
+  Average fitness this generation: 6199,6040
+  Elite Fitness: 9864.567425676521
+  ID: NN-1464.14
+Generation: 1466
+  Average fitness this generation: 6858,6853
+  Elite Fitness: 10258.78477984564
+  ID: NN-1465.4
+Generation: 1467
+  Average fitness this generation: 6061,4972
+  Elite Fitness: 9885.745477613678
+  ID: NN-1466.20
+Generation: 1468
+  Average fitness this generation: 5946,2188
+  Elite Fitness: 9342.833190928855
+  ID: NN-1467.6
+Generation: 1469
+  Average fitness this generation: 5897,3937
+  Elite Fitness: 10161.986048468942
+  ID: NN-1468.2
+Generation: 1470
+  Average fitness this generation: 5797,5471
+  Elite Fitness: 10991.035280045186
+  ID: NN-1469.6
+Generation: 1471
+  Average fitness this generation: 5687,4973
+  Elite Fitness: 9546.553393681546
+  ID: NN-1470.3
+Generation: 1472
+  Average fitness this generation: 6713,6525
+  Elite Fitness: 9580.731004872996
+  ID: NN-1471.7
+Generation: 1473
+  Average fitness this generation: 5468,0699
+  Elite Fitness: 9780.109608135861
+  ID: NN-1472.4
+Generation: 1474
+  Average fitness this generation: 6208,9690
+  Elite Fitness: 10196.814910155212
+  ID: NN-1473.25
+Generation: 1475
+  Average fitness this generation: 5321,4495
+  Elite Fitness: 10046.903642474936
+  ID: NN-1474.12
+Generation: 1476
+  Average fitness this generation: 5214,1115
+  Elite Fitness: 9665.00070682201
+  ID: NN-1475.21
+Generation: 1477
+  Average fitness this generation: 5220,1867
+  Elite Fitness: 10222.276563214047
+  ID: NN-1476.11
+Generation: 1478
+  Average fitness this generation: 5071,1552
+  Elite Fitness: 10073.109544635157
+  ID: NN-1477.5
+Generation: 1479
+  Average fitness this generation: 5386,8237
+  Elite Fitness: 9778.100611291226
+  ID: NN-1478.2
+Generation: 1480
+  Average fitness this generation: 5800,6788
+  Elite Fitness: 9341.63335232696
+  ID: NN-1479.5
+Generation: 1481
+  Average fitness this generation: 5315,5146
+  Elite Fitness: 10179.899409833186
+  ID: NN-1480.11
+Generation: 1482
+  Average fitness this generation: 5815,6034
+  Elite Fitness: 9599.87527098714
+  ID: NN-1481.2
+Generation: 1483
+  Average fitness this generation: 6209,6331
+  Elite Fitness: 10565.608012350029
+  ID: NN-1482.6
+Generation: 1484
+  Average fitness this generation: 5706,6338
+  Elite Fitness: 9735.536984522663
+  ID: NN-1483.2
+Generation: 1485
+  Average fitness this generation: 4998,2537
+  Elite Fitness: 9918.304575595716
+  ID: NN-1483.2
+Generation: 1486
+  Average fitness this generation: 4876,2660
+  Elite Fitness: 9808.868620493364
+  ID: NN-1485.8
+Generation: 1487
+  Average fitness this generation: 5745,5543
+  Elite Fitness: 9726.645968520113
+  ID: NN-1486.26
+Generation: 1488
+  Average fitness this generation: 5703,8195
+  Elite Fitness: 9986.644101623762
+  ID: NN-1487.10
+Generation: 1489
+  Average fitness this generation: 5862,8152
+  Elite Fitness: 10234.741717189328
+  ID: NN-1488.3
+Generation: 1490
+  Average fitness this generation: 6322,5893
+  Elite Fitness: 9950.972902818885
+  ID: NN-1489.2
+Generation: 1491
+  Average fitness this generation: 6010,1150
+  Elite Fitness: 10441.060208928404
+  ID: NN-1490.6
+Generation: 1492
+  Average fitness this generation: 5662,1226
+  Elite Fitness: 9612.338836343075
+  ID: NN-1490.6
+Generation: 1493
+  Average fitness this generation: 5624,8731
+  Elite Fitness: 9248.754269005552
+  ID: NN-1492.10
+Generation: 1494
+  Average fitness this generation: 5288,0299
+  Elite Fitness: 9885.27384085272
+  ID: NN-1493.2
+Generation: 1495
+  Average fitness this generation: 5092,6207
+  Elite Fitness: 9662.873322826628
+  ID: NN-1493.2
+Generation: 1496
+  Average fitness this generation: 5766,3162
+  Elite Fitness: 9526.64766689972
+  ID: NN-1495.21

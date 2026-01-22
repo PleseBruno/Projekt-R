@@ -9,12 +9,12 @@ public class GeneticAlgorithms {
 
     private static final Random rand = new Random();
 
-    public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen, double alpha, double crossChance, double mutationChance) {
+    public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen, int numNeuralNetworks, double alpha, double crossChance, double mutationChance) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         switch (geneticType) {
             case DEFAULT:
-                newGeneration = makeBabies(oldGeneration, gen, alpha, crossChance, mutationChance);
+                newGeneration = makeBabies(oldGeneration, gen, numNeuralNetworks, alpha, crossChance, mutationChance);
                 break;
             default:
                 throw new IllegalArgumentException("Genetic type not supported");
@@ -24,19 +24,21 @@ public class GeneticAlgorithms {
     }
 
 
-    private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen, double alpha, double crossChance, double mutationChance) {
+    private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen, int numNeuralNetworks, double alpha, double crossChance, double mutationChance) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         // dodaje najboljeg stare generacije u novu i mice ga iz stare
         NeuralNetwork elite = oldGeneration.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
         newGeneration.put(elite, null);
 
-        System.out.println(elite + "\n With Fitness:" + oldGeneration.get(elite));
+//        System.out.println(elite + "\n With Fitness:" + oldGeneration.get(elite));
+        System.out.println("  Elite Fitness: " + oldGeneration.get(elite) + "\n  ID: " + elite.getID());
+
 
         //racuna ukupni fitness
         double sum = oldGeneration.values().stream().mapToDouble(Double::doubleValue).sum();
 
-        for (int i = 0; i < oldGeneration.size() - 1; i++) {
+        for (int i = 0; i < numNeuralNetworks - 1; i++) {
             double idxPrviClan = new Random().nextDouble(0, sum);
             double idxDrugiClan = new Random().nextDouble(0, sum);
 
