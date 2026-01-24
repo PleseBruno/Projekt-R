@@ -9,12 +9,12 @@ public class GeneticAlgorithms {
 
     private static final Random rand = new Random();
 
-    public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen, int numNeuralNetworks, double alpha, double crossChance, double mutationChance) {
+    public static Map<NeuralNetwork, Double> makeNewGen(Map<NeuralNetwork, Double> oldGeneration, GeneticType geneticType, int gen, int numNeuralNetworks, double alpha, double mutationChance) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         switch (geneticType) {
             case DEFAULT:
-                newGeneration = makeBabies(oldGeneration, gen, numNeuralNetworks, alpha, crossChance, mutationChance);
+                newGeneration = makeBabies(oldGeneration, gen, numNeuralNetworks, alpha, mutationChance);
                 break;
             default:
                 throw new IllegalArgumentException("Genetic type not supported");
@@ -24,7 +24,7 @@ public class GeneticAlgorithms {
     }
 
 
-    private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen, int numNeuralNetworks, double alpha, double crossChance, double mutationChance) {
+    private static Map<NeuralNetwork, Double> makeBabies(Map<NeuralNetwork, Double> oldGeneration, int gen, int numNeuralNetworks, double alpha, double mutationChance) {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         // dodaje najboljeg stare generacije u novu i mice ga iz stare
@@ -50,7 +50,7 @@ public class GeneticAlgorithms {
             floor = 0;
             drugiClan = findRandomClan(oldGeneration, idxDrugiClan, floor);
 
-            newGeneration.put(createChild(prviClan, drugiClan, gen, i + 1, alpha, crossChance, mutationChance), null);
+            newGeneration.put(createChild(prviClan, drugiClan, gen, i + 1, alpha, mutationChance), null);
         }
 
         return newGeneration;
@@ -69,7 +69,7 @@ public class GeneticAlgorithms {
         throw new RuntimeException("Clan not found - Linija:78");
     }
 
-    private static NeuralNetwork createChild(NeuralNetwork prviClan, NeuralNetwork drugiClan, int gen, int id, double alpha, double crossChance, double mutationChance) {
+    private static NeuralNetwork createChild(NeuralNetwork prviClan, NeuralNetwork drugiClan, int gen, int id, double alpha, double mutationChance) {
         NeuralNetwork child = prviClan.copy();
         child.setID("NN-" + gen + "." + id);
 
@@ -85,13 +85,13 @@ public class GeneticAlgorithms {
         Iterator<Matrix> iteratorDrugogClanaWeights = drugiClanWeights.iterator();
         Iterator<Matrix> iteratorDrugogClanaBiases = drugiClanBiases.iterator();
 
-        generateNewValues(childWeight, iteratorPrvogClanaWeights, iteratorDrugogClanaWeights, alpha, crossChance, mutationChance);
-        generateNewValues(childBias, iteratorPrvogClanaBiases, iteratorDrugogClanaBiases, alpha, crossChance, mutationChance);
+        generateNewValues(childWeight, iteratorPrvogClanaWeights, iteratorDrugogClanaWeights, alpha, mutationChance);
+        generateNewValues(childBias, iteratorPrvogClanaBiases, iteratorDrugogClanaBiases, alpha, mutationChance);
 
         return child;
     }
 
-    private static void generateNewValues(List<Matrix> childBias, Iterator<Matrix> iteratorPrvogClanaBiases, Iterator<Matrix> iteratorDrugogClanaBiases, double alpha, double crossChance, double mutationChance) {
+    private static void generateNewValues(List<Matrix> childBias, Iterator<Matrix> iteratorPrvogClanaBiases, Iterator<Matrix> iteratorDrugogClanaBiases, double alpha, double mutationChance) {
         for (Matrix w1 : childBias) {
             Matrix w2 = iteratorPrvogClanaBiases.next();
             Matrix w3 = iteratorDrugogClanaBiases.next();
@@ -100,7 +100,7 @@ public class GeneticAlgorithms {
             double[] arrDrugi = w3.toArray();
             for (int i = 0; i < w1.rows; i++) {
                 for (int j = 0; j < w1.cols; j++) {
-                    w1.data[i][j] = rand.nextDouble(0, 1) < crossChance ? BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], alpha) : w1.data[i][j];
+                    w1.data[i][j] = BLX_ALPHA(arrPrvi[i * w1.cols + j], arrDrugi[i * w1.cols + j], alpha);
                 }
             }
 

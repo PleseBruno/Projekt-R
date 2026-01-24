@@ -17,10 +17,10 @@ import java.util.concurrent.ExecutionException;
 
 public class Launcher extends Application {
 
-    private final static boolean HEADLESS = true;
+    private final static boolean HEADLESS = false;
     private final static boolean CONTINUE_LEARNING = false;
-    private final static int NUM_GENS = 4000;
-    private final static int NUM_AVG_FITNESS = 100;
+    private final static int NUM_GENS = 500;
+//    private final static int NUM_AVG_FITNESS = 100;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -41,18 +41,18 @@ public class Launcher extends Application {
         if (HEADLESS) {
             int numNeuralNetworks = 50;
             int testsPerNetwork = 40;
-            double alpha = 0.2;
-            double crossChance = 0.08;
-            double mutationChance = 0.02;
+            double alpha = 0.25;
+//            double crossChance = 0.80;
+            double mutationChance = 0.05;
 
-            LinkedList<Double> lastAvgFitnessesList = new LinkedList<>();
-            double oldMean = 0.0, newMean;
-            double stdDeviation;
+//            LinkedList<Double> lastAvgFitnessesList = new LinkedList<>();
+//            double oldMean = 0.0, newMean;
+//            double stdDeviation;
+//
+//            boolean growth_era = true;
 
-            boolean growth_era = true;
-
-            int inputNodes = 12;
-            int[] hiddenLayers = {100, 200};
+            int inputNodes = 8;
+            int[] hiddenLayers = {20, 40};
             int outputNodes = 4;
 
             ParallelGameRunner runner = new ParallelGameRunner(
@@ -89,6 +89,7 @@ public class Launcher extends Application {
                     List<NeuralNetwork>  nns = new ArrayList<>(Generacija.keySet());
 
                     Random random = new Random(System.nanoTime());
+//                    Long seed = random.nextLong();
                     List<Long> seeds = new ArrayList<>();
 
                     for (int k = 0; k < testsPerNetwork; k++) {
@@ -117,60 +118,22 @@ public class Launcher extends Application {
                             bestFitness = avg;
                             bestNetwork = nn;
                         }
+                        if (avg > bestFitnessGen) {
+                            bestFitnessGen = avg;
+                            bestNetworkGen = nn;
+                        }
                     }
                     double totalFitnessThisGenAverage = averaged.values().stream().mapToDouble(Double::doubleValue).sum() / averaged.size();
                     System.out.printf("  Average fitness this generation: %.4f%n", totalFitnessThisGenAverage);
 
-                    if (lastAvgFitnessesList.size() < NUM_AVG_FITNESS) {
-                        lastAvgFitnessesList.add(totalFitnessThisGenAverage);
-                    } else {
-                        lastAvgFitnessesList.add(totalFitnessThisGenAverage);
-                        lastAvgFitnessesList.removeLast();
+                    Generacija = GeneticAlgorithms.makeNewGen(averaged, GeneticType.DEFAULT, j, numNeuralNetworks ,alpha, mutationChance);
 
-                        newMean = lastAvgFitnessesList
-                                            .stream()
-                                            .mapToDouble(Double::doubleValue)
-                                            .average()
-                                            .orElseThrow(() -> new IllegalStateException("No average fitness found"));
-
-//                        if (newMean > oldMean) {
-//                            oldMean = newMean;
-//
-//                            growth_era = true;
-//                        } else {
-//                            stdDeviation = Statistics.getStdDev(lastAvgFitnessesList);
-//
-//                            if (stdDeviation > 1200) {
-//                                growth_era = true;
-//                            } else  {
-//                                growth_era = false;
-//                            }
-//                        }
-                    }
-
-                    if (growth_era) {
-                        alpha = 0.2;
-                        crossChance = 0.08;
-                        mutationChance = 0.02;
-                    } else {
-                        alpha = 0.25;
-                        crossChance = 0.1;
-                        mutationChance = 0.07;
-                    }
-
-                    if (j == 1000) {
-                        numNeuralNetworks = 30;
-                        testsPerNetwork = 20;
-                    }
-
-                    Generacija = GeneticAlgorithms.makeNewGen(averaged, GeneticType.DEFAULT, j, numNeuralNetworks ,alpha, crossChance, mutationChance);
-
-                    if (j % 500 == 0 && j > 1000) {
+                    if (j % 100 == 0) {
                         Path fileName = Path.of("lastSavedNetwok.txt");
 
                         try {
-                            Files.writeString(fileName, bestNetwork.toString());
-                            System.out.println("Saved network: " + bestNetwork.toString());
+                            Files.writeString(fileName, bestNetworkGen.toString());
+//                            System.out.println("Saved network: " + bestNetwork.toString());
                         }
                         catch (IOException e) {
                             System.err.println("Neuronska mreža neuspješno spremljena.");

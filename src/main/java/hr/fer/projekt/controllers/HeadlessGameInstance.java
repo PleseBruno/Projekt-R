@@ -62,10 +62,10 @@ public class  HeadlessGameInstance {
                 world.getPlayer().getY(),
                 STARTING_GAME_SPEED + time / 5000.0,
                 world.getPlayer().getMoveY(),
-                world.getPlayer().getMoveX(),
+//              world.getPlayer().getMoveX(),
                 first.getX(),
                 first.getY(),
-                first.getR()
+//              first.getR()
         };
     }
 
@@ -85,7 +85,7 @@ public class  HeadlessGameInstance {
         }
         
         // Fitness = survival time
-        return time + bonusPoints;
+        return (time * time) / 10000 + bonusPoints;
     }
 
     void consolePrint(){
@@ -175,8 +175,6 @@ public class  HeadlessGameInstance {
 
                 if (time <= 5000) {
                     bonusPoints += c.getPoints();
-                } else {
-                    bonusPoints += c.getPoints() / (time);
                 }
                 return true;
             }
