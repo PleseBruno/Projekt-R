@@ -192,7 +192,7 @@ public class Controller implements Initializable {
 
     public void step() {
 
-        time+=0.75;
+        time+=0.5;
 
         if (sPressed && !world.getPlayer().isDived() && !world.getPlayer().isJumped()) {
             world.getPlayer().dive();

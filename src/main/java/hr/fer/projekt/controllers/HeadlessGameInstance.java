@@ -56,8 +56,8 @@ public class  HeadlessGameInstance {
         return new double[]{
                 nearest.getX(),
                 nearest.getY(),
-                nearest.getWidth(),
-                nearest.getHeight(),
+//              nearest.getWidth(),
+//              nearest.getHeight(),
                 world.getPlayer().getX(),
                 world.getPlayer().getY(),
                 STARTING_GAME_SPEED + time / 5000.0,
@@ -133,7 +133,7 @@ public class  HeadlessGameInstance {
 
     private void step() {
         // Update world physics
-        time += 0.75;
+        time += 0.5;
         updatePhysics();
     }
 

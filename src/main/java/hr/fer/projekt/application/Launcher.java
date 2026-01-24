@@ -84,7 +84,8 @@ public class Launcher extends Application {
                 double bestFitness = Double.NEGATIVE_INFINITY;
 
                 for (int j = 0; j < NUM_GENS; j++) {
-
+                    NeuralNetwork bestNetworkGen = null;
+                    double bestFitnessGen = Double.NEGATIVE_INFINITY;
                     System.out.println("Generation: " + j);
                     List<NeuralNetwork>  nns = new ArrayList<>(Generacija.keySet());
 
