@@ -18,8 +18,8 @@ import java.util.concurrent.ExecutionException;
 public class Launcher extends Application {
 
     private final static boolean HEADLESS = false;
-    private final static boolean CONTINUE_LEARNING = false;
-    private final static int NUM_GENS = 500;
+    private final static boolean CONTINUE_LEARNING = true;
+    private final static int NUM_GENS = 2000;
 //    private final static int NUM_AVG_FITNESS = 100;
 
     @Override
@@ -43,7 +43,7 @@ public class Launcher extends Application {
             int testsPerNetwork = 40;
             double alpha = 0.25;
 //            double crossChance = 0.80;
-            double mutationChance = 0.05;
+            double mutationChance = 0.01;
 
 //            LinkedList<Double> lastAvgFitnessesList = new LinkedList<>();
 //            double oldMean = 0.0, newMean;
@@ -51,7 +51,7 @@ public class Launcher extends Application {
 //
 //            boolean growth_era = true;
 
-            int inputNodes = 8;
+            int inputNodes = 11;
             int[] hiddenLayers = {20, 40};
             int outputNodes = 4;
 
@@ -68,9 +68,12 @@ public class Launcher extends Application {
                     inputNodes = n.getInputNodes();
                     hiddenLayers = n.getHiddenLayers();
                     outputNodes = n.getOutputNodes();
-                    Generacija.put(n, null);
                     for (int i = 0; i < numNeuralNetworks - 1; i++) {
-                        Generacija.put(new NeuralNetwork("NN-1." + i + 1, inputNodes, hiddenLayers, outputNodes), null);
+                        if (i < 10) {
+                            Generacija.put(n.copy(), null);
+                        } else {
+                            Generacija.put(new NeuralNetwork("NN-1." + i + 1, inputNodes, hiddenLayers, outputNodes), null);
+                        }
                     }
                 } else {
                     for (int i = 0; i < numNeuralNetworks; i++) {
@@ -80,12 +83,15 @@ public class Launcher extends Application {
 
 
                 // Track best network found across all generations
-                NeuralNetwork bestNetwork = null;
-                double bestFitness = Double.NEGATIVE_INFINITY;
+//                NeuralNetwork bestNetwork = null;
+//                double bestFitness = Double.NEGATIVE_INFINITY;
+
+                NeuralNetwork bestNetworkGen = null;
+                double bestFitnessGen = Double.NEGATIVE_INFINITY;
 
                 for (int j = 0; j < NUM_GENS; j++) {
-                    NeuralNetwork bestNetworkGen = null;
-                    double bestFitnessGen = Double.NEGATIVE_INFINITY;
+                    bestNetworkGen = null;
+                    bestFitnessGen = Double.NEGATIVE_INFINITY;
                     System.out.println("Generation: " + j);
                     List<NeuralNetwork>  nns = new ArrayList<>(Generacija.keySet());
 
@@ -115,10 +121,10 @@ public class Launcher extends Application {
                         double sum = accumulator.getOrDefault(nn, 0.0);
                         double avg = sum / testsPerNetwork;
                         averaged.put(nn, avg);
-                        if (avg > bestFitness) {
-                            bestFitness = avg;
-                            bestNetwork = nn;
-                        }
+//                        if (avg > bestFitness) {
+//                            bestFitness = avg;
+//                            bestNetwork = nn;
+//                        }
                         if (avg > bestFitnessGen) {
                             bestFitnessGen = avg;
                             bestNetworkGen = nn;
@@ -126,10 +132,11 @@ public class Launcher extends Application {
                     }
                     double totalFitnessThisGenAverage = averaged.values().stream().mapToDouble(Double::doubleValue).sum() / averaged.size();
                     System.out.printf("  Average fitness this generation: %.4f%n", totalFitnessThisGenAverage);
+                    System.out.println("  Elite Fitness: " + bestFitnessGen + "\n  ID: " + bestNetworkGen.getID());
 
                     Generacija = GeneticAlgorithms.makeNewGen(averaged, GeneticType.DEFAULT, j, numNeuralNetworks ,alpha, mutationChance);
 
-                    if (j % 100 == 0) {
+                    if (j % 500 == 0) {
                         Path fileName = Path.of("lastSavedNetwok.txt");
 
                         try {
@@ -143,15 +150,15 @@ public class Launcher extends Application {
                 }
 
                 // Print best network to stdout at the end
-                if (bestNetwork != null) {
+                if (bestNetworkGen != null) {
                     System.out.println("\n=== BEST NETWORK ===");
-                    System.out.println("ID: " + bestNetwork.getID() + " fitness=" + bestFitness);
-                    System.out.println(bestNetwork.toString());
+                    System.out.println("ID: " + bestNetworkGen.getID() + " fitness=" + bestFitnessGen);
+                    System.out.println(bestNetworkGen.toString());
 
                     Path fileName = Path.of("best_network.txt");
 
                     try {
-                        Files.writeString(fileName, bestNetwork.toString());
+                        Files.writeString(fileName, bestNetworkGen.toString());
                     }
                     catch (IOException e) {
                         System.err.println("Neuronska mreža neuspješno učitana.");

@@ -1,7 +1,6 @@
 package hr.fer.projekt.controllers;
 
 import hr.fer.projekt.entities.Coins;
-import hr.fer.projekt.matematika.Matrix;
 import hr.fer.projekt.neuronskaMreza.NeuralNetwork;
 import hr.fer.projekt.application.World;
 import hr.fer.projekt.entities.Obstacle;
@@ -9,7 +8,6 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -87,18 +85,18 @@ public class Controller implements Initializable {
         }
 
         return new double[]{
-                nearest.getX(),
-                nearest.getY(),
-//              nearest.getWidth(),
-//              nearest.getHeight(),
-                world.getPlayer().getX(),
-                world.getPlayer().getY(),
-                STARTING_GAME_SPEED + time / 5000.0,
-                world.getPlayer().getMoveY(),
-//              world.getPlayer().getMoveX(),
-                first.getX(),
-                first.getY(),
-//              first.getR()
+            nearest.getX(),
+            nearest.getY(),
+            nearest.getWidth(),
+            nearest.getHeight(),
+            world.getPlayer().getX(),
+            world.getPlayer().getY(),
+            STARTING_GAME_SPEED + time / 5000.0,
+            world.getPlayer().getMoveY(),
+            world.getPlayer().getMoveX(),
+            first.getX(),
+            first.getY(),
+//            first.getR()
         };
     }
 

@@ -54,18 +54,18 @@ public class  HeadlessGameInstance {
             world.getCoins().removeIf(c -> c.getID().equals(10000));
         }
         return new double[]{
-                nearest.getX(),
-                nearest.getY(),
-//              nearest.getWidth(),
-//              nearest.getHeight(),
-                world.getPlayer().getX(),
-                world.getPlayer().getY(),
-                STARTING_GAME_SPEED + time / 5000.0,
-                world.getPlayer().getMoveY(),
-//              world.getPlayer().getMoveX(),
-                first.getX(),
-                first.getY(),
-//              first.getR()
+            nearest.getX(),
+            nearest.getY(),
+            nearest.getWidth(),
+            nearest.getHeight(),
+            world.getPlayer().getX(),
+            world.getPlayer().getY(),
+            STARTING_GAME_SPEED + time / 5000.0,
+            world.getPlayer().getMoveY(),
+            world.getPlayer().getMoveX(),
+            first.getX(),
+            first.getY(),
+//            first.getR()
         };
     }
 

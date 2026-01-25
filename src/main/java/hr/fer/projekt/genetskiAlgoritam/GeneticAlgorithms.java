@@ -28,17 +28,17 @@ public class GeneticAlgorithms {
         Map<NeuralNetwork, Double> newGeneration = new HashMap<NeuralNetwork, Double>();
 
         // dodaje najboljeg stare generacije u novu i mice ga iz stare
-        NeuralNetwork elite = oldGeneration.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
-        newGeneration.put(elite, null);
+//        NeuralNetwork elite = oldGeneration.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+//        newGeneration.put(elite, null);
 
 //        System.out.println(elite + "\n With Fitness:" + oldGeneration.get(elite));
-        System.out.println("  Elite Fitness: " + oldGeneration.get(elite) + "\n  ID: " + elite.getID());
+//        System.out.println("  Elite Fitness: " + oldGeneration.get(elite) + "\n  ID: " + elite.getID());
 
 
         //racuna ukupni fitness
         double sum = oldGeneration.values().stream().mapToDouble(Double::doubleValue).sum();
 
-        for (int i = 0; i < numNeuralNetworks - 1; i++) {
+        for (int i = 0; i < numNeuralNetworks; i++) {
             double idxPrviClan = new Random().nextDouble(0, sum);
             double idxDrugiClan = new Random().nextDouble(0, sum);
 
