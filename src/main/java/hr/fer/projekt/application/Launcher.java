@@ -19,7 +19,7 @@ public class Launcher extends Application {
 
     private final static boolean HEADLESS = false;
     private final static boolean CONTINUE_LEARNING = true;
-    private final static int NUM_GENS = 2000;
+    private final static int NUM_GENS = 500;
 //    private final static int NUM_AVG_FITNESS = 100;
 
     @Override
@@ -40,9 +40,9 @@ public class Launcher extends Application {
 
         if (HEADLESS) {
             int numNeuralNetworks = 50;
-            int testsPerNetwork = 40;
+            int testsPerNetwork = 25;
             double alpha = 0.25;
-//            double crossChance = 0.80;
+            double crossChance = 0.80;
             double mutationChance = 0.01;
 
 //            LinkedList<Double> lastAvgFitnessesList = new LinkedList<>();
@@ -51,8 +51,8 @@ public class Launcher extends Application {
 //
 //            boolean growth_era = true;
 
-            int inputNodes = 11;
-            int[] hiddenLayers = {20, 40};
+            int inputNodes = 10;
+            int[] hiddenLayers = {30, 40};
             int outputNodes = 4;
 
             ParallelGameRunner runner = new ParallelGameRunner(
@@ -90,8 +90,9 @@ public class Launcher extends Application {
                 double bestFitnessGen = Double.NEGATIVE_INFINITY;
 
                 for (int j = 0; j < NUM_GENS; j++) {
-                    bestNetworkGen = null;
-                    bestFitnessGen = Double.NEGATIVE_INFINITY;
+                        bestNetworkGen = null;
+                        bestFitnessGen = Double.NEGATIVE_INFINITY;
+
                     System.out.println("Generation: " + j);
                     List<NeuralNetwork>  nns = new ArrayList<>(Generacija.keySet());
 

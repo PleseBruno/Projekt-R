@@ -14,9 +14,9 @@ public class  HeadlessGameInstance {
     private final World world;
     private final long TICK_TIME_MS = 0;
     private final double STARTING_GAME_SPEED = 0.5;
-    private volatile double time = 0;
-    private volatile double bonusPoints = 0;
-    private volatile boolean gameRunning = true;
+    private double time = 0;
+    private double bonusPoints = 0;
+    private boolean gameRunning = true;
 
     private boolean aPressed = false, dPressed = false,
             sPressed = false, wPressed = false;
@@ -56,7 +56,7 @@ public class  HeadlessGameInstance {
         return new double[]{
             nearest.getX(),
             nearest.getY(),
-            nearest.getWidth(),
+//            nearest.getWidth(),
             nearest.getHeight(),
             world.getPlayer().getX(),
             world.getPlayer().getY(),
@@ -85,7 +85,7 @@ public class  HeadlessGameInstance {
         }
         
         // Fitness = survival time
-        return (time * time) / 10000 + bonusPoints;
+        return time + bonusPoints;
     }
 
     void consolePrint(){
@@ -173,9 +173,11 @@ public class  HeadlessGameInstance {
 
                 c.setX(-50);
 
-                if (time <= 5000) {
+                if (time >= 1000)
+                    bonusPoints += c.getPoints() / (time / 1000.0);
+                else
                     bonusPoints += c.getPoints();
-                }
+
                 return true;
             }
             return false;

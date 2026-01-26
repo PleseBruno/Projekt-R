@@ -86,7 +86,7 @@ public class Coins {
         }
     }
     public static Coins makeCoin(String ID, Random random, double x) {
-        int randomNum = random.nextInt(50, 350);
-        return new Coins(500, 12, x + 225, randomNum, ID);
+        int randomNum = random.nextInt(1, 3);
+        return new Coins(500, 12, x + 225, randomNum * 100, ID);
     }
 }

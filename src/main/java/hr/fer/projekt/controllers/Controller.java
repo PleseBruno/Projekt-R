@@ -85,17 +85,17 @@ public class Controller implements Initializable {
         }
 
         return new double[]{
-            nearest.getX(),
-            nearest.getY(),
-            nearest.getWidth(),
-            nearest.getHeight(),
-            world.getPlayer().getX(),
-            world.getPlayer().getY(),
-            STARTING_GAME_SPEED + time / 5000.0,
-            world.getPlayer().getMoveY(),
-            world.getPlayer().getMoveX(),
-            first.getX(),
-            first.getY(),
+                nearest.getX(),
+                nearest.getY(),
+//            nearest.getWidth(),
+                nearest.getHeight(),
+                world.getPlayer().getX(),
+                world.getPlayer().getY(),
+                STARTING_GAME_SPEED + time / 5000.0,
+                world.getPlayer().getMoveY(),
+                world.getPlayer().getMoveX(),
+                first.getX(),
+                first.getY(),
 //            first.getR()
         };
     }
